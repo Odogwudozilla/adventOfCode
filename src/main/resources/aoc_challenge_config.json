@@ -1,0 +1,61 @@
+{
+  "adventOfCodeConfig": {
+    "description": "Configuration for tracking Advent of Code puzzle availability and completion status",
+    "yearsAvailable": {
+      "2015": {
+        "totalDays": 25,
+        "availableUntil": "2015-12-25"
+      },
+      "2016": {
+        "totalDays": 25,
+        "availableUntil": "2016-12-25"
+      },
+      "2017": {
+        "totalDays": 25,
+        "availableUntil": "2017-12-25"
+      },
+      "2018": {
+        "totalDays": 25,
+        "availableUntil": "2018-12-25"
+      },
+      "2019": {
+        "totalDays": 25,
+        "availableUntil": "2019-12-25"
+      },
+      "2020": {
+        "totalDays": 25,
+        "availableUntil": "2020-12-25"
+      },
+      "2021": {
+        "totalDays": 25,
+        "availableUntil": "2021-12-25"
+      },
+      "2022": {
+        "totalDays": 25,
+        "availableUntil": "2022-12-25"
+      },
+      "2023": {
+        "totalDays": 25,
+        "availableUntil": "2023-12-25"
+      },
+      "2024": {
+        "totalDays": 25,
+        "availableUntil": "2024-12-25"
+      },
+      "2025": {
+        "totalDays": 12,
+        "availableUntil": "2025-12-12"
+      }
+    },
+    "notes": [
+      "This configuration tracks all Advent of Code years and their available days.",
+      "Years 2015-2024 each have 25 days (December 1-25).",
+      "Year 2025 has 12 days (December 1-12).",
+      "To add a new year (e.g., 2026), simply add a new entry with the year and totalDays.",
+      "The solutions_database.json file tracks which puzzles have been solved.",
+      "When selecting a random puzzle, exclude any year/day combinations already in solutions_database.json.",
+      "Never select a puzzle from a future year or day that hasn't been released yet."
+    ]
+  }
+}
+
