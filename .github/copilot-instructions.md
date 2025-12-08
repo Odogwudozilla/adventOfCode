@@ -84,6 +84,24 @@ Solves Part 1 of the puzzle
 
 Includes clear comments and follows standard Java conventions
 
+Update Solutions Database
+
+After successfully running the solution and obtaining results:
+
+Update the resources/solutions_database.json file with:
+
+Year (e.g., 2025)
+
+Day number
+
+Puzzle title (extracted from description)
+
+Official puzzle link (https://adventofcode.com/YYYY/day/D)
+
+Solution values for Part 1 (and Part 2 if completed)
+
+The JSON file is structured by year, with each day entry containing all puzzle metadata and results.
+
 Prompt for Additional Puzzle Parts
 
 Ask:
@@ -103,6 +121,8 @@ No hardcoded puzzle inputs — read from the .txt file using Java standard file 
 Use only a single Java class unless otherwise instructed.
 
 Package must match: odogwudozilla.<year>.day<day> — do not prepend "year".
+
+Always update the resources/solutions_database.json file after obtaining solution results for each part.
 
 Do not proceed without user confirmation after each step.
 

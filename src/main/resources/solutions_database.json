@@ -1,0 +1,87 @@
+{
+  "adventOfCodeSolutions": {
+    "2025": [
+      {
+        "year": 2025,
+        "day": 1,
+        "title": "Secret Entrance",
+        "link": "https://adventofcode.com/2025/day/1",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 2,
+        "title": "Gift Shop",
+        "link": "https://adventofcode.com/2025/day/2",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 3,
+        "title": "Lobby",
+        "link": "https://adventofcode.com/2025/day/3",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 4,
+        "title": "Printing Department",
+        "link": "https://adventofcode.com/2025/day/4",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 5,
+        "title": "Supply Closet",
+        "link": "https://adventofcode.com/2025/day/5",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 6,
+        "title": "Guard Station",
+        "link": "https://adventofcode.com/2025/day/6",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 7,
+        "title": "Laboratories",
+        "link": "https://adventofcode.com/2025/day/7",
+        "solutions": {
+          "partOne": null,
+          "partTwo": null
+        }
+      },
+      {
+        "year": 2025,
+        "day": 8,
+        "title": "Playground",
+        "link": "https://adventofcode.com/2025/day/8",
+        "solutions": {
+          "partOne": "32103",
+          "partTwo": "8133642976"
+        }
+      }
+    ]
+  }
+}
+
