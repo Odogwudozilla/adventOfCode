@@ -7,8 +7,8 @@
         "title": "Secret Entrance",
         "link": "https://adventofcode.com/2025/day/1",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "1147",
+          "partTwo": "6789"
         }
       },
       {
@@ -17,8 +17,8 @@
         "title": "Gift Shop",
         "link": "https://adventofcode.com/2025/day/2",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "9188031749",
+          "partTwo": "11323661261"
         }
       },
       {
@@ -27,8 +27,8 @@
         "title": "Lobby",
         "link": "https://adventofcode.com/2025/day/3",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "16993",
+          "partTwo": "168617068915447"
         }
       },
       {
@@ -37,28 +37,28 @@
         "title": "Printing Department",
         "link": "https://adventofcode.com/2025/day/4",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "1491",
+          "partTwo": "8722"
         }
       },
       {
         "year": 2025,
         "day": 5,
-        "title": "Supply Closet",
+        "title": "Cafeteria",
         "link": "https://adventofcode.com/2025/day/5",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "739",
+          "partTwo": "344486348901788"
         }
       },
       {
         "year": 2025,
         "day": 6,
-        "title": "Guard Station",
+        "title": "Trash Compactor",
         "link": "https://adventofcode.com/2025/day/6",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "3968933219902",
+          "partTwo": "6019576291014"
         }
       },
       {
@@ -67,8 +67,8 @@
         "title": "Laboratories",
         "link": "https://adventofcode.com/2025/day/7",
         "solutions": {
-          "partOne": null,
-          "partTwo": null
+          "partOne": "1711",
+          "partTwo": "36706966158365"
         }
       },
       {
