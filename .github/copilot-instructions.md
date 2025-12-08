@@ -114,6 +114,25 @@ Ask the user to append the Part 2 description to the same description file
 
 Re-read the file, append logic for Part 2 to the same class
 
+Confirm Solutions and Commit
+
+After Part 2 has been successfully solved and results obtained:
+
+Prompt the user:
+
+"Are the solutions for Part 1 and Part 2 accepted?"
+
+If the user responds affirmatively:
+
+Stage all changes using git add
+
+Generate a descriptive one-liner commit message in the format:
+"Add AOC <Year> Day <Day> solution: <PuzzleTitle> - <brief algorithm/approach description>"
+
+Commit the changes with the generated message
+
+Confirm the commit was successful
+
 Rules and Constraints:
 
 No hardcoded puzzle inputs — read from the .txt file using Java standard file I/O (e.g., Files.readAllLines()).
