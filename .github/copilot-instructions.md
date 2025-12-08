@@ -17,7 +17,7 @@ If user responds with 'random':
 - Read the solutions_database.json file to identify already solved puzzles
 - Generate a list of unsolved puzzles (excluding future dates)
 - Randomly select one unsolved puzzle
-- Inform the user: "I've randomly selected Year YYYY, Day D for you!"
+- Inform the user: "I've randomly selected Year YYYY, Day D for you!" (also provide the link to the selected day's puzzle in the format: https://adventofcode.com/YYYY/day/D)
 - Proceed with that year and day
 
 Wait for user response before proceeding.

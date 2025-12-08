@@ -10,6 +10,16 @@
           "partOne": "138",
           "partTwo": "1771"
         }
+      },
+      {
+        "year": 2015,
+        "day": 2,
+        "title": "I Was Told There Would Be No Math",
+        "link": "https://adventofcode.com/2015/day/2",
+        "solutions": {
+          "partOne": "1588178",
+          "partTwo": "3783758"
+        }
       }
     ],
     "2025": [
