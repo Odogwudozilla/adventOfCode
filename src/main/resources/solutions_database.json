@@ -1,5 +1,17 @@
 {
   "adventOfCodeSolutions": {
+    "2015": [
+      {
+        "year": 2015,
+        "day": 1,
+        "title": "Not Quite Lisp",
+        "link": "https://adventofcode.com/2015/day/1",
+        "solutions": {
+          "partOne": "138",
+          "partTwo": "1771"
+        }
+      }
+    ],
     "2025": [
       {
         "year": 2025,
