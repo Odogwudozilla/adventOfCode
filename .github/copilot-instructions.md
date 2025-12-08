@@ -13,10 +13,14 @@ If user responds with a specific year and day:
 - Proceed with that year and day
 
 If user responds with 'random':
-- Read the aoc_challenge_config.json file to get available years and days
-- Read the solutions_database.json file to identify already solved puzzles
-- Generate a list of unsolved puzzles (excluding future dates)
-- Randomly select one unsolved puzzle
+- Use the PuzzleRandomizer Java utility class to select a random unsolved puzzle:
+  * Run: `.\gradlew randomPuzzle` (or `./gradlew randomPuzzle` on Unix systems)
+  * The PuzzleRandomizer class reads aoc_challenge_config.json to get available years and days
+  * It reads solutions_database.json to identify already solved puzzles
+  * It generates a list of ALL unsolved puzzles (excluding future dates)
+  * It uses Java's Random class with current timestamp to select a random puzzle
+  * The output format is: "YYYY,D" (e.g., "2023,15")
+- Parse the output to extract year and day
 - Inform the user: "I've randomly selected Year YYYY, Day D for you!" (also provide the link to the selected day's puzzle in the format: https://adventofcode.com/YYYY/day/D)
 - Proceed with that year and day
 

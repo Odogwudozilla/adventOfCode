@@ -22,6 +22,18 @@
         }
       }
     ],
+    "2024": [
+      {
+        "year": 2024,
+        "day": 18,
+        "title": "RAM Run",
+        "link": "https://adventofcode.com/2024/day/18",
+        "solutions": {
+          "partOne": "322",
+          "partTwo": "60,21"
+        }
+      }
+    ],
     "2025": [
       {
         "year": 2025,

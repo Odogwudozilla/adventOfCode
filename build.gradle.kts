@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("application")
 }
 
 group = "odogwudozilla"
@@ -18,3 +19,22 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+application {
+    mainClass.set("odogwudozilla.Main")
+}
+
+tasks.register<JavaExec>("randomPuzzle") {
+    group = "application"
+    description = "Selects a random unsolved Advent of Code puzzle"
+    mainClass.set("odogwudozilla.PuzzleRandomizer")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
+tasks.register<JavaExec>("runDay18") {
+    group = "application"
+    description = "Run Advent of Code 2024 Day 18 solution"
+    mainClass.set("odogwudozilla.year2024.day18.RAMRunAOC2024Day18")
+    classpath = sourceSets["main"].runtimeClasspath
+}
+
