@@ -203,7 +203,21 @@ public class PuzzleRandomizer {
 
                     PuzzleKey key = new PuzzleKey(year, day);
                     if (!solved.contains(key)) {
-                        unsolved.add(new PuzzleSelection(year, day));
+                        // Special handling for Day 25: only allow if all previous days are solved
+                        if (day == 25) {
+                            boolean allPreviousDaysSolved = true;
+                            for (int prevDay = 1; prevDay < 25; prevDay++) {
+                                if (!solved.contains(new PuzzleKey(year, prevDay))) {
+                                    allPreviousDaysSolved = false;
+                                    break;
+                                }
+                            }
+                            if (allPreviousDaysSolved) {
+                                unsolved.add(new PuzzleSelection(year, day));
+                            }
+                        } else {
+                            unsolved.add(new PuzzleSelection(year, day));
+                        }
                     }
                 }
             }

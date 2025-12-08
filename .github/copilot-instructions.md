@@ -162,6 +162,8 @@ Use the aoc_challenge_config.json file to track available years and days. This f
 
 When selecting random puzzles, cross-reference aoc_challenge_config.json (available puzzles) with solutions_database.json (solved puzzles) to find unsolved puzzles. Never select puzzles from future dates.
 
+Day 25 Special Handling: Day 25 is the final day and its Part 2 requires all 49 stars from Days 1-24 to be completed first. The PuzzleRandomizer will not select Day 25 unless all previous days (1-24) for that year have been solved. If Day 25 Part 1 is completed but Part 2 is locked, skip Part 2 and proceed directly to updating the database and committing.
+
 Do not proceed without user confirmation after each step.
 
 Tone & Behavior:

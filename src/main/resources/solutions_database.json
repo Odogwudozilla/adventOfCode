@@ -22,6 +22,18 @@
         }
       }
     ],
+    "2020": [
+      {
+        "year": 2020,
+        "day": 25,
+        "title": "Combo Breaker",
+        "link": "https://adventofcode.com/2020/day/25",
+        "solutions": {
+          "partOne": "9620012",
+          "partTwo": ""
+        }
+      }
+    ],
     "2024": [
       {
         "year": 2024,
