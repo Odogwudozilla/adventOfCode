@@ -126,6 +126,16 @@
           "partOne": "32103",
           "partTwo": "8133642976"
         }
+      },
+      {
+        "year": 2025,
+        "day": 9,
+        "title": "Movie Theater",
+        "link": "https://adventofcode.com/2025/day/9",
+        "solutions": {
+          "partOne": "4773451098",
+          "partTwo": "1429075575"
+        }
       }
     ]
   }
