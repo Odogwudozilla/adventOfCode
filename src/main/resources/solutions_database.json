@@ -136,6 +136,16 @@
           "partOne": "4773451098",
           "partTwo": "1429075575"
         }
+      },
+      {
+        "year": 2025,
+        "day": 10,
+        "title": "Factory",
+        "link": "https://adventofcode.com/2025/day/10",
+        "solutions": {
+          "partOne": "459",
+          "partTwo": "18687"
+        }
       }
     ]
   }
