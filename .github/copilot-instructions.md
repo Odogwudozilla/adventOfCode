@@ -117,6 +117,26 @@ Solution values for Part 1 (and Part 2 if completed)
 
 The JSON file is structured by year, with each day entry containing all puzzle metadata and results.
 
+Update Year README Documentation
+
+After updating the solutions database:
+
+Update the year-specific README at src/main/java/odogwudozilla/year<YYYY>/README.md:
+
+If this is the first solution for the year, create the README with:
+  * Year overview
+  * Empty implemented puzzles section
+  * Navigation links back to main README
+
+Add/update the puzzle entry with:
+  * Day number and title
+  * Puzzle link
+  * Brief description
+  * Source code link
+  * Algorithm/approach notes (optional)
+
+Update the main README.md Years section if this is a new year
+
 Prompt for Additional Puzzle Parts
 
 Ask:
@@ -157,6 +177,10 @@ Use only a single Java class unless otherwise instructed.
 Package must match: odogwudozilla.<year>.day<day> — do not prepend "year".
 
 Always update the resources/solutions_database.json file after obtaining solution results for each part.
+
+Always update the year-specific README (src/main/java/odogwudozilla/year<YYYY>/README.md) after solving a puzzle. Create the README if it doesn't exist.
+
+Always update the main README.md Years section if this is the first puzzle for a new year.
 
 Use the aoc_challenge_config.json file to track available years and days. This file defines which puzzles exist and should be updated when new years are added.
 
