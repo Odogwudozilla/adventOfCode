@@ -102,5 +102,16 @@ Advent of Code 2025 features a journey through various rooms of the North Pole h
 
 ---
 
+### Day 11: Reactor
+**Link**: [https://adventofcode.com/2025/day/11](https://adventofcode.com/2025/day/11)
+
+**Description**: Count all paths through a directed graph of devices from start to end, with Part 2 requiring paths to pass through specific intermediate nodes. Uses dynamic programming with memoization for efficient path counting in a DAG structure.
+
+**Source Code**: [ReactorAOC2025Day11.java](day11/)
+
+**Algorithm**: DFS with backtracking for Part 1, state-space DP with memoization (node, hasReq1, hasReq2) for Part 2.
+
+---
+
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
 

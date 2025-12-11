@@ -158,6 +158,16 @@
           "partOne": "459",
           "partTwo": "18687"
         }
+      },
+      {
+        "year": 2025,
+        "day": 11,
+        "title": "Reactor",
+        "link": "https://adventofcode.com/2025/day/11",
+        "solutions": {
+          "partOne": "658",
+          "partTwo": "371113003846800"
+        }
       }
     ]
   }
