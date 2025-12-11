@@ -222,6 +222,7 @@ Explore solutions organized by year:
 
 - **[2015](src/main/java/odogwudozilla/year2015/README.md)** - The inaugural Advent of Code year
 - **[2020](src/main/java/odogwudozilla/year2020/README.md)** - Tropical vacation themed puzzles
+- **[2023](src/main/java/odogwudozilla/year2023/README.md)** - Garden plots and infinite grids
 - **[2024](src/main/java/odogwudozilla/year2024/README.md)** - Computer systems and algorithms
 - **[2025](src/main/java/odogwudozilla/year2025/README.md)** - Journey through North Pole headquarters (12 days)
 
