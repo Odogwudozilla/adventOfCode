@@ -168,6 +168,16 @@
           "partOne": "658",
           "partTwo": "371113003846800"
         }
+      },
+      {
+        "year": 2025,
+        "day": 12,
+        "title": "Christmas Tree Farm",
+        "link": "https://adventofcode.com/2025/day/12",
+        "solutions": {
+          "partOne": "583",
+          "partTwo": "⭐"
+        }
       }
     ]
   }

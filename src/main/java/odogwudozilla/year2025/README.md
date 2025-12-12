@@ -113,5 +113,16 @@ Advent of Code 2025 features a journey through various rooms of the North Pole h
 
 ---
 
+### Day 12: Christmas Tree Farm
+**Link**: [https://adventofcode.com/2025/day/12](https://adventofcode.com/2025/day/12)
+
+**Description**: Determine how many rectangular regions can fit all required presents with irregular shapes. Presents can be rotated and flipped, must not overlap, and must align to a grid. A classic 2D polyomino packing problem solved using constraint satisfaction with backtracking.
+
+**Source Code**: [ChristmasTreeFarmAOC2025Day12.java](day12/)
+
+**Algorithm**: Backtracking with pruning. For each present, tries all orientations (rotations and flips) at all valid grid positions. Uses early termination when total area exceeds available space. Part 2 automatically awarded upon Part 1 completion.
+
+---
+
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
 
