@@ -1,0 +1,272 @@
+================================================================================
+                    ADVENT OF CODE PROJECT STRUCTURE
+================================================================================
+
+Root Directory: adventOfCode/
+
+================================================================================
+BUILD & CONFIGURATION
+================================================================================
+
+build.gradle.kts                 - Gradle build configuration (Kotlin DSL)
+settings.gradle.kts              - Gradle settings
+gradlew                          - Gradle wrapper (Unix/Linux)
+gradlew.bat                      - Gradle wrapper (Windows)
+
+================================================================================
+SOURCE CODE STRUCTURE
+================================================================================
+
+src/main/java/odogwudozilla/
+│
+├── Main.java                    - Main entry point for the application
+├── PuzzleRandomizer.java        - Utility to randomly select unsolved puzzles
+│
+└── year<YYYY>/
+    ├── README.md                - Year-specific documentation
+    │
+    └── day<D>/
+        └── <PuzzleName>AOC<YYYY>Day<D>.java  - Solution for the puzzle
+
+IMPLEMENTED YEARS AND PACKAGES:
+================================
+
+2015 (The Inaugural Year)
+  odogwudozilla.year2015
+  ├── day1/   - Not Quite Lisp
+  └── day2/   - I Was Told There Would Be No Math
+
+2018 (Fabric and Sleigh Systems)
+  odogwudozilla.year2018
+  └── day3/   - No Matter How You Slice It
+
+2020 (Tropical Vacation)
+  odogwudozilla.year2020
+  └── day25/  - Combo Breaker
+
+2023 (Garden and Grids)
+  odogwudozilla.year2023
+  └── day21/  - Step Counter
+
+2024 (Computer Systems)
+  odogwudozilla.year2024
+  └── day18/  - RAM Run
+
+2025 (North Pole Headquarters)
+  odogwudozilla.year2025
+  ├── day1/   - Secret Entrance
+  ├── day2/   - Gift Shop
+  ├── day3/   - Lobby
+  ├── day4/   - Printing Department
+  ├── day5/   - Cafeteria
+  ├── day6/   - Trash Compactor
+  ├── day7/   - Laboratories
+  ├── day8/   - Playground
+  ├── day9/   - Movie Theater
+  ├── day10/  - Factory
+  ├── day11/  - Reactor
+  └── day12/  - Christmas Tree Farm
+
+================================================================================
+RESOURCES & CONFIGURATION
+================================================================================
+
+src/main/resources/
+│
+├── aoc_challenge_config.json    - Configuration of available years and days
+├── solutions_database.json      - Database of solved puzzles and results
+├── project_structure.txt        - This file
+│
+└── <YYYY>/day<D>/
+    ├── day<D>_puzzle_description.txt  - Full puzzle description
+    └── day<D>_puzzle_data.txt         - Personal puzzle input data
+
+YEAR RESOURCES BREAKDOWN:
+=========================
+
+2015/
+  ├── day1/
+  │   ├── day1_puzzle_description.txt
+  │   └── day1_puzzle_data.txt
+  └── day2/
+      ├── day2_puzzle_description.txt
+      └── day2_puzzle_data.txt
+
+2018/
+  └── day3/
+      ├── day3_puzzle_description.txt
+      └── day3_puzzle_data.txt
+
+2020/
+  └── day25/
+      ├── day25_puzzle_description.txt
+      └── day25_puzzle_data.txt
+
+2023/
+  └── day21/
+      ├── day21_puzzle_description.txt
+      └── day21_puzzle_data.txt
+
+2024/
+  └── day18/
+      ├── day18_puzzle_description.txt
+      └── day18_puzzle_data.txt
+
+2025/
+  ├── day1/   - Resources filled
+  ├── day2/   - Resources filled
+  ├── day3/   - Resources filled
+  ├── day4/   - Resources filled
+  ├── day5/   - Resources filled
+  ├── day6/   - Resources filled
+  ├── day7/   - Resources filled
+  ├── day8/   - Resources filled
+  ├── day9/   - Resources filled
+  ├── day10/  - Resources filled
+  ├── day11/  - Resources filled (empty files)
+  ├── day12/  - Resources filled (empty files)
+  └── (further days) - Empty directories
+
+================================================================================
+TEST STRUCTURE
+================================================================================
+
+src/test/java/                   - Unit test source code
+src/test/resources/              - Test resources
+
+================================================================================
+BUILD OUTPUT
+================================================================================
+
+build/                           - Generated build directory
+├── classes/java/main/           - Compiled Java classes
+├── distributions/               - Distribution packages
+├── generated/                   - Generated sources
+├── libs/                        - Built JAR files
+├── resources/main/              - Processed resources
+├── scripts/                     - Gradle scripts
+└── tmp/                         - Temporary build files
+
+================================================================================
+GRADLE WRAPPER SCRIPTS
+================================================================================
+
+build/scripts/adventOfCode       - Shell script (Unix/Linux)
+build/scripts/adventOfCode.bat   - Batch script (Windows)
+
+================================================================================
+PROJECT CONVENTIONS
+================================================================================
+
+Package Naming:
+  - Pattern: odogwudozilla.year<YYYY>.day<D>
+  - Each puzzle gets its own package
+  - Main class naming: <PuzzleTitle>AOC<YYYY>Day<D>.java
+
+Class Structure:
+  - Each solution is a standalone Java class with main() method
+  - Includes JavaDoc with puzzle description and URL
+  - Reads input from resource files (never hardcoded)
+  - Solves both Part 1 and Part 2 (if applicable)
+
+Resource Files:
+  - Puzzle descriptions stored in day<D>_puzzle_description.txt
+  - Puzzle input data stored in day<D>_puzzle_data.txt
+  - Kept separate to allow easy reference and modification
+
+Configuration:
+  - aoc_challenge_config.json    - Defines available years/days
+  - solutions_database.json      - Tracks solved puzzles and results
+
+================================================================================
+KEY FILES & THEIR PURPOSES
+================================================================================
+
+Main.java
+  Purpose: Application entry point
+  Role: Orchestrates the overall application flow
+
+PuzzleRandomizer.java
+  Purpose: Intelligent puzzle selection utility
+  Role: Randomly selects unsolved puzzles from available set
+  Features:
+    - Reads aoc_challenge_config.json for available puzzles
+    - Reads solutions_database.json for completed puzzles
+    - Excludes future-dated puzzles
+    - Returns random unsolved puzzle in format: YYYY,D
+
+aoc_challenge_config.json
+  Purpose: Central configuration for puzzle availability
+  Contents:
+    - Available years and date ranges
+    - Total days per year
+    - Date when puzzles became available
+
+solutions_database.json
+  Purpose: Persistent storage of puzzle solutions
+  Contents:
+    - Puzzle metadata (title, link, year, day)
+    - Solution results (Part 1 and Part 2 answers)
+    - Organized by year then day
+
+README.md files
+  Purpose: Documentation at year and project levels
+  Locations:
+    - Root: src/main/java/odogwudozilla/README.md (project overview)
+    - Year: src/main/java/odogwudozilla/year<YYYY>/README.md (year details)
+
+================================================================================
+STATISTICS
+================================================================================
+
+Total Years Covered: 6
+  - 2015: 2 puzzles solved
+  - 2018: 1 puzzle solved
+  - 2020: 1 puzzle solved
+  - 2023: 1 puzzle solved
+  - 2024: 1 puzzle solved
+  - 2025: 12 puzzles solved (ongoing)
+
+Total Puzzles Implemented: 18
+
+Package Structure: Fully organized and maintainable
+
+================================================================================
+WORKFLOW OVERVIEW
+================================================================================
+
+1. Random Puzzle Selection
+   - Run: ./gradlew randomPuzzle
+   - Output: YYYY,D format
+   - Creates new year/day package if needed
+
+2. Setup Phase
+   - Create package: odogwudozilla.year<YYYY>.day<D>
+   - Create resources: <YYYY>/day<D>/
+   - Create empty files: day<D>_puzzle_description.txt
+                        day<D>_puzzle_data.txt
+
+3. Data Collection
+   - Paste puzzle description to day<D>_puzzle_description.txt
+   - Paste puzzle input to day<D>_puzzle_data.txt
+
+4. Solution Development
+   - Create class: <PuzzleName>AOC<YYYY>Day<D>.java
+   - Implement Part 1 solution
+   - Implement Part 2 solution (if applicable)
+   - Include JavaDoc and comments
+
+5. Database & Documentation Update
+   - Update solutions_database.json with results
+   - Update/create year README.md
+   - Update main README.md if new year
+   - Update project_structure.txt if new year added or structure changed
+
+6. Commit
+   - Stage: git add -A
+   - Commit: git commit -m "Add AOC <Year> Day <Day> solution: <Title> - <approach>"
+
+================================================================================
+                            End of Project Structure
+================================================================================
+
