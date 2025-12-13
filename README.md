@@ -14,6 +14,19 @@ This repository contains solutions to Advent of Code puzzles from various years 
 - **📝 Comprehensive Documentation**: Each solution includes puzzle descriptions and input data
 - **🚀 Easy Execution**: Custom Gradle tasks for running solutions and selecting puzzles
 
+## ✨ Enhancement Features
+
+This project includes advanced enhancement features for testing, monitoring, and statistics tracking:
+
+- **Test Harness** - Validate puzzle solutions against expected results
+- **Performance Monitoring** - Track execution time and memory usage
+- **Puzzle Caching** - Persist results with JSON-based storage
+- **Difficulty Rating** - Rate puzzles on a 1-10 scale
+- **Solution Statistics** - Analyze comprehensive performance metrics
+- **Web Dashboard** - Generate interactive HTML progress tracker
+
+📚 **Documentation:** See [`docs/enhancements/`](docs/enhancements/) for complete details and integration guides.
+
 ## 🏗️ Project Structure
 
 ```
@@ -21,6 +34,9 @@ adventOfCode/
 ├── src/main/java/odogwudozilla/
 │   ├── Main.java                          # Main entry point
 │   ├── PuzzleRandomizer.java              # Random puzzle selector utility
+│   ├── core/                              # Enhancement features (core utilities)
+│   ├── dashboard/                         # Enhancement features (web dashboard)
+│   ├── examples/                          # Enhancement features (usage examples)
 │   └── year<YYYY>/
 │       └── day<D>/
 │           └── <PuzzleName>AOC<YYYY>Day<D>.java
@@ -31,6 +47,21 @@ adventOfCode/
 │       └── day<D>/
 │           ├── day<D>_puzzle_description.txt
 │           └── day<D>_puzzle_data.txt
+│
+├── docs/enhancements/                     # Enhancement features documentation
+│   ├── README.md                          # Enhancement docs index
+│   ├── QUICK_START.md                     # Quick integration guide
+│   ├── ENHANCEMENT_FEATURES.md            # Complete feature documentation
+│   ├── IMPLEMENTATION_SUMMARY.md          # Implementation details
+│   ├── IMPLEMENTATION_CHECKLIST.md        # Completion checklist
+│   ├── DEMONSTRATION_RESULTS.md           # Live demo results
+│   └── DEMO_COMPLETE.md                   # Demo summary
+│
+├── cache/                                 # Runtime-generated cache
+│   └── puzzle-results/                    # Cached puzzle results (JSON)
+│
+├── dashboard/                             # Runtime-generated dashboard
+│   └── index.html                         # Progress dashboard
 │
 ├── build.gradle.kts                        # Gradle build configuration
 └── README.md                               # This file
