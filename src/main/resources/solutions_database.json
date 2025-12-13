@@ -22,6 +22,18 @@
         }
       }
     ],
+    "2018": [
+      {
+        "year": 2018,
+        "day": 3,
+        "title": "No Matter How You Slice It",
+        "link": "https://adventofcode.com/2018/day/3",
+        "solutions": {
+          "partOne": "106501",
+          "partTwo": "632"
+        }
+      }
+    ],
     "2020": [
       {
         "year": 2020,
