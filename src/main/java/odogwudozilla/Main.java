@@ -14,22 +14,35 @@ import java.util.stream.Stream;
 /**
  * Centralized CLI-based puzzle executor for Advent of Code solutions.
  *
- * Dynamically discovers and executes puzzle solution classes based on command-line arguments.
+ * This class serves as the main entry point for executing puzzle solutions dynamically.
+ * It uses Java reflection to discover and load puzzle classes based on year and day parameters.
+ *
+ * Class Discovery Strategy:
+ * - Scans the package: odogwudozilla.year<YYYY>.day<D>
+ * - Searches for files matching pattern: *AOC<YYYY>Day<D>.class
+ * - Filters out inner classes (containing '$')
+ * - Invokes the public static main(String[] args) method
  *
  * Usage: java odogwudozilla.Main <year> <day>
  * Examples:
  *   java odogwudozilla.Main 2025 day1
  *   java odogwudozilla.Main 2024 day18
  *   java odogwudozilla.Main 2018 day3
+ *
+ * Also used by the puzzle command wrapper:
+ *   puzzle 2025 day1
  */
 public class Main {
 
     private static final String PACKAGE_PREFIX = "odogwudozilla.year";
+    private static final int EXIT_CODE_INVALID_ARGS = 1;
+    private static final int EXIT_CODE_PUZZLE_NOT_FOUND = 2;
+    private static final int EXIT_CODE_EXECUTION_ERROR = 3;
 
     public static void main(String[] args) {
         if (args.length < 2) {
             printUsage();
-            System.exit(1);
+            System.exit(EXIT_CODE_INVALID_ARGS);
         }
 
         String year = args[0];
@@ -37,12 +50,12 @@ public class Main {
 
         if (!isValidYear(year)) {
             System.err.println("Error: Invalid year format. Expected a 4-digit year (e.g., 2025).");
-            System.exit(1);
+            System.exit(EXIT_CODE_INVALID_ARGS);
         }
 
         if (!isValidDay(day)) {
             System.err.println("Error: Invalid day format. Expected 'day' followed by 1-2 digits (e.g., day1, day25).");
-            System.exit(1);
+            System.exit(EXIT_CODE_INVALID_ARGS);
         }
 
         executePuzzle(year, day);
@@ -63,7 +76,7 @@ public class Main {
 
             if (puzzleClassName == null) {
                 System.err.println("Error: Puzzle class for year " + year + " " + day + " not found.");
-                System.exit(1);
+                System.exit(EXIT_CODE_PUZZLE_NOT_FOUND);
             }
 
             Class<?> puzzleClass = Class.forName(puzzleClassName);
@@ -72,16 +85,13 @@ public class Main {
 
         } catch (ClassNotFoundException e) {
             System.err.println("Error: Puzzle class not found - " + e.getMessage());
-            e.printStackTrace();
-            System.exit(1);
+            System.exit(EXIT_CODE_EXECUTION_ERROR);
         } catch (NoSuchMethodException e) {
             System.err.println("Error: Puzzle class does not have a public static main(String[] args) method.");
-            e.printStackTrace();
-            System.exit(1);
+            System.exit(EXIT_CODE_EXECUTION_ERROR);
         } catch (Exception e) {
             System.err.println("Error executing puzzle: " + e.getMessage());
-            e.printStackTrace();
-            System.exit(1);
+            System.exit(EXIT_CODE_EXECUTION_ERROR);
         }
     }
 

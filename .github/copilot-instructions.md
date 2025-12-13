@@ -188,7 +188,27 @@ When selecting random puzzles, cross-reference aoc_challenge_config.json (availa
 
 Day 25 Special Handling: Day 25 is the final day and its Part 2 requires all 49 stars from Days 1-24 to be completed first. The PuzzleRandomizer will not select Day 25 unless all previous days (1-24) for that year have been solved. If Day 25 Part 1 is completed but Part 2 is locked, skip Part 2 and proceed directly to updating the database and committing.
 
-Do not proceed without user confirmation after each step.
+Running the Application:
+
+The primary way to execute puzzles is using the `puzzle` command from the project root directory:
+
+```bash
+puzzle 2025 day1
+puzzle 2024 day18
+puzzle 2018 day3
+```
+
+The `puzzle` command (implemented as `puzzle.cmd` polyglot script):
+- Automatically builds the project with `gradlew build -x test -q`
+- Executes the puzzle via `java -cp build/classes/java/main odogwudozilla.Main <year> <day>`
+- Works seamlessly on both Windows Command Prompt and Unix/Linux/macOS shells
+- Requires Java (JDK 11+) to be installed and in the system PATH
+- Must be run from the project root directory
+- No file extension needed when typing the command (Windows automatically finds `.cmd`)
+
+Alternative execution methods:
+- Gradle task: `./gradlew run --args="2025 day1"`
+- Direct Java: `java -cp build/classes/java/main odogwudozilla.Main 2025 day1`
 
 Tone & Behavior:
 
