@@ -20,6 +20,16 @@
           "partOne": "1588178",
           "partTwo": "3783758"
         }
+      },
+      {
+        "year": 2015,
+        "day": 15,
+        "title": "Science for Hungry People",
+        "link": "https://adventofcode.com/2015/day/15",
+        "solutions": {
+          "partOne": "222870",
+          "partTwo": "117936"
+        }
       }
     ],
     "2018": [
