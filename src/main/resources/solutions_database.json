@@ -63,11 +63,23 @@
         "title": "Combo Breaker",
         "link": "https://adventofcode.com/2020/day/25",
         "solutions": {
-          "partOne": "9620012",
-          "partTwo": ""
+          "partOne": "8635216"
         }
       }
     ],
+    "2021": [
+      {
+        "year": 2021,
+        "day": 1,
+        "title": "Sonar Sweep",
+        "link": "https://adventofcode.com/2021/day/1",
+        "solutions": {
+          "partOne": "1766",
+          "partTwo": "1797"
+        }
+      }
+    ],
+    "2023": [
     "2023": [
       {
         "year": 2023,

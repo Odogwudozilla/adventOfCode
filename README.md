@@ -255,6 +255,7 @@ Explore solutions organized by year:
 - **[2017](src/main/java/odogwudozilla/year2017/README.md)** - Assembly instructions and circular lists
 - **[2018](src/main/java/odogwudozilla/year2018/README.md)** - Fabric cutting and sleigh systems
 - **[2020](src/main/java/odogwudozilla/year2020/README.md)** - Tropical vacation themed puzzles
+- **[2021](src/main/java/odogwudozilla/year2021/README.md)** - Submarine adventure with sonar analysis
 - **[2023](src/main/java/odogwudozilla/year2023/README.md)** - Garden plots and infinite grids
 - **[2024](src/main/java/odogwudozilla/year2024/README.md)** - Computer systems and algorithms
 - **[2025](src/main/java/odogwudozilla/year2025/README.md)** - Journey through North Pole headquarters (12 days)
