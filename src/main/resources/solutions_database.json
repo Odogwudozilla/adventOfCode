@@ -32,6 +32,18 @@
         }
       }
     ],
+    "2017": [
+      {
+        "year": 2017,
+        "day": 1,
+        "title": "Inverse Captcha",
+        "link": "https://adventofcode.com/2017/day/1",
+        "solutions": {
+          "partOne": "1144",
+          "partTwo": "1194"
+        }
+      }
+    ],
     "2018": [
       {
         "year": 2018,
