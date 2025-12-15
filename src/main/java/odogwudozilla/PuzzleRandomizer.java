@@ -9,8 +9,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -46,7 +48,10 @@ public class PuzzleRandomizer {
     }
 
     /**
-     * Selects a random unsolved puzzle from all available puzzles.
+     * Selects a random unsolved puzzle from all available puzzles with prioritisation logic.
+     * Priority order:
+     * 1. If there is a year with zero solved days, randomly pick one and return day 1
+     * 2. Otherwise, randomly select a year and return the lowest-numbered unsolved day
      * @return PuzzleSelection containing year and day, or null if no unsolved puzzles exist
      */
     @Nullable
@@ -63,19 +68,45 @@ public class PuzzleRandomizer {
             throw new IOException("Solutions database not found: " + SOLUTIONS_FILE);
         }
 
-        // Build set of solved puzzles
-        Set<PuzzleKey> solved = buildSolvedSet(solutionsContent);
+        // Build map of solved puzzles by year
+        Map<Integer, Set<Integer>> solvedByYear = buildSolvedSetByYear(solutionsContent);
 
-        // Build list of unsolved puzzles
-        List<PuzzleSelection> unsolved = buildUnsolvedList(configContent, solved);
-
-        // Select random puzzle
-        if (unsolved.isEmpty()) {
+        // Extract all available years from config
+        List<Integer> availableYears = extractAvailableYears(configContent);
+        if (availableYears.isEmpty()) {
             return null;
         }
 
-        int randomIndex = RANDOM.nextInt(unsolved.size());
-        return unsolved.get(randomIndex);
+        // Find years with zero solved days
+        List<Integer> unsolvedYears = new ArrayList<>();
+        for (Integer year : availableYears) {
+            if (!solvedByYear.containsKey(year) || solvedByYear.get(year).isEmpty()) {
+                unsolvedYears.add(year);
+            }
+        }
+
+        int selectedYear;
+        int selectedDay;
+
+        if (!unsolvedYears.isEmpty()) {
+            // Priority 1: Randomly select a year with no solved days
+            selectedYear = unsolvedYears.get(RANDOM.nextInt(unsolvedYears.size()));
+            selectedDay = 1;
+        } else {
+            // Priority 2: Randomly select a year and find lowest-numbered unsolved day
+            selectedYear = availableYears.get(RANDOM.nextInt(availableYears.size()));
+            selectedDay = findLowestUnsolvedDay(configContent, selectedYear, solvedByYear.get(selectedYear));
+
+            if (selectedDay == -1) {
+                // All days in this year are solved, try to find another year
+                selectedDay = findLowestUnsolvedDayAcrossYears(configContent, availableYears, solvedByYear);
+                if (selectedDay == -1) {
+                    return null;
+                }
+            }
+        }
+
+        return new PuzzleSelection(selectedYear, selectedDay);
     }
 
     /**
@@ -101,13 +132,13 @@ public class PuzzleRandomizer {
     }
 
     /**
-     * Builds a set of all solved puzzles from the solutions database.
+     * Builds a map of solved puzzles organised by year.
      * @param solutionsJson JSON string containing solutions database
-     * @return Set of PuzzleKey objects representing solved puzzles
+     * @return Map where key is year and value is Set of solved days for that year
      */
     @NotNull
-    private static Set<PuzzleKey> buildSolvedSet(@NotNull String solutionsJson) {
-        Set<PuzzleKey> solved = new HashSet<>();
+    private static Map<Integer, Set<Integer>> buildSolvedSetByYear(@NotNull String solutionsJson) {
+        Map<Integer, Set<Integer>> solvedByYear = new HashMap<>();
 
         // Pattern to match year sections: "2015": [ ... ]
         Pattern yearPattern = Pattern.compile("\"(\\d{4})\"\\s*:\\s*\\[");
@@ -125,15 +156,18 @@ public class PuzzleRandomizer {
             if (yearEnd == -1) continue;
 
             String yearSection = solutionsJson.substring(yearStart, yearEnd);
-            Matcher dayMatcher = dayPattern.matcher(yearSection);
+            Set<Integer> solvedDays = new HashSet<>();
 
+            Matcher dayMatcher = dayPattern.matcher(yearSection);
             while (dayMatcher.find()) {
                 int day = Integer.parseInt(dayMatcher.group(1));
-                solved.add(new PuzzleKey(year, day));
+                solvedDays.add(day);
             }
+
+            solvedByYear.put(year, solvedDays);
         }
 
-        return solved;
+        return solvedByYear;
     }
 
     /**
@@ -163,67 +197,106 @@ public class PuzzleRandomizer {
     }
 
     /**
-     * Builds a list of all unsolved puzzles from the configuration.
+     * Extracts all available years from the configuration.
      * @param configJson JSON string containing puzzle configuration
-     * @param solved Set of already solved puzzles
-     * @return List of PuzzleSelection objects representing unsolved puzzles
+     * @return List of all available years from config
      */
     @NotNull
-    private static List<PuzzleSelection> buildUnsolvedList(@NotNull String configJson, @NotNull Set<PuzzleKey> solved) {
-        List<PuzzleSelection> unsolved = new ArrayList<>();
-        LocalDate currentDate = LocalDate.now();
-
-        // Pattern to match year and totalDays: "2015": { ... "totalDays": 25 ... }
+    private static List<Integer> extractAvailableYears(@NotNull String configJson) {
+        List<Integer> years = new ArrayList<>();
         Pattern yearPattern = Pattern.compile("\"(\\d{4})\"\\s*:\\s*\\{");
-        Pattern totalDaysPattern = Pattern.compile("\"totalDays\"\\s*:\\s*(\\d+)");
-
         Matcher yearMatcher = yearPattern.matcher(configJson);
 
         while (yearMatcher.find()) {
             int year = Integer.parseInt(yearMatcher.group(1));
-            int yearStart = yearMatcher.end();
+            years.add(year);
+        }
 
-            // Find the end of this year's object
-            int yearEnd = findMatchingBrace(configJson, yearStart - 1);
-            if (yearEnd == -1) continue;
+        return years;
+    }
 
-            String yearSection = configJson.substring(yearStart, yearEnd);
-            Matcher totalDaysMatcher = totalDaysPattern.matcher(yearSection);
+    /**
+     * Finds the lowest-numbered unsolved day within a specific year.
+     * @param configJson JSON string containing puzzle configuration
+     * @param year the year to search in
+     * @param solvedDays Set of days already solved for this year
+     * @return lowest unsolved day number, or -1 if all days are solved or no valid days exist
+     */
+    private static int findLowestUnsolvedDay(@NotNull String configJson, int year, @Nullable Set<Integer> solvedDays) {
+        LocalDate currentDate = LocalDate.now();
 
-            if (totalDaysMatcher.find()) {
-                int totalDays = Integer.parseInt(totalDaysMatcher.group(1));
+        // Find total days for the given year
+        Pattern yearPattern = Pattern.compile("\"" + year + "\"\\s*:\\s*\\{");
+        Pattern totalDaysPattern = Pattern.compile("\"totalDays\"\\s*:\\s*(\\d+)");
 
-                for (int day = 1; day <= totalDays; day++) {
-                    LocalDate puzzleDate = LocalDate.of(year, 12, day);
+        Matcher yearMatcher = yearPattern.matcher(configJson);
+        if (!yearMatcher.find()) {
+            return -1;
+        }
 
-                    // Skip future puzzles
-                    if (puzzleDate.isAfter(currentDate)) {
-                        continue;
-                    }
+        int yearStart = yearMatcher.end();
+        int yearEnd = findMatchingBrace(configJson, yearStart - 1);
+        if (yearEnd == -1) {
+            return -1;
+        }
 
-                    PuzzleKey key = new PuzzleKey(year, day);
-                    if (!solved.contains(key)) {
-                        // Special handling for Day 25: only allow if all previous days are solved
-                        if (day == 25) {
-                            boolean allPreviousDaysSolved = true;
-                            for (int prevDay = 1; prevDay < 25; prevDay++) {
-                                if (!solved.contains(new PuzzleKey(year, prevDay))) {
-                                    allPreviousDaysSolved = false;
-                                    break;
-                                }
-                            }
-                            if (allPreviousDaysSolved) {
-                                unsolved.add(new PuzzleSelection(year, day));
-                            }
-                        } else {
-                            unsolved.add(new PuzzleSelection(year, day));
+        String yearSection = configJson.substring(yearStart, yearEnd);
+        Matcher totalDaysMatcher = totalDaysPattern.matcher(yearSection);
+
+        if (!totalDaysMatcher.find()) {
+            return -1;
+        }
+
+        int totalDays = Integer.parseInt(totalDaysMatcher.group(1));
+        Set<Integer> solved = solvedDays != null ? solvedDays : new HashSet<>();
+
+        for (int day = 1; day <= totalDays; day++) {
+            LocalDate puzzleDate = LocalDate.of(year, 12, day);
+
+            // Skip future puzzles
+            if (puzzleDate.isAfter(currentDate)) {
+                continue;
+            }
+
+            if (!solved.contains(day)) {
+                // Special handling for Day 25: only allow if all previous days are solved
+                if (day == 25) {
+                    boolean allPreviousDaysSolved = true;
+                    for (int prevDay = 1; prevDay < 25; prevDay++) {
+                        if (!solved.contains(prevDay)) {
+                            allPreviousDaysSolved = false;
+                            break;
                         }
                     }
+                    if (allPreviousDaysSolved) {
+                        return day;
+                    }
+                } else {
+                    return day;
                 }
             }
         }
 
-        return unsolved;
+        return -1;
+    }
+
+    /**
+     * Finds the lowest-numbered unsolved day across any available year.
+     * Used as a fallback when a randomly selected year has no unsolved days.
+     * @param configJson JSON string containing puzzle configuration
+     * @param availableYears List of all available years
+     * @param solvedByYear Map of solved puzzles organised by year
+     * @return lowest unsolved day number found, or -1 if no unsolved puzzles exist
+     */
+    private static int findLowestUnsolvedDayAcrossYears(@NotNull String configJson, @NotNull List<Integer> availableYears,
+                                                        @NotNull Map<Integer, Set<Integer>> solvedByYear) {
+        for (Integer year : availableYears) {
+            int day = findLowestUnsolvedDay(configJson, year, solvedByYear.get(year));
+            if (day != -1) {
+                return day;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -252,31 +325,6 @@ public class PuzzleRandomizer {
         return -1;
     }
 
-    /**
-     * Internal class representing a puzzle key for solved set lookup.
-     */
-    private static class PuzzleKey {
-        final int year;
-        final int day;
-
-        PuzzleKey(int year, int day) {
-            this.year = year;
-            this.day = day;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            PuzzleKey that = (PuzzleKey) o;
-            return year == that.year && day == that.day;
-        }
-
-        @Override
-        public int hashCode() {
-            return 31 * year + day;
-        }
-    }
 
     /**
      * Class representing a selected puzzle with year and day.
