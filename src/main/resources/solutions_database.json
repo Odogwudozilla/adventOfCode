@@ -79,7 +79,18 @@
         }
       }
     ],
-    "2023": [
+    "2022": [
+      {
+        "year": 2022,
+        "day": 1,
+        "title": "Calorie Counting",
+        "link": "https://adventofcode.com/2022/day/1",
+        "solutions": {
+          "partOne": "67016",
+          "partTwo": "200116"
+        }
+      }
+    ],
     "2023": [
       {
         "year": 2023,
