@@ -247,15 +247,17 @@ When adding new solutions:
 
 Explore solutions organized by year:
 
-- **[2015](src/main/java/odogwudozilla/year2015/README.md)** - The inaugural Advent of Code year
-- **[2017](src/main/java/odogwudozilla/year2017/README.md)** - Assembly instructions and circular lists
-- **[2018](src/main/java/odogwudozilla/year2018/README.md)** - Fabric cutting and sleigh systems
-- **[2020](src/main/java/odogwudozilla/year2020/README.md)** - Tropical vacation themed puzzles
-- **[2021](src/main/java/odogwudozilla/year2021/README.md)** - Submarine adventure with sonar analysis
-- **[2022](src/main/java/odogwudozilla/year2022/README.md)** - Elf expedition with calorie counting
-- **[2023](src/main/java/odogwudozilla/year2023/README.md)** - Garden plots and infinite grids
-- **[2024](src/main/java/odogwudozilla/year2024/README.md)** - Computer systems and algorithms
-- **[2025](src/main/java/odogwudozilla/year2025/README.md)** - Journey through North Pole headquarters (12 days)
+- **[2015 Solutions](src/main/java/odogwudozilla/year2015/README.md)** - The inaugural Advent of Code year
+- **[2016 Solutions](src/main/java/odogwudozilla/year2016/README.md)** - Chronal Calibration and Keypad Security
+- **[2017 Solutions](src/main/java/odogwudozilla/year2017/README.md)** - Assembly instructions and circular lists
+- **[2018 Solutions](src/main/java/odogwudozilla/year2018/README.md)** - Fabric cutting and sleigh systems
+- **[2019 Solutions](src/main/java/odogwudozilla/year2019/README.md)** - Intcode computer and space image format
+- **[2020 Solutions](src/main/java/odogwudozilla/year2020/README.md)** - Tropical vacation themed puzzles
+- **[2021 Solutions](src/main/java/odogwudozilla/year2021/README.md)** - Submarine adventure with sonar analysis
+- **[2022 Solutions](src/main/java/odogwudozilla/year2022/README.md)** - Elf expedition with calorie counting
+- **[2023 Solutions](src/main/java/odogwudozilla/year2023/README.md)** - Garden plots and infinite grids
+- **[2024 Solutions](src/main/java/odogwudozilla/year2024/README.md)** - Computer systems and algorithms
+- **[2025 Solutions](src/main/java/odogwudozilla/year2025/README.md)** - Journey through North Pole headquarters (12 days)
 
 ## 🔗 Useful Links
 
@@ -270,4 +272,3 @@ This project is for educational purposes. Advent of Code puzzles are created by 
 ---
 
 **Happy Coding! 🎄✨**
-

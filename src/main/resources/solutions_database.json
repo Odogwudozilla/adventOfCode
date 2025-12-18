@@ -32,6 +32,18 @@
         }
       }
     ],
+    "2016": [
+      {
+        "year": 2016,
+        "day": 1,
+        "title": "No Time for a Taxicab",
+        "link": "https://adventofcode.com/2016/day/1",
+        "solutions": {
+          "partOne": "262",
+          "partTwo": "131"
+        }
+      }
+    ],
     "2017": [
       {
         "year": 2017,
