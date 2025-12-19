@@ -59,6 +59,16 @@
     "2018": [
       {
         "year": 2018,
+        "day": 1,
+        "title": "Chronal Calibration",
+        "link": "https://adventofcode.com/2018/day/1",
+        "solutions": {
+          "partOne": "437",
+          "partTwo": "655"
+        }
+      },
+      {
+        "year": 2018,
         "day": 3,
         "title": "No Matter How You Slice It",
         "link": "https://adventofcode.com/2018/day/3",
