@@ -93,6 +93,16 @@
     "2020": [
       {
         "year": 2020,
+        "day": 1,
+        "title": "Report Repair",
+        "link": "https://adventofcode.com/2020/day/1",
+        "solutions": {
+          "partOne": "444019",
+          "partTwo": "29212176"
+        }
+      },
+      {
+        "year": 2020,
         "day": 25,
         "title": "Combo Breaker",
         "link": "https://adventofcode.com/2020/day/25",
