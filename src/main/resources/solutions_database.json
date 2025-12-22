@@ -131,6 +131,16 @@
           "partOne": "1766",
           "partTwo": "1797"
         }
+      },
+      {
+        "year": 2021,
+        "day": 2,
+        "title": "Dive!",
+        "link": "https://adventofcode.com/2021/day/2",
+        "solutions": {
+          "partOne": "1698735",
+          "partTwo": "1594785890"
+        }
       }
     ],
     "2022": [

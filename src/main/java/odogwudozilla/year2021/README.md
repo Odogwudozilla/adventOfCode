@@ -21,3 +21,13 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 2: Dive!
+**Link**: [https://adventofcode.com/2021/day/2](https://adventofcode.com/2021/day/2)
+
+**Description**: Follow a series of movement commands to calculate the submarine's final horizontal position and depth. Part 1 multiplies these for the answer. Part 2 introduces 'aim' for more complex movement.
+
+**Source Code**: [DiveAOC2021Day2.java](day2/)
+
+**Algorithm/Approach**: Iterate through commands, updating horizontal and depth. For Part 2, track aim and update depth accordingly when moving forward.
+
+---
