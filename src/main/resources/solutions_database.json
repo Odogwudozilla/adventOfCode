@@ -86,6 +86,16 @@
           "partOne": "106501",
           "partTwo": "632"
         }
+      },
+      {
+        "year": 2018,
+        "day": 4,
+        "title": "Repose Record",
+        "link": "https://adventofcode.com/2018/day/4",
+        "solutions": {
+          "partOne": "72925",
+          "partTwo": "49137"
+        }
       }
     ],
     "2019": [
