@@ -19,6 +19,15 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 2: Password Philosophy
+**Link**: [https://adventofcode.com/2020/day/2](https://adventofcode.com/2020/day/2)
+
+**Description**: Validate passwords against two different policies. Part 1 checks if a letter appears within a specified range. Part 2 checks if a letter appears in exactly one of two specified positions.
+
+**Source Code**: [PasswordPhilosophyAOC2020Day2.java](day2/)
+
+---
+
 ### Day 25: Combo Breaker
 **Link**: [https://adventofcode.com/2020/day/25](https://adventofcode.com/2020/day/25)
 

@@ -123,6 +123,16 @@
       },
       {
         "year": 2020,
+        "day": 2,
+        "title": "Password Philosophy",
+        "link": "https://adventofcode.com/2020/day/2",
+        "solutions": {
+          "partOne": "474",
+          "partTwo": "745"
+        }
+      },
+      {
+        "year": 2020,
         "day": 25,
         "title": "Combo Breaker",
         "link": "https://adventofcode.com/2020/day/25",
