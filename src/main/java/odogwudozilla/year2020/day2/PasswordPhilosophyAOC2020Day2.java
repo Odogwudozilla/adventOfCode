@@ -27,6 +27,19 @@ public class PasswordPhilosophyAOC2020Day2 {
      */
     public static void main(String[] args) throws Exception {
         List<String> lines = Files.readAllLines(Paths.get(INPUT_PATH));
+        int validCount = solvePartOne(lines);
+        System.out.println("main - Part 1 valid password count: " + validCount);
+
+        int validCountPart2 = solvePartTwo(lines);
+        System.out.println("main - Part 2 valid password count: " + validCountPart2);
+    }
+
+    /**
+     * Counts valid passwords according to the first policy (Part 1).
+     * @param lines List of password entries
+     * @return Number of valid passwords
+     */
+    private static int solvePartOne(List<String> lines) {
         int validCount = 0;
         for (String line : lines) {
             Matcher m = POLICY_PATTERN.matcher(line);
@@ -41,8 +54,15 @@ public class PasswordPhilosophyAOC2020Day2 {
                 }
             }
         }
-        System.out.println("main - Part 1 valid password count: " + validCount);
+        return validCount;
+    }
 
+    /**
+     * Counts valid passwords according to the second policy (Part 2).
+     * @param lines List of password entries
+     * @return Number of valid passwords
+     */
+    private static int solvePartTwo(List<String> lines) {
         int validCountPart2 = 0;
         for (String line : lines) {
             Matcher m = POLICY_PATTERN.matcher(line);
@@ -58,6 +78,6 @@ public class PasswordPhilosophyAOC2020Day2 {
                 }
             }
         }
-        System.out.println("main - Part 2 valid password count: " + validCountPart2);
+        return validCountPart2;
     }
 }

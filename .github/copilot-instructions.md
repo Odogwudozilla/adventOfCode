@@ -95,7 +95,9 @@ Contains a public static void main(String[] args) method
 
 Reads the input from the .txt file in the resources folder
 
-Solves Part 1 of the puzzle
+Solves Part 1 of the puzzle using a method named solvePartOne
+
+Solves Part 2 of the puzzle (if available) using a method named solvePartTwo
 
 Includes clear comments and follows standard Java conventions
 
@@ -187,6 +189,12 @@ Use the aoc_challenge_config.json file to track available years and days. This f
 When selecting random puzzles, cross-reference aoc_challenge_config.json (available puzzles) with solutions_database.json (solved puzzles) to find unsolved puzzles. Never select puzzles from future dates.
 
 Day 25 Special Handling: Day 25 is the final day and its Part 2 requires all 49 stars from Days 1-24 to be completed first. The PuzzleRandomizer will not select Day 25 unless all previous days (1-24) for that year have been solved. If Day 25 Part 1 is completed but Part 2 is locked, skip Part 2 and proceed directly to updating the database and committing.
+
+File/Folder Creation Guidance:
+
+When creating solution classes and resource files, always use the 'src' directory as the base (e.g., src/main/java/odogwudozilla/<year>/day<day>/ for classes and src/main/resources/<year>/day<day>/ for resources).
+
+Check the existing file structure before creating new files or folders to ensure consistency and avoid duplication.
 
 Running the Application:
 

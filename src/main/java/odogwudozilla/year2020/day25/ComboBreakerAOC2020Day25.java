@@ -30,7 +30,7 @@ public class ComboBreakerAOC2020Day25 {
             System.out.println("Door Public Key: " + doorPublicKey);
 
             // Part 1: Find the encryption key
-            long encryptionKey = solvePart1(cardPublicKey, doorPublicKey);
+            String encryptionKey = solvePartOne(lines);
             System.out.println("\nPart 1 - Encryption Key: " + encryptionKey);
 
         } catch (IOException e) {
@@ -40,19 +40,15 @@ public class ComboBreakerAOC2020Day25 {
 
     /**
      * Solves Part 1 by finding the loop size for one device and using it to calculate the encryption key.
-     * @param cardPublicKey the card's public key
-     * @param doorPublicKey the door's public key
-     * @return the encryption key
+     * @param lines List of input lines
+     * @return the encryption key as String
      */
-    private static long solvePart1(long cardPublicKey, long doorPublicKey) {
-        // Find the card's loop size by brute force
+    public static String solvePartOne(List<String> lines) {
+        long cardPublicKey = Long.parseLong(lines.get(0).trim());
+        long doorPublicKey = Long.parseLong(lines.get(1).trim());
         int cardLoopSize = findLoopSize(cardPublicKey);
-        System.out.println("Card Loop Size: " + cardLoopSize);
-
-        // Calculate the encryption key using the card's loop size and door's public key
         long encryptionKey = transform(doorPublicKey, cardLoopSize);
-
-        return encryptionKey;
+        return String.valueOf(encryptionKey);
     }
 
     /**
@@ -88,4 +84,3 @@ public class ComboBreakerAOC2020Day25 {
         return value;
     }
 }
-

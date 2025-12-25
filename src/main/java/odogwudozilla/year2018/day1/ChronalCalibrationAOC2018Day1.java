@@ -30,30 +30,41 @@ public class ChronalCalibrationAOC2018Day1 {
         // main - Read input and solve Part 1 and Part 2
         try {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_PATH));
-            int frequency = 0;
-            for (String line : lines) {
-                frequency += Integer.parseInt(line.trim());
-            }
-            System.out.println("main - Resulting frequency after all changes: " + frequency);
-
-            // Part 2: Find the first frequency reached twice
-            Set<Integer> seen = new HashSet<>();
-            seen.add(0);
-            frequency = 0;
-            boolean found = false;
-            while (!found) {
-                for (String line : lines) {
-                    frequency += Integer.parseInt(line.trim());
-                    if (seen.contains(frequency)) {
-                        System.out.println("main - First frequency reached twice: " + frequency);
-                        found = true;
-                        break;
-                    }
-                    seen.add(frequency);
-                }
-            }
+            int part1Result = solvePartOne(lines);
+            int part2Result = solvePartTwo(lines);
+            System.out.println("main - Resulting frequency after all changes: " + part1Result);
+            System.out.println("main - First frequency reached twice: " + part2Result);
         } catch (IOException e) {
             System.err.println("main - Error reading input file: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(List<String> lines) {
+        int frequency = 0;
+        for (String line : lines) {
+            frequency += Integer.parseInt(line.trim());
+        }
+        return frequency;
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static int solvePartTwo(List<String> lines) {
+        Set<Integer> seen = new HashSet<>();
+        seen.add(0);
+        int frequency = 0;
+        while (true) {
+            for (String line : lines) {
+                frequency += Integer.parseInt(line.trim());
+                if (seen.contains(frequency)) {
+                    return frequency;
+                }
+                seen.add(frequency);
+            }
         }
     }
 }

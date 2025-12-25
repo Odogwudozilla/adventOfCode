@@ -25,11 +25,11 @@ public class TrashCompactorAOC2025Day6 {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_FILE));
 
             // Part 1: Calculate grand total (left-to-right reading)
-            long grandTotal = calculateGrandTotal(lines);
+            long grandTotal = solvePartOne(lines);
             System.out.println("Part 1 - Grand Total: " + grandTotal);
 
             // Part 2: Calculate grand total (right-to-left reading, column-by-column)
-            long grandTotalPart2 = calculateGrandTotalPart2(lines);
+            long grandTotalPart2 = solvePartTwo(lines);
             System.out.println("Part 2 - Grand Total: " + grandTotalPart2);
 
         } catch (IOException e) {
@@ -303,5 +303,22 @@ public class TrashCompactorAOC2025Day6 {
 
         return numbers;
     }
-}
 
+    /**
+     * Solve Part 1: Calculate grand total (left-to-right reading)
+     * @param lines the input lines containing the math worksheet
+     * @return the sum of all problem answers
+     */
+    private static long solvePartOne(List<String> lines) {
+        return calculateGrandTotal(lines);
+    }
+
+    /**
+     * Solve Part 2: Calculate grand total (right-to-left reading, column-by-column)
+     * @param lines the input lines containing the math worksheet
+     * @return the sum of all problem answers
+     */
+    private static long solvePartTwo(List<String> lines) {
+        return calculateGrandTotalPart2(lines);
+    }
+}

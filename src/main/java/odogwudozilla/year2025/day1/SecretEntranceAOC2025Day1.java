@@ -24,10 +24,10 @@ public class SecretEntranceAOC2025Day1 {
     public static void main(String[] args) {
         try {
             List<String> rotations = readInputFile();
-            int passwordPart1 = calculatePassword(rotations);
+            int passwordPart1 = solvePartOne(rotations);
             System.out.println("Part 1 - The password is: " + passwordPart1);
 
-            int passwordPart2 = calculatePasswordWithClicks(rotations);
+            int passwordPart2 = solvePartTwo(rotations);
             System.out.println("Part 2 - The password (method 0x434C49434B) is: " + passwordPart2);
         } catch (IOException e) {
             System.err.println("Error reading input file: " + e.getMessage());
@@ -49,7 +49,7 @@ public class SecretEntranceAOC2025Day1 {
      * @param rotations list of rotation instructions (e.g., "L68", "R48")
      * @return the number of times the dial points at 0
      */
-    private static int calculatePassword(List<String> rotations) {
+    private static int solvePartOne(List<String> rotations) {
         int currentPosition = STARTING_POSITION;
         int zeroCount = 0;
 
@@ -104,20 +104,26 @@ public class SecretEntranceAOC2025Day1 {
     private static int calculatePasswordWithClicks(List<String> rotations) {
         int currentPosition = STARTING_POSITION;
         int zeroCount = 0;
-
         for (String rotation : rotations) {
             if (rotation.trim().isEmpty()) {
                 continue;
             }
-
             char direction = rotation.charAt(0);
             int distance = Integer.parseInt(rotation.substring(1));
-
             zeroCount += countZerosDuringRotation(currentPosition, direction, distance);
             currentPosition = performRotation(currentPosition, direction, distance);
         }
-
         return zeroCount;
+    }
+
+    /**
+     * Calculates the password by counting how many times the dial points at 0 during any click.
+     * This includes both passing through 0 during rotations and ending at 0.
+     * @param rotations list of rotation instructions (e.g., "L68", "R48")
+     * @return the total number of times the dial points at 0
+     */
+    private static int solvePartTwo(List<String> rotations) {
+        return calculatePasswordWithClicks(rotations);
     }
 
     /**
@@ -154,4 +160,3 @@ public class SecretEntranceAOC2025Day1 {
         return count;
     }
 }
-

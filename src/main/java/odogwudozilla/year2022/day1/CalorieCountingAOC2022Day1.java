@@ -29,11 +29,11 @@ public class CalorieCountingAOC2022Day1 {
             List<Integer> elfCalories = calculateElfCalories(lines);
 
             // Part 1: Find the maximum calories carried by any single Elf
-            int maxCalories = solvePart1(elfCalories);
+            int maxCalories = solvePartOne(elfCalories);
             System.out.println("Part 1 - Maximum calories carried by one Elf: " + maxCalories);
 
             // Part 2: Find sum of top three Elves' calories
-            int topThreeSum = solvePart2(elfCalories);
+            int topThreeSum = solvePartTwo(elfCalories);
             System.out.println("Part 2 - Sum of top three Elves' calories: " + topThreeSum);
 
         } catch (IOException e) {
@@ -75,7 +75,7 @@ public class CalorieCountingAOC2022Day1 {
      * @param elfCalories list of total calories per Elf
      * @return the maximum calories
      */
-    private static int solvePart1(List<Integer> elfCalories) {
+    private static int solvePartOne(List<Integer> elfCalories) {
         return Collections.max(elfCalories);
     }
 
@@ -84,7 +84,7 @@ public class CalorieCountingAOC2022Day1 {
      * @param elfCalories list of total calories per Elf
      * @return the sum of the top three values
      */
-    private static int solvePart2(List<Integer> elfCalories) {
+    private static int solvePartTwo(List<Integer> elfCalories) {
         // Sort in descending order
         List<Integer> sortedCalories = new ArrayList<>(elfCalories);
         sortedCalories.sort(Collections.reverseOrder());
@@ -99,4 +99,3 @@ public class CalorieCountingAOC2022Day1 {
         return topThreeSum;
     }
 }
-

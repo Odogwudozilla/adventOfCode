@@ -27,18 +27,8 @@ public class TheTyrannyOfTheRocketEquationAOC2019Day1 {
         String methodName = "main";
         try {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_PATH));
-            int totalFuelPart1 = 0;
-            int totalFuelPart2 = 0;
-            for (String line : lines) {
-                if (line.trim().isEmpty()) {
-                    continue;
-                }
-                int mass = Integer.parseInt(line.trim());
-                int fuelPart1 = calculateFuel(mass);
-                int fuelPart2 = calculateFuelWithFuel(mass);
-                totalFuelPart1 += fuelPart1;
-                totalFuelPart2 += fuelPart2;
-            }
+            int totalFuelPart1 = solvePartOne(lines);
+            int totalFuelPart2 = solvePartTwo(lines);
             System.out.println("Part 1: Total fuel required = " + totalFuelPart1);
             System.out.println("Part 2: Total fuel required (including fuel for fuel) = " + totalFuelPart2);
             // main - Successfully calculated total fuel required for Part 1 and Part 2
@@ -48,6 +38,40 @@ public class TheTyrannyOfTheRocketEquationAOC2019Day1 {
         } catch (NumberFormatException e) {
             System.err.println(methodName + " - Invalid number in input: " + e.getMessage());
         }
+    }
+
+    /**
+     * Calculates the total fuel required for Part 1.
+     * @param lines List of module masses
+     * @return Total fuel required
+     */
+    private static int solvePartOne(List<String> lines) {
+        int totalFuel = 0;
+        for (String line : lines) {
+            if (line.trim().isEmpty()) {
+                continue;
+            }
+            int mass = Integer.parseInt(line.trim());
+            totalFuel += calculateFuel(mass);
+        }
+        return totalFuel;
+    }
+
+    /**
+     * Calculates the total fuel required for Part 2 (including fuel for fuel).
+     * @param lines List of module masses
+     * @return Total fuel required
+     */
+    private static int solvePartTwo(List<String> lines) {
+        int totalFuel = 0;
+        for (String line : lines) {
+            if (line.trim().isEmpty()) {
+                continue;
+            }
+            int mass = Integer.parseInt(line.trim());
+            totalFuel += calculateFuelWithFuel(mass);
+        }
+        return totalFuel;
     }
 
     /**

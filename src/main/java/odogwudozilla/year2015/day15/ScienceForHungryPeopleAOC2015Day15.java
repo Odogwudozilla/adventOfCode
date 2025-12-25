@@ -45,15 +45,29 @@ public class ScienceForHungryPeopleAOC2015Day15 {
             List<String> lines = Files.readAllLines(Paths.get(PUZZLE_INPUT_PATH));
             List<Ingredient> ingredients = parseIngredients(lines);
 
-            long maxScore = findMaxScore(ingredients, -1);
+            long maxScore = solvePartOne(ingredients);
             System.out.println("Part 1 - Highest-scoring cookie: " + maxScore);
 
-            long maxScoreWith500Calories = findMaxScore(ingredients, 500);
+            long maxScoreWith500Calories = solvePartTwo(ingredients);
             System.out.println("Part 2 - Highest-scoring cookie with 500 calories: " + maxScoreWith500Calories);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static long solvePartOne(List<Ingredient> ingredients) {
+        return findMaxScore(ingredients, -1);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static long solvePartTwo(List<Ingredient> ingredients) {
+        return findMaxScore(ingredients, 500);
     }
 
     private static List<Ingredient> parseIngredients(List<String> lines) {

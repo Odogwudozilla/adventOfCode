@@ -147,18 +147,11 @@ public class PlaygroundAOC2025Day8 {
         try {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_FILE));
             List<JunctionBox> junctionBoxes = parseJunctionBoxes(lines);
-
-            System.out.println("Loaded " + junctionBoxes.size() + " junction boxes");
-
-            // Part 1: Make 1000 connections and find product of three largest circuits
-            long part1Result = solvePart1(junctionBoxes);
+            long part1Result = solvePartOne(junctionBoxes);
             System.out.println("Part 1 - Product of three largest circuits: " + part1Result);
 
-            System.out.println();
-
-            // Part 2: Continue until all boxes form one circuit
-            long part2Result = solvePart2(junctionBoxes);
-            System.out.println("Part 2 - Product of X coordinates of final connection: " + part2Result);
+            long part2Result = solvePartTwo(junctionBoxes);
+            System.out.println("Part 2 - Product of X coordinates of last connection: " + part2Result);
 
         } catch (IOException e) {
             System.err.println("Error reading input file: " + e.getMessage());
@@ -244,7 +237,7 @@ public class PlaygroundAOC2025Day8 {
     }
 
     /**
-     * Solves Part 2: Continues connecting until all boxes form one circuit.
+     * Solves Part 2: Continues connecting until all boxes form a single circuit.
      * Finds the last connection that unifies everything into a single circuit.
      * @param junctionBoxes the list of junction boxes
      * @return the product of the X coordinates of the final two junction boxes connected
@@ -307,5 +300,22 @@ public class PlaygroundAOC2025Day8 {
         long product = (long) box1.x * box2.x;
         return product;
     }
-}
 
+    /**
+     * Solve Part 1: After making 1000 connections, find the product of the sizes of the three largest circuits.
+     * @param junctionBoxes list of junction boxes
+     * @return the product of the sizes of the three largest circuits
+     */
+    private static long solvePartOne(List<JunctionBox> junctionBoxes) {
+        return solvePart1(junctionBoxes);
+    }
+
+    /**
+     * Solve Part 2: Find the last connection that unifies all boxes and multiply their X coordinates.
+     * @param junctionBoxes list of junction boxes
+     * @return the product of X coordinates of the last connection
+     */
+    private static long solvePartTwo(List<JunctionBox> junctionBoxes) {
+        return solvePart2(junctionBoxes);
+    }
+}

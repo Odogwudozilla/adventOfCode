@@ -30,8 +30,6 @@ public class NoMatterHowYouSliceItAOC2018Day3 {
 
     public static void main(String[] args) throws Exception {
         List<String> lines = Files.readAllLines(Paths.get(PUZZLE_INPUT_PATH));
-
-        // Parse claims
         Map<Integer, Claim> claims = new HashMap<>();
         for (String line : lines) {
             Claim claim = parseClaim(line);
@@ -39,10 +37,17 @@ public class NoMatterHowYouSliceItAOC2018Day3 {
                 claims.put(claim.id, claim);
             }
         }
+        long overlapCount = solvePartOne(claims);
+        System.out.println("Part 1 - Square inches with two or more claims: " + overlapCount);
+        int nonOverlappingClaimId = solvePartTwo(claims);
+        System.out.println("Part 2 - Claim with no overlaps: #" + nonOverlappingClaimId);
+    }
 
-        // Track which square inches are covered by how many claims
+    /**
+     * Standardised method for Part 1.
+     */
+    private static long solvePartOne(Map<Integer, Claim> claims) {
         Map<String, Integer> fabricCoverage = new HashMap<>();
-
         for (Claim claim : claims.values()) {
             for (int x = claim.left; x < claim.left + claim.width; x++) {
                 for (int y = claim.top; y < claim.top + claim.height; y++) {
@@ -51,23 +56,28 @@ public class NoMatterHowYouSliceItAOC2018Day3 {
                 }
             }
         }
+        return fabricCoverage.values().stream().filter(count -> count >= 2).count();
+    }
 
-        // Part 1: Count square inches covered by two or more claims
-        long overlapCount = fabricCoverage.values().stream()
-            .filter(count -> count >= 2)
-            .count();
-
-        System.out.println("Part 1 - Square inches with two or more claims: " + overlapCount);
-
-        // Part 2: Find the claim that doesn't overlap with any other claim
+    /**
+     * Standardised method for Part 2.
+     */
+    private static int solvePartTwo(Map<Integer, Claim> claims) {
+        Map<String, Integer> fabricCoverage = new HashMap<>();
+        for (Claim claim : claims.values()) {
+            for (int x = claim.left; x < claim.left + claim.width; x++) {
+                for (int y = claim.top; y < claim.top + claim.height; y++) {
+                    String coordinate = x + "," + y;
+                    fabricCoverage.put(coordinate, fabricCoverage.getOrDefault(coordinate, 0) + 1);
+                }
+            }
+        }
         Set<Integer> overlappingClaimIds = new HashSet<>();
         for (Map.Entry<String, Integer> entry : fabricCoverage.entrySet()) {
             if (entry.getValue() >= 2) {
                 String[] coords = entry.getKey().split(",");
                 int x = Integer.parseInt(coords[0]);
                 int y = Integer.parseInt(coords[1]);
-
-                // Find all claims that cover this square inch
                 for (Claim claim : claims.values()) {
                     if (claim.covers(x, y)) {
                         overlappingClaimIds.add(claim.id);
@@ -75,14 +85,12 @@ public class NoMatterHowYouSliceItAOC2018Day3 {
                 }
             }
         }
-
-        // Find the claim that's not in the overlapping set
         for (Claim claim : claims.values()) {
             if (!overlappingClaimIds.contains(claim.id)) {
-                System.out.println("Part 2 - Claim with no overlaps: #" + claim.id);
-                break;
+                return claim.id;
             }
         }
+        return -1;
     }
 
     private static Claim parseClaim(String line) {
@@ -118,4 +126,3 @@ public class NoMatterHowYouSliceItAOC2018Day3 {
         }
     }
 }
-

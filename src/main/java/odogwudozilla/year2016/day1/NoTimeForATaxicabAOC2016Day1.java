@@ -34,41 +34,10 @@ public class NoTimeForATaxicabAOC2016Day1 {
         try {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_PATH));
             String[] instructions = lines.get(0).split(", ");
-            int x = 0;
-            int y = 0;
-            int direction = NORTH;
-            Set<String> visited = new HashSet<>();
-            visited.add("0,0");
-            boolean foundTwice = false;
-            int part2Distance = -1;
-            outer:
-            for (String instr : instructions) {
-                char turn = instr.charAt(0);
-                int blocks = Integer.parseInt(instr.substring(1));
-                direction = turnDirection(direction, turn);
-                for (int i = 0; i < blocks; i++) {
-                    switch (direction) {
-                        case NORTH: y++; break;
-                        case EAST:  x++; break;
-                        case SOUTH: y--; break;
-                        case WEST:  x--; break;
-                        default: break;
-                    }
-                    String coord = x + "," + y;
-                    if (!foundTwice) {
-                        if (visited.contains(coord)) {
-                            part2Distance = Math.abs(x) + Math.abs(y);
-                            foundTwice = true;
-                            // main - First location visited twice found
-                        } else {
-                            visited.add(coord);
-                        }
-                    }
-                }
-            }
-            int distance = Math.abs(x) + Math.abs(y);
-            System.out.println("main - Easter Bunny HQ is " + distance + " blocks away.");
-            if (foundTwice) {
+            int part1Distance = solvePartOne(instructions);
+            int part2Distance = solvePartTwo(instructions);
+            System.out.println("main - Easter Bunny HQ is " + part1Distance + " blocks away.");
+            if (part2Distance != -1) {
                 System.out.println("main - First location visited twice is " + part2Distance + " blocks away.");
             } else {
                 System.out.println("main - No location visited twice.");
@@ -76,6 +45,62 @@ public class NoTimeForATaxicabAOC2016Day1 {
         } catch (IOException e) {
             System.err.println("main - Error reading input file: " + e.getMessage());
         }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(String[] instructions) {
+        int x = 0;
+        int y = 0;
+        int direction = NORTH;
+        for (String instr : instructions) {
+            char turn = instr.charAt(0);
+            int blocks = Integer.parseInt(instr.substring(1));
+            direction = turnDirection(direction, turn);
+            for (int i = 0; i < blocks; i++) {
+                switch (direction) {
+                    case NORTH: y++; break;
+                    case EAST:  x++; break;
+                    case SOUTH: y--; break;
+                    case WEST:  x--; break;
+                    default: break;
+                }
+            }
+        }
+        return Math.abs(x) + Math.abs(y);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static int solvePartTwo(String[] instructions) {
+        int x = 0;
+        int y = 0;
+        int direction = NORTH;
+        Set<String> visited = new HashSet<>();
+        visited.add("0,0");
+        for (String instr : instructions) {
+            char turn = instr.charAt(0);
+            int blocks = Integer.parseInt(instr.substring(1));
+            direction = turnDirection(direction, turn);
+            for (int i = 0; i < blocks; i++) {
+                switch (direction) {
+                    case NORTH: y++; break;
+                    case EAST:  x++; break;
+                    case SOUTH: y--; break;
+                    case WEST:  x--; break;
+                    default: break;
+                }
+                String coord = x + "," + y;
+                if (visited.contains(coord)) {
+                    return Math.abs(x) + Math.abs(y);
+                } else {
+                    visited.add(coord);
+                }
+            }
+        }
+        return -1;
     }
 
     /**

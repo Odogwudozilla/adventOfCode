@@ -62,10 +62,10 @@ public class FactoryAOC2025Day10 {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_FILE));
             List<Machine> machines = parseMachines(lines);
 
-            int totalPresses = solvePart1(machines);
+            int totalPresses = solvePartOne(machines);
             System.out.println("Part 1 - Minimum button presses required: " + totalPresses);
 
-            long totalPart2 = solvePart2(machines);
+            long totalPart2 = solvePartTwo(machines);
             System.out.println("Part 2 - Minimum button presses for joltage configuration: " + totalPart2);
 
         } catch (IOException e) {
@@ -79,7 +79,7 @@ public class FactoryAOC2025Day10 {
      * @param machines the list of machines to configure
      * @return the total minimum button presses required
      */
-    private static int solvePart1(List<Machine> machines) {
+    private static int solvePartOne(List<Machine> machines) {
         int totalPresses = 0;
 
         for (Machine machine : machines) {
@@ -95,7 +95,7 @@ public class FactoryAOC2025Day10 {
      * @param machines the list of machines to configure
      * @return the total minimum button presses required
      */
-    private static long solvePart2(List<Machine> machines) {
+    private static long solvePartTwo(List<Machine> machines) {
         long totalPresses = 0;
 
         for (Machine machine : machines) {

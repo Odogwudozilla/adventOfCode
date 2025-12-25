@@ -57,12 +57,10 @@ public class StepCounterAOC2023Day21 {
             char[][] grid = parseGrid(lines);
             Position start = findStartPosition(grid);
 
-            // Part 1: Finite grid, 64 steps
-            int reachablePlotsPart1 = countReachablePlots(grid, start, TARGET_STEPS_PART1);
+            int reachablePlotsPart1 = solvePartOne(grid, start);
             System.out.println("Part 1 - Garden plots reachable in exactly " + TARGET_STEPS_PART1 + " steps: " + reachablePlotsPart1);
 
-            // Part 2: Infinite repeating grid, 26501365 steps
-            long reachablePlotsPart2 = countReachablePlotsInfinite(grid, start, TARGET_STEPS_PART2);
+            long reachablePlotsPart2 = solvePartTwo(grid, start);
             System.out.println("Part 2 - Garden plots reachable in exactly " + TARGET_STEPS_PART2 + " steps: " + reachablePlotsPart2);
 
         } catch (IOException e) {
@@ -267,5 +265,18 @@ public class StepCounterAOC2023Day21 {
         // Return positions at the target step parity
         return (targetSteps % 2 == 0) ? evenSteps.size() : oddSteps.size();
     }
-}
 
+    /**
+     * Solve Part 1: Finite grid, 64 steps
+     */
+    private static int solvePartOne(char[][] grid, Position start) {
+        return countReachablePlots(grid, start, TARGET_STEPS_PART1);
+    }
+
+    /**
+     * Solve Part 2: Infinite repeating grid, 26501365 steps
+     */
+    private static long solvePartTwo(char[][] grid, Position start) {
+        return countReachablePlotsInfinite(grid, start, TARGET_STEPS_PART2);
+    }
+}

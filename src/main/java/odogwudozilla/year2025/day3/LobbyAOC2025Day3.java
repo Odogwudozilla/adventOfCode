@@ -30,11 +30,10 @@ public class LobbyAOC2025Day3 {
             List<String> banks = Files.readAllLines(Paths.get(INPUT_FILE));
 
             // Part 1: Select exactly 2 batteries
-            long totalJoltagePart1 = calculateTotalJoltage(banks, PART_1_BATTERIES);
+            long totalJoltagePart1 = solvePartOne(banks);
             System.out.println("Part 1 - Total output joltage (2 batteries): " + totalJoltagePart1);
 
-            // Part 2: Select exactly 12 batteries
-            long totalJoltagePart2 = calculateTotalJoltage(banks, PART_2_BATTERIES);
+            long totalJoltagePart2 = solvePartTwo(banks);
             System.out.println("Part 2 - Total output joltage (12 batteries): " + totalJoltagePart2);
 
         } catch (IOException e) {
@@ -96,5 +95,18 @@ public class LobbyAOC2025Day3 {
 
         return Long.parseLong(result.toString());
     }
-}
 
+    /**
+     * Standardised method for Part 1.
+     */
+    private static long solvePartOne(List<String> banks) {
+        return calculateTotalJoltage(banks, PART_1_BATTERIES);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static long solvePartTwo(List<String> banks) {
+        return calculateTotalJoltage(banks, PART_2_BATTERIES);
+    }
+}

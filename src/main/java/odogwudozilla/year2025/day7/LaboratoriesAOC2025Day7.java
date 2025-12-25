@@ -63,9 +63,8 @@ public class LaboratoriesAOC2025Day7 {
             );
 
             char[][] grid = parseGrid(lines);
-            int splitCount = simulateTachyonBeam(grid);
-            long timelineCount = countQuantumTimelines(grid);
-
+            int splitCount = solvePartOne(grid);
+            long timelineCount = solvePartTwo(grid);
             System.out.println("Part 1 - Total beam splits: " + splitCount);
             System.out.println("Part 2 - Total quantum timelines: " + timelineCount);
 
@@ -90,6 +89,24 @@ public class LaboratoriesAOC2025Day7 {
         }
 
         return grid;
+    }
+
+    /**
+     * Solve Part 1: Simulates the tachyon beam and returns the split count.
+     * @param grid the manifold grid
+     * @return the number of times the beam is split
+     */
+    private static int solvePartOne(char[][] grid) {
+        return simulateTachyonBeam(grid);
+    }
+
+    /**
+     * Solve Part 2: Counts quantum timelines in the manifold.
+     * @param grid the manifold grid
+     * @return the total quantum timelines
+     */
+    private static long solvePartTwo(char[][] grid) {
+        return countQuantumTimelines(grid);
     }
 
     /**

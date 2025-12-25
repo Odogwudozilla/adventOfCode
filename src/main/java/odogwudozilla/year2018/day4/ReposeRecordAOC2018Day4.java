@@ -25,11 +25,11 @@ public class ReposeRecordAOC2018Day4 {
         LOGGER.info("main - Starting Repose Record analysis");
         try {
             List<String> records = Files.readAllLines(Paths.get(INPUT_PATH));
-            int resultPart1 = partOne(records);
+            int resultPart1 = solvePartOne(records);
             LOGGER.info("main - Part 1 result (guard ID * minute): " + resultPart1);
             System.out.println("Part 1 result (guard ID * minute): " + resultPart1);
 
-            int resultPart2 = partTwo(records);
+            int resultPart2 = solvePartTwo(records);
             LOGGER.info("main - Part 2 result (guard ID * minute): " + resultPart2);
             System.out.println("Part 2 result (guard ID * minute): " + resultPart2);
         } catch (Exception e) {
@@ -46,7 +46,7 @@ public class ReposeRecordAOC2018Day4 {
      * @param records List of sleep records
      * @return Product of guard ID and minute
      */
-    private static int partOne(List<String> records) {
+    private static int solvePartOne(List<String> records) {
         Map<Integer, int[]> sleepMap = buildSleepMap(records);
         int maxSleepGuard = -1;
         int maxSleep = 0;
@@ -73,7 +73,7 @@ public class ReposeRecordAOC2018Day4 {
      * @param records List of sleep records
      * @return Product of guard ID and minute
      */
-    private static int partTwo(List<String> records) {
+    private static int solvePartTwo(List<String> records) {
         Map<Integer, int[]> sleepMap = buildSleepMap(records);
         int maxGuard = -1;
         int maxMinute = -1;

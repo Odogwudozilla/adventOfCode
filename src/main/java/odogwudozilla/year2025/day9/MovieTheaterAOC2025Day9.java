@@ -66,10 +66,10 @@ public class MovieTheaterAOC2025Day9 {
             List<Point> redTilesList = parseRedTilesList(lines);
             Set<Point> redTilesSet = new HashSet<>(redTilesList);
 
-            long part1Result = solvePart1(redTilesSet);
+            long part1Result = solvePartOne(redTilesSet);
             System.out.println("Part 1 - Largest rectangle area: " + part1Result);
 
-            long part2Result = solvePart2(redTilesList, redTilesSet);
+            long part2Result = solvePartTwo(redTilesList, redTilesSet);
             System.out.println("Part 2 - Largest rectangle area (red/green only): " + part2Result);
 
         } catch (IOException e) {
@@ -95,6 +95,25 @@ public class MovieTheaterAOC2025Day9 {
             redTiles.add(new Point(x, y));
         }
         return redTiles;
+    }
+
+    /**
+     * Solves Part 1: Find the largest rectangle using red tiles for two opposite corners.
+     * @param redTilesSet set of red tile coordinates
+     * @return the largest rectangle area
+     */
+    private static long solvePartOne(Set<Point> redTilesSet) {
+        return solvePart1(redTilesSet);
+    }
+
+    /**
+     * Solves Part 2: Find the largest rectangle using only red or green tiles.
+     * @param redTilesList list of red tile coordinates in order
+     * @param redTilesSet set of red tile coordinates
+     * @return the largest rectangle area (red/green only)
+     */
+    private static long solvePartTwo(List<Point> redTilesList, Set<Point> redTilesSet) {
+        return solvePart2(redTilesList, redTilesSet);
     }
 
     /**

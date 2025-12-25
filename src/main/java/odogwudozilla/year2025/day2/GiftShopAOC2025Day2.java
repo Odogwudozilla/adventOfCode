@@ -25,10 +25,10 @@ public class GiftShopAOC2025Day2 {
         try {
             String input = Files.readString(Paths.get(INPUT_FILE)).trim();
 
-            long sumOfInvalidIdsPart1 = solvePart1(input);
+            long sumOfInvalidIdsPart1 = solvePartOne(input);
             System.out.println("Part 1 - Sum of all invalid IDs: " + sumOfInvalidIdsPart1);
 
-            long sumOfInvalidIdsPart2 = solvePart2(input);
+            long sumOfInvalidIdsPart2 = solvePartTwo(input);
             System.out.println("Part 2 - Sum of all invalid IDs: " + sumOfInvalidIdsPart2);
 
         } catch (IOException e) {
@@ -42,7 +42,7 @@ public class GiftShopAOC2025Day2 {
      * @param input the comma-separated ranges of product IDs
      * @return the sum of all invalid product IDs
      */
-    private static long solvePart1(String input) {
+    private static long solvePartOne(String input) {
         String[] ranges = input.split(",");
         List<Long> invalidIds = new ArrayList<>();
 
@@ -76,7 +76,7 @@ public class GiftShopAOC2025Day2 {
      * @param input the comma-separated ranges of product IDs
      * @return the sum of all invalid product IDs
      */
-    private static long solvePart2(String input) {
+    private static long solvePartTwo(String input) {
         String[] ranges = input.split(",");
         List<Long> invalidIds = new ArrayList<>();
 

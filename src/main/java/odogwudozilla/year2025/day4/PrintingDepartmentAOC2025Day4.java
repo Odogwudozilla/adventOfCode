@@ -30,16 +30,14 @@ public class PrintingDepartmentAOC2025Day4 {
             );
 
             char[][] grid = parseGrid(lines);
-            int accessibleRolls = countAccessibleRolls(grid);
-
+            int accessibleRolls = solvePartOne(grid);
             System.out.println("PrintingDepartmentAOC2025Day4 - Part 1");
             System.out.println("Number of rolls accessible by forklift: " + accessibleRolls);
             System.out.println();
 
             // Part 2: Iteratively remove accessible rolls
             char[][] grid2 = parseGrid(lines);
-            int totalRemovedRolls = removeAllAccessibleRolls(grid2);
-
+            int totalRemovedRolls = solvePartTwo(grid2);
             System.out.println("PrintingDepartmentAOC2025Day4 - Part 2");
             System.out.println("Total rolls removed: " + totalRemovedRolls);
 
@@ -63,6 +61,24 @@ public class PrintingDepartmentAOC2025Day4 {
         }
 
         return grid;
+    }
+
+    /**
+     * Solve Part 1: Counts the number of rolls that can be accessed by a forklift.
+     * @param grid the grid containing the paper rolls
+     * @return the count of accessible rolls
+     */
+    private static int solvePartOne(char[][] grid) {
+        return countAccessibleRolls(grid);
+    }
+
+    /**
+     * Solve Part 2: Iteratively removes accessible rolls and returns the total removed.
+     * @param grid the grid containing the paper rolls
+     * @return the total number of rolls removed
+     */
+    private static int solvePartTwo(char[][] grid) {
+        return removeAllAccessibleRolls(grid);
     }
 
     /**

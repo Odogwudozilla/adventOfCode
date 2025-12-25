@@ -25,11 +25,11 @@ public class DiveAOC2021Day2 {
         LOGGER.info("main - Starting Dive! position calculation");
         try {
             List<String> commands = Files.readAllLines(Paths.get(INPUT_PATH));
-            int resultPart1 = partOne(commands);
+            int resultPart1 = solvePartOne(commands);
             LOGGER.info("main - Part 1 result (horizontal * depth): " + resultPart1);
             System.out.println("Part 1 result (horizontal * depth): " + resultPart1);
 
-            int resultPart2 = partTwo(commands);
+            int resultPart2 = solvePartTwo(commands);
             LOGGER.info("main - Part 2 result (horizontal * depth): " + resultPart2);
             System.out.println("Part 2 result (horizontal * depth): " + resultPart2);
         } catch (Exception e) {
@@ -46,7 +46,7 @@ public class DiveAOC2021Day2 {
      * @param commands List of movement commands
      * @return Product of final horizontal position and depth
      */
-    private static int partOne(List<String> commands) {
+    private static int solvePartOne(List<String> commands) {
         int horizontal = 0;
         int depth = 0;
         for (String command : commands) {
@@ -64,7 +64,7 @@ public class DiveAOC2021Day2 {
                     depth -= value;
                     break;
                 default:
-                    LOGGER.warning("partOne - Unknown command: " + command);
+                    LOGGER.warning("solvePartOne - Unknown command: " + command);
             }
         }
         return horizontal * depth;
@@ -76,7 +76,7 @@ public class DiveAOC2021Day2 {
      * @param commands List of movement commands
      * @return Product of final horizontal position and depth using aim logic
      */
-    private static int partTwo(List<String> commands) {
+    private static int solvePartTwo(List<String> commands) {
         int aim = 0;
         int horizontal = 0;
         int depth = 0;
@@ -96,7 +96,7 @@ public class DiveAOC2021Day2 {
                     aim -= value;
                     break;
                 default:
-                    LOGGER.warning("partTwo - Unknown command: " + command);
+                    LOGGER.warning("solvePartTwo - Unknown command: " + command);
             }
         }
         return horizontal * depth;

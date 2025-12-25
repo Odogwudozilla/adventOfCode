@@ -25,11 +25,11 @@ public class NotQuiteLispAOC2015Day1 {
             String instructions = readPuzzleInput();
 
             // Part 1: Find the final floor
-            int finalFloor = calculateFinalFloor(instructions);
+            int finalFloor = solvePartOne(instructions);
             System.out.println("Part 1 - Final floor: " + finalFloor);
 
             // Part 2: Find the position of the first character that causes Santa to enter the basement
-            int basementPosition = findBasementPosition(instructions);
+            int basementPosition = solvePartTwo(instructions);
             System.out.println("Part 2 - First basement position: " + basementPosition);
 
         } catch (IOException e) {
@@ -52,7 +52,7 @@ public class NotQuiteLispAOC2015Day1 {
      * @param instructions the string of parentheses instructions
      * @return the final floor number
      */
-    private static int calculateFinalFloor(String instructions) {
+    private static int solvePartOne(String instructions) {
         int floor = STARTING_FLOOR;
 
         for (char instruction : instructions.toCharArray()) {
@@ -72,7 +72,7 @@ public class NotQuiteLispAOC2015Day1 {
      * @param instructions the string of parentheses instructions
      * @return the position (1-indexed) of the character that first causes floor -1
      */
-    private static int findBasementPosition(String instructions) {
+    private static int solvePartTwo(String instructions) {
         int floor = STARTING_FLOOR;
         int position = 0;
 
@@ -95,4 +95,3 @@ public class NotQuiteLispAOC2015Day1 {
         return -1;
     }
 }
-

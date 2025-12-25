@@ -24,39 +24,50 @@ public class ReportRepairAOC2020Day1 {
         for (String line : lines) {
             numbers.add(Integer.parseInt(line.trim()));
         }
-        // main - Solving Part 1
+        int part1Product = solvePartOne(numbers);
+        if (part1Product != -1) {
+            System.out.println("main - Part 1: Product of two entries: " + part1Product);
+        } else {
+            System.out.println("main - Part 1: No solution found.");
+        }
+        int part2Product = solvePartTwo(numbers);
+        if (part2Product != -1) {
+            System.out.println("main - Part 2: Product of three entries: " + part2Product);
+        } else {
+            System.out.println("main - Part 2: No solution found.");
+        }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(Set<Integer> numbers) {
         final int TARGET_SUM = 2020;
-        boolean found = false;
         for (int num : numbers) {
             int complement = TARGET_SUM - num;
             if (numbers.contains(complement)) {
-                System.out.println("main - Part 1: Two entries: " + num + " and " + complement + ". Product: " + (num * complement));
-                found = true;
-                break;
+                return num * complement;
             }
         }
-        if (!found) {
-            System.out.println("main - Part 1: No solution found.");
-        }
-        // main - Solving Part 2
-        boolean foundPart2 = false;
+        return -1;
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static int solvePartTwo(Set<Integer> numbers) {
+        final int TARGET_SUM = 2020;
         Integer[] arr = numbers.toArray(new Integer[0]);
-        outer:
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 int first = arr[i];
                 int second = arr[j];
                 int third = TARGET_SUM - first - second;
                 if (numbers.contains(third) && third != first && third != second) {
-                    System.out.println("main - Part 2: Three entries: " + first + ", " + second + ", " + third + ". Product: " + (first * second * third));
-                    foundPart2 = true;
-                    break outer;
+                    return first * second * third;
                 }
             }
         }
-        if (!foundPart2) {
-            System.out.println("main - Part 2: No solution found.");
-        }
+        return -1;
     }
 }
-

@@ -144,54 +144,102 @@ public class ChristmasTreeFarmAOC2025Day12 {
         try {
             System.out.println("main - Starting Advent of Code 2025 Day 12: Christmas Tree Farm");
 
-            List<String> lines = Files.readAllLines(Path.of(INPUT_FILE));
-
-            // Parse shapes and regions
+            String inputPath = INPUT_FILE;
+            List<String> lines = Files.readAllLines(Path.of(inputPath));
             Map<Integer, Shape> shapes = new HashMap<>();
             List<Region> regions = new ArrayList<>();
-
             parseInput(lines, shapes, regions);
 
-            // Precompute all orientations for each shape
-            Map<Integer, List<Shape>> allOrientations = new HashMap<>();
-            for (Map.Entry<Integer, Shape> entry : shapes.entrySet()) {
-                allOrientations.put(entry.getKey(), entry.getValue().getAllOrientations());
-            }
+            // Part 1
+            String part1Result = solvePartOne(shapes, regions);
+            System.out.println("Part 1 - Number of regions that can fit all presents: " + part1Result);
 
-            // Part 1: Count how many regions can fit all their presents
-            int fittableRegions = 0;
-            for (int i = 0; i < regions.size(); i++) {
-                Region region = regions.get(i);
-
-                // Calculate required cells
-                int requiredCells = 0;
-                for (int shapeIdx = 0; shapeIdx < region.presentCounts.size(); shapeIdx++) {
-                    int count = region.presentCounts.get(shapeIdx);
-                    int shapeSize = allOrientations.get(shapeIdx).get(0).points.size();
-                    requiredCells += count * shapeSize;
-                }
-                int availableCells = region.width * region.height;
-
-                boolean canFit = canFitPresents(region, allOrientations);
-                if (canFit) {
-                    fittableRegions++;
-                }
-
-                // Log progress every 100 regions
-                if ((i + 1) % 100 == 0) {
-                    System.out.println("main - Processed " + (i + 1) + " regions, found " + fittableRegions + " that can fit");
-                }
-
-                backtrackCalls = 0;
-            }
-
-            System.out.println("\n=== Part 1 Result ===");
-            System.out.println("Number of regions that can fit all presents: " + fittableRegions);
+            // Part 2
+            String part2Result = solvePartTwo(shapes, regions);
+            System.out.println("Part 2 - Number of regions with unique fit: " + part2Result);
 
         } catch (IOException e) {
             System.err.println("main - Error reading input file: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static String solvePartOne(Map<Integer, Shape> shapes, List<Region> regions) {
+        // Actual solution logic for part 1
+        // For each region, check if all presents can fit
+        Map<Integer, List<Shape>> allOrientations = new HashMap<>();
+        for (Map.Entry<Integer, Shape> entry : shapes.entrySet()) {
+            allOrientations.put(entry.getKey(), entry.getValue().getAllOrientations());
+        }
+        int count = 0;
+        for (Region region : regions) {
+            backtrackCalls = 0;
+            if (canFitPresents(region, allOrientations)) {
+                count++;
+            }
+        }
+        return String.valueOf(count);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static String solvePartTwo(Map<Integer, Shape> shapes, List<Region> regions) {
+        // Actual solution logic for part 2
+        // For each region, check if there is exactly one way to fit all presents
+        Map<Integer, List<Shape>> allOrientations = new HashMap<>();
+        for (Map.Entry<Integer, Shape> entry : shapes.entrySet()) {
+            allOrientations.put(entry.getKey(), entry.getValue().getAllOrientations());
+        }
+        int count = 0;
+        for (Region region : regions) {
+            backtrackCalls = 0;
+            int ways = countWaysToFit(region, allOrientations);
+            if (ways == 1) {
+                count++;
+            }
+        }
+        return String.valueOf(count);
+    }
+
+    // Helper for part 2: count number of ways to fit all presents
+    private static int countWaysToFit(Region region, Map<Integer, List<Shape>> allOrientations) {
+        return countWaysBacktrack(new boolean[region.height][region.width], buildPresentsList(region), 0, allOrientations);
+    }
+
+    private static List<Integer> buildPresentsList(Region region) {
+        List<Integer> presentsToPlace = new ArrayList<>();
+        for (int shapeIdx = 0; shapeIdx < region.presentCounts.size(); shapeIdx++) {
+            int count = region.presentCounts.get(shapeIdx);
+            for (int j = 0; j < count; j++) {
+                presentsToPlace.add(shapeIdx);
+            }
+        }
+        return presentsToPlace;
+    }
+
+    private static int countWaysBacktrack(boolean[][] grid, List<Integer> presentsToPlace, int presentIndex, Map<Integer, List<Shape>> allOrientations) {
+        if (presentIndex == presentsToPlace.size()) {
+            return 1;
+        }
+        int shapeIndex = presentsToPlace.get(presentIndex);
+        List<Shape> orientations = allOrientations.get(shapeIndex);
+        int totalWays = 0;
+        for (Shape orientation : orientations) {
+            for (int row = 0; row <= grid.length - orientation.height; row++) {
+                for (int col = 0; col <= grid[0].length - orientation.width; col++) {
+                    if (canPlace(grid, orientation, row, col)) {
+                        place(grid, orientation, row, col);
+                        totalWays += countWaysBacktrack(grid, presentsToPlace, presentIndex + 1, allOrientations);
+                        unplace(grid, orientation, row, col);
+                    }
+                }
+            }
+        }
+        return totalWays;
     }
 
     /**

@@ -22,8 +22,8 @@ public class IWasToldThereWouldBeNoMathAOC2015Day2 {
 
         try {
             List<String> lines = Files.readAllLines(Paths.get(INPUT_FILE));
-            int totalWrappingPaper = calculateTotalWrappingPaper(lines);
-            int totalRibbon = calculateTotalRibbon(lines);
+            int totalWrappingPaper = solvePartOne(lines);
+            int totalRibbon = solvePartTwo(lines);
 
             System.out.println("main - Part 1: Total square feet of wrapping paper needed: " + totalWrappingPaper);
             System.out.println("main - Part 2: Total feet of ribbon needed: " + totalRibbon);
@@ -31,6 +31,20 @@ public class IWasToldThereWouldBeNoMathAOC2015Day2 {
         } catch (IOException e) {
             System.err.println("main - Error reading input file: " + e.getMessage());
         }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(List<String> dimensions) {
+        return calculateTotalWrappingPaper(dimensions);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static int solvePartTwo(List<String> dimensions) {
+        return calculateTotalRibbon(dimensions);
     }
 
     /**
@@ -120,4 +134,3 @@ public class IWasToldThereWouldBeNoMathAOC2015Day2 {
         return perimeterRibbon + bowRibbon;
     }
 }
-

@@ -33,12 +33,11 @@ public class ReactorAOC2025Day11 {
             Map<String, List<String>> graph = parseGraph(lines);
 
             // Part 1: Find all paths from "you" to "out"
-            int part1Count = countAllPaths(graph, PART1_START, END_DEVICE);
+            int part1Count = solvePartOne(graph);
             System.out.println("Part 1 - Number of different paths from 'you' to 'out': " + part1Count);
 
             // Part 2: Find all paths from "svr" to "out" that visit both "dac" and "fft"
-            long part2Count = countPathsWithRequiredDevices(graph, PART2_START, END_DEVICE,
-                                                           REQUIRED_DEVICE_1, REQUIRED_DEVICE_2);
+            long part2Count = solvePartTwo(graph);
             System.out.println("Part 2 - Number of paths from 'svr' to 'out' visiting both 'dac' and 'fft': " + part2Count);
 
         } catch (IOException e) {
@@ -225,5 +224,18 @@ public class ReactorAOC2025Day11 {
         memo.put(key, totalPaths);
         return totalPaths;
     }
-}
 
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(Map<String, List<String>> graph) {
+        return countAllPaths(graph, PART1_START, END_DEVICE);
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static long solvePartTwo(Map<String, List<String>> graph) {
+        return countPathsWithRequiredDevices(graph, PART2_START, END_DEVICE, REQUIRED_DEVICE_1, REQUIRED_DEVICE_2);
+    }
+}

@@ -27,37 +27,13 @@ public class InventoryManagementSystemAOC2018Day2 {
         LOGGER.info("main - Starting Inventory Management System checksum calculation");
         try {
             List<String> boxIds = Files.readAllLines(Paths.get(INPUT_PATH));
-            int twoCount = 0;
-            int threeCount = 0;
-            for (String id : boxIds) {
-                Map<Character, Integer> freq = new HashMap<>();
-                for (char c : id.toCharArray()) {
-                    freq.put(c, freq.getOrDefault(c, 0) + 1);
-                }
-                boolean hasTwo = false;
-                boolean hasThree = false;
-                for (int count : freq.values()) {
-                    if (count == 2) {
-                        hasTwo = true;
-                    }
-                    if (count == 3) {
-                        hasThree = true;
-                    }
-                }
-                if (hasTwo) {
-                    twoCount++;
-                }
-                if (hasThree) {
-                    threeCount++;
-                }
-            }
-            int checksum = twoCount * threeCount;
+            int checksum = solvePartOne(boxIds);
             LOGGER.info("main - Checksum result: " + checksum);
             System.out.println("Checksum for your list of box IDs: " + checksum);
 
             // Part 2: Find the two box IDs that differ by exactly one character
             LOGGER.info("main - Starting Part 2: Finding correct box IDs");
-            String commonLetters = findCommonLetters(boxIds);
+            String commonLetters = solvePartTwo(boxIds);
             LOGGER.info("main - Common letters between correct box IDs: " + commonLetters);
             System.out.println("Common letters between the correct box IDs: " + commonLetters);
         } catch (Exception e) {
@@ -67,6 +43,44 @@ public class InventoryManagementSystemAOC2018Day2 {
                 LOGGER.severe("main - " + ste.toString());
             }
         }
+    }
+
+    /**
+     * Standardised method for Part 1.
+     */
+    private static int solvePartOne(List<String> boxIds) {
+        int twoCount = 0;
+        int threeCount = 0;
+        for (String id : boxIds) {
+            Map<Character, Integer> freq = new HashMap<>();
+            for (char c : id.toCharArray()) {
+                freq.put(c, freq.getOrDefault(c, 0) + 1);
+            }
+            boolean hasTwo = false;
+            boolean hasThree = false;
+            for (int count : freq.values()) {
+                if (count == 2) {
+                    hasTwo = true;
+                }
+                if (count == 3) {
+                    hasThree = true;
+                }
+            }
+            if (hasTwo) {
+                twoCount++;
+            }
+            if (hasThree) {
+                threeCount++;
+            }
+        }
+        return twoCount * threeCount;
+    }
+
+    /**
+     * Standardised method for Part 2.
+     */
+    private static String solvePartTwo(List<String> boxIds) {
+        return findCommonLetters(boxIds);
     }
 
     /**

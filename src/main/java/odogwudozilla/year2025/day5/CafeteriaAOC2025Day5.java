@@ -27,10 +27,10 @@ public class CafeteriaAOC2025Day5 {
         try {
             List<String> lines = Files.readAllLines(Paths.get(PUZZLE_DATA_FILE));
 
-            int freshCount = solvePart1(lines);
+            int freshCount = solvePartOne(lines);
             System.out.println("main - Part 1 - Number of fresh ingredient IDs: " + freshCount);
 
-            long totalFreshIds = solvePart2(lines);
+            long totalFreshIds = solvePartTwo(lines);
             System.out.println("main - Part 2 - Total ingredient IDs considered fresh: " + totalFreshIds);
         } catch (IOException e) {
             System.err.println("main - Error reading puzzle data file: " + e.getMessage());
@@ -42,8 +42,8 @@ public class CafeteriaAOC2025Day5 {
      * @param lines the input lines from the puzzle data file
      * @return the count of fresh ingredient IDs
      */
-    private static int solvePart1(@NotNull List<String> lines) {
-        System.out.println("solvePart1 - Parsing fresh ingredient ranges and available IDs");
+    private static int solvePartOne(@NotNull List<String> lines) {
+        System.out.println("solvePartOne - Parsing fresh ingredient ranges and available IDs");
 
         List<Range> freshRanges = new ArrayList<>();
         List<Long> availableIds = new ArrayList<>();
@@ -62,7 +62,7 @@ public class CafeteriaAOC2025Day5 {
             }
         }
 
-        System.out.println("solvePart1 - Parsed " + freshRanges.size() + " fresh ranges and " + availableIds.size() + " available IDs");
+        System.out.println("solvePartOne - Parsed " + freshRanges.size() + " fresh ranges and " + availableIds.size() + " available IDs");
 
         int freshCount = 0;
         for (Long id : availableIds) {
@@ -79,8 +79,8 @@ public class CafeteriaAOC2025Day5 {
      * @param lines the input lines from the puzzle data file
      * @return the total count of unique ingredient IDs in all fresh ranges
      */
-    private static long solvePart2(@NotNull List<String> lines) {
-        System.out.println("solvePart2 - Parsing fresh ingredient ranges");
+    private static long solvePartTwo(@NotNull List<String> lines) {
+        System.out.println("solvePartTwo - Parsing fresh ingredient ranges");
 
         List<Range> freshRanges = new ArrayList<>();
 
@@ -91,10 +91,10 @@ public class CafeteriaAOC2025Day5 {
             freshRanges.add(parseRange(line));
         }
 
-        System.out.println("solvePart2 - Parsed " + freshRanges.size() + " fresh ranges");
+        System.out.println("solvePartTwo - Parsed " + freshRanges.size() + " fresh ranges");
 
         List<Range> mergedRanges = mergeRanges(freshRanges);
-        System.out.println("solvePart2 - Merged into " + mergedRanges.size() + " non-overlapping ranges");
+        System.out.println("solvePartTwo - Merged into " + mergedRanges.size() + " non-overlapping ranges");
 
         long totalCount = 0;
         for (Range range : mergedRanges) {

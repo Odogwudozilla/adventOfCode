@@ -25,8 +25,8 @@ public class SonarSweepAOC2021Day1 {
                     .map(Integer::parseInt)
                     .collect(Collectors.toList());
 
-            int part1Result = solvePart1(depths);
-            int part2Result = solvePart2(depths);
+            int part1Result = solvePartOne(depths);
+            int part2Result = solvePartTwo(depths);
 
             System.out.println("Part 1: " + part1Result);
             System.out.println("Part 2: " + part2Result);
@@ -39,7 +39,7 @@ public class SonarSweepAOC2021Day1 {
     /**
      * Part 1: Count the number of times a depth measurement increases from the previous measurement.
      */
-    private static int solvePart1(List<Integer> depths) {
+    private static int solvePartOne(List<Integer> depths) {
         int increaseCount = 0;
         for (int i = 1; i < depths.size(); i++) {
             if (depths.get(i) > depths.get(i - 1)) {
@@ -53,9 +53,9 @@ public class SonarSweepAOC2021Day1 {
      * Part 2: Count the number of times the sum of a three-measurement sliding window increases
      * from the previous sum.
      */
-    private static int solvePart2(List<Integer> depths) {
+    private static int solvePartTwo(List<Integer> depths) {
         List<Integer> windowSums = calculateWindowSums(depths, WINDOW_SIZE);
-        return solvePart1(windowSums);
+        return solvePartOne(windowSums);
     }
 
     /**

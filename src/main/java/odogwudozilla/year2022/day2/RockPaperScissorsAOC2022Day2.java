@@ -29,8 +29,8 @@ public class RockPaperScissorsAOC2022Day2 {
 
     public static void main(String[] args) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get(INPUT_PATH));
-        System.out.println("main - Part 1 valid password count: " + solvePart1(lines));
-        System.out.println("main - Part 2 valid password count: " + solvePart2(lines));
+        System.out.println("main - Part 1 valid password count: " + solvePartOne(lines));
+        System.out.println("main - Part 2 valid password count: " + solvePartTwo(lines));
     }
 
     /**
@@ -38,7 +38,7 @@ public class RockPaperScissorsAOC2022Day2 {
      * @param lines The strategy guide input
      * @return Total score
      */
-    private static int solvePart1(List<String> lines) {
+    private static int solvePartOne(List<String> lines) {
         int totalScore = 0;
         for (String line : lines) {
             String[] parts = line.split(" ");
@@ -79,7 +79,7 @@ public class RockPaperScissorsAOC2022Day2 {
      * @param lines The strategy guide input
      * @return Total score
      */
-    private static int solvePart2(List<String> lines) {
+    private static int solvePartTwo(List<String> lines) {
         int totalScore = 0;
         for (String line : lines) {
             String[] parts = line.split(" ");
@@ -122,4 +122,3 @@ public class RockPaperScissorsAOC2022Day2 {
         return totalScore;
     }
 }
-
