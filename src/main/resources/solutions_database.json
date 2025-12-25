@@ -173,6 +173,16 @@
           "partOne": "67016",
           "partTwo": "200116"
         }
+      },
+      {
+        "year": 2022,
+        "day": 2,
+        "title": "Rock Paper Scissors",
+        "link": "https://adventofcode.com/2022/day/2",
+        "solutions": {
+          "partOne": "11841",
+          "partTwo": "13022"
+        }
       }
     ],
     "2023": [

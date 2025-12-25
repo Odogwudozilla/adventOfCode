@@ -21,9 +21,17 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: Parse the input to group calories by Elf (separated by blank lines), calculate totals for each Elf, then find the maximum for Part 1 and sum the top three for Part 2 using sorting.
 
+### Day 2: Rock Paper Scissors
+**Link**: [Day 2: Rock Paper Scissors](https://adventofcode.com/2022/day/2)
+
+**Description**: The Elves are running a Rock Paper Scissors tournament. You are given an encrypted strategy guide to calculate your score. Part 1 interprets the second column as your move; Part 2 interprets it as the desired outcome.
+
+**Source**: [RockPaperScissorsAOC2022Day2.java](day2/RockPaperScissorsAOC2022Day2.java)
+
+**Approach**: For Part 1, map the encrypted moves to Rock/Paper/Scissors and calculate scores based on the rules. For Part 2, determine the required move to achieve the desired outcome and sum the scores accordingly.
+
 ---
 
 ## Navigation
 - [Main README](../../../README.md)
 - [All Solutions Database](../../../resources/solutions_database.json)
-
