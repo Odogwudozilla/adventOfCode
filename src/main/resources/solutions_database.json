@@ -23,6 +23,16 @@
       },
       {
         "year": 2015,
+        "day": 3,
+        "title": "Perfectly Spherical Houses in a Vacuum",
+        "link": "https://adventofcode.com/2015/day/3",
+        "solutions": {
+          "partOne": "2081",
+          "partTwo": "2341"
+        }
+      },
+      {
+        "year": 2015,
         "day": 15,
         "title": "Science for Hungry People",
         "link": "https://adventofcode.com/2015/day/15",

@@ -28,6 +28,17 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
+### Day 3: Perfectly Spherical Houses in a Vacuum
+**Link**: [https://adventofcode.com/2015/day/3](https://adventofcode.com/2015/day/3)
+
+**Description**: Santa delivers presents to houses on an infinite two-dimensional grid, moving according to instructions. The goal is to determine how many houses receive at least one present. Part 2 introduces Robo-Santa, who alternates moves with Santa.
+
+**Source Code**: [PerfectlySphericalHousesAOC2015Day3.java](day3/)
+
+**Algorithm/Approach**: Use a HashSet to track unique house coordinates. For Part 1, iterate through the directions and update Santa's position. For Part 2, alternate moves between Santa and Robo-Santa, updating their positions and the set of visited houses.
+
+---
+
 ### Day 15: Science for Hungry People
 **Link**: [https://adventofcode.com/2015/day/15](https://adventofcode.com/2015/day/15)
 
