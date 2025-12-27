@@ -193,6 +193,16 @@
           "partOne": "11841",
           "partTwo": "13022"
         }
+      },
+      {
+        "year": 2022,
+        "day": 3,
+        "title": "Rucksack Reorganization",
+        "link": "https://adventofcode.com/2022/day/3",
+        "solutions": {
+          "partOne": "7428",
+          "partTwo": "2650"
+        }
       }
     ],
     "2023": [
