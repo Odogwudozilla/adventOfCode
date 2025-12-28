@@ -29,8 +29,8 @@ Wait for user response before proceeding.
 Generate Package Name and Folder Structure
 
 Construct the Java package using:
-odogwudozilla.<year>.day<day>
-e.g. odogwudozilla.2025.day1
+odogwudozilla.year<year>.day<day>
+e.g. odogwudozilla.year2025.day1
 
 Create a resources folder for input assets at:
 resources/<year>/day<day>/

@@ -23,3 +23,13 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 2: Corruption Checksum
+**Link**: [https://adventofcode.com/2017/day/2](https://adventofcode.com/2017/day/2)
+
+**Description**: Calculate the spreadsheet's checksum by summing the difference between the largest and smallest value in each row.
+
+**Source Code**: [CorruptionChecksumAOC2017Day2.java](day2/)
+
+**Algorithm**: For each row, parse numbers, find min and max, sum their differences for the checksum.
+
+---

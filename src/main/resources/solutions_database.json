@@ -64,6 +64,16 @@
           "partOne": "1144",
           "partTwo": "1194"
         }
+      },
+      {
+        "year": 2017,
+        "day": 2,
+        "title": "Corruption Checksum",
+        "link": "https://adventofcode.com/2017/day/2",
+        "solutions": {
+          "partOne": "48357",
+          "partTwo": "351"
+        }
       }
     ],
     "2018": [
