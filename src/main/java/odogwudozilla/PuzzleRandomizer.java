@@ -51,7 +51,8 @@ public class PuzzleRandomizer {
      * Selects a random unsolved puzzle from all available puzzles with prioritisation logic.
      * Priority order:
      * 1. If there is a year with zero solved days, randomly pick one and return day 1
-     * 2. Otherwise, randomly select a year and return the lowest-numbered unsolved day
+     * 2. Otherwise, randomly select a year and return a random unsolved day from that year
+     *
      * @return PuzzleSelection containing year and day, or null if no unsolved puzzles exist
      */
     @Nullable
@@ -85,28 +86,72 @@ public class PuzzleRandomizer {
             }
         }
 
-        int selectedYear;
-        int selectedDay;
-
         if (!unsolvedYears.isEmpty()) {
             // Priority 1: Randomly select a year with no solved days
-            selectedYear = unsolvedYears.get(RANDOM.nextInt(unsolvedYears.size()));
-            selectedDay = 1;
+            int selectedYear = unsolvedYears.get(RANDOM.nextInt(unsolvedYears.size()));
+            return new PuzzleSelection(selectedYear, 1);
         } else {
-            // Priority 2: Randomly select a year and find lowest-numbered unsolved day
-            selectedYear = availableYears.get(RANDOM.nextInt(availableYears.size()));
-            selectedDay = findLowestUnsolvedDay(configContent, selectedYear, solvedByYear.get(selectedYear));
-
-            if (selectedDay == -1) {
-                // All days in this year are solved, try to find another year
-                selectedDay = findLowestUnsolvedDayAcrossYears(configContent, availableYears, solvedByYear);
-                if (selectedDay == -1) {
-                    return null;
+            // Priority 2: Randomly select a year and pick a random unsolved day from that year
+            List<PuzzleSelection> unsolvedPuzzles = new ArrayList<>();
+            for (Integer year : availableYears) {
+                Set<Integer> solved = solvedByYear.getOrDefault(year, new HashSet<>());
+                int totalDays = getTotalDaysForYear(configContent, year);
+                LocalDate currentDate = LocalDate.now();
+                for (int day = 1; day <= totalDays; day++) {
+                    LocalDate puzzleDate = LocalDate.of(year, 12, day);
+                    if (puzzleDate.isAfter(currentDate)) {
+                        continue; // Skip future puzzles
+                    }
+                    if (!solved.contains(day)) {
+                        // Special handling for Day 25: only allow if all previous days are solved
+                        if (day == 25) {
+                            boolean allPreviousDaysSolved = true;
+                            for (int prevDay = 1; prevDay < 25; prevDay++) {
+                                if (!solved.contains(prevDay)) {
+                                    allPreviousDaysSolved = false;
+                                    break;
+                                }
+                            }
+                            if (allPreviousDaysSolved) {
+                                unsolvedPuzzles.add(new PuzzleSelection(year, day));
+                            }
+                        } else {
+                            unsolvedPuzzles.add(new PuzzleSelection(year, day));
+                        }
+                    }
                 }
             }
+            if (unsolvedPuzzles.isEmpty()) {
+                return null;
+            }
+            return unsolvedPuzzles.get(RANDOM.nextInt(unsolvedPuzzles.size()));
         }
+    }
 
-        return new PuzzleSelection(selectedYear, selectedDay);
+    /**
+     * Gets the total number of available days for a given year from the config JSON.
+     * @param configJson JSON string containing puzzle configuration
+     * @param year the year to search in
+     * @return total number of days for the year, or 25 if not found
+     */
+    private static int getTotalDaysForYear(@NotNull String configJson, int year) {
+        Pattern yearPattern = Pattern.compile("\"" + year + "\"\\s*:\\s*\\{");
+        Pattern totalDaysPattern = Pattern.compile("\"totalDays\"\\s*:\\s*(\\d+)");
+        Matcher yearMatcher = yearPattern.matcher(configJson);
+        if (!yearMatcher.find()) {
+            return 25;
+        }
+        int yearStart = yearMatcher.end();
+        int yearEnd = findMatchingBrace(configJson, yearStart - 1);
+        if (yearEnd == -1) {
+            return 25;
+        }
+        String yearSection = configJson.substring(yearStart, yearEnd);
+        Matcher totalDaysMatcher = totalDaysPattern.matcher(yearSection);
+        if (!totalDaysMatcher.find()) {
+            return 25;
+        }
+        return Integer.parseInt(totalDaysMatcher.group(1));
     }
 
     /**

@@ -128,6 +128,16 @@
           "partOne": "3305301",
           "partTwo": "4955106"
         }
+      },
+      {
+        "year": 2019,
+        "day": 2,
+        "title": "1202 Program Alarm",
+        "link": "https://adventofcode.com/2019/day/2",
+        "solutions": {
+          "partOne": "3166704",
+          "partTwo": "8018"
+        }
       }
     ],
     "2020": [
