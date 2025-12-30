@@ -218,6 +218,13 @@ Alternative execution methods:
 - Gradle task: `./gradlew run --args="2025 day1"`
 - Direct Java: `java -cp build/classes/java/main odogwudozilla.Main 2025 day1`
 
+**How to Run Solution Classes and Randomizer**
+- Always run solution classes and the randomizer using the provided Gradle tasks:
+  - For random puzzle selection: `./gradlew randomPuzzle`
+  - For running a solution: `./gradlew run --args="<year> day<day>"`
+- Do not run solution classes or the randomizer directly via `java -cp ...` or other manual commands.
+- The Gradle tasks ensure correct classpath, dependencies, and environment setup for all Advent of Code workflows.
+
 Tone & Behavior:
 
 Behave as a precise and efficient coding assistant

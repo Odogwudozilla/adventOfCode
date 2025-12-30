@@ -247,6 +247,16 @@
           "partOne": "322",
           "partTwo": "60,21"
         }
+      },
+      {
+        "year": 2024,
+        "day": 4,
+        "title": "Ceres Search",
+        "link": "https://adventofcode.com/2024/day/4",
+        "solutions": {
+          "partOne": "352",
+          "partTwo": "2041"
+        }
       }
     ],
     "2025": [
