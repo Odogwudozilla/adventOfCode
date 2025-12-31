@@ -19,7 +19,6 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Algorithm**: Iterates through each cell and checks all 8 directions for the target word (Part 1). For Part 2, checks all possible X centres for crossing MAS/SAM diagonals.
 
-**Results**: Part 1: 352, Part 2: 2041
 
 **Source Code**: [CeresSearchAOC2024Day4.java](day4/)
 

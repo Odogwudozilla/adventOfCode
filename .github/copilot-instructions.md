@@ -161,7 +161,7 @@ Prompt the user:
 
 If the user responds affirmatively:
 
-Stage all changes using git add
+Stage all changes using "git add ."
 
 Generate a descriptive one-liner commit message in the format:
 "Add AOC <Year> Day <Day> solution: <PuzzleTitle> - <brief algorithm/approach description>"
@@ -176,11 +176,11 @@ No hardcoded puzzle inputs — read from the .txt file using Java standard file 
 
 Use only a single Java class unless otherwise instructed.
 
-Package must match: odogwudozilla.<year>.day<day> — do not prepend "year".
+Package must match: odogwudozilla.year<YYYY>.day<day>.
 
 Always update the resources/solutions_database.json file after obtaining solution results for each part.
 
-Always update the year-specific README (src/main/java/odogwudozilla/year<YYYY>/README.md) after solving a puzzle. Create the README if it doesn't exist.
+Always update the year-specific README (src/main/java/odogwudozilla/year<YYYY>/README.md) after solving a puzzle. Create the README if it doesn't exist. Do not add the puzzle solution values to the ReadMe
 
 Always update the main README.md Years section if this is the first puzzle for a new year.
 
@@ -192,7 +192,7 @@ Day 25 Special Handling: Day 25 is the final day and its Part 2 requires all 49 
 
 File/Folder Creation Guidance:
 
-When creating solution classes and resource files, always use the 'src' directory as the base (e.g., src/main/java/odogwudozilla/<year>/day<day>/ for classes and src/main/resources/<year>/day<day>/ for resources).
+When creating solution classes and resource files, always use the 'src' directory as the base (e.g., src/main/java/odogwudozilla/year<year>/day<day>/ for classes and src/main/resources/<year>/day<day>/ for resources).
 
 Check the existing file structure before creating new files or folders to ensure consistency and avoid duplication.
 

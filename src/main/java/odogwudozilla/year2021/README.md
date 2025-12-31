@@ -31,3 +31,14 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 **Algorithm/Approach**: Iterate through commands, updating horizontal and depth. For Part 2, track aim and update depth accordingly when moving forward.
 
 ---
+
+### Day 4: Giant Squid
+**Link**: [https://adventofcode.com/2021/day/4](https://adventofcode.com/2021/day/4)
+
+**Description**: Play bingo with a set of boards and a sequence of drawn numbers. The first board to complete a row or column wins. The score is calculated by multiplying the sum of unmarked numbers by the last drawn number. Part 2 finds the score of the last board to win.
+
+**Source Code**: [GiantSquidAOC2021Day4.java](day4/)
+
+**Algorithm/Approach**: Parse the drawn numbers and boards, simulate marking numbers, and check for winning conditions after each draw. For Part 2, continue until all boards have won and return the score for the last winning board.
+
+---
