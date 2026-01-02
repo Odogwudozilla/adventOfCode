@@ -74,6 +74,16 @@
           "partOne": "48357",
           "partTwo": "351"
         }
+      },
+      {
+        "year": 2017,
+        "day": 5,
+        "title": "A Maze of Twisty Trampolines, All Alike",
+        "link": "https://adventofcode.com/2017/day/5",
+        "solutions": {
+          "partOne": "391540",
+          "partTwo": "30513679"
+        }
       }
     ],
     "2018": [

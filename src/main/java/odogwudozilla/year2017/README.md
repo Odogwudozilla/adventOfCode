@@ -33,3 +33,14 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 **Algorithm**: For each row, parse numbers, find min and max, sum their differences for the checksum.
 
 ---
+
+### Day 5: A Maze of Twisty Trampolines, All Alike
+**Link**: [https://adventofcode.com/2017/day/5](https://adventofcode.com/2017/day/5)
+
+**Description**: Traverse a list of jump offsets, incrementing each instruction after use, to determine the number of steps required to exit the maze.
+
+**Source Code**: [AmazeOfTwistyTrampolinesAOC2017Day5.java](day5/)
+
+**Algorithm**: Simulate jumps using an array, incrementing each instruction after jumping, and count steps until the pointer leaves the array bounds.
+
+---
