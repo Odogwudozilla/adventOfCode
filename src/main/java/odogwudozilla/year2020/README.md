@@ -28,6 +28,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 9: Encoding Error
+**Link**: [https://adventofcode.com/2020/day/9](https://adventofcode.com/2020/day/9)
+
+**Description**: Find the first number in a list that is not the sum of two of the 25 previous numbers (XMAS encryption anomaly). Part 2: Find a contiguous set of numbers that sum to the invalid number, then return the sum of the smallest and largest numbers in that set.
+
+**Source Code**: [EncodingErrorAOC2020Day9.java](day9/)
+
+**Algorithm**: Part 1 uses a preamble window approach checking all pairs for valid sums. Part 2 uses a nested loop to find contiguous subsequences and their sums.
+
+---
+
 ### Day 25: Combo Breaker
 **Link**: [https://adventofcode.com/2020/day/25](https://adventofcode.com/2020/day/25)
 

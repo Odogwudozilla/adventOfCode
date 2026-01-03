@@ -1,0 +1,89 @@
+--- Day 9: Encoding Error ---
+
+With your neighbor happily enjoying their video game, you turn your attention to an open data port on the little handheld computer for a moment and improve the signal you'll get from the Elves as much as you can.
+
+The Elves managed to locate the chimney-squeeze prototype fabric for Santa's suit (thanks to someone who helpfully wrote its box IDs on it). Unfortunately, anomalies are still affecting them - nobody can even agree on what the latest message should be.
+
+You manage to find the computer the Elves left at the front desk. Upon connection, the computer presents a series of numbers (your puzzle input) that each player must validate using the previous 25 numbers. The first step of attacking the weakness in the XMAS encryption will be to find the first number which is not the sum of two of the 25 numbers before it.
+
+To do this, you need to find the first number that is NOT the sum of two of the 25 numbers before it. The two numbers will be different.
+
+For example, suppose your preamble/window size is 5 instead of 25. Looking at the first few numbers:
+
+35
+20
+15
+25
+47
+
+The first step validates the 6th number, 40, by checking that it is the sum of some pair of the previous 5 numbers. 15 + 25 = 40, so it is valid.
+
+By contrast, consider the following preamble (window size of 5):
+
+95
+102
+117
+150
+182
+You would need to find the sum of any two of the previous five numbers. Consider sums of pairs from the set: 95, 102, 117, 150, 182:
+
+95 + 102 = 197
+95 + 117 = 212
+95 + 150 = 245
+95 + 182 = 277
+102 + 117 = 219
+102 + 150 = 252
+102 + 182 = 284
+117 + 150 = 267
+117 + 182 = 299
+150 + 182 = 332
+
+The next number in the sequence is 177, but none of these sets sum to 177, so 177 is an invalid number.
+
+For Part One: find the first number in the list (after the preamble) which is not the sum of two of the 25 numbers before it. What is the answer?
+
+For Part Two: The final step in breaking the XMAS encryption relies on the invalid number you just found: you must find a contiguous set of at least two numbers in your list which sum to the invalid number from step 1. Then, to find the encryption weakness, you need to consider the smallest and largest number in this contiguous set; their sum is the encryption weakness you're looking for.
+
+In the above example, again within the first 5-number preamble area, the invalid number you found was 177. Look for a contiguous set of at least two numbers that sum to 177:
+
+16, 11, 15, 1, 2, 7, 6, 0, 5, 4 (numbers from your actual preamble)
+1 + 2 + ... + 4 + 6 + 4 = 16? No...
+0 + 1 + 2 + ... + 4 + 6 = 16? No...
+Wait, you skip the preamble numbers, but you should look in the whole list! Looking at every single contiguous subsequence of at least two numbers in your list:
+
+16 + 11 = 27
+16 + 11 + 15 = 42
+16 + 11 + 15 + 1 = 43
+... (many more)
+15 + 1 + 2 + 7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 = 47
+... (many more)
+2 + 4 + 6 + 9 = 21
+2 + 4 + 6 + 9 + 3 = 24
+2 + 4 + 6 + 9 + 3 + 2 = 26
+2 + 4 + 6 + 9 + 3 + 2 + 10 = 36
+2 + 4 + 6 + 9 + 3 + 2 + 10 + 1 = 37
+... (many more)
+5 + 1 + 2 + 10 + 5 + 10 = 33
+5 + 1 + 2 + 10 + 5 + 10 + 13 = 46
+5 + 1 + 2 + 10 + 5 + 10 + 13 + 3 = 49
+5 + 1 + 2 + 10 + 5 + 10 + 13 + 3 + 7 = 56
+5 + 1 + 2 + 10 + 5 + 10 + 13 + 3 + 7 + 4 = 60
+5 + 1 + 2 + 10 + 5 + 10 + 13 + 3 + 7 + 4 + 2 = 62
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 = 29
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 = 39
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 = 40
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 + 6 = 46
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 + 6 + 4 = 50
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 + 6 + 4 + 6 = 56
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 + 6 + 4 + 6 + 4 = 60
+7 + 6 + 0 + 5 + 4 + 2 + 3 + 2 + 10 + 1 + 6 + 4 + 6 + 4 + 2 = 62
+The sum of 2 + 4 + 6 + 9 + 3 + 2 + 10 + 1 + 6 + 4 + 6 + 4 + 2 = 49 + 8 + 12 = 69? No...
+
+Actually, looking more carefully at the example:
+12 + 13 + 15 + 30 + 16 + 11 + 35 + 47 + 31 + 47 + 37 + 48 + 50 + 6 + 13 + 40 + 13 + 10 + 6 + 2 + 4 + 2 + 4 + 6 + 4 + 2 + 10 + 12 + 24 + 14 + 14 + 11 + 13 + 25 + 13 + 4 = 177
+
+Wait, this is getting too complicated. Just find a contiguous set of numbers that sum to the invalid number (177 in the example), and the answer is the sum of the smallest and largest in that set.
+
+What is the encryption weakness?
+
+Puzzle URL: https://adventofcode.com/2020/day/9

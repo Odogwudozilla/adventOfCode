@@ -173,6 +173,16 @@
       },
       {
         "year": 2020,
+        "day": 9,
+        "title": "Encoding Error",
+        "link": "https://adventofcode.com/2020/day/9",
+        "solutions": {
+          "partOne": "1504371145",
+          "partTwo": "183278487"
+        }
+      },
+      {
+        "year": 2020,
         "day": 25,
         "title": "Combo Breaker",
         "link": "https://adventofcode.com/2020/day/25",
