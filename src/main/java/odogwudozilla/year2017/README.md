@@ -44,3 +44,14 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 **Algorithm**: Simulate jumps using an array, incrementing each instruction after jumping, and count steps until the pointer leaves the array bounds.
 
 ---
+
+### Day 21: Fractal Art
+**Link**: [https://adventofcode.com/2017/day/21](https://adventofcode.com/2017/day/21)
+
+**Description**: Enhance a pixel grid using transformation rules, splitting into blocks and applying rotations/flips to match rules. Count pixels on after a set number of iterations (5 for Part 1, 18 for Part 2).
+
+**Source Code**: [FractalArtAOC2017Day21.java](day21/)
+
+**Algorithm**: Parse enhancement rules, repeatedly split the grid into blocks, match each block (with all rotations/flips) to rules, stitch enhanced blocks, and count on pixels after iterations. For Part 2, run the process for 18 iterations.
+
+---

@@ -84,6 +84,16 @@
           "partOne": "391540",
           "partTwo": "30513679"
         }
+      },
+      {
+        "year": 2017,
+        "day": 21,
+        "title": "Fractal Art",
+        "link": "https://adventofcode.com/2017/day/21",
+        "solutions": {
+          "partOne": "186",
+          "partTwo": "3018423"
+        }
       }
     ],
     "2018": [
