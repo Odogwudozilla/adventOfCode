@@ -158,6 +158,16 @@
           "partOne": "3166704",
           "partTwo": "8018"
         }
+      },
+      {
+        "year": 2019,
+        "day": 11,
+        "title": "Space Police",
+        "link": "https://adventofcode.com/2019/day/11",
+        "solutions": {
+          "partOne": "2211",
+          "partTwo": "EFCKUEGC"
+        }
       }
     ],
     "2020": [

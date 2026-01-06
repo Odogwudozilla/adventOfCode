@@ -14,5 +14,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Simulate an Intcode computer. For Part 1, restore the gravity assist program by setting position 1 to 12 and position 2 to 2, then run the program and report the value at position 0. For Part 2, find the noun and verb that produce the output 19690720 and report 100 * noun + verb.
   - **Source:** [ProgramAlarmAOC2019Day2.java](./day2/ProgramAlarmAOC2019Day2.java)
   - **Algorithm:** Implement Intcode interpreter, brute-force noun/verb search for Part 2.
+- [Day 11: Space Police](https://adventofcode.com/2019/day/11)
+  - **Description:** Build a robot that moves on a grid, painting panels black or white according to an Intcode program. Part 1 counts the number of panels painted at least once. Part 2 renders the registration identifier painted by the robot.
+  - **Source:** [SpacePoliceAOC2019Day11.java](./day11/SpacePoliceAOC2019Day11.java)
+  - **Algorithm:** Simulate robot movement and painting using a custom Intcode interpreter. Track painted panels and render the output grid for Part 2.
 
 [Back to main README](../../../README.md)
