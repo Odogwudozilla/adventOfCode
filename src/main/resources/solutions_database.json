@@ -87,6 +87,16 @@
       },
       {
         "year": 2017,
+        "day": 9,
+        "title": "Stream Processing",
+        "link": "https://adventofcode.com/2017/day/9",
+        "solutions": {
+          "partOne": "16869",
+          "partTwo": "7284"
+        }
+      },
+      {
+        "year": 2017,
         "day": 21,
         "title": "Fractal Art",
         "link": "https://adventofcode.com/2017/day/21",

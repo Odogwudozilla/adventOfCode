@@ -45,6 +45,17 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 9: Stream Processing
+**Link**: [https://adventofcode.com/2017/day/9](https://adventofcode.com/2017/day/9)
+
+**Description**: Parse a stream of characters containing groups (delimited by {}) and garbage (delimited by <>). Calculate the total score for all groups based on nesting depth (Part 1) and count non-canceled characters within garbage (Part 2).
+
+**Source Code**: [StreamProcessingAOC2017Day9.java](day9/)
+
+**Algorithm**: Use a state machine to track whether currently inside garbage, handle escape sequences with !, and compute group scores based on nesting depth or count garbage characters.
+
+---
+
 ### Day 21: Fractal Art
 **Link**: [https://adventofcode.com/2017/day/21](https://adventofcode.com/2017/day/21)
 
