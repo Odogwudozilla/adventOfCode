@@ -39,6 +39,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 23: Crab Cups
+**Link**: [https://adventofcode.com/2020/day/23](https://adventofcode.com/2020/day/23)
+
+**Description**: Simulate a game where cups are moved in a circle according to specific rules. Part 1: After 100 moves, what is the order of cups after cup 1? Part 2: After 10 million moves with 1 million cups, what is the product of the two cups immediately clockwise of cup 1?
+
+**Source Code**: [CrabCupsAOC2020Day23.java](day23/)
+
+**Algorithm**: Part 1 uses a LinkedList to simulate cup moves. Part 2 uses an array-based linked list for efficient simulation of 10 million moves with 1 million cups.
+
+---
+
 ### Day 25: Combo Breaker
 **Link**: [https://adventofcode.com/2020/day/25](https://adventofcode.com/2020/day/25)
 

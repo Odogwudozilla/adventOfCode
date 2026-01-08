@@ -213,6 +213,16 @@
       },
       {
         "year": 2020,
+        "day": 23,
+        "title": "Crab Cups",
+        "link": "https://adventofcode.com/2020/day/23",
+        "solutions": {
+          "partOne": "24987653",
+          "partTwo": "442938711161"
+        }
+      },
+      {
+        "year": 2020,
         "day": 25,
         "title": "Combo Breaker",
         "link": "https://adventofcode.com/2020/day/25",

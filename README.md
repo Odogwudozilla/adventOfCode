@@ -243,7 +243,7 @@ When adding new solutions:
 3. Add puzzle description and input data to resources
 4. Commit with descriptive message: `Add AOC <Year> Day <Day> solution: <PuzzleTitle> - <approach>`
 
-## 📊 Years
+## 📅 Years
 
 Explore solutions organized by year:
 
