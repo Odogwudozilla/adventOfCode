@@ -52,6 +52,16 @@
           "partOne": "262",
           "partTwo": "131"
         }
+      },
+      {
+        "year": 2016,
+        "day": 20,
+        "title": "Firewall Rules",
+        "link": "https://adventofcode.com/2016/day/20",
+        "solutions": {
+          "partOne": "32259706",
+          "partTwo": "113"
+        }
       }
     ],
     "2017": [
