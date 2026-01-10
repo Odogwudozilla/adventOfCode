@@ -188,6 +188,16 @@
           "partOne": "2211",
           "partTwo": "EFCKUEGC"
         }
+      },
+      {
+        "year": 2019,
+        "day": 16,
+        "title": "Flawed Frequency Transmission",
+        "link": "https://adventofcode.com/2019/day/16",
+        "solutions": {
+          "partOne": "37153056",
+          "partTwo": "60592199"
+        }
       }
     ],
     "2020": [
