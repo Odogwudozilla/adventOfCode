@@ -22,5 +22,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Clean up a noisy signal using the Flawed Frequency Transmission (FFT) algorithm. Each phase applies a repeating pattern to the input digits, producing a new list. After 100 phases, report the first eight digits of the output.
   - **Source:** [FlawedFrequencyTransmissionAOC2019Day16.java](./day16/FlawedFrequencyTransmissionAOC2019Day16.java)
   - **Algorithm:** For each phase, generate output digits by summing products of input digits and a position-dependent pattern, keeping only the ones digit. Repeat for 100 phases.
+- [Day 24: Planet of Discord](https://adventofcode.com/2019/day/24)
+  - **Description:** Simulate a 5x5 grid of bugs and empty spaces, updating each minute according to adjacency rules. Find the first repeated layout and calculate its biodiversity rating.
+  - **Source:** [PlanetOfDiscordAOC2019Day24.java](./day24/PlanetOfDiscordAOC2019Day24.java)
+  - **Algorithm:** Track layouts using a set, update the grid per rules, and compute biodiversity when a repeat is found.
 
 [Back to main README](../../../README.md)

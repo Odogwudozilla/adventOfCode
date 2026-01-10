@@ -198,6 +198,16 @@
           "partOne": "37153056",
           "partTwo": "60592199"
         }
+      },
+      {
+        "year": 2019,
+        "day": 24,
+        "title": "Planet of Discord",
+        "link": "https://adventofcode.com/2019/day/24",
+        "solutions": {
+          "partOne": "32776479",
+          "partTwo": "2017"
+        }
       }
     ],
     "2020": [
