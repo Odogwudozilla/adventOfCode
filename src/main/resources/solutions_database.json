@@ -208,6 +208,16 @@
           "partOne": "32776479",
           "partTwo": "2017"
         }
+      },
+      {
+        "year": 2019,
+        "day": 9,
+        "title": "Sensor Boost",
+        "link": "https://adventofcode.com/2019/day/9",
+        "solutions": {
+          "partOne": "3638931938",
+          "partTwo": "86025"
+        }
       }
     ],
     "2020": [
