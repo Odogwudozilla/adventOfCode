@@ -301,6 +301,16 @@
           "partOne": "45031",
           "partTwo": "2568"
         }
+      },
+      {
+        "year": 2021,
+        "day": 23,
+        "title": "Amphipod",
+        "link": "https://adventofcode.com/2021/day/23",
+        "solutions": {
+          "partOne": "17400",
+          "partTwo": "46120"
+        }
       }
     ],
     "2022": [

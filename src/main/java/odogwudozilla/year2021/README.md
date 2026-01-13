@@ -42,3 +42,15 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 **Algorithm/Approach**: Parse the drawn numbers and boards, simulate marking numbers, and check for winning conditions after each draw. For Part 2, continue until all boards have won and return the score for the last winning board.
 
 ---
+
+### Day 23: Amphipod
+**Link**: [https://adventofcode.com/2021/day/23](https://adventofcode.com/2021/day/23)
+
+**Description**: Organise amphipods into their destination rooms in a burrow using the least energy possible. Each amphipod type (Amber, Bronze, Copper, Desert) has a different energy cost per step. Part 1 has rooms with 2 positions. Part 2 expands rooms to 4 positions.
+
+**Source Code**: [AmphipodAOC2021Day23.java](day23/)
+
+**Algorithm/Approach**: Use Dijkstra's algorithm with state-space search to find the minimum energy configuration. Model the burrow state including hallway and room positions. Generate all valid moves based on movement rules and explore states using a priority queue ordered by energy cost. Support variable room depths to handle both Part 1 (depth 2) and Part 2 (depth 4).
+
+---
+
