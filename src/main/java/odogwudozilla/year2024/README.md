@@ -22,6 +22,15 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [CeresSearchAOC2024Day4.java](day4/)
 
+### Day 5: Print Queue
+**Link**: [https://adventofcode.com/2024/day/5](https://adventofcode.com/2024/day/5)
+
+**Description**: Given a set of page ordering rules and a list of updates (page sequences), determine which updates are already in the correct order. For each correctly-ordered update, find the middle page number and sum these values.
+
+**Algorithm**: For each update, check all applicable ordering rules (only those involving present pages). Use index mapping to verify order. Sum the middle page numbers of valid updates.
+
+**Source Code**: [PrintQueueAOC2024Day5.java](day5/)
+
 ### Day 18: RAM Run
 **Link**: [https://adventofcode.com/2024/day/18](https://adventofcode.com/2024/day/18)
 

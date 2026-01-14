@@ -377,6 +377,16 @@
           "partOne": "352",
           "partTwo": "2041"
         }
+      },
+      {
+        "year": 2024,
+        "day": 5,
+        "title": "Print Queue",
+        "link": "https://adventofcode.com/2024/day/5",
+        "solutions": {
+          "partOne": "3608",
+          "partTwo": "4922"
+        }
       }
     ],
     "2025": [
