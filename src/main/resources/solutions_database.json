@@ -348,6 +348,16 @@
     "2023": [
       {
         "year": 2023,
+        "day": 13,
+        "title": "Point of Incidence",
+        "link": "https://adventofcode.com/2023/day/13",
+        "solutions": {
+          "partOne": "42974",
+          "partTwo": "27587"
+        }
+      },
+      {
+        "year": 2023,
         "day": 21,
         "title": "Step Counter",
         "link": "https://adventofcode.com/2023/day/21",
