@@ -348,6 +348,16 @@
     "2023": [
       {
         "year": 2023,
+        "day": 10,
+        "title": "Pipe Maze",
+        "link": "https://adventofcode.com/2023/day/10",
+        "solutions": {
+          "partOne": "6690",
+          "partTwo": "525"
+        }
+      },
+      {
+        "year": 2023,
         "day": 13,
         "title": "Point of Incidence",
         "link": "https://adventofcode.com/2023/day/13",

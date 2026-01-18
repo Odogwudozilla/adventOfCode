@@ -4,6 +4,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 
 ## Implemented Puzzles
 
+### Day 10: Pipe Maze
+**Link**: [Day 10 - Pipe Maze](https://adventofcode.com/2023/day/10)
+
+**Description**: 
+- Part 1: Navigate through a two-dimensional grid of pipes to find a continuous loop. Determine the farthest point from the starting position 'S' along the loop.
+- Part 2: Calculate how many tiles are enclosed within the pipe loop using scan-line algorithm.
+
+**Source**: [PipeMazeAOC2023Day10.java](day10/PipeMazeAOC2023Day10.java)
+
+**Algorithm/Approach**:
+- Part 1: Breadth-First Search (BFS) to traverse the pipe loop and track distances from the starting position
+- Part 2: Scan-line algorithm with ray-casting to determine which tiles are inside the loop boundary
+
 ### Day 13: Point of Incidence
 **Link**: [Day 13 - Point of Incidence](https://adventofcode.com/2023/day/13)
 
