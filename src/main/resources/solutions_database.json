@@ -156,6 +156,16 @@
           "partOne": "72925",
           "partTwo": "49137"
         }
+      },
+      {
+        "year": 2018,
+        "day": 15,
+        "title": "Beverage Bandits",
+        "link": "https://adventofcode.com/2018/day/15",
+        "solutions": {
+          "partOne": "201123",
+          "partTwo": "54188"
+        }
       }
     ],
     "2019": [
