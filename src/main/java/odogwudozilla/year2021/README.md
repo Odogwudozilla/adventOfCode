@@ -32,6 +32,17 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 3: Binary Diagnostic
+**Link**: [https://adventofcode.com/2021/day/3](https://adventofcode.com/2021/day/3)
+
+**Description**: Analyze binary diagnostic data from the submarine. Part 1 calculates power consumption by finding gamma and epsilon rates based on most/least common bits. Part 2 calculates life support rating using oxygen generator and CO2 scrubber ratings through iterative filtering.
+
+**Source Code**: [BinaryDiagnosticAOC2021Day3.java](day3/)
+
+**Algorithm/Approach**: Part 1 counts bit occurrences in each position to determine most/least common bits. Part 2 uses iterative filtering, removing numbers that don't match the bit criteria until only one remains for each rating type.
+
+---
+
 ### Day 4: Giant Squid
 **Link**: [https://adventofcode.com/2021/day/4](https://adventofcode.com/2021/day/4)
 

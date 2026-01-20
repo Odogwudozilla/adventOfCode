@@ -304,6 +304,16 @@
       },
       {
         "year": 2021,
+        "day": 3,
+        "title": "Binary Diagnostic",
+        "link": "https://adventofcode.com/2021/day/3",
+        "solutions": {
+          "partOne": "1997414",
+          "partTwo": "1032597"
+        }
+      },
+      {
+        "year": 2021,
         "day": 4,
         "title": "Giant Squid",
         "link": "https://adventofcode.com/2021/day/4",
