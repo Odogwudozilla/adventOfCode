@@ -363,6 +363,16 @@
           "partOne": "7428",
           "partTwo": "2650"
         }
+      },
+      {
+        "year": 2022,
+        "day": 8,
+        "title": "Treetop Tree House",
+        "link": "https://adventofcode.com/2022/day/8",
+        "solutions": {
+          "partOne": "1829",
+          "partTwo": "291840"
+        }
       }
     ],
     "2023": [

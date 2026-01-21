@@ -35,6 +35,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: For Part 1, split each rucksack into two compartments and find the common item type, summing its priority. For Part 2, group rucksacks in threes and find the badge item type common to all three, summing its priority.
 
+### Day 8: Treetop Tree House
+**Link**: [Day 8: Treetop Tree House](https://adventofcode.com/2022/day/8)
+
+**Description**: Determine if there is enough tree cover for a tree house by counting visible trees in a grid. Part 1 counts trees visible from outside the grid (all trees between it and an edge are shorter). Part 2 finds the tree with the highest scenic score (product of viewing distances in all four directions).
+
+**Source**: [TreetopTreeHouseAOC2022Day8.java](day8/TreetopTreeHouseAOC2022Day8.java)
+
+**Approach**: For Part 1, iterate through each tree and check if it is visible from any of the four directions by examining trees until reaching an edge or a taller tree. For Part 2, calculate the scenic score for each tree by counting visible trees in all four directions, then find the maximum score.
+
 ---
 
 ## Navigation
