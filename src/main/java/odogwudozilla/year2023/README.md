@@ -4,6 +4,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 
 ## Implemented Puzzles
 
+### Day 4: Scratchcards
+**Link**: [Day 4 - Scratchcards](https://adventofcode.com/2023/day/4)
+
+**Description**: 
+- Part 1: Calculate total points from scratchcards. Each card has winning numbers and your numbers. The first match is worth 1 point, then each subsequent match doubles the points (2, 4, 8, 16, etc.).
+- Part 2: Calculate the total number of scratchcards including copies. Each match on a card causes you to win copies of subsequent cards.
+
+**Source**: [ScratchcardsAOC2023Day4.java](day4/ScratchcardsAOC2023Day4.java)
+
+**Algorithm/Approach**:
+- Part 1: Parse each card to extract winning numbers and your numbers, count matches using a Set lookup, calculate points using 2^(matchCount-1) formula
+- Part 2: Use an array to track copies of each card, iterate through cards and increment copy counts for subsequent cards based on match count
+
 ### Day 10: Pipe Maze
 **Link**: [Day 10 - Pipe Maze](https://adventofcode.com/2023/day/10)
 

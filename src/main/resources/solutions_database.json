@@ -378,6 +378,16 @@
     "2023": [
       {
         "year": 2023,
+        "day": 4,
+        "title": "Scratchcards",
+        "link": "https://adventofcode.com/2023/day/4",
+        "solutions": {
+          "partOne": "22193",
+          "partTwo": "5625994"
+        }
+      },
+      {
+        "year": 2023,
         "day": 10,
         "title": "Pipe Maze",
         "link": "https://adventofcode.com/2023/day/10",
