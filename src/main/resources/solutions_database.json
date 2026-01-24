@@ -166,6 +166,16 @@
           "partOne": "201123",
           "partTwo": "54188"
         }
+      },
+      {
+        "year": 2018,
+        "day": 16,
+        "title": "Chronal Classification",
+        "link": "https://adventofcode.com/2018/day/16",
+        "solutions": {
+          "partOne": "663",
+          "partTwo": "525"
+        }
       }
     ],
     "2019": [
