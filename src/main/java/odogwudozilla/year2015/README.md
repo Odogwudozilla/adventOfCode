@@ -39,6 +39,17 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
+### Day 10: Elves Look, Elves Say
+**Link**: [https://adventofcode.com/2015/day/10](https://adventofcode.com/2015/day/10)
+
+**Description**: Apply the look-and-say sequence transformation (also known as the Morris number sequence) to a string of digits. Each iteration describes the previous result by counting consecutive runs of digits.
+
+**Source Code**: [ElvesLookElvesSayAOC2015Day10.java](day10/)
+
+**Algorithm/Approach**: Iterate through the string counting consecutive occurrences of each digit, then build the result by appending the count followed by the digit. Part 1 applies this 40 times, Part 2 applies it 50 times. The result grows exponentially with each iteration.
+
+---
+
 ### Day 15: Science for Hungry People
 **Link**: [https://adventofcode.com/2015/day/15](https://adventofcode.com/2015/day/15)
 

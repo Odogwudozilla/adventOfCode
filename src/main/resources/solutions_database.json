@@ -33,6 +33,16 @@
       },
       {
         "year": 2015,
+        "day": 10,
+        "title": "Elves Look, Elves Say",
+        "link": "https://adventofcode.com/2015/day/10",
+        "solutions": {
+          "partOne": "360154",
+          "partTwo": "5103798"
+        }
+      },
+      {
+        "year": 2015,
         "day": 15,
         "title": "Science for Hungry People",
         "link": "https://adventofcode.com/2015/day/15",
