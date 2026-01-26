@@ -273,6 +273,16 @@
       },
       {
         "year": 2020,
+        "day": 8,
+        "title": "Handheld Halting",
+        "link": "https://adventofcode.com/2020/day/8",
+        "solutions": {
+          "partOne": "2051",
+          "partTwo": "2304"
+        }
+      },
+      {
+        "year": 2020,
         "day": 9,
         "title": "Encoding Error",
         "link": "https://adventofcode.com/2020/day/9",

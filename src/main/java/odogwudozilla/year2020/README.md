@@ -28,6 +28,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 8: Handheld Halting
+**Link**: [https://adventofcode.com/2020/day/8](https://adventofcode.com/2020/day/8)
+
+**Description**: Fix a handheld game console with an infinite loop in its boot code. The console runs instructions (acc, jmp, nop) and you need to detect the infinite loop. Part 1: Find the accumulator value immediately before any instruction is executed a second time. Part 2: Fix the code by changing exactly one jmp to nop or vice versa to make the program terminate normally.
+
+**Source Code**: [HandheldHaltingAOC2020Day8.java](day8/)
+
+**Algorithm**: Part 1 detects infinite loops by tracking visited instruction indices. Part 2 systematically tries flipping each jmp/nop instruction until the program terminates successfully.
+
+---
+
 ### Day 9: Encoding Error
 **Link**: [https://adventofcode.com/2020/day/9](https://adventofcode.com/2020/day/9)
 
