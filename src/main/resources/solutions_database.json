@@ -169,6 +169,16 @@
       },
       {
         "year": 2018,
+        "day": 11,
+        "title": "Chronal Charge",
+        "link": "https://adventofcode.com/2018/day/11",
+        "solutions": {
+          "partOne": "233,36",
+          "partTwo": "231,107,14"
+        }
+      },
+      {
+        "year": 2018,
         "day": 15,
         "title": "Beverage Bandits",
         "link": "https://adventofcode.com/2018/day/15",
