@@ -72,6 +72,16 @@
           "partOne": "32259706",
           "partTwo": "113"
         }
+      },
+      {
+        "year": 2016,
+        "day": 21,
+        "title": "Scrambled Letters and Hash",
+        "link": "https://adventofcode.com/2016/day/21",
+        "solutions": {
+          "partOne": "gbhafcde",
+          "partTwo": "bcfaegdh"
+        }
       }
     ],
     "2017": [
