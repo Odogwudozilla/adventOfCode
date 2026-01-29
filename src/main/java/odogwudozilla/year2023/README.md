@@ -17,6 +17,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: Parse each card to extract winning numbers and your numbers, count matches using a Set lookup, calculate points using 2^(matchCount-1) formula
 - Part 2: Use an array to track copies of each card, iterate through cards and increment copy counts for subsequent cards based on match count
 
+### Day 6: Wait For It
+**Link**: [Day 6 - Wait For It](https://adventofcode.com/2023/day/6)
+
+**Description**: 
+- Part 1: Calculate the number of ways to beat boat race records across multiple races. The boat's speed increases by 1 mm/ms for each millisecond the button is held. Multiply the number of winning strategies for each race.
+- Part 2: Treat all race times and distances as a single large race by removing spaces between numbers, then calculate ways to win.
+
+**Source**: [WaitForItAOC2023Day6.java](day6/WaitForItAOC2023Day6.java)
+
+**Algorithm/Approach**:
+- Part 1: For each race, iterate through all possible hold times and count how many result in distances that beat the record
+- Part 2: Parse numbers by concatenating digits (ignoring spaces), then apply the same algorithm to the single large race
+
 ### Day 10: Pipe Maze
 **Link**: [Day 10 - Pipe Maze](https://adventofcode.com/2023/day/10)
 

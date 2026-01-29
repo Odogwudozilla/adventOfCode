@@ -438,6 +438,16 @@
       },
       {
         "year": 2023,
+        "day": 6,
+        "title": "Wait For It",
+        "link": "https://adventofcode.com/2023/day/6",
+        "solutions": {
+          "partOne": "4568778",
+          "partTwo": "28973936"
+        }
+      },
+      {
+        "year": 2023,
         "day": 10,
         "title": "Pipe Maze",
         "link": "https://adventofcode.com/2023/day/10",
