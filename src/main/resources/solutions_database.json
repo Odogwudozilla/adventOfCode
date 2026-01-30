@@ -261,6 +261,16 @@
       },
       {
         "year": 2019,
+        "day": 7,
+        "title": "Amplification Circuit",
+        "link": "https://adventofcode.com/2019/day/7",
+        "solutions": {
+          "partOne": "272368",
+          "partTwo": "19741286"
+        }
+      },
+      {
+        "year": 2019,
         "day": 9,
         "title": "Sensor Boost",
         "link": "https://adventofcode.com/2019/day/9",
