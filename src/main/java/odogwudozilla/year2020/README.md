@@ -50,6 +50,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 10: Adapter Array
+**Link**: [https://adventofcode.com/2020/day/10](https://adventofcode.com/2020/day/10)
+
+**Description**: Given a list of joltage adapters, find a chain that uses all adapters to connect the charging outlet to your device. Count the 1-jolt and 3-jolt differences between consecutive adapters, then multiply these counts.
+
+**Source Code**: [AdapterArrayAOC2020Day10.java](day10/)
+
+**Algorithm**: Sort the adapter list, count the differences between consecutive adapters, and account for the device's built-in adapter (+3 jolts).
+
+---
+
 ### Day 23: Crab Cups
 **Link**: [https://adventofcode.com/2020/day/23](https://adventofcode.com/2020/day/23)
 

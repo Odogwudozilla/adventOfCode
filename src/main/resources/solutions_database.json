@@ -323,6 +323,16 @@
       },
       {
         "year": 2020,
+        "day": 10,
+        "title": "Adapter Array",
+        "link": "https://adventofcode.com/2020/day/10",
+        "solutions": {
+          "partOne": "2080",
+          "partTwo": "6908379398144"
+        }
+      },
+      {
+        "year": 2020,
         "day": 23,
         "title": "Crab Cups",
         "link": "https://adventofcode.com/2020/day/23",
