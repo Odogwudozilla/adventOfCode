@@ -448,6 +448,16 @@
     "2023": [
       {
         "year": 2023,
+        "day": 3,
+        "title": "Gear Ratios",
+        "link": "https://adventofcode.com/2023/day/3",
+        "solutions": {
+          "partOne": "540212",
+          "partTwo": "87605697"
+        }
+      },
+      {
+        "year": 2023,
         "day": 4,
         "title": "Scratchcards",
         "link": "https://adventofcode.com/2023/day/4",

@@ -4,6 +4,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 
 ## Implemented Puzzles
 
+### Day 3: Gear Ratios
+**Link**: [Day 3 - Gear Ratios](https://adventofcode.com/2023/day/3)
+
+**Description**: 
+- Part 1: Sum all part numbers in the engine schematic. A part number is any number adjacent to a symbol (including diagonally), where periods (.) do not count as symbols.
+- Part 2: Find all gears (asterisks with exactly two adjacent numbers) and sum the products of their two adjacent numbers.
+
+**Source**: [GearRatiosAOC2023Day3.java](day3/GearRatiosAOC2023Day3.java)
+
+**Algorithm/Approach**:
+- Part 1: Iterate through the schematic, extract all numbers, and check if they are adjacent to any non-digit, non-period character
+- Part 2: Locate all asterisks, find all adjacent numbers for each asterisk, and sum the products of pairs with exactly two numbers
+
 ### Day 4: Scratchcards
 **Link**: [Day 4 - Scratchcards](https://adventofcode.com/2023/day/4)
 
