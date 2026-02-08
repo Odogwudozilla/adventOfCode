@@ -83,7 +83,7 @@ public class GearRatiosAOC2023Day3 {
     private static long solvePartTwo(List<String> lines) {
         long sum = 0;
         int rows = lines.size();
-        int cols = lines.get(0).length();
+        int cols = lines.getFirst().length();
 
         for (int row = 0; row < rows; row++) {
             String line = lines.get(row);

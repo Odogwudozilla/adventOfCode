@@ -66,3 +66,14 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 **Algorithm**: Parse enhancement rules, repeatedly split the grid into blocks, match each block (with all rotations/flips) to rules, stitch enhanced blocks, and count on pixels after iterations. For Part 2, run the process for 18 iterations.
 
 ---
+
+### Day 24: Electromagnetic Moat
+**Link**: [https://adventofcode.com/2017/day/24](https://adventofcode.com/2017/day/24)
+
+**Description**: Build the strongest possible bridge using magnetic components, each with two ports. The bridge must start with a port of type 0, and each component can only be used once. The strength of a bridge is the sum of the port types in each component. For Part 2, find the strength of the longest bridge (and strongest if there is a tie).
+
+**Source Code**: [ElectromagneticMoatAOC2017Day24.java](day24/)
+
+**Algorithm**: Use depth-first search to recursively try all possible bridges, tracking used components and summing strengths. For Part 2, also track the length of each bridge and select the strongest among the longest.
+
+---

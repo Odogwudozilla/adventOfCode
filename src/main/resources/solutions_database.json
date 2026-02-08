@@ -134,6 +134,16 @@
           "partOne": "186",
           "partTwo": "3018423"
         }
+      },
+      {
+        "year": 2017,
+        "day": 24,
+        "title": "Electromagnetic Moat",
+        "link": "https://adventofcode.com/2017/day/24",
+        "solutions": {
+          "partOne": "1695",
+          "partTwo": "1673"
+        }
       }
     ],
     "2018": [
