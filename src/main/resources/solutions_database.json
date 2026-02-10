@@ -82,6 +82,16 @@
           "partOne": "gbhafcde",
           "partTwo": "bcfaegdh"
         }
+      },
+      {
+        "year": 2016,
+        "day": 4,
+        "title": "Security Through Obscurity",
+        "link": "https://adventofcode.com/2016/day/4",
+        "solutions": {
+          "partOne": "185371",
+          "partTwo": "984"
+        }
       }
     ],
     "2017": [
