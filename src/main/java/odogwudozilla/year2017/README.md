@@ -56,6 +56,17 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 14: Disk Defragmentation
+**Link**: [https://adventofcode.com/2017/day/14](https://adventofcode.com/2017/day/14)
+
+**Description**: Given a key string, generate a 128x128 grid using knot hashes and count the number of used squares (1s) in the grid. For Part 2, count the number of regions of adjacent used squares (not including diagonals).
+
+**Source Code**: [DiskDefragmentationAOC2017Day14.java](day14/)
+
+**Algorithm**: For each row, compute the knot hash, convert to binary, and count the number of 1s across the grid. For Part 2, use DFS to find and count all regions of connected used squares.
+
+---
+
 ### Day 21: Fractal Art
 **Link**: [https://adventofcode.com/2017/day/21](https://adventofcode.com/2017/day/21)
 

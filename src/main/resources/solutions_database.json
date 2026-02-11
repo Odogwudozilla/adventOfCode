@@ -137,6 +137,16 @@
       },
       {
         "year": 2017,
+        "day": 14,
+        "title": "Disk Defragmentation",
+        "link": "https://adventofcode.com/2017/day/14",
+        "solutions": {
+          "partOne": "8222",
+          "partTwo": "1086"
+        }
+      },
+      {
+        "year": 2017,
         "day": 21,
         "title": "Fractal Art",
         "link": "https://adventofcode.com/2017/day/21",
