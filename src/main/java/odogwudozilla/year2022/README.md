@@ -44,6 +44,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: For Part 1, iterate through each tree and check if it is visible from any of the four directions by examining trees until reaching an edge or a taller tree. For Part 2, calculate the scenic score for each tree by counting visible trees in all four directions, then find the maximum score.
 
+### Day 16: Proboscidea Volcanium
+**Link**: [Day 16: Proboscidea Volcanium](https://adventofcode.com/2022/day/16)
+
+**Description**: The sensors have led you to the origin of the distress signal: yet another handheld device, just like the one the Elves gave you. However, you don't see any Elves around; instead, the device is surrounded by elephants! They must have gotten lost in these tunnels, and one of the elephants apparently figured out how to turn on the distress signal. You need to get the elephants out of here, quickly, before the volcano erupts. The puzzle involves a network of pipes and pressure-release valves, and you must determine the most pressure you can release in 30 minutes by opening valves in an optimal order. In Part 2, you and an elephant work together for 26 minutes to maximise the pressure released.
+
+**Source**: [ProboscideaVolcaniumAOC2022Day16.java](day16/ProboscideaVolcaniumAOC2022Day16.java)
+
+**Approach**: Parse the input into a graph of valves and tunnels, precompute shortest paths between all valves, and use depth-first search with memoisation to explore all possible orders of opening valves to maximise released pressure within the time limit. For Part 2, try all possible splits of the valves between the two agents and sum their best results.
+
 ---
 
 ## Navigation

@@ -473,6 +473,16 @@
           "partOne": "1829",
           "partTwo": "291840"
         }
+      },
+      {
+        "year": 2022,
+        "day": 16,
+        "title": "Proboscidea Volcanium",
+        "link": "https://adventofcode.com/2022/day/16",
+        "solutions": {
+          "partOne": "1474",
+          "partTwo": "2100"
+        }
       }
     ],
     "2023": [
