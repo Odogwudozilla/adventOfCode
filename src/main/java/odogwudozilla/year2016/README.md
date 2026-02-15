@@ -10,6 +10,7 @@ This README tracks all implemented solutions for Advent of Code 2016.
 | 4   | Security Through Obscurity | https://adventofcode.com/2016/day/4      | Part 1: Sum the sector IDs of all real rooms by validating checksums.<br>Part 2: Decrypt names and find the sector ID for North Pole objects room. | [SecurityThroughObscurityAOC2016Day4.java](./day4/SecurityThroughObscurityAOC2016Day4.java) |
 | 20  | Firewall Rules           | https://adventofcode.com/2016/day/20          | Part 1: Find the lowest-valued allowed IP.<br>Part 2: Count the total number of allowed IPs. | [FirewallRulesAOC2016Day20.java](./day20/FirewallRulesAOC2016Day20.java)        |
 | 21  | Scrambled Letters and Hash | https://adventofcode.com/2016/day/21       | Part 1: Apply scrambling operations to password "abcdefgh".<br>Part 2: Reverse scrambling operations to unscramble "fbgdceah". | [ScrambledLettersAndHashAOC2016Day21.java](./day21/ScrambledLettersAndHashAOC2016Day21.java) |
+| 22  | Grid Computing           | https://adventofcode.com/2016/day/22          | Part 1: Count the number of viable pairs of nodes in a storage grid. | [GridComputingAOC2016Day22.java](./day22/GridComputingAOC2016Day22.java)        |
 
 ## Navigation
 - [Back to main README](../../../README.md)

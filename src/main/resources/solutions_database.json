@@ -92,6 +92,16 @@
           "partOne": "185371",
           "partTwo": "984"
         }
+      },
+      {
+        "year": 2016,
+        "day": 22,
+        "title": "Grid Computing",
+        "link": "https://adventofcode.com/2016/day/22",
+        "solutions": {
+          "partOne": "950",
+          "partTwo": "256"
+        }
       }
     ],
     "2017": [

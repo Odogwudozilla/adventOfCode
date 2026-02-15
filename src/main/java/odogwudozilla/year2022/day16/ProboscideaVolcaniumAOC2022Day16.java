@@ -54,7 +54,7 @@ public class ProboscideaVolcaniumAOC2022Day16 {
             }
             valves.put(name, new Valve(name, flow, leadsTo));
         }
-        // Precompute shortest paths between all valves using Floyd-Warshall
+        // Precompute the shortest paths between all valves using Floyd-Warshall
         Map<String, Map<String, Integer>> shortestPaths = computeAllPairsShortestPaths(valves);
         // Only consider valves with positive flow
         List<String> usefulValves = new ArrayList<>();
