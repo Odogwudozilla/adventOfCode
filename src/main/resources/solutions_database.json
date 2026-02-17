@@ -555,6 +555,16 @@
           "partOne": "3737",
           "partTwo": "625382480005896"
         }
+      },
+      {
+        "year": 2023,
+        "day": 9,
+        "title": "Mirage Maintenance",
+        "link": "https://adventofcode.com/2023/day/9",
+        "solutions": {
+          "partOne": "1901217887",
+          "partTwo": "905"
+        }
       }
     ],
     "2024": [

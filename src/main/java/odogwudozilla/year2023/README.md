@@ -43,6 +43,17 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: For each race, iterate through all possible hold times and count how many result in distances that beat the record
 - Part 2: Parse numbers by concatenating digits (ignoring spaces), then apply the same algorithm to the single large race
 
+### Day 9: Mirage Maintenance
+**Link**: [Day 9 - Mirage Maintenance](https://adventofcode.com/2023/day/9)
+
+**Description**:
+- Part 1: Extrapolate the next value for each sequence using difference sequences until all zeroes, then sum the extrapolated values.
+
+**Source**: [MirageMaintenanceAOC2023Day9.java](day9/MirageMaintenanceAOC2023Day9.java)
+
+**Algorithm/Approach**:
+- For each line, repeatedly compute difference sequences until all values are zero, then extrapolate the next value by summing up from the bottom difference sequence.
+
 ### Day 10: Pipe Maze
 **Link**: [Day 10 - Pipe Maze](https://adventofcode.com/2023/day/10)
 
@@ -89,4 +100,3 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 ---
 
 [← Back to Main README](../../../../../../README.md)
-
