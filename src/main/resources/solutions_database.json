@@ -102,6 +102,16 @@
           "partOne": "950",
           "partTwo": "256"
         }
+      },
+      {
+        "year": 2016,
+        "day": 12,
+        "title": "Leonardo's Monorail",
+        "link": "https://adventofcode.com/2016/day/12",
+        "solutions": {
+          "partOne": "318117",
+          "partTwo": "9227771"
+        }
       }
     ],
     "2017": [
