@@ -503,6 +503,16 @@
           "partOne": "1474",
           "partTwo": "2100"
         }
+      },
+      {
+        "year": 2022,
+        "day": 24,
+        "title": "Blizzard Basin",
+        "link": "https://adventofcode.com/2022/day/24",
+        "solutions": {
+          "partOne": "232",
+          "partTwo": "715"
+        }
       }
     ],
     "2023": [

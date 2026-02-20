@@ -53,6 +53,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: Parse the input into a graph of valves and tunnels, precompute shortest paths between all valves, and use depth-first search with memoisation to explore all possible orders of opening valves to maximise released pressure within the time limit. For Part 2, try all possible splits of the valves between the two agents and sum their best results.
 
+### Day 24: Blizzard Basin
+**Link**: [Day 24: Blizzard Basin](https://adventofcode.com/2022/day/24)
+
+**Description**: With everything replanted for next year (and with elephants and monkeys to tend the grove), you and the Elves leave for the extraction point. Partway up the mountain that shields the grove is a flat, open area that serves as the extraction point. It's a bit of a climb, but nothing the expedition can't handle. At least, that would normally be true; now that the mountain is covered in snow, things have become more difficult than the Elves are used to. As the expedition reaches a valley that must be traversed to reach the extraction site, you find that strong, turbulent winds are pushing small blizzards of snow and sharp ice around the valley. It's a good thing everyone packed warm clothes! To make it across safely, you'll need to find a way to avoid them.
+
+**Source**: [BlizzardBasinAOC2022Day24.java](day24/BlizzardBasinAOC2022Day24.java)
+
+**Approach**: Parse the valley map, simulate blizzard movement with wrap-around, and use breadth-first search (BFS) to find the minimum number of minutes to reach the goal, avoiding blizzards at each step. Precompute blizzard positions for each minute in the cycle for efficiency.
+
 ---
 
 ## Navigation
