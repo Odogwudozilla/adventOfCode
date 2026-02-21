@@ -112,6 +112,16 @@
           "partOne": "318117",
           "partTwo": "9227771"
         }
+      },
+      {
+        "year": 2016,
+        "day": 19,
+        "title": "An Elephant Named Joseph",
+        "link": "https://adventofcode.com/2016/day/19",
+        "solutions": {
+          "partOne": "1834471",
+          "partTwo": "1420064"
+        }
       }
     ],
     "2017": [
