@@ -40,6 +40,15 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [RAMRunAOC2024Day18.java](day18/)
 
+### Day 22: Monkey Market
+**Link**: [https://adventofcode.com/2024/day/22](https://adventofcode.com/2024/day/22)
+
+**Description**: Simulate buyers' pseudorandom secret number evolution to predict their prices. For each buyer, generate 2000 new secret numbers and sum the 2000th secret number for all buyers.
+
+**Part 2**: Find the best sequence of four price changes (from buyers' price history) that maximises the sum of prices at the first occurrence for each buyer.
+
+**Source Code**: [MonkeyMarketAOC2024Day22.java](day22/)
+
 ---
 
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)

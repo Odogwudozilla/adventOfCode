@@ -627,6 +627,16 @@
           "partOne": "3608",
           "partTwo": "4922"
         }
+      },
+      {
+        "year": 2024,
+        "day": 22,
+        "title": "Monkey Market",
+        "link": "https://adventofcode.com/2024/day/22",
+        "solutions": {
+          "partOne": "12664695565",
+          "partTwo": "1444"
+        }
       }
     ],
     "2025": [
