@@ -177,6 +177,16 @@
       },
       {
         "year": 2017,
+        "day": 20,
+        "title": "Particle Swarm",
+        "link": "https://adventofcode.com/2017/day/20",
+        "solutions": {
+          "partOne": "150",
+          "partTwo": "657"
+        }
+      },
+      {
+        "year": 2017,
         "day": 21,
         "title": "Fractal Art",
         "link": "https://adventofcode.com/2017/day/21",

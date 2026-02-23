@@ -67,6 +67,17 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 20: Particle Swarm
+**Link**: [https://adventofcode.com/2017/day/20](https://adventofcode.com/2017/day/20)
+
+**Description**: Simulate a swarm of particles in 3D space, each with position, velocity, and acceleration. Find which particle stays closest to the origin in the long term (Part 1). For Part 2, simulate collisions where particles at the same position destroy each other.
+
+**Source Code**: [ParticleSwarmAOC2017Day20.java](day20/)
+
+**Algorithm**: Parse particles and simulate their movement by updating velocity then position each tick. For Part 1, run the simulation long enough for particles to stabilize and find the one with minimum Manhattan distance. For Part 2, track collisions by checking for multiple particles at the same position and remove them each tick.
+
+---
+
 ### Day 21: Fractal Art
 **Link**: [https://adventofcode.com/2017/day/21](https://adventofcode.com/2017/day/21)
 
