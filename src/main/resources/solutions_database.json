@@ -403,6 +403,16 @@
       },
       {
         "year": 2020,
+        "day": 19,
+        "title": "Monster Messages",
+        "link": "https://adventofcode.com/2020/day/19",
+        "solutions": {
+          "partOne": "111",
+          "partTwo": "343"
+        }
+      },
+      {
+        "year": 2020,
         "day": 23,
         "title": "Crab Cups",
         "link": "https://adventofcode.com/2020/day/23",

@@ -61,6 +61,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 19: Monster Messages
+**Link**: [https://adventofcode.com/2020/day/19](https://adventofcode.com/2020/day/19)
+
+**Description**: Validate messages against a set of rules that build upon each other. Rules can match literal characters or reference other rules, with support for alternatives (|). Part 1: Determine how many messages completely match rule 0. Part 2: Update rules 8 and 11 to introduce loops and count valid messages.
+
+**Source Code**: [MonsterMessagesAOC2020Day19.java](day19/)
+
+**Algorithm**: Part 1 builds a regular expression from the rules and matches messages against it. Part 2 handles the recursive rules by counting how many times rule 42 and rule 31 match sequentially, ensuring the pattern follows the required structure (more rule 42 matches than rule 31 matches).
+
+---
+
 ### Day 23: Crab Cups
 **Link**: [https://adventofcode.com/2020/day/23](https://adventofcode.com/2020/day/23)
 
