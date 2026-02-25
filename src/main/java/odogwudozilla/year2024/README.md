@@ -31,6 +31,17 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [PrintQueueAOC2024Day5.java](day5/)
 
+### Day 9: Disk Fragmenter
+**Link**: [https://adventofcode.com/2024/day/9](https://adventofcode.com/2024/day/9)
+
+**Description**: Compact files on disk by moving file blocks to free space. The disk map uses a dense format where digits alternate between file length and free space length. Calculate a filesystem checksum after compaction.
+
+**Part 2**: Instead of moving individual blocks, move whole files to the leftmost contiguous free space that can fit them, processing files in decreasing order of file ID.
+
+**Algorithm**: Part 1 uses two-pointer technique to move individual blocks from right to left. Part 2 scans for contiguous free space and moves entire files while preserving file integrity.
+
+**Source Code**: [DiskFragmenterAOC2024Day9.java](day9/)
+
 ### Day 18: RAM Run
 **Link**: [https://adventofcode.com/2024/day/18](https://adventofcode.com/2024/day/18)
 

@@ -650,6 +650,16 @@
       },
       {
         "year": 2024,
+        "day": 9,
+        "title": "Disk Fragmenter",
+        "link": "https://adventofcode.com/2024/day/9",
+        "solutions": {
+          "partOne": "6279058075753",
+          "partTwo": "6301361958738"
+        }
+      },
+      {
+        "year": 2024,
         "day": 22,
         "title": "Monkey Market",
         "link": "https://adventofcode.com/2024/day/22",
