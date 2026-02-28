@@ -484,6 +484,16 @@
       },
       {
         "year": 2021,
+        "day": 21,
+        "title": "Dirac Dice",
+        "link": "https://adventofcode.com/2021/day/21",
+        "solutions": {
+          "partOne": "518418",
+          "partTwo": "116741133558209"
+        }
+      },
+      {
+        "year": 2021,
         "day": 23,
         "title": "Amphipod",
         "link": "https://adventofcode.com/2021/day/23",

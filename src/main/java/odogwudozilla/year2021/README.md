@@ -54,6 +54,17 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 21: Dirac Dice
+**Link**: [https://adventofcode.com/2021/day/21](https://adventofcode.com/2021/day/21)
+
+**Description**: Play a dice game on a circular board with 10 spaces. Part 1 uses a deterministic 100-sided die that rolls in sequence (1, 2, 3, ..., 100, repeat). Players roll three times per turn, move forward that many spaces, and add their position to their score. The game ends when a player reaches 1000 points. Part 2 introduces a quantum three-sided die that splits the universe on each roll, creating all possible outcomes simultaneously. The game ends when a player reaches 21 points. Find the player who wins in more universes.
+
+**Source Code**: [DiracDiceAOC2021Day21.java](day21/)
+
+**Algorithm/Approach**: Part 1 uses simple simulation with a deterministic die. Part 2 uses recursive dynamic programming with memoization to count wins across all quantum universes. Pre-compute the frequency of each possible sum when rolling a 3-sided die three times (sums 3-9 with different frequencies), then recursively explore all game states, caching results to avoid recomputation.
+
+---
+
 ### Day 23: Amphipod
 **Link**: [https://adventofcode.com/2021/day/23](https://adventofcode.com/2021/day/23)
 
