@@ -61,5 +61,15 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
-[← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
+### Day 20: Infinite Elves and Infinite Houses
+**Link**: [https://adventofcode.com/2015/day/20](https://adventofcode.com/2015/day/20)
 
+**Description**: Santa sends infinite elves to deliver presents to infinite houses. Each elf delivers presents to houses that are multiples of their elf number. Each elf delivers presents equal to ten times their number at each house. The goal is to find the lowest house number that receives at least as many presents as the puzzle input. Part 2: Each Elf only visits 50 houses, and delivers presents equal to eleven times their number at each house.
+
+**Source Code**: [InfiniteElvesAndInfiniteHousesAOC2015Day20.java](day20/)
+
+**Algorithm/Approach**: Use an array to track the number of presents each house receives. For each elf, increment the present count for every house that elf visits (up to 50 for Part 2). Find the lowest house number that meets the target.
+
+---
+
+[← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)

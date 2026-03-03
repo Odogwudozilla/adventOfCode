@@ -50,6 +50,16 @@
           "partOne": "222870",
           "partTwo": "117936"
         }
+      },
+      {
+        "year": 2015,
+        "day": 20,
+        "title": "Infinite Elves and Infinite Houses",
+        "link": "https://adventofcode.com/2015/day/20",
+        "solutions": {
+          "partOne": "776160",
+          "partTwo": "786240"
+        }
       }
     ],
     "2016": [
