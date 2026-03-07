@@ -151,8 +151,8 @@
         "title": "Inverse Captcha",
         "link": "https://adventofcode.com/2017/day/1",
         "solutions": {
-          "partOne": "1144",
-          "partTwo": "1194"
+          "partOne": "1175",
+          "partTwo": "1166"
         }
       },
       {
@@ -223,6 +223,16 @@
         "solutions": {
           "partOne": "1695",
           "partTwo": "1673"
+        }
+      },
+      {
+        "year": 2017,
+        "day": 11,
+        "title": "Hex Ed",
+        "link": "https://adventofcode.com/2017/day/11",
+        "solutions": {
+          "partOne": "773",
+          "partTwo": "1560"
         }
       }
     ],

@@ -56,6 +56,17 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 11: Hex Ed
+**Link**: [https://adventofcode.com/2017/day/11](https://adventofcode.com/2017/day/11)
+
+**Description**: Find the fewest steps required to reach a child process lost in an infinite hex grid, and the furthest distance from the start during the walk.
+
+**Source Code**: [HexEdAOC2017Day11.java](day11/)
+
+**Algorithm**: Use cube coordinates to represent hex grid positions. For each step, update coordinates and compute distance using max of absolute differences. Track maximum distance for Part 2.
+
+---
+
 ### Day 14: Disk Defragmentation
 **Link**: [https://adventofcode.com/2017/day/14](https://adventofcode.com/2017/day/14)
 
