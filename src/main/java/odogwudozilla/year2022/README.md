@@ -53,6 +53,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: Parse the input into a graph of valves and tunnels, precompute shortest paths between all valves, and use depth-first search with memoisation to explore all possible orders of opening valves to maximise released pressure within the time limit. For Part 2, try all possible splits of the valves between the two agents and sum their best results.
 
+### Day 20: Grove Positioning System
+**Link**: [Day 20: Grove Positioning System](https://adventofcode.com/2022/day/20)
+
+**Description**: The Elves are out of range, and you must decrypt a circular list of numbers using a mixing process to find the grove's coordinates. After mixing, sum the 1000th, 2000th, and 3000th numbers after 0 to get the answer.
+
+**Source**: [GrovePositioningSystemAOC2022Day20.java](day20/GrovePositioningSystemAOC2022Day20.java)
+
+**Approach**: Track the original indices of the numbers, perform the mixing operation as described, and use modular arithmetic to wrap around the list. Locate the zero and sum the required positions for the result.
+
 ### Day 24: Blizzard Basin
 **Link**: [Day 24: Blizzard Basin](https://adventofcode.com/2022/day/24)
 

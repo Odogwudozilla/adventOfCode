@@ -583,6 +583,16 @@
           "partOne": "232",
           "partTwo": "715"
         }
+      },
+      {
+        "year": 2022,
+        "day": 20,
+        "title": "Grove Positioning System",
+        "link": "https://adventofcode.com/2022/day/20",
+        "solutions": {
+          "partOne": "2827",
+          "partTwo": "7834270093909"
+        }
       }
     ],
     "2023": [
