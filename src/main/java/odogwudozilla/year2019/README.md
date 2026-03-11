@@ -26,6 +26,10 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Build a robot that moves on a grid, painting panels black or white according to an Intcode program. Part 1 counts the number of panels painted at least once. Part 2 renders the registration identifier painted by the robot.
   - **Source:** [SpacePoliceAOC2019Day11.java](./day11/SpacePoliceAOC2019Day11.java)
   - **Algorithm:** Simulate robot movement and painting using a custom Intcode interpreter. Track painted panels and render the output grid for Part 2.
+- [Day 13: Care Package](https://adventofcode.com/2019/day/13)
+  - **Description:** The arcade cabinet draws tiles to the screen using Intcode output. Count the number of block tiles (tile id 2) on the screen when the game exits.
+  - **Source:** [CarePackageAOC2019Day13.java](./day13/CarePackageAOC2019Day13.java)
+  - **Algorithm:** Run Intcode interpreter, parse output in triplets, and count block tiles.
 - [Day 16: Flawed Frequency Transmission](https://adventofcode.com/2019/day/16)
   - **Description:** Clean up a noisy signal using the Flawed Frequency Transmission (FFT) algorithm. Each phase applies a repeating pattern to the input digits, producing a new list. After 100 phases, report the first eight digits of the output.
   - **Source:** [FlawedFrequencyTransmissionAOC2019Day16.java](./day16/FlawedFrequencyTransmissionAOC2019Day16.java)

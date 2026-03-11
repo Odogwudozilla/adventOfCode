@@ -378,6 +378,16 @@
           "partOne": "3638931938",
           "partTwo": "86025"
         }
+      },
+      {
+        "year": 2019,
+        "day": 13,
+        "title": "Care Package",
+        "link": "https://adventofcode.com/2019/day/13",
+        "solutions": {
+          "partOne": "265",
+          "partTwo": "13331"
+        }
       }
     ],
     "2020": [
