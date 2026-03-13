@@ -60,6 +60,15 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [MonkeyMarketAOC2024Day22.java](day22/)
 
+### Day 23: LAN Party
+**Link**: [https://adventofcode.com/2024/day/23](https://adventofcode.com/2024/day/23)
+
+**Description**: Given a network map of undirected connections, find all sets of three computers where each is connected to the other two (triangles). Count how many of these sets contain at least one computer whose name starts with 't'.
+
+**Algorithm**: Build an adjacency map, enumerate all unique triples, check for mutual connections, and count triangles with a 't'-starting node.
+
+**Source Code**: [LANPartyAOC2024Day23.java](day23/)
+
 ---
 
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)

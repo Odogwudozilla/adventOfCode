@@ -727,6 +727,16 @@
           "partOne": "12664695565",
           "partTwo": "1444"
         }
+      },
+      {
+        "year": 2024,
+        "day": 23,
+        "title": "LAN Party",
+        "link": "https://adventofcode.com/2024/day/23",
+        "solutions": {
+          "partOne": "1308",
+          "partTwo": "bu,fq,fz,pn,rr,st,sv,tr,un,uy,zf,zi,zy"
+        }
       }
     ],
     "2025": [
