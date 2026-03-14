@@ -54,6 +54,17 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 12: Passage Pathing
+**Link**: [https://adventofcode.com/2021/day/12](https://adventofcode.com/2021/day/12)
+
+**Description**: Find all distinct paths through a cave system from 'start' to 'end', visiting small caves at most once. Big caves can be visited any number of times. Part 2 allows one small cave to be visited twice. The solution uses depth-first search to enumerate all valid paths.
+
+**Source Code**: [PassagePathingAOC2021Day12.java](day12/)
+
+**Algorithm/Approach**: Build an adjacency list graph from the input, then use recursive DFS to count all valid paths, tracking visited small caves to enforce the rules. For Part 2, track whether a small cave has been visited twice and allow this exception once per path.
+
+---
+
 ### Day 21: Dirac Dice
 **Link**: [https://adventofcode.com/2021/day/21](https://adventofcode.com/2021/day/21)
 
@@ -62,17 +73,6 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 **Source Code**: [DiracDiceAOC2021Day21.java](day21/)
 
 **Algorithm/Approach**: Part 1 uses simple simulation with a deterministic die. Part 2 uses recursive dynamic programming with memoization to count wins across all quantum universes. Pre-compute the frequency of each possible sum when rolling a 3-sided die three times (sums 3-9 with different frequencies), then recursively explore all game states, caching results to avoid recomputation.
-
----
-
-### Day 23: Amphipod
-**Link**: [https://adventofcode.com/2021/day/23](https://adventofcode.com/2021/day/23)
-
-**Description**: Organise amphipods into their destination rooms in a burrow using the least energy possible. Each amphipod type (Amber, Bronze, Copper, Desert) has a different energy cost per step. Part 1 has rooms with 2 positions. Part 2 expands rooms to 4 positions.
-
-**Source Code**: [AmphipodAOC2021Day23.java](day23/)
-
-**Algorithm/Approach**: Use Dijkstra's algorithm with state-space search to find the minimum energy configuration. Model the burrow state including hallway and room positions. Generate all valid moves based on movement rules and explore states using a priority queue ordered by energy cost. Support variable room depths to handle both Part 1 (depth 2) and Part 2 (depth 4).
 
 ---
 

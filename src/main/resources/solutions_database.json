@@ -531,6 +531,16 @@
           "partOne": "17400",
           "partTwo": "46120"
         }
+      },
+      {
+        "year": 2021,
+        "day": 12,
+        "title": "Passage Pathing",
+        "link": "https://adventofcode.com/2021/day/12",
+        "solutions": {
+          "partOne": "3000",
+          "partTwo": "74222"
+        }
       }
     ],
     "2022": [
