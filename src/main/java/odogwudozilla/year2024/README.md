@@ -10,6 +10,13 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 ## Implemented Puzzles
 
+### Day 3: Mull It Over
+**Link**: [https://adventofcode.com/2024/day/3](https://adventofcode.com/2024/day/3)
+
+**Description**: Scan the corrupted memory for uncorrupted mul(X,Y) instructions. Multiply X and Y for each valid instruction and sum all results.
+
+**Source Code**: [MullItOverAOC2024Day3.java](day3/)
+
 ### Day 4: Ceres Search
 **Link**: [https://adventofcode.com/2024/day/4](https://adventofcode.com/2024/day/4)
 
