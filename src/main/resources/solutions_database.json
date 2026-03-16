@@ -757,6 +757,16 @@
           "partOne": "175700056",
           "partTwo": "71668682"
         }
+      },
+      {
+        "year": 2024,
+        "day": 8,
+        "title": "Resonant Collinearity",
+        "link": "https://adventofcode.com/2024/day/8",
+        "solutions": {
+          "partOne": "271",
+          "partTwo": "271"
+        }
       }
     ],
     "2025": [

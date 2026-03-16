@@ -38,6 +38,13 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [PrintQueueAOC2024Day5.java](day5/)
 
+### Day 8: Resonant Collinearity
+**Link**: [https://adventofcode.com/2024/day/8](https://adventofcode.com/2024/day/8)
+
+**Description**: For each frequency, find all pairs of antennas with the same frequency. For each pair, mark antinodes at points collinear with the antennas, where one antenna is twice as far from the antinode as the other. Count all unique antinode locations within the map.
+
+**Source Code**: [ResonantCollinearityAOC2024Day8.java](day8/)
+
 ### Day 9: Disk Fragmenter
 **Link**: [https://adventofcode.com/2024/day/9](https://adventofcode.com/2024/day/9)
 
