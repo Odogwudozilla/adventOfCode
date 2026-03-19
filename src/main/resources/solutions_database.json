@@ -142,6 +142,16 @@
           "partOne": "1834471",
           "partTwo": "1420064"
         }
+      },
+      {
+        "year": 2016,
+        "day": 9,
+        "title": "Explosives in Cyberspace",
+        "link": "https://adventofcode.com/2016/day/9",
+        "solutions": {
+          "partOne": "123908",
+          "partTwo": "10755693147"
+        }
       }
     ],
     "2017": [
