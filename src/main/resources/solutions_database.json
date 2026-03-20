@@ -623,6 +623,16 @@
           "partOne": "2827",
           "partTwo": "7834270093909"
         }
+      },
+      {
+        "year": 2022,
+        "day": 21,
+        "title": "Monkey Math",
+        "link": "https://adventofcode.com/2022/day/21",
+        "solutions": {
+          "partOne": "160274622817992",
+          "partTwo": "3087390115721"
+        }
       }
     ],
     "2023": [

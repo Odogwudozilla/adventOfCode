@@ -71,6 +71,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: Parse the valley map, simulate blizzard movement with wrap-around, and use breadth-first search (BFS) to find the minimum number of minutes to reach the goal, avoiding blizzards at each step. Precompute blizzard positions for each minute in the cycle for efficiency.
 
+### Day 21: Monkey Math
+**Link**: [Day 21: Monkey Math](https://adventofcode.com/2022/day/21)
+
+**Description**: Each monkey is given a job: either to yell a specific number or to yell the result of a math operation. Your job is to work out the number the monkey named root will yell before the monkeys figure it out themselves. In Part 2, you must determine what number you (humn) need to yell so that root's two dependencies are equal.
+
+**Source**: [MonkeyMathAOC2022Day21.java](day21/MonkeyMathAOC2022Day21.java)
+
+**Approach**: Parse the input into a map of monkey jobs. Recursively evaluate each monkey's job, memoising results. For Part 2, treat humn as a variable and use binary search to find the value that makes root's dependencies equal, adjusting for monotonicity.
+
 ---
 
 ## Navigation
