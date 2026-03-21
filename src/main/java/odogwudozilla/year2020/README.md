@@ -28,6 +28,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 6: Custom Customs
+**Link**: [https://adventofcode.com/2020/day/6](https://adventofcode.com/2020/day/6)
+
+**Description**: For each group, count the number of questions to which anyone answered "yes" (Part 1) and the number to which everyone answered "yes" (Part 2). Sum these counts for all groups.
+
+**Source Code**: [CustomCustomsAOC2020Day6.java](day6/)
+
+**Algorithm**: For each group, Part 1 collects all unique answers using a set. Part 2 finds the intersection of all answers in the group. Sum the set sizes for all groups.
+
+---
+
 ### Day 8: Handheld Halting
 **Link**: [https://adventofcode.com/2020/day/8](https://adventofcode.com/2020/day/8)
 

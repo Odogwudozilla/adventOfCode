@@ -479,6 +479,16 @@
         "solutions": {
           "partOne": "8635216"
         }
+      },
+      {
+        "year": 2020,
+        "day": 6,
+        "title": "Custom Customs",
+        "link": "https://adventofcode.com/2020/day/6",
+        "solutions": {
+          "partOne": "6809",
+          "partTwo": "3394"
+        }
       }
     ],
     "2021": [
