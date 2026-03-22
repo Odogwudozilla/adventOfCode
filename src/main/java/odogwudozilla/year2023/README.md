@@ -30,6 +30,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: Parse each card to extract winning numbers and your numbers, count matches using a Set lookup, calculate points using 2^(matchCount-1) formula
 - Part 2: Use an array to track copies of each card, iterate through cards and increment copy counts for subsequent cards based on match count
 
+### Day 5: If You Give A Seed A Fertilizer
+**Link**: [Day 5 - If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5)
+
+**Description**:
+- Part 1: Find the lowest location number for any seed by mapping each seed through a series of category conversions using the Almanac.
+- Part 2: Seeds are given as ranges; efficiently map all ranges through the Almanac to find the lowest possible location number.
+
+**Source**: [IfYouGiveASeedAFertilizerAOC2023Day5.java](day5/IfYouGiveASeedAFertilizerAOC2023Day5.java)
+
+**Algorithm/Approach**:
+- Part 1: Parse all mapping tables and apply each to every seed, tracking the minimum location.
+- Part 2: Treat seed input as intervals, propagate intervals through all mapping tables using interval splitting and merging for efficiency.
+
 ### Day 6: Wait For It
 **Link**: [Day 6 - Wait For It](https://adventofcode.com/2023/day/6)
 

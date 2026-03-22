@@ -715,6 +715,16 @@
           "partOne": "1901217887",
           "partTwo": "905"
         }
+      },
+      {
+        "year": 2023,
+        "day": 5,
+        "title": "If You Give A Seed A Fertilizer",
+        "link": "https://adventofcode.com/2023/day/5",
+        "solutions": {
+          "partOne": "424490994",
+          "partTwo": "15290096"
+        }
       }
     ],
     "2024": [
