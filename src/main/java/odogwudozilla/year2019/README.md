@@ -34,6 +34,10 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Clean up a noisy signal using the Flawed Frequency Transmission (FFT) algorithm. Each phase applies a repeating pattern to the input digits, producing a new list. After 100 phases, report the first eight digits of the output.
   - **Source:** [FlawedFrequencyTransmissionAOC2019Day16.java](./day16/FlawedFrequencyTransmissionAOC2019Day16.java)
   - **Algorithm:** For each phase, generate output digits by summing products of input digits and a position-dependent pattern, keeping only the ones digit. Repeat for 100 phases.
+- [Day 22: Slam Shuffle](https://adventofcode.com/2019/day/22)
+  - **Description:** Simulate a deck of cards and apply a sequence of shuffling techniques (deal into new stack, cut N, deal with increment N). Part 1 finds the position of card 2019 in a deck of 10007 cards. Part 2 finds which card is at position 2020 after shuffling a deck of 119315717514047 cards 101741582076661 times.
+  - **Source:** [SlamShuffleAOC2019Day22.java](./day22/SlamShuffleAOC2019Day22.java)
+  - **Algorithm:** Part 1 - simulate the deck as a list and return the index of the target card. Part 2 - model the entire shuffle sequence as a single affine transformation f(x) = ax + b (mod deckSize), then use modular exponentiation to compose n repetitions, and invert the result to find the card at the queried position. Overflow-safe multiplication is achieved using BigInteger for intermediate products.
 - [Day 24: Planet of Discord](https://adventofcode.com/2019/day/24)
   - **Description:** Simulate a 5x5 grid of bugs and empty spaces, updating each minute according to adjacency rules. Find the first repeated layout and calculate its biodiversity rating.
   - **Source:** [PlanetOfDiscordAOC2019Day24.java](./day24/PlanetOfDiscordAOC2019Day24.java)

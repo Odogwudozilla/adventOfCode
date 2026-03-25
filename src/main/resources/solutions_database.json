@@ -398,6 +398,16 @@
           "partOne": "265",
           "partTwo": "13331"
         }
+      },
+      {
+        "year": 2019,
+        "day": 22,
+        "title": "Slam Shuffle",
+        "link": "https://adventofcode.com/2019/day/22",
+        "solutions": {
+          "partOne": "7171",
+          "partTwo": "73394009116480"
+        }
       }
     ],
     "2020": [
