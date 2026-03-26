@@ -499,6 +499,16 @@
           "partOne": "6809",
           "partTwo": "3394"
         }
+      },
+      {
+        "year": 2020,
+        "day": 21,
+        "title": "Allergen Assessment",
+        "link": "https://adventofcode.com/2020/day/21",
+        "solutions": {
+          "partOne": "2573",
+          "partTwo": "bjpkhx,nsnqf,snhph,zmfqpn,qrbnjtj,dbhfd,thn,sthnsg"
+        }
       }
     ],
     "2021": [

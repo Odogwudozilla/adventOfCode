@@ -83,6 +83,17 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 21: Allergen Assessment
+**Link**: [https://adventofcode.com/2020/day/21](https://adventofcode.com/2020/day/21)
+
+**Description**: Determine which ingredients cannot possibly contain any of the allergens in your list and count their appearances. Then, resolve the canonical dangerous ingredient list by allergen.
+
+**Source Code**: [AllergenAssessmentAOC2020Day21.java](day21/)
+
+**Algorithm**: For each allergen, intersect ingredient sets across all foods listing that allergen. Remove resolved ingredients iteratively to map allergens uniquely. Count safe ingredient appearances for Part 1; sort dangerous ingredients by allergen for Part 2.
+
+---
+
 ### Day 23: Crab Cups
 **Link**: [https://adventofcode.com/2020/day/23](https://adventofcode.com/2020/day/23)
 
