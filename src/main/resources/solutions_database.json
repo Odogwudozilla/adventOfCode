@@ -745,6 +745,16 @@
           "partOne": "424490994",
           "partTwo": "15290096"
         }
+      },
+      {
+        "year": 2023,
+        "day": 20,
+        "title": "Pulse Propagation",
+        "link": "https://adventofcode.com/2023/day/20",
+        "solutions": {
+          "partOne": "832957356",
+          "partTwo": "1"
+        }
       }
     ],
     "2024": [

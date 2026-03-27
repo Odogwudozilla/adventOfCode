@@ -93,6 +93,17 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: Test each possible reflection line by comparing mirrored rows/columns for exact matches
 - Part 2: Find reflections with exactly one character difference, which represents the fixed smudge
 
+### Day 20: Pulse Propagation
+**Link**: [Day 20 - Pulse Propagation](https://adventofcode.com/2023/day/20)
+
+**Description**:
+- Simulate a network of modules (flip-flops, conjunctions, broadcaster) that communicate using high and low pulses. After pushing the button 1000 times, count the total low and high pulses sent and multiply these totals.
+
+**Source**: [PulsePropagationAOC2023Day20.java](day20/PulsePropagationAOC2023Day20.java)
+
+**Algorithm/Approach**:
+- Parse the module network from input, simulate pulse propagation for each button press, and track pulse counts. Use a queue to process pulses in order and module classes to encapsulate behaviour.
+
 ### Day 21: Step Counter
 **Link**: [Day 21 - Step Counter](https://adventofcode.com/2023/day/21)
 
@@ -105,10 +116,6 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 **Algorithm/Approach**:
 - Part 1: Breadth-First Search (BFS) with parity tracking to count positions reachable in exactly 64 steps
 - Part 2: Quadratic extrapolation using finite differences after sampling at strategic intervals (65, 196, 327 steps)
-
-**Solutions**:
-- Part 1: `3737`
-- Part 2: `625382480005896`
 
 ---
 
