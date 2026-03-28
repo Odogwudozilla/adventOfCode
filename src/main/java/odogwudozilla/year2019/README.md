@@ -42,5 +42,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Simulate a 5x5 grid of bugs and empty spaces, updating each minute according to adjacency rules. Find the first repeated layout and calculate its biodiversity rating.
   - **Source:** [PlanetOfDiscordAOC2019Day24.java](./day24/PlanetOfDiscordAOC2019Day24.java)
   - **Algorithm:** Track layouts using a set, update the grid per rules, and compute biodiversity when a repeat is found.
+- [Day 21: Springdroid Adventure](https://adventofcode.com/2019/day/21)
+  - **Description:** Program a springdroid using springscript to jump over holes in the hull. Part 1 uses sensors A-D and the WALK command. Part 2 enables extended sensors E-I and uses the RUN command to survey the hull.
+  - **Source:** [SpringdroidAdventureAOC2019Day21.java](./day21/SpringdroidAdventureAOC2019Day21.java)
+  - **Algorithm:** Implement a minimal Intcode interpreter. For Part 1, jump if any of A, B, or C is a hole and D is ground. For Part 2, also require that H or E is ground before jumping, using extended sensors and RUN mode.
 
 [Back to main README](../../../README.md)

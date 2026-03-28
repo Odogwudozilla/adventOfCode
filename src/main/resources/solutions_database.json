@@ -408,6 +408,16 @@
           "partOne": "7171",
           "partTwo": "73394009116480"
         }
+      },
+      {
+        "year": 2019,
+        "day": 21,
+        "title": "Springdroid Adventure",
+        "link": "https://adventofcode.com/2019/day/21",
+        "solutions": {
+          "partOne": "19355364",
+          "partTwo": "1142530574"
+        }
       }
     ],
     "2020": [
