@@ -117,6 +117,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: Breadth-First Search (BFS) with parity tracking to count positions reachable in exactly 64 steps
 - Part 2: Quadratic extrapolation using finite differences after sampling at strategic intervals (65, 196, 327 steps)
 
+### Day 24: Never Tell Me The Odds
+**Link**: [Day 24 - Never Tell Me The Odds](https://adventofcode.com/2023/day/24)
+
+**Description**:
+- Part 1: Count the number of pairs of hailstones whose paths intersect within the test area (ignoring the Z axis). Each hailstone moves in a straight line; check all pairs for intersection in the future and within the specified bounds.
+- Part 2: Find the unique integer initial position (x, y, z) and velocity (vx, vy, vz) for a rock thrown at time 0 so that it collides with every hailstone in integer nanoseconds. Return the sum of the initial position coordinates.
+
+**Source**: [NeverTellMeTheOddsAOC2023Day24.java](day24/NeverTellMeTheOddsAOC2023Day24.java)
+
+**Algorithm/Approach**:
+- Part 1: Parse each hailstone's position and velocity from input. For each pair, solve the linear equations for intersection in the XY plane. Count only those intersections that occur in the future and within the test area bounds.
+- Part 2: Set up a system of six linear equations using three hailstones and their pairwise differences, eliminating the collision time variable. Solve for the rock's initial position and velocity using Gaussian elimination. Return the sum of the initial position coordinates.
+
 ---
 
 [← Back to Main README](../../../../../../README.md)

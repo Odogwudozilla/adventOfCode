@@ -765,6 +765,16 @@
           "partOne": "832957356",
           "partTwo": "1"
         }
+      },
+      {
+        "year": 2023,
+        "day": 24,
+        "title": "Never Tell Me The Odds",
+        "link": "https://adventofcode.com/2023/day/24",
+        "solutions": {
+          "partOne": "12015",
+          "partTwo": "1016365642179116"
+        }
       }
     ],
     "2024": [
