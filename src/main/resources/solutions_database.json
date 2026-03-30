@@ -316,6 +316,16 @@
           "partOne": "663",
           "partTwo": "525"
         }
+      },
+      {
+        "year": 2018,
+        "day": 5,
+        "title": "Alchemical Reduction",
+        "link": "https://adventofcode.com/2018/day/5",
+        "solutions": {
+          "partOne": "11242",
+          "partTwo": "5492"
+        }
       }
     ],
     "2019": [
