@@ -867,6 +867,16 @@
           "partOne": "271",
           "partTwo": "994"
         }
+      },
+      {
+        "year": 2024,
+        "day": 6,
+        "title": "Guard Gallivant",
+        "link": "https://adventofcode.com/2024/day/6",
+        "solutions": {
+          "partOne": "5461",
+          "partTwo": "1836"
+        }
       }
     ],
     "2025": [

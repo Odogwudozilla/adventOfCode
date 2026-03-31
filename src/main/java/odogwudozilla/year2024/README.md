@@ -38,6 +38,13 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [PrintQueueAOC2024Day5.java](day5/)
 
+### Day 6: Guard Gallivant
+**Link**: [https://adventofcode.com/2024/day/6](https://adventofcode.com/2024/day/6)
+
+**Description**: Predict the guard's patrol path in a lab, counting all distinct positions visited before leaving the mapped area. For Part 2, determine all possible positions for a new obstruction that would cause the guard to get stuck in a loop.
+
+**Source Code**: [GuardGallivantAOC2024Day6.java](day6/)
+
 ### Day 8: Resonant Collinearity
 **Link**: [https://adventofcode.com/2024/day/8](https://adventofcode.com/2024/day/8)
 
