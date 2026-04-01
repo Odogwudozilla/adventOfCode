@@ -56,6 +56,18 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: For each race, iterate through all possible hold times and count how many result in distances that beat the record
 - Part 2: Parse numbers by concatenating digits (ignoring spaces), then apply the same algorithm to the single large race
 
+### Day 7: Camel Cards
+**Link**: [Day 7 - Camel Cards](https://adventofcode.com/2023/day/7)
+
+**Description**:
+- Part 1: Order hands by strength (five of a kind, four of a kind, full house, etc.), breaking ties by card order. Multiply each hand's bid by its rank and sum for total winnings.
+- Part 2: J cards are jokers (wildcards, weakest card). Evaluate hands with jokers as wildcards for type, but break ties treating J as J. Multiply each hand's bid by its rank and sum for new total winnings.
+
+**Source**: [CamelCardsAOC2023Day7.java](day7/CamelCardsAOC2023Day7.java)
+
+**Algorithm/Approach**:
+- Parse each hand and bid, sort hands by type and card order (with/without jokers), assign ranks, and sum bid * rank for all hands. For Part 2, treat J as wildcard for hand type, but as lowest card for tie-breaking.
+
 ### Day 9: Mirage Maintenance
 **Link**: [Day 9 - Mirage Maintenance](https://adventofcode.com/2023/day/9)
 
