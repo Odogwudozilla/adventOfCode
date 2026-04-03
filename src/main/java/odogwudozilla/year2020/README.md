@@ -72,6 +72,15 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 11: Seating System
+**Link**: [https://adventofcode.com/2020/day/11](https://adventofcode.com/2020/day/11)
+
+**Description**: Simulate a seating system where seats become occupied or empty based on adjacent seats. Apply rules until the system stabilises, then count the number of occupied seats.
+
+**Source Code**: [SeatingSystemAOC2020Day11.java](day11/)
+
+---
+
 ### Day 19: Monster Messages
 **Link**: [https://adventofcode.com/2020/day/19](https://adventofcode.com/2020/day/19)
 

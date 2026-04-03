@@ -386,7 +386,7 @@
         "link": "https://adventofcode.com/2019/day/7",
         "solutions": {
           "partOne": "272368",
-          "partTwo": "19741286"
+          "partTwo": "247899149"
         }
       },
       {
@@ -439,6 +439,16 @@
         "solutions": {
           "partOne": "444019",
           "partTwo": "29212176"
+        }
+      },
+      {
+        "year": 2020,
+        "day": 11,
+        "title": "Seating System",
+        "link": "https://adventofcode.com/2020/day/11",
+        "solutions": {
+          "partOne": "2368",
+          "partTwo": "2124"
         }
       },
       {
