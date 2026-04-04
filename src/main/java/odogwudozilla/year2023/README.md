@@ -105,6 +105,18 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - Part 1: Test each possible reflection line by comparing mirrored rows/columns for exact matches
 - Part 2: Find reflections with exactly one character difference, which represents the fixed smudge
 
+### Day 17: Clumsy Crucible
+**Link**: [Day 17 - Clumsy Crucible](https://adventofcode.com/2023/day/17)
+
+**Description**:
+- Part 1: Find the least heat loss path for a crucible from the lava pool (top-left) to the machine parts factory (bottom-right) on a city grid, moving at most three blocks straight before turning left or right (no reversing).
+- Part 2: For the ultra crucible, each straight segment must be at least four and at most ten blocks before turning. Find the minimum heat loss path under these constraints.
+
+**Source**: [ClumsyCrucibleAOC2023Day17.java](day17/ClumsyCrucibleAOC2023Day17.java)
+
+**Algorithm/Approach**:
+- Dijkstra's algorithm with direction and straight-move constraints to track position, direction, and consecutive straight moves. For Part 2, enforce the minimum and maximum straight segment rules.
+
 ### Day 20: Pulse Propagation
 **Link**: [Day 20 - Pulse Propagation](https://adventofcode.com/2023/day/20)
 

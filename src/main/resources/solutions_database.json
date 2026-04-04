@@ -795,6 +795,16 @@
           "partOne": "12015",
           "partTwo": "1016365642179116"
         }
+      },
+      {
+        "year": 2023,
+        "day": 17,
+        "title": "Clumsy Crucible",
+        "link": "https://adventofcode.com/2023/day/17",
+        "solutions": {
+          "partOne": "1008",
+          "partTwo": "1210"
+        }
       }
     ],
     "2024": [
