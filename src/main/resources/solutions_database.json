@@ -33,6 +33,16 @@
       },
       {
         "year": 2015,
+        "day": 4,
+        "title": "The Ideal Stocking Stuffer",
+        "link": "https://adventofcode.com/2015/day/4",
+        "solutions": {
+          "partOne": "282749",
+          "partTwo": "9962624"
+        }
+      },
+      {
+        "year": 2015,
         "day": 10,
         "title": "Elves Look, Elves Say",
         "link": "https://adventofcode.com/2015/day/10",

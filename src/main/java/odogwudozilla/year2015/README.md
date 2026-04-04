@@ -39,6 +39,15 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
+### Day 4: The Ideal Stocking Stuffer
+**Link**: [https://adventofcode.com/2015/day/4](https://adventofcode.com/2015/day/4)
+
+**Description**: Find the lowest positive number that, when appended to the secret key, produces an MD5 hash starting with five zeroes.
+
+**Source Code**: [TheIdealStockingStufferAOC2015Day4.java](day4/)
+
+---
+
 ### Day 10: Elves Look, Elves Say
 **Link**: [https://adventofcode.com/2015/day/10](https://adventofcode.com/2015/day/10)
 
