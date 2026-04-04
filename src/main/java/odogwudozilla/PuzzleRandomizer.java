@@ -91,10 +91,17 @@ public class PuzzleRandomizer {
             int selectedYear = unsolvedYears.get(RANDOM.nextInt(unsolvedYears.size()));
             return new PuzzleSelection(selectedYear, 1);
         } else {
-            // Priority 2: Randomly select a year and pick a random unsolved day from that year
+            // Priority 2: Randomly select a year and pick the lowest unsolved day from that year
+            int selectedYear = availableYears.get(RANDOM.nextInt(availableYears.size()));
+            Set<Integer> solved = solvedByYear.getOrDefault(selectedYear, new HashSet<>());
+            int lowestUnsolvedDay = findLowestUnsolvedDay(configContent, selectedYear, solved);
+            if (lowestUnsolvedDay != -1) {
+                return new PuzzleSelection(selectedYear, lowestUnsolvedDay);
+            }
+            // Fallback: if selected year is fully solved, pick any random unsolved puzzle
             List<PuzzleSelection> unsolvedPuzzles = new ArrayList<>();
             for (Integer year : availableYears) {
-                Set<Integer> solved = solvedByYear.getOrDefault(year, new HashSet<>());
+                solved = solvedByYear.getOrDefault(year, new HashSet<>());
                 int totalDays = getTotalDaysForYear(configContent, year);
                 LocalDate currentDate = LocalDate.now();
                 for (int day = 1; day <= totalDays; day++) {
@@ -325,24 +332,6 @@ public class PuzzleRandomizer {
         return -1;
     }
 
-    /**
-     * Finds the lowest-numbered unsolved day across any available year.
-     * Used as a fallback when a randomly selected year has no unsolved days.
-     * @param configJson JSON string containing puzzle configuration
-     * @param availableYears List of all available years
-     * @param solvedByYear Map of solved puzzles organised by year
-     * @return lowest unsolved day number found, or -1 if no unsolved puzzles exist
-     */
-    private static int findLowestUnsolvedDayAcrossYears(@NotNull String configJson, @NotNull List<Integer> availableYears,
-                                                        @NotNull Map<Integer, Set<Integer>> solvedByYear) {
-        for (Integer year : availableYears) {
-            int day = findLowestUnsolvedDay(configJson, year, solvedByYear.get(year));
-            if (day != -1) {
-                return day;
-            }
-        }
-        return -1;
-    }
 
     /**
      * Finds the matching closing brace for an opening brace.
