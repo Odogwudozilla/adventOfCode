@@ -815,6 +815,16 @@
           "partOne": "1008",
           "partTwo": "1210"
         }
+      },
+      {
+        "year": 2023,
+        "day": 1,
+        "title": "Trebuchet?!",
+        "link": "https://adventofcode.com/2023/day/1",
+        "solutions": {
+          "partOne": "54597",
+          "partTwo": "54504"
+        }
       }
     ],
     "2024": [

@@ -4,6 +4,18 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 
 ## Implemented Puzzles
 
+### Day 1: Trebuchet?!
+**Link**: [Day 1 - Trebuchet?!](https://adventofcode.com/2023/day/1)
+
+**Description**:
+- Part 1: Each line contains a calibration value. Combine the first and last digit (in that order) to form a two-digit number. Sum all calibration values.
+- Part 2: Some digits are spelled out (e.g., "one", "two"). Find the first and last digit (numeric or spelled) per line and sum the calibration values.
+
+**Source**: [TrebuchetAOC2023Day1.java](day1/TrebuchetAOC2023Day1.java)
+
+**Algorithm/Approach**:
+- For each line, scan for the first and last digit (numeric or spelled), concatenate them, and sum the resulting numbers.
+
 ### Day 3: Gear Ratios
 **Link**: [Day 3 - Gear Ratios](https://adventofcode.com/2023/day/3)
 
