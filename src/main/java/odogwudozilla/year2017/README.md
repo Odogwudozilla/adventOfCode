@@ -34,6 +34,17 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 ---
 
+### Day 3: Spiral Memory
+**Link**: [https://adventofcode.com/2017/day/3](https://adventofcode.com/2017/day/3)
+
+**Description**: Calculate the Manhattan Distance from a given square in a spiral memory grid to the access port at square 1. For Part 2, find the first value written in the spiral that is larger than the puzzle input, where each square's value is the sum of all adjacent squares.
+
+**Source Code**: [SpiralMemoryAOC2017Day3.java](day3/)
+
+**Algorithm**: For Part 1, determine the layer of the spiral containing the input, compute the minimum distance to the closest axis, and sum with the layer number for the Manhattan Distance. For Part 2, simulate the spiral, summing adjacent values, and return the first value greater than the input.
+
+---
+
 ### Day 5: A Maze of Twisty Trampolines, All Alike
 **Link**: [https://adventofcode.com/2017/day/5](https://adventofcode.com/2017/day/5)
 

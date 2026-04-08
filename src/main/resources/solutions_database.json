@@ -254,6 +254,16 @@
           "partOne": "773",
           "partTwo": "1560"
         }
+      },
+      {
+        "year": 2017,
+        "day": 3,
+        "title": "Spiral Memory",
+        "link": "https://adventofcode.com/2017/day/3",
+        "solutions": {
+          "partOne": "475",
+          "partTwo": "409372"
+        }
       }
     ],
     "2018": [
@@ -815,7 +825,7 @@
           "partOne": "1008",
           "partTwo": "1210"
         }
-      },
+3      },
       {
         "year": 2023,
         "day": 1,
