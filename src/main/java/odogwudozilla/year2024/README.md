@@ -10,6 +10,13 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 ## Implemented Puzzles
 
+### Day 1: Historian Hysteria
+**Link**: [https://adventofcode.com/2024/day/1](https://adventofcode.com/2024/day/1)
+
+**Description**: Reconcile two lists of location IDs by pairing up the smallest numbers and summing the distances. For Part 2, calculate a similarity score by multiplying each number in the left list by its count in the right list and summing the results.
+
+**Source Code**: [HistorianHysteriaAOC2024Day1.java](day1/)
+
 ### Day 3: Mull It Over
 **Link**: [https://adventofcode.com/2024/day/3](https://adventofcode.com/2024/day/3)
 

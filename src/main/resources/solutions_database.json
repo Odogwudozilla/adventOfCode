@@ -840,6 +840,16 @@
     "2024": [
       {
         "year": 2024,
+        "day": 1,
+        "title": "Historian Hysteria",
+        "link": "https://adventofcode.com/2024/day/1",
+        "solutions": {
+          "partOne": "2192892",
+          "partTwo": "22962826"
+        }
+      },
+      {
+        "year": 2024,
         "day": 18,
         "title": "RAM Run",
         "link": "https://adventofcode.com/2024/day/18",
