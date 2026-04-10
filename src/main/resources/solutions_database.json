@@ -162,6 +162,16 @@
           "partOne": "123908",
           "partTwo": "10755693147"
         }
+      },
+      {
+        "year": 2016,
+        "day": 2,
+        "title": "Bathroom Security",
+        "link": "https://adventofcode.com/2016/day/2",
+        "solutions": {
+          "partOne": "99332",
+          "partTwo": "DD483"
+        }
       }
     ],
     "2017": [
