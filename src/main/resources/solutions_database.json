@@ -845,6 +845,16 @@
           "partOne": "54597",
           "partTwo": "54504"
         }
+      },
+      {
+        "year": 2023,
+        "day": 2,
+        "title": "Cube Conundrum",
+        "link": "https://adventofcode.com/2023/day/2",
+        "solutions": {
+          "partOne": "2285",
+          "partTwo": "77021"
+        }
       }
     ],
     "2024": [

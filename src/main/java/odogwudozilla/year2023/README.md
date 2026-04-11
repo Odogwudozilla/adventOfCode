@@ -16,6 +16,19 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 **Algorithm/Approach**:
 - For each line, scan for the first and last digit (numeric or spelled), concatenate them, and sum the resulting numbers.
 
+### Day 2: Cube Conundrum
+**Link**: [Day 2 - Cube Conundrum](https://adventofcode.com/2023/day/2)
+
+**Description**:
+- Part 1: Determine which games would have been possible if the bag had only 12 red, 13 green, and 14 blue cubes. Sum the IDs of those games.
+- Part 2: For each game, find the minimum set of cubes that must have been present. The power of a set is red * green * blue. Sum the power for all games.
+
+**Source**: [CubeConundrumAOC2023Day2.java](day2/CubeConundrumAOC2023Day2.java)
+
+**Algorithm/Approach**:
+- For each game, parse all rounds and check if any colour count exceeds the allowed maximum. If not, add the game ID to the sum (Part 1).
+- For Part 2, track the maximum count of each colour across all rounds, compute the product, and sum for all games.
+
 ### Day 3: Gear Ratios
 **Link**: [Day 3 - Gear Ratios](https://adventofcode.com/2023/day/3)
 
