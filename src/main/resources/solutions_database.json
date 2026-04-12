@@ -70,6 +70,16 @@
           "partOne": "776160",
           "partTwo": "786240"
         }
+      },
+      {
+        "year": 2015,
+        "day": 5,
+        "title": "Doesn't He Have Intern-Elves For This?",
+        "link": "https://adventofcode.com/2015/day/5",
+        "solutions": {
+          "partOne": "238",
+          "partTwo": "69"
+        }
       }
     ],
     "2016": [

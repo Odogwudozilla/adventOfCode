@@ -48,6 +48,15 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
+### Day 5: Doesn't He Have Intern-Elves For This?
+**Link**: [https://adventofcode.com/2015/day/5](https://adventofcode.com/2015/day/5)
+
+**Description**: Determine which strings are 'nice' based on vowel count, double letters, and forbidden substrings.
+
+**Source Code**: [DoesntHeHaveInternElvesForThisAOC2015Day5.java](day5/)
+
+---
+
 ### Day 10: Elves Look, Elves Say
 **Link**: [https://adventofcode.com/2015/day/10](https://adventofcode.com/2015/day/10)
 
