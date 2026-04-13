@@ -182,6 +182,16 @@
           "partOne": "99332",
           "partTwo": "DD483"
         }
+      },
+      {
+        "year": 2016,
+        "day": 3,
+        "title": "Squares With Three Sides",
+        "link": "https://adventofcode.com/2016/day/3",
+        "solutions": {
+          "partOne": "982",
+          "partTwo": "1826"
+        }
       }
     ],
     "2017": [
