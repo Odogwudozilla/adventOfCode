@@ -17,6 +17,13 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 
 **Source Code**: [HistorianHysteriaAOC2024Day1.java](day1/)
 
+### Day 2: Red-Nosed Reports
+**Link**: [https://adventofcode.com/2024/day/2](https://adventofcode.com/2024/day/2)
+
+**Description**: Analyze reactor reports to determine which are safe. A report is safe if all levels are strictly increasing or strictly decreasing, and every adjacent pair differs by 1-3.
+
+**Source Code**: [RedNosedReportsAOC2024Day2.java](day2/)
+
 ### Day 3: Mull It Over
 **Link**: [https://adventofcode.com/2024/day/3](https://adventofcode.com/2024/day/3)
 

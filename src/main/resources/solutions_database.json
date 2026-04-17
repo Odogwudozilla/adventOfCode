@@ -950,12 +950,12 @@
       },
       {
         "year": 2024,
-        "day": 3,
-        "title": "Mull It Over",
-        "link": "https://adventofcode.com/2024/day/3",
+        "day": 2,
+        "title": "Red-Nosed Reports",
+        "link": "https://adventofcode.com/2024/day/2",
         "solutions": {
-          "partOne": "175700056",
-          "partTwo": "71668682"
+          "partOne": "680",
+          "partTwo": "710"
         }
       },
       {
