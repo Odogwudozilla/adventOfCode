@@ -376,6 +376,16 @@
           "partOne": "11242",
           "partTwo": "5492"
         }
+      },
+      {
+        "year": 2018,
+        "day": 6,
+        "title": "Chronal Coordinates",
+        "link": "https://adventofcode.com/2018/day/6",
+        "solutions": {
+          "partOne": "3894",
+          "partTwo": "39398"
+        }
       }
     ],
     "2019": [
