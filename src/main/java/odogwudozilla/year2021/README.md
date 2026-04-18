@@ -54,6 +54,17 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 5: Hydrothermal Venture
+**Link**: [https://adventofcode.com/2021/day/5](https://adventofcode.com/2021/day/5)
+
+**Description**: Map hydrothermal vent lines on the ocean floor. Part 1 counts points where at least two horizontal or vertical lines overlap. Part 2 includes diagonal lines at exactly 45 degrees.
+
+**Source Code**: [HydrothermalVentureAOC2021Day5.java](day5/)
+
+**Algorithm/Approach**: Parse each line segment and increment a grid counter for each covered point. For Part 2, handle diagonal lines by stepping both x and y. Count grid points with at least two overlaps.
+
+---
+
 ### Day 12: Passage Pathing
 **Link**: [https://adventofcode.com/2021/day/12](https://adventofcode.com/2021/day/12)
 

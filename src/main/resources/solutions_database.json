@@ -644,6 +644,16 @@
       },
       {
         "year": 2021,
+        "day": 5,
+        "title": "Hydrothermal Venture",
+        "link": "https://adventofcode.com/2021/day/5",
+        "solutions": {
+          "partOne": "4655",
+          "partTwo": "20500"
+        }
+      },
+      {
+        "year": 2021,
         "day": 21,
         "title": "Dirac Dice",
         "link": "https://adventofcode.com/2021/day/21",
