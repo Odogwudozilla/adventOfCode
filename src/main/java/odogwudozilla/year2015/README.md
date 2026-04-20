@@ -79,6 +79,15 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 
 ---
 
+### Day 18: Like a GIF For Your Yard
+**Link**: [https://adventofcode.com/2015/day/18](https://adventofcode.com/2015/day/18)
+
+**Description**: Simulate a 100x100 grid of lights following Conway's Game of Life rules for 100 steps. Part 2: Four corners are always on.
+
+**Source Code**: [LikeAGIFForYourYardAOC2015Day18.java](day18/)
+
+---
+
 ### Day 20: Infinite Elves and Infinite Houses
 **Link**: [https://adventofcode.com/2015/day/20](https://adventofcode.com/2015/day/20)
 

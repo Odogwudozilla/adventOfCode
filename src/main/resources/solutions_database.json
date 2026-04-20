@@ -80,6 +80,16 @@
           "partOne": "238",
           "partTwo": "69"
         }
+      },
+      {
+        "year": 2015,
+        "day": 18,
+        "title": "Like a GIF For Your Yard",
+        "link": "https://adventofcode.com/2015/day/18",
+        "solutions": {
+          "partOne": "1061",
+          "partTwo": "1006"
+        }
       }
     ],
     "2016": [
