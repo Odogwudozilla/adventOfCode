@@ -498,6 +498,16 @@
           "partOne": "19355364",
           "partTwo": "1142530574"
         }
+      },
+      {
+        "year": 2019,
+        "day": 3,
+        "title": "Crossed Wires",
+        "link": "https://adventofcode.com/2019/day/3",
+        "solutions": {
+          "partOne": "303",
+          "partTwo": "11222"
+        }
       }
     ],
     "2020": [

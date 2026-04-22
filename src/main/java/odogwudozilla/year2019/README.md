@@ -14,6 +14,10 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Description:** Simulate an Intcode computer. For Part 1, restore the gravity assist program by setting position 1 to 12 and position 2 to 2, then run the program and report the value at position 0. For Part 2, find the noun and verb that produce the output 19690720 and report 100 * noun + verb.
   - **Source:** [ProgramAlarmAOC2019Day2.java](./day2/ProgramAlarmAOC2019Day2.java)
   - **Algorithm:** Implement Intcode interpreter, brute-force noun/verb search for Part 2.
+- [Day 3: Crossed Wires](https://adventofcode.com/2019/day/3)
+  - **Description:** Trace two wires on a grid, find the closest intersection by Manhattan distance (Part 1), and the intersection with the fewest combined steps (Part 2).
+  - **Source:** [CrossedWiresAOC2019Day3.java](./day3/CrossedWiresAOC2019Day3.java)
+  - **Algorithm:** Track all visited points for each wire, find intersections, compute Manhattan distances and step counts for each intersection.
 - [Day 7: Amplification Circuit](https://adventofcode.com/2019/day/7)
   - **Description:** Configure five amplifiers in series to maximise the thruster signal by testing all permutations of phase settings. Part 1 uses phase settings 0-4 with linear signal flow. Part 2 uses phase settings 5-9 with feedback loop mode where the output of the last amplifier feeds back to the first.
   - **Source:** [AmplificationCircuitAOC2019Day7.java](./day7/AmplificationCircuitAOC2019Day7.java)
