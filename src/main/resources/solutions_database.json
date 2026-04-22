@@ -619,6 +619,16 @@
           "partOne": "2573",
           "partTwo": "bjpkhx,nsnqf,snhph,zmfqpn,qrbnjtj,dbhfd,thn,sthnsg"
         }
+      },
+      {
+        "year": 2020,
+        "day": 3,
+        "title": "Toboggan Trajectory",
+        "link": "https://adventofcode.com/2020/day/3",
+        "solutions": {
+          "partOne": "286",
+          "partTwo": "3638606400"
+        }
       }
     ],
     "2021": [

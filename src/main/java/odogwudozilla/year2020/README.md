@@ -28,6 +28,15 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 3: Toboggan Trajectory
+**Link**: [https://adventofcode.com/2020/day/3](https://adventofcode.com/2020/day/3)
+
+**Description**: Traverse a repeating map of open squares and trees, counting trees encountered for various slopes. Part 1: Right 3, down 1. Part 2: Multiply the number of trees encountered for five different slopes.
+
+**Source Code**: [TobogganTrajectoryAOC2020Day3.java](day3/)
+
+---
+
 ### Day 6: Custom Customs
 **Link**: [https://adventofcode.com/2020/day/6](https://adventofcode.com/2020/day/6)
 
