@@ -711,6 +711,16 @@
           "partOne": "3000",
           "partTwo": "74222"
         }
+      },
+      {
+        "year": 2021,
+        "day": 6,
+        "title": "Lanternfish",
+        "link": "https://adventofcode.com/2021/day/6",
+        "solutions": {
+          "partOne": "380612",
+          "partTwo": "1710166656900"
+        }
       }
     ],
     "2022": [

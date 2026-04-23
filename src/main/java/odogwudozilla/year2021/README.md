@@ -65,6 +65,17 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 
 ---
 
+### Day 6: Lanternfish
+**Link**: [https://adventofcode.com/2021/day/6](https://adventofcode.com/2021/day/6)
+
+**Description**: Simulate lanternfish population growth. Each lanternfish creates a new lanternfish every 7 days, with new fish taking 2 extra days for their first cycle. Part 1 models growth over 80 days; Part 2 extends this to 256 days, requiring an efficient approach to handle exponential growth.
+
+**Source Code**: [LanternfishAOC2021Day6.java](day6/)
+
+**Algorithm/Approach**: Use an array to count the number of fish at each timer value (0-8). Each day, shift the counts down, add new fish at timer 8, and reset fish at timer 0 to timer 6. This avoids simulating each fish individually and handles large populations efficiently.
+
+---
+
 ### Day 12: Passage Pathing
 **Link**: [https://adventofcode.com/2021/day/12](https://adventofcode.com/2021/day/12)
 
@@ -86,4 +97,3 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 **Algorithm/Approach**: Part 1 uses simple simulation with a deterministic die. Part 2 uses recursive dynamic programming with memoization to count wins across all quantum universes. Pre-compute the frequency of each possible sum when rolling a 3-sided die three times (sums 3-9 with different frequencies), then recursively explore all game states, caching results to avoid recomputation.
 
 ---
-
