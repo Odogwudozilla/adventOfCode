@@ -915,7 +915,17 @@
           "partOne": "1008",
           "partTwo": "1210"
         }
-3      },
+      },
+      {
+        "year": 2023,
+        "day": 7,
+        "title": "Camel Cards",
+        "link": "https://adventofcode.com/2023/day/7",
+        "solutions": {
+          "partOne": "245794640",
+          "partTwo": "247899149"
+        }
+      },
       {
         "year": 2023,
         "day": 1,
