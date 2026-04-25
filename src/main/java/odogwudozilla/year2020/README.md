@@ -37,6 +37,15 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 
 ---
 
+### Day 4: Passport Processing
+**Link**: [https://adventofcode.com/2020/day/4](https://adventofcode.com/2020/day/4)
+
+**Description**: Validate batch passport files. Part 1 checks that all required fields are present (cid is optional). Part 2 additionally validates each field value against strict rules (year ranges, height units, hex colour, eye colour enum, and nine-digit passport ID).
+
+**Source Code**: [PassportProcessingAOC2020Day4.java](day4/)
+
+---
+
 ### Day 6: Custom Customs
 **Link**: [https://adventofcode.com/2020/day/6](https://adventofcode.com/2020/day/6)
 
@@ -135,3 +144,9 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 ---
 
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
+
+### Day 4: Passport Processing
+
+- **Puzzle:** [Passport Processing](https://adventofcode.com/2020/day/4)
+- **Source:** [View code](src/main/java/odogwudozilla/year2020/day4/)
+

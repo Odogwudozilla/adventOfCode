@@ -484,6 +484,15 @@
       }
     }, {
       "year" : 2020,
+      "day" : 4,
+      "title" : "Passport Processing",
+      "link" : "https://adventofcode.com/2020/day/4",
+      "solutions" : {
+        "partOne" : "254",
+        "partTwo" : "184"
+      }
+    }, {
+      "year" : 2020,
       "day" : 11,
       "title" : "Seating System",
       "link" : "https://adventofcode.com/2020/day/11",
@@ -579,6 +588,14 @@
       "solutions" : {
         "partOne" : "286",
         "partTwo" : "3638606400"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 4,
+      "title" : "Passport Processing",
+      "link" : "https://adventofcode.com/2020/day/4",
+      "solutions" : {
+        "partOne" : "254"
       }
     } ],
     "2021" : [ {
