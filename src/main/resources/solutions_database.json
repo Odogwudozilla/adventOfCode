@@ -756,6 +756,16 @@
       },
       {
         "year": 2022,
+        "day": 4,
+        "title": "Camp Cleanup",
+        "link": "https://adventofcode.com/2022/day/4",
+        "solutions": {
+          "partOne": "466",
+          "partTwo": "865"
+        }
+      },
+      {
+        "year": 2022,
         "day": 8,
         "title": "Treetop Tree House",
         "link": "https://adventofcode.com/2022/day/8",

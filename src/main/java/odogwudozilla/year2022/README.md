@@ -35,6 +35,15 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 
 **Approach**: For Part 1, split each rucksack into two compartments and find the common item type, summing its priority. For Part 2, group rucksacks in threes and find the badge item type common to all three, summing its priority.
 
+### Day 4: Camp Cleanup
+**Link**: [Day 4: Camp Cleanup](https://adventofcode.com/2022/day/4)
+
+**Description**: Elves are assigned section ranges for camp cleanup. Some assignments overlap, and the task is to count how many assignment pairs have one range fully containing the other.
+
+**Source**: [CampCleanupAOC2022Day4.java](day4/CampCleanupAOC2022Day4.java)
+
+**Approach**: For each pair, parse the two ranges and check if one fully contains the other. Count such pairs for Part 1.
+
 ### Day 8: Treetop Tree House
 **Link**: [Day 8: Treetop Tree House](https://adventofcode.com/2022/day/8)
 
