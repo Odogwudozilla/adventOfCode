@@ -1,0 +1,197 @@
+Role:
+You are a software engineer building an automation tool for solving Advent of Code puzzles.
+Task:
+Design and implement a fully automated workflow/script that retrieves, solves, submits, and documents Advent of Code puzzles.
+Context:
+
+
+The project is a local code repository for solving Advent of Code challenges.
+
+
+The automation should be triggered via a command (e.g., typing "random").
+
+
+Advent of Code puzzles are tied to specific year/day combinations, so “random” must select a valid unsolved puzzle.
+
+
+The system must authenticate using stored session credentials (e.g., session cookie).
+
+
+The website enforces rate limiting: at least 60 seconds between submissions or key requests.
+
+
+Steps / Guidelines:
+
+
+Puzzle Selection
+
+
+Select a random unsolved puzzle (year/day).
+
+
+
+
+Data Retrieval
+
+
+Fetch the puzzle page using authenticated requests.
+
+
+Extract:
+
+
+Part 1 description
+
+
+Puzzle input
+
+
+
+
+
+
+Project Integration
+
+
+Create/update a file in the repository for the selected puzzle.
+
+
+Insert the puzzle description and input in a structured format.
+
+
+
+
+Solve Part 1
+
+
+Generate and execute code to solve Part 1.
+
+
+Store the solution in the project.
+
+
+
+
+Submission & Validation
+
+
+Wait at least 60 seconds before submitting.
+
+
+Submit the answer via HTTP request or browser automation.
+
+
+Parse the response to determine correctness.
+
+
+
+
+Retry Logic
+
+
+If incorrect:
+
+
+Log the attempt
+
+
+Revise solution
+
+
+Respect rate limit before retrying
+
+
+
+
+
+
+Part 2 Handling
+
+
+If Part 1 is correct:
+
+
+Extract Part 2 description
+
+
+Solve Part 2
+
+
+Submit and validate using the same constraints
+
+
+
+
+
+
+Documentation Update
+
+
+Update project documentation (e.g., README or log file) with:
+
+
+Puzzle reference
+
+
+Approach summary
+
+
+Final solutions
+
+
+
+
+
+
+Code Quality Check
+
+
+Refactor for clarity and maintainability without breaking functionality.
+
+
+
+
+Version Control
+
+
+
+
+Stage changes
+
+
+Commit with a descriptive message
+
+
+Push to remote repository
+
+
+Constraints:
+
+
+Enforce minimum 60-second delay between all critical requests (fetching, submitting).
+
+
+Do not expose credentials in logs or code.
+
+
+Ensure idempotency where possible (avoid duplicating work).
+
+
+Include logging for each major step and failure case.
+
+
+Output Format:
+Provide a working implementation plan and code, including:
+
+
+Script or CLI tool (preferred language: specify if needed, default Python)
+
+
+Modular functions for each step
+
+
+Clear comments and logging
+
+
+Instructions for setup (including authentication handling)
+

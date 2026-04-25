@@ -363,6 +363,15 @@
         "partOne" : "3894",
         "partTwo" : "39398"
       }
+    }, {
+      "year" : 2018,
+      "day" : 7,
+      "title" : "The Sum of Its Parts",
+      "link" : "https://adventofcode.com/2018/day/7",
+      "solutions" : {
+        "partOne" : "JDEKPFABTUHOQSXVYMLZCNIGRW",
+        "partTwo" : "1048"
+      }
     } ],
     "2019" : [ {
       "year" : 2019,

@@ -31,3 +31,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - Algorithm: For Day 11, calculate power levels using the formula (rack ID * Y + serial) * rack ID, extract hundreds digit, and subtract 5. Part 1 brute-forces all 3x3 squares. Part 2 uses a Summed Area Table (SAT) for O(1) range queries, enabling efficient evaluation of all square sizes (1x1 to 300x300).
 - Algorithm: For Day 15, implement turn-based combat simulation with BFS pathfinding for movement, reading-order tie-breaking, and HP tracking. Part 2 uses binary search to find minimum elf attack power ensuring no elf deaths.
 - Algorithm: For Day 16, implement all 16 opcodes (arithmetic, bitwise, comparison, assignment). Part 1 tests each sample against all opcodes. Part 2 uses constraint satisfaction and propagation to deduce opcode mappings, then executes the test program.
+
+### Day 7: The Sum of Its Parts
+
+- **Puzzle:** [The Sum of Its Parts](https://adventofcode.com/2018/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day7/)
+
