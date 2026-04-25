@@ -121,3 +121,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 **Algorithm**: Use depth-first search to recursively try all possible bridges, tracking used components and summing strengths. For Part 2, also track the length of each bridge and select the strongest among the longest.
 
 ---
+
+### Day 4: High-Entropy Passphrases
+
+- **Puzzle:** [High-Entropy Passphrases](https://adventofcode.com/2017/day/4)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day4/)
+

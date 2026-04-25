@@ -1,1185 +1,1067 @@
 {
-  "adventOfCodeSolutions": {
-    "2015": [
-      {
-        "year": 2015,
-        "day": 1,
-        "title": "Not Quite Lisp",
-        "link": "https://adventofcode.com/2015/day/1",
-        "solutions": {
-          "partOne": "138",
-          "partTwo": "1771"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 2,
-        "title": "I Was Told There Would Be No Math",
-        "link": "https://adventofcode.com/2015/day/2",
-        "solutions": {
-          "partOne": "1588178",
-          "partTwo": "3783758"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 3,
-        "title": "Perfectly Spherical Houses in a Vacuum",
-        "link": "https://adventofcode.com/2015/day/3",
-        "solutions": {
-          "partOne": "2081",
-          "partTwo": "2341"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 4,
-        "title": "The Ideal Stocking Stuffer",
-        "link": "https://adventofcode.com/2015/day/4",
-        "solutions": {
-          "partOne": "282749",
-          "partTwo": "9962624"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 10,
-        "title": "Elves Look, Elves Say",
-        "link": "https://adventofcode.com/2015/day/10",
-        "solutions": {
-          "partOne": "360154",
-          "partTwo": "5103798"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 15,
-        "title": "Science for Hungry People",
-        "link": "https://adventofcode.com/2015/day/15",
-        "solutions": {
-          "partOne": "222870",
-          "partTwo": "117936"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 20,
-        "title": "Infinite Elves and Infinite Houses",
-        "link": "https://adventofcode.com/2015/day/20",
-        "solutions": {
-          "partOne": "776160",
-          "partTwo": "786240"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 5,
-        "title": "Doesn't He Have Intern-Elves For This?",
-        "link": "https://adventofcode.com/2015/day/5",
-        "solutions": {
-          "partOne": "238",
-          "partTwo": "69"
-        }
-      },
-      {
-        "year": 2015,
-        "day": 18,
-        "title": "Like a GIF For Your Yard",
-        "link": "https://adventofcode.com/2015/day/18",
-        "solutions": {
-          "partOne": "1061",
-          "partTwo": "1006"
-        }
+  "adventOfCodeSolutions" : {
+    "2015" : [ {
+      "year" : 2015,
+      "day" : 1,
+      "title" : "Not Quite Lisp",
+      "link" : "https://adventofcode.com/2015/day/1",
+      "solutions" : {
+        "partOne" : "138",
+        "partTwo" : "1771"
       }
-    ],
-    "2016": [
-      {
-        "year": 2016,
-        "day": 1,
-        "title": "No Time for a Taxicab",
-        "link": "https://adventofcode.com/2016/day/1",
-        "solutions": {
-          "partOne": "262",
-          "partTwo": "131"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 20,
-        "title": "Firewall Rules",
-        "link": "https://adventofcode.com/2016/day/20",
-        "solutions": {
-          "partOne": "32259706",
-          "partTwo": "113"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 21,
-        "title": "Scrambled Letters and Hash",
-        "link": "https://adventofcode.com/2016/day/21",
-        "solutions": {
-          "partOne": "gbhafcde",
-          "partTwo": "bcfaegdh"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 4,
-        "title": "Security Through Obscurity",
-        "link": "https://adventofcode.com/2016/day/4",
-        "solutions": {
-          "partOne": "185371",
-          "partTwo": "984"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 22,
-        "title": "Grid Computing",
-        "link": "https://adventofcode.com/2016/day/22",
-        "solutions": {
-          "partOne": "950",
-          "partTwo": "256"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 12,
-        "title": "Leonardo's Monorail",
-        "link": "https://adventofcode.com/2016/day/12",
-        "solutions": {
-          "partOne": "318117",
-          "partTwo": "9227771"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 17,
-        "title": "Two Steps Forward",
-        "link": "https://adventofcode.com/2016/day/17",
-        "solutions": {
-          "partOne": "DDURRLRRDD",
-          "partTwo": "436"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 19,
-        "title": "An Elephant Named Joseph",
-        "link": "https://adventofcode.com/2016/day/19",
-        "solutions": {
-          "partOne": "1834471",
-          "partTwo": "1420064"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 9,
-        "title": "Explosives in Cyberspace",
-        "link": "https://adventofcode.com/2016/day/9",
-        "solutions": {
-          "partOne": "123908",
-          "partTwo": "10755693147"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 2,
-        "title": "Bathroom Security",
-        "link": "https://adventofcode.com/2016/day/2",
-        "solutions": {
-          "partOne": "99332",
-          "partTwo": "DD483"
-        }
-      },
-      {
-        "year": 2016,
-        "day": 3,
-        "title": "Squares With Three Sides",
-        "link": "https://adventofcode.com/2016/day/3",
-        "solutions": {
-          "partOne": "982",
-          "partTwo": "1826"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 2,
+      "title" : "I Was Told There Would Be No Math",
+      "link" : "https://adventofcode.com/2015/day/2",
+      "solutions" : {
+        "partOne" : "1588178",
+        "partTwo" : "3783758"
       }
-    ],
-    "2017": [
-      {
-        "year": 2017,
-        "day": 1,
-        "title": "Inverse Captcha",
-        "link": "https://adventofcode.com/2017/day/1",
-        "solutions": {
-          "partOne": "1175",
-          "partTwo": "1166"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 2,
-        "title": "Corruption Checksum",
-        "link": "https://adventofcode.com/2017/day/2",
-        "solutions": {
-          "partOne": "48357",
-          "partTwo": "351"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 5,
-        "title": "A Maze of Twisty Trampolines, All Alike",
-        "link": "https://adventofcode.com/2017/day/5",
-        "solutions": {
-          "partOne": "391540",
-          "partTwo": "30513679"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 9,
-        "title": "Stream Processing",
-        "link": "https://adventofcode.com/2017/day/9",
-        "solutions": {
-          "partOne": "16869",
-          "partTwo": "7284"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 14,
-        "title": "Disk Defragmentation",
-        "link": "https://adventofcode.com/2017/day/14",
-        "solutions": {
-          "partOne": "8222",
-          "partTwo": "1086"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 20,
-        "title": "Particle Swarm",
-        "link": "https://adventofcode.com/2017/day/20",
-        "solutions": {
-          "partOne": "150",
-          "partTwo": "657"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 21,
-        "title": "Fractal Art",
-        "link": "https://adventofcode.com/2017/day/21",
-        "solutions": {
-          "partOne": "186",
-          "partTwo": "3018423"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 24,
-        "title": "Electromagnetic Moat",
-        "link": "https://adventofcode.com/2017/day/24",
-        "solutions": {
-          "partOne": "1695",
-          "partTwo": "1673"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 11,
-        "title": "Hex Ed",
-        "link": "https://adventofcode.com/2017/day/11",
-        "solutions": {
-          "partOne": "773",
-          "partTwo": "1560"
-        }
-      },
-      {
-        "year": 2017,
-        "day": 3,
-        "title": "Spiral Memory",
-        "link": "https://adventofcode.com/2017/day/3",
-        "solutions": {
-          "partOne": "475",
-          "partTwo": "409372"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 3,
+      "title" : "Perfectly Spherical Houses in a Vacuum",
+      "link" : "https://adventofcode.com/2015/day/3",
+      "solutions" : {
+        "partOne" : "2081",
+        "partTwo" : "2341"
       }
-    ],
-    "2018": [
-      {
-        "year": 2018,
-        "day": 1,
-        "title": "Chronal Calibration",
-        "link": "https://adventofcode.com/2018/day/1",
-        "solutions": {
-          "partOne": "437",
-          "partTwo": "655"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 2,
-        "title": "Inventory Management System",
-        "link": "https://adventofcode.com/2018/day/2",
-        "solutions": {
-          "partOne": "4980",
-          "partTwo": "qysdtrkloagnfozuwujmhrbvx"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 3,
-        "title": "No Matter How You Slice It",
-        "link": "https://adventofcode.com/2018/day/3",
-        "solutions": {
-          "partOne": "106501",
-          "partTwo": "632"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 4,
-        "title": "Repose Record",
-        "link": "https://adventofcode.com/2018/day/4",
-        "solutions": {
-          "partOne": "72925",
-          "partTwo": "49137"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 11,
-        "title": "Chronal Charge",
-        "link": "https://adventofcode.com/2018/day/11",
-        "solutions": {
-          "partOne": "233,36",
-          "partTwo": "231,107,14"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 15,
-        "title": "Beverage Bandits",
-        "link": "https://adventofcode.com/2018/day/15",
-        "solutions": {
-          "partOne": "201123",
-          "partTwo": "54188"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 16,
-        "title": "Chronal Classification",
-        "link": "https://adventofcode.com/2018/day/16",
-        "solutions": {
-          "partOne": "663",
-          "partTwo": "525"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 5,
-        "title": "Alchemical Reduction",
-        "link": "https://adventofcode.com/2018/day/5",
-        "solutions": {
-          "partOne": "11242",
-          "partTwo": "5492"
-        }
-      },
-      {
-        "year": 2018,
-        "day": 6,
-        "title": "Chronal Coordinates",
-        "link": "https://adventofcode.com/2018/day/6",
-        "solutions": {
-          "partOne": "3894",
-          "partTwo": "39398"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 4,
+      "title" : "The Ideal Stocking Stuffer",
+      "link" : "https://adventofcode.com/2015/day/4",
+      "solutions" : {
+        "partOne" : "282749",
+        "partTwo" : "9962624"
       }
-    ],
-    "2019": [
-      {
-        "year": 2019,
-        "day": 1,
-        "title": "The Tyranny of the Rocket Equation",
-        "link": "https://adventofcode.com/2019/day/1",
-        "solutions": {
-          "partOne": "3305301",
-          "partTwo": "4955106"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 2,
-        "title": "1202 Program Alarm",
-        "link": "https://adventofcode.com/2019/day/2",
-        "solutions": {
-          "partOne": "3166704",
-          "partTwo": "8018"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 11,
-        "title": "Space Police",
-        "link": "https://adventofcode.com/2019/day/11",
-        "solutions": {
-          "partOne": "2211",
-          "partTwo": "EFCKUEGC"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 16,
-        "title": "Flawed Frequency Transmission",
-        "link": "https://adventofcode.com/2019/day/16",
-        "solutions": {
-          "partOne": "37153056",
-          "partTwo": "60592199"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 24,
-        "title": "Planet of Discord",
-        "link": "https://adventofcode.com/2019/day/24",
-        "solutions": {
-          "partOne": "32776479",
-          "partTwo": "2017"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 7,
-        "title": "Amplification Circuit",
-        "link": "https://adventofcode.com/2019/day/7",
-        "solutions": {
-          "partOne": "272368",
-          "partTwo": "247899149"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 9,
-        "title": "Sensor Boost",
-        "link": "https://adventofcode.com/2019/day/9",
-        "solutions": {
-          "partOne": "3638931938",
-          "partTwo": "86025"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 13,
-        "title": "Care Package",
-        "link": "https://adventofcode.com/2019/day/13",
-        "solutions": {
-          "partOne": "265",
-          "partTwo": "13331"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 22,
-        "title": "Slam Shuffle",
-        "link": "https://adventofcode.com/2019/day/22",
-        "solutions": {
-          "partOne": "7171",
-          "partTwo": "73394009116480"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 21,
-        "title": "Springdroid Adventure",
-        "link": "https://adventofcode.com/2019/day/21",
-        "solutions": {
-          "partOne": "19355364",
-          "partTwo": "1142530574"
-        }
-      },
-      {
-        "year": 2019,
-        "day": 3,
-        "title": "Crossed Wires",
-        "link": "https://adventofcode.com/2019/day/3",
-        "solutions": {
-          "partOne": "303",
-          "partTwo": "11222"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 10,
+      "title" : "Elves Look, Elves Say",
+      "link" : "https://adventofcode.com/2015/day/10",
+      "solutions" : {
+        "partOne" : "360154",
+        "partTwo" : "5103798"
       }
-    ],
-    "2020": [
-      {
-        "year": 2020,
-        "day": 1,
-        "title": "Report Repair",
-        "link": "https://adventofcode.com/2020/day/1",
-        "solutions": {
-          "partOne": "444019",
-          "partTwo": "29212176"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 11,
-        "title": "Seating System",
-        "link": "https://adventofcode.com/2020/day/11",
-        "solutions": {
-          "partOne": "2368",
-          "partTwo": "2124"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 2,
-        "title": "Password Philosophy",
-        "link": "https://adventofcode.com/2020/day/2",
-        "solutions": {
-          "partOne": "474",
-          "partTwo": "745"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 8,
-        "title": "Handheld Halting",
-        "link": "https://adventofcode.com/2020/day/8",
-        "solutions": {
-          "partOne": "2051",
-          "partTwo": "2304"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 9,
-        "title": "Encoding Error",
-        "link": "https://adventofcode.com/2020/day/9",
-        "solutions": {
-          "partOne": "1504371145",
-          "partTwo": "183278487"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 10,
-        "title": "Adapter Array",
-        "link": "https://adventofcode.com/2020/day/10",
-        "solutions": {
-          "partOne": "2080",
-          "partTwo": "6908379398144"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 19,
-        "title": "Monster Messages",
-        "link": "https://adventofcode.com/2020/day/19",
-        "solutions": {
-          "partOne": "111",
-          "partTwo": "343"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 23,
-        "title": "Crab Cups",
-        "link": "https://adventofcode.com/2020/day/23",
-        "solutions": {
-          "partOne": "24987653",
-          "partTwo": "442938711161"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 25,
-        "title": "Combo Breaker",
-        "link": "https://adventofcode.com/2020/day/25",
-        "solutions": {
-          "partOne": "8635216"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 6,
-        "title": "Custom Customs",
-        "link": "https://adventofcode.com/2020/day/6",
-        "solutions": {
-          "partOne": "6809",
-          "partTwo": "3394"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 21,
-        "title": "Allergen Assessment",
-        "link": "https://adventofcode.com/2020/day/21",
-        "solutions": {
-          "partOne": "2573",
-          "partTwo": "bjpkhx,nsnqf,snhph,zmfqpn,qrbnjtj,dbhfd,thn,sthnsg"
-        }
-      },
-      {
-        "year": 2020,
-        "day": 3,
-        "title": "Toboggan Trajectory",
-        "link": "https://adventofcode.com/2020/day/3",
-        "solutions": {
-          "partOne": "286",
-          "partTwo": "3638606400"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 15,
+      "title" : "Science for Hungry People",
+      "link" : "https://adventofcode.com/2015/day/15",
+      "solutions" : {
+        "partOne" : "222870",
+        "partTwo" : "117936"
       }
-    ],
-    "2021": [
-      {
-        "year": 2021,
-        "day": 1,
-        "title": "Sonar Sweep",
-        "link": "https://adventofcode.com/2021/day/1",
-        "solutions": {
-          "partOne": "1766",
-          "partTwo": "1797"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 2,
-        "title": "Dive!",
-        "link": "https://adventofcode.com/2021/day/2",
-        "solutions": {
-          "partOne": "1698735",
-          "partTwo": "1594785890"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 3,
-        "title": "Binary Diagnostic",
-        "link": "https://adventofcode.com/2021/day/3",
-        "solutions": {
-          "partOne": "1997414",
-          "partTwo": "1032597"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 4,
-        "title": "Giant Squid",
-        "link": "https://adventofcode.com/2021/day/4",
-        "solutions": {
-          "partOne": "45031",
-          "partTwo": "2568"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 5,
-        "title": "Hydrothermal Venture",
-        "link": "https://adventofcode.com/2021/day/5",
-        "solutions": {
-          "partOne": "4655",
-          "partTwo": "20500"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 21,
-        "title": "Dirac Dice",
-        "link": "https://adventofcode.com/2021/day/21",
-        "solutions": {
-          "partOne": "518418",
-          "partTwo": "116741133558209"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 23,
-        "title": "Amphipod",
-        "link": "https://adventofcode.com/2021/day/23",
-        "solutions": {
-          "partOne": "17400",
-          "partTwo": "46120"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 12,
-        "title": "Passage Pathing",
-        "link": "https://adventofcode.com/2021/day/12",
-        "solutions": {
-          "partOne": "3000",
-          "partTwo": "74222"
-        }
-      },
-      {
-        "year": 2021,
-        "day": 6,
-        "title": "Lanternfish",
-        "link": "https://adventofcode.com/2021/day/6",
-        "solutions": {
-          "partOne": "380612",
-          "partTwo": "1710166656900"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 20,
+      "title" : "Infinite Elves and Infinite Houses",
+      "link" : "https://adventofcode.com/2015/day/20",
+      "solutions" : {
+        "partOne" : "776160",
+        "partTwo" : "786240"
       }
-    ],
-    "2022": [
-      {
-        "year": 2022,
-        "day": 1,
-        "title": "Calorie Counting",
-        "link": "https://adventofcode.com/2022/day/1",
-        "solutions": {
-          "partOne": "67016",
-          "partTwo": "200116"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 2,
-        "title": "Rock Paper Scissors",
-        "link": "https://adventofcode.com/2022/day/2",
-        "solutions": {
-          "partOne": "11841",
-          "partTwo": "13022"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 3,
-        "title": "Rucksack Reorganization",
-        "link": "https://adventofcode.com/2022/day/3",
-        "solutions": {
-          "partOne": "7428",
-          "partTwo": "2650"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 4,
-        "title": "Camp Cleanup",
-        "link": "https://adventofcode.com/2022/day/4",
-        "solutions": {
-          "partOne": "466",
-          "partTwo": "865"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 8,
-        "title": "Treetop Tree House",
-        "link": "https://adventofcode.com/2022/day/8",
-        "solutions": {
-          "partOne": "1829",
-          "partTwo": "291840"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 16,
-        "title": "Proboscidea Volcanium",
-        "link": "https://adventofcode.com/2022/day/16",
-        "solutions": {
-          "partOne": "1474",
-          "partTwo": "2100"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 24,
-        "title": "Blizzard Basin",
-        "link": "https://adventofcode.com/2022/day/24",
-        "solutions": {
-          "partOne": "232",
-          "partTwo": "715"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 20,
-        "title": "Grove Positioning System",
-        "link": "https://adventofcode.com/2022/day/20",
-        "solutions": {
-          "partOne": "2827",
-          "partTwo": "7834270093909"
-        }
-      },
-      {
-        "year": 2022,
-        "day": 21,
-        "title": "Monkey Math",
-        "link": "https://adventofcode.com/2022/day/21",
-        "solutions": {
-          "partOne": "160274622817992",
-          "partTwo": "3087390115721"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 5,
+      "title" : "Doesn't He Have Intern-Elves For This?",
+      "link" : "https://adventofcode.com/2015/day/5",
+      "solutions" : {
+        "partOne" : "238",
+        "partTwo" : "69"
       }
-    ],
-    "2023": [
-      {
-        "year": 2023,
-        "day": 3,
-        "title": "Gear Ratios",
-        "link": "https://adventofcode.com/2023/day/3",
-        "solutions": {
-          "partOne": "540212",
-          "partTwo": "87605697"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 4,
-        "title": "Scratchcards",
-        "link": "https://adventofcode.com/2023/day/4",
-        "solutions": {
-          "partOne": "22193",
-          "partTwo": "5625994"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 6,
-        "title": "Wait For It",
-        "link": "https://adventofcode.com/2023/day/6",
-        "solutions": {
-          "partOne": "4568778",
-          "partTwo": "28973936"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 10,
-        "title": "Pipe Maze",
-        "link": "https://adventofcode.com/2023/day/10",
-        "solutions": {
-          "partOne": "6690",
-          "partTwo": "525"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 13,
-        "title": "Point of Incidence",
-        "link": "https://adventofcode.com/2023/day/13",
-        "solutions": {
-          "partOne": "42974",
-          "partTwo": "27587"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 21,
-        "title": "Step Counter",
-        "link": "https://adventofcode.com/2023/day/21",
-        "solutions": {
-          "partOne": "3737",
-          "partTwo": "625382480005896"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 9,
-        "title": "Mirage Maintenance",
-        "link": "https://adventofcode.com/2023/day/9",
-        "solutions": {
-          "partOne": "1901217887",
-          "partTwo": "905"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 5,
-        "title": "If You Give A Seed A Fertilizer",
-        "link": "https://adventofcode.com/2023/day/5",
-        "solutions": {
-          "partOne": "424490994",
-          "partTwo": "15290096"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 20,
-        "title": "Pulse Propagation",
-        "link": "https://adventofcode.com/2023/day/20",
-        "solutions": {
-          "partOne": "832957356",
-          "partTwo": "1"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 24,
-        "title": "Never Tell Me The Odds",
-        "link": "https://adventofcode.com/2023/day/24",
-        "solutions": {
-          "partOne": "12015",
-          "partTwo": "1016365642179116"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 17,
-        "title": "Clumsy Crucible",
-        "link": "https://adventofcode.com/2023/day/17",
-        "solutions": {
-          "partOne": "1008",
-          "partTwo": "1210"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 7,
-        "title": "Camel Cards",
-        "link": "https://adventofcode.com/2023/day/7",
-        "solutions": {
-          "partOne": "245794640",
-          "partTwo": "247899149"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 1,
-        "title": "Trebuchet?!",
-        "link": "https://adventofcode.com/2023/day/1",
-        "solutions": {
-          "partOne": "54597",
-          "partTwo": "54504"
-        }
-      },
-      {
-        "year": 2023,
-        "day": 2,
-        "title": "Cube Conundrum",
-        "link": "https://adventofcode.com/2023/day/2",
-        "solutions": {
-          "partOne": "2285",
-          "partTwo": "77021"
-        }
+    }, {
+      "year" : 2015,
+      "day" : 18,
+      "title" : "Like a GIF For Your Yard",
+      "link" : "https://adventofcode.com/2015/day/18",
+      "solutions" : {
+        "partOne" : "1061",
+        "partTwo" : "1006"
       }
-    ],
-    "2024": [
-      {
-        "year": 2024,
-        "day": 1,
-        "title": "Historian Hysteria",
-        "link": "https://adventofcode.com/2024/day/1",
-        "solutions": {
-          "partOne": "2192892",
-          "partTwo": "22962826"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 18,
-        "title": "RAM Run",
-        "link": "https://adventofcode.com/2024/day/18",
-        "solutions": {
-          "partOne": "322",
-          "partTwo": "60,21"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 4,
-        "title": "Ceres Search",
-        "link": "https://adventofcode.com/2024/day/4",
-        "solutions": {
-          "partOne": "352",
-          "partTwo": "2041"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 5,
-        "title": "Print Queue",
-        "link": "https://adventofcode.com/2024/day/5",
-        "solutions": {
-          "partOne": "3608",
-          "partTwo": "4922"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 9,
-        "title": "Disk Fragmenter",
-        "link": "https://adventofcode.com/2024/day/9",
-        "solutions": {
-          "partOne": "6279058075753",
-          "partTwo": "6301361958738"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 22,
-        "title": "Monkey Market",
-        "link": "https://adventofcode.com/2024/day/22",
-        "solutions": {
-          "partOne": "12664695565",
-          "partTwo": "1444"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 23,
-        "title": "LAN Party",
-        "link": "https://adventofcode.com/2024/day/23",
-        "solutions": {
-          "partOne": "1308",
-          "partTwo": "bu,fq,fz,pn,rr,st,sv,tr,un,uy,zf,zi,zy"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 2,
-        "title": "Red-Nosed Reports",
-        "link": "https://adventofcode.com/2024/day/2",
-        "solutions": {
-          "partOne": "680",
-          "partTwo": "710"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 8,
-        "title": "Resonant Collinearity",
-        "link": "https://adventofcode.com/2024/day/8",
-        "solutions": {
-          "partOne": "271",
-          "partTwo": "994"
-        }
-      },
-      {
-        "year": 2024,
-        "day": 6,
-        "title": "Guard Gallivant",
-        "link": "https://adventofcode.com/2024/day/6",
-        "solutions": {
-          "partOne": "5461",
-          "partTwo": "1836"
-        }
+    } ],
+    "2016" : [ {
+      "year" : 2016,
+      "day" : 1,
+      "title" : "No Time for a Taxicab",
+      "link" : "https://adventofcode.com/2016/day/1",
+      "solutions" : {
+        "partOne" : "262",
+        "partTwo" : "131"
       }
-    ],
-    "2025": [
-      {
-        "year": 2025,
-        "day": 1,
-        "title": "Secret Entrance",
-        "link": "https://adventofcode.com/2025/day/1",
-        "solutions": {
-          "partOne": "1147",
-          "partTwo": "6789"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 2,
-        "title": "Gift Shop",
-        "link": "https://adventofcode.com/2025/day/2",
-        "solutions": {
-          "partOne": "9188031749",
-          "partTwo": "11323661261"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 3,
-        "title": "Lobby",
-        "link": "https://adventofcode.com/2025/day/3",
-        "solutions": {
-          "partOne": "16993",
-          "partTwo": "168617068915447"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 4,
-        "title": "Printing Department",
-        "link": "https://adventofcode.com/2025/day/4",
-        "solutions": {
-          "partOne": "1491",
-          "partTwo": "8722"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 5,
-        "title": "Cafeteria",
-        "link": "https://adventofcode.com/2025/day/5",
-        "solutions": {
-          "partOne": "739",
-          "partTwo": "344486348901788"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 6,
-        "title": "Trash Compactor",
-        "link": "https://adventofcode.com/2025/day/6",
-        "solutions": {
-          "partOne": "3968933219902",
-          "partTwo": "6019576291014"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 7,
-        "title": "Laboratories",
-        "link": "https://adventofcode.com/2025/day/7",
-        "solutions": {
-          "partOne": "1711",
-          "partTwo": "36706966158365"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 8,
-        "title": "Playground",
-        "link": "https://adventofcode.com/2025/day/8",
-        "solutions": {
-          "partOne": "32103",
-          "partTwo": "8133642976"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 9,
-        "title": "Movie Theater",
-        "link": "https://adventofcode.com/2025/day/9",
-        "solutions": {
-          "partOne": "4773451098",
-          "partTwo": "1429075575"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 10,
-        "title": "Factory",
-        "link": "https://adventofcode.com/2025/day/10",
-        "solutions": {
-          "partOne": "459",
-          "partTwo": "18687"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 11,
-        "title": "Reactor",
-        "link": "https://adventofcode.com/2025/day/11",
-        "solutions": {
-          "partOne": "658",
-          "partTwo": "371113003846800"
-        }
-      },
-      {
-        "year": 2025,
-        "day": 12,
-        "title": "Christmas Tree Farm",
-        "link": "https://adventofcode.com/2025/day/12",
-        "solutions": {
-          "partOne": "583",
-          "partTwo": "⭐"
-        }
+    }, {
+      "year" : 2016,
+      "day" : 20,
+      "title" : "Firewall Rules",
+      "link" : "https://adventofcode.com/2016/day/20",
+      "solutions" : {
+        "partOne" : "32259706",
+        "partTwo" : "113"
       }
-    ]
+    }, {
+      "year" : 2016,
+      "day" : 21,
+      "title" : "Scrambled Letters and Hash",
+      "link" : "https://adventofcode.com/2016/day/21",
+      "solutions" : {
+        "partOne" : "gbhafcde",
+        "partTwo" : "bcfaegdh"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 4,
+      "title" : "Security Through Obscurity",
+      "link" : "https://adventofcode.com/2016/day/4",
+      "solutions" : {
+        "partOne" : "185371",
+        "partTwo" : "984"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 22,
+      "title" : "Grid Computing",
+      "link" : "https://adventofcode.com/2016/day/22",
+      "solutions" : {
+        "partOne" : "950",
+        "partTwo" : "256"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 12,
+      "title" : "Leonardo's Monorail",
+      "link" : "https://adventofcode.com/2016/day/12",
+      "solutions" : {
+        "partOne" : "318117",
+        "partTwo" : "9227771"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 17,
+      "title" : "Two Steps Forward",
+      "link" : "https://adventofcode.com/2016/day/17",
+      "solutions" : {
+        "partOne" : "DDURRLRRDD",
+        "partTwo" : "436"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 19,
+      "title" : "An Elephant Named Joseph",
+      "link" : "https://adventofcode.com/2016/day/19",
+      "solutions" : {
+        "partOne" : "1834471",
+        "partTwo" : "1420064"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 9,
+      "title" : "Explosives in Cyberspace",
+      "link" : "https://adventofcode.com/2016/day/9",
+      "solutions" : {
+        "partOne" : "123908",
+        "partTwo" : "10755693147"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 2,
+      "title" : "Bathroom Security",
+      "link" : "https://adventofcode.com/2016/day/2",
+      "solutions" : {
+        "partOne" : "99332",
+        "partTwo" : "DD483"
+      }
+    }, {
+      "year" : 2016,
+      "day" : 3,
+      "title" : "Squares With Three Sides",
+      "link" : "https://adventofcode.com/2016/day/3",
+      "solutions" : {
+        "partOne" : "982",
+        "partTwo" : "1826"
+      }
+    } ],
+    "2017" : [ {
+      "year" : 2017,
+      "day" : 1,
+      "title" : "Inverse Captcha",
+      "link" : "https://adventofcode.com/2017/day/1",
+      "solutions" : {
+        "partOne" : "1175",
+        "partTwo" : "1166"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 2,
+      "title" : "Corruption Checksum",
+      "link" : "https://adventofcode.com/2017/day/2",
+      "solutions" : {
+        "partOne" : "48357",
+        "partTwo" : "351"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 5,
+      "title" : "A Maze of Twisty Trampolines, All Alike",
+      "link" : "https://adventofcode.com/2017/day/5",
+      "solutions" : {
+        "partOne" : "391540",
+        "partTwo" : "30513679"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 9,
+      "title" : "Stream Processing",
+      "link" : "https://adventofcode.com/2017/day/9",
+      "solutions" : {
+        "partOne" : "16869",
+        "partTwo" : "7284"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 14,
+      "title" : "Disk Defragmentation",
+      "link" : "https://adventofcode.com/2017/day/14",
+      "solutions" : {
+        "partOne" : "8222",
+        "partTwo" : "1086"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 20,
+      "title" : "Particle Swarm",
+      "link" : "https://adventofcode.com/2017/day/20",
+      "solutions" : {
+        "partOne" : "150",
+        "partTwo" : "657"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 21,
+      "title" : "Fractal Art",
+      "link" : "https://adventofcode.com/2017/day/21",
+      "solutions" : {
+        "partOne" : "186",
+        "partTwo" : "3018423"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 24,
+      "title" : "Electromagnetic Moat",
+      "link" : "https://adventofcode.com/2017/day/24",
+      "solutions" : {
+        "partOne" : "1695",
+        "partTwo" : "1673"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 11,
+      "title" : "Hex Ed",
+      "link" : "https://adventofcode.com/2017/day/11",
+      "solutions" : {
+        "partOne" : "773",
+        "partTwo" : "1560"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 3,
+      "title" : "Spiral Memory",
+      "link" : "https://adventofcode.com/2017/day/3",
+      "solutions" : {
+        "partOne" : "475",
+        "partTwo" : "409372"
+      }
+    }, {
+      "year" : 2017,
+      "day" : 4,
+      "title" : "High-Entropy Passphrases",
+      "link" : "https://adventofcode.com/2017/day/4",
+      "solutions" : {
+        "partOne" : "477",
+        "partTwo" : "167"
+      }
+    } ],
+    "2018" : [ {
+      "year" : 2018,
+      "day" : 1,
+      "title" : "Chronal Calibration",
+      "link" : "https://adventofcode.com/2018/day/1",
+      "solutions" : {
+        "partOne" : "437",
+        "partTwo" : "655"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 2,
+      "title" : "Inventory Management System",
+      "link" : "https://adventofcode.com/2018/day/2",
+      "solutions" : {
+        "partOne" : "4980",
+        "partTwo" : "qysdtrkloagnfozuwujmhrbvx"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 3,
+      "title" : "No Matter How You Slice It",
+      "link" : "https://adventofcode.com/2018/day/3",
+      "solutions" : {
+        "partOne" : "106501",
+        "partTwo" : "632"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 4,
+      "title" : "Repose Record",
+      "link" : "https://adventofcode.com/2018/day/4",
+      "solutions" : {
+        "partOne" : "72925",
+        "partTwo" : "49137"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 11,
+      "title" : "Chronal Charge",
+      "link" : "https://adventofcode.com/2018/day/11",
+      "solutions" : {
+        "partOne" : "233,36",
+        "partTwo" : "231,107,14"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 15,
+      "title" : "Beverage Bandits",
+      "link" : "https://adventofcode.com/2018/day/15",
+      "solutions" : {
+        "partOne" : "201123",
+        "partTwo" : "54188"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 16,
+      "title" : "Chronal Classification",
+      "link" : "https://adventofcode.com/2018/day/16",
+      "solutions" : {
+        "partOne" : "663",
+        "partTwo" : "525"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 5,
+      "title" : "Alchemical Reduction",
+      "link" : "https://adventofcode.com/2018/day/5",
+      "solutions" : {
+        "partOne" : "11242",
+        "partTwo" : "5492"
+      }
+    }, {
+      "year" : 2018,
+      "day" : 6,
+      "title" : "Chronal Coordinates",
+      "link" : "https://adventofcode.com/2018/day/6",
+      "solutions" : {
+        "partOne" : "3894",
+        "partTwo" : "39398"
+      }
+    } ],
+    "2019" : [ {
+      "year" : 2019,
+      "day" : 1,
+      "title" : "The Tyranny of the Rocket Equation",
+      "link" : "https://adventofcode.com/2019/day/1",
+      "solutions" : {
+        "partOne" : "3305301",
+        "partTwo" : "4955106"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 2,
+      "title" : "1202 Program Alarm",
+      "link" : "https://adventofcode.com/2019/day/2",
+      "solutions" : {
+        "partOne" : "3166704",
+        "partTwo" : "8018"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 11,
+      "title" : "Space Police",
+      "link" : "https://adventofcode.com/2019/day/11",
+      "solutions" : {
+        "partOne" : "2211",
+        "partTwo" : "EFCKUEGC"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 16,
+      "title" : "Flawed Frequency Transmission",
+      "link" : "https://adventofcode.com/2019/day/16",
+      "solutions" : {
+        "partOne" : "37153056",
+        "partTwo" : "60592199"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 24,
+      "title" : "Planet of Discord",
+      "link" : "https://adventofcode.com/2019/day/24",
+      "solutions" : {
+        "partOne" : "32776479",
+        "partTwo" : "2017"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 7,
+      "title" : "Amplification Circuit",
+      "link" : "https://adventofcode.com/2019/day/7",
+      "solutions" : {
+        "partOne" : "272368",
+        "partTwo" : "247899149"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 9,
+      "title" : "Sensor Boost",
+      "link" : "https://adventofcode.com/2019/day/9",
+      "solutions" : {
+        "partOne" : "3638931938",
+        "partTwo" : "86025"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 13,
+      "title" : "Care Package",
+      "link" : "https://adventofcode.com/2019/day/13",
+      "solutions" : {
+        "partOne" : "265",
+        "partTwo" : "13331"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 22,
+      "title" : "Slam Shuffle",
+      "link" : "https://adventofcode.com/2019/day/22",
+      "solutions" : {
+        "partOne" : "7171",
+        "partTwo" : "73394009116480"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 21,
+      "title" : "Springdroid Adventure",
+      "link" : "https://adventofcode.com/2019/day/21",
+      "solutions" : {
+        "partOne" : "19355364",
+        "partTwo" : "1142530574"
+      }
+    }, {
+      "year" : 2019,
+      "day" : 3,
+      "title" : "Crossed Wires",
+      "link" : "https://adventofcode.com/2019/day/3",
+      "solutions" : {
+        "partOne" : "303",
+        "partTwo" : "11222"
+      }
+    } ],
+    "2020" : [ {
+      "year" : 2020,
+      "day" : 1,
+      "title" : "Report Repair",
+      "link" : "https://adventofcode.com/2020/day/1",
+      "solutions" : {
+        "partOne" : "444019",
+        "partTwo" : "29212176"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 11,
+      "title" : "Seating System",
+      "link" : "https://adventofcode.com/2020/day/11",
+      "solutions" : {
+        "partOne" : "2368",
+        "partTwo" : "2124"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 2,
+      "title" : "Password Philosophy",
+      "link" : "https://adventofcode.com/2020/day/2",
+      "solutions" : {
+        "partOne" : "474",
+        "partTwo" : "745"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 8,
+      "title" : "Handheld Halting",
+      "link" : "https://adventofcode.com/2020/day/8",
+      "solutions" : {
+        "partOne" : "2051",
+        "partTwo" : "2304"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 9,
+      "title" : "Encoding Error",
+      "link" : "https://adventofcode.com/2020/day/9",
+      "solutions" : {
+        "partOne" : "1504371145",
+        "partTwo" : "183278487"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 10,
+      "title" : "Adapter Array",
+      "link" : "https://adventofcode.com/2020/day/10",
+      "solutions" : {
+        "partOne" : "2080",
+        "partTwo" : "6908379398144"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 19,
+      "title" : "Monster Messages",
+      "link" : "https://adventofcode.com/2020/day/19",
+      "solutions" : {
+        "partOne" : "111",
+        "partTwo" : "343"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 23,
+      "title" : "Crab Cups",
+      "link" : "https://adventofcode.com/2020/day/23",
+      "solutions" : {
+        "partOne" : "24987653",
+        "partTwo" : "442938711161"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 25,
+      "title" : "Combo Breaker",
+      "link" : "https://adventofcode.com/2020/day/25",
+      "solutions" : {
+        "partOne" : "8635216"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 6,
+      "title" : "Custom Customs",
+      "link" : "https://adventofcode.com/2020/day/6",
+      "solutions" : {
+        "partOne" : "6809",
+        "partTwo" : "3394"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 21,
+      "title" : "Allergen Assessment",
+      "link" : "https://adventofcode.com/2020/day/21",
+      "solutions" : {
+        "partOne" : "2573",
+        "partTwo" : "bjpkhx,nsnqf,snhph,zmfqpn,qrbnjtj,dbhfd,thn,sthnsg"
+      }
+    }, {
+      "year" : 2020,
+      "day" : 3,
+      "title" : "Toboggan Trajectory",
+      "link" : "https://adventofcode.com/2020/day/3",
+      "solutions" : {
+        "partOne" : "286",
+        "partTwo" : "3638606400"
+      }
+    } ],
+    "2021" : [ {
+      "year" : 2021,
+      "day" : 1,
+      "title" : "Sonar Sweep",
+      "link" : "https://adventofcode.com/2021/day/1",
+      "solutions" : {
+        "partOne" : "1766",
+        "partTwo" : "1797"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 2,
+      "title" : "Dive!",
+      "link" : "https://adventofcode.com/2021/day/2",
+      "solutions" : {
+        "partOne" : "1698735",
+        "partTwo" : "1594785890"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 3,
+      "title" : "Binary Diagnostic",
+      "link" : "https://adventofcode.com/2021/day/3",
+      "solutions" : {
+        "partOne" : "1997414",
+        "partTwo" : "1032597"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 4,
+      "title" : "Giant Squid",
+      "link" : "https://adventofcode.com/2021/day/4",
+      "solutions" : {
+        "partOne" : "45031",
+        "partTwo" : "2568"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 5,
+      "title" : "Hydrothermal Venture",
+      "link" : "https://adventofcode.com/2021/day/5",
+      "solutions" : {
+        "partOne" : "4655",
+        "partTwo" : "20500"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 21,
+      "title" : "Dirac Dice",
+      "link" : "https://adventofcode.com/2021/day/21",
+      "solutions" : {
+        "partOne" : "518418",
+        "partTwo" : "116741133558209"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 23,
+      "title" : "Amphipod",
+      "link" : "https://adventofcode.com/2021/day/23",
+      "solutions" : {
+        "partOne" : "17400",
+        "partTwo" : "46120"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 12,
+      "title" : "Passage Pathing",
+      "link" : "https://adventofcode.com/2021/day/12",
+      "solutions" : {
+        "partOne" : "3000",
+        "partTwo" : "74222"
+      }
+    }, {
+      "year" : 2021,
+      "day" : 6,
+      "title" : "Lanternfish",
+      "link" : "https://adventofcode.com/2021/day/6",
+      "solutions" : {
+        "partOne" : "380612",
+        "partTwo" : "1710166656900"
+      }
+    } ],
+    "2022" : [ {
+      "year" : 2022,
+      "day" : 1,
+      "title" : "Calorie Counting",
+      "link" : "https://adventofcode.com/2022/day/1",
+      "solutions" : {
+        "partOne" : "67016",
+        "partTwo" : "200116"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 2,
+      "title" : "Rock Paper Scissors",
+      "link" : "https://adventofcode.com/2022/day/2",
+      "solutions" : {
+        "partOne" : "11841",
+        "partTwo" : "13022"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 3,
+      "title" : "Rucksack Reorganization",
+      "link" : "https://adventofcode.com/2022/day/3",
+      "solutions" : {
+        "partOne" : "7428",
+        "partTwo" : "2650"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 4,
+      "title" : "Camp Cleanup",
+      "link" : "https://adventofcode.com/2022/day/4",
+      "solutions" : {
+        "partOne" : "466",
+        "partTwo" : "865"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 8,
+      "title" : "Treetop Tree House",
+      "link" : "https://adventofcode.com/2022/day/8",
+      "solutions" : {
+        "partOne" : "1829",
+        "partTwo" : "291840"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 16,
+      "title" : "Proboscidea Volcanium",
+      "link" : "https://adventofcode.com/2022/day/16",
+      "solutions" : {
+        "partOne" : "1474",
+        "partTwo" : "2100"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 24,
+      "title" : "Blizzard Basin",
+      "link" : "https://adventofcode.com/2022/day/24",
+      "solutions" : {
+        "partOne" : "232",
+        "partTwo" : "715"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 20,
+      "title" : "Grove Positioning System",
+      "link" : "https://adventofcode.com/2022/day/20",
+      "solutions" : {
+        "partOne" : "2827",
+        "partTwo" : "7834270093909"
+      }
+    }, {
+      "year" : 2022,
+      "day" : 21,
+      "title" : "Monkey Math",
+      "link" : "https://adventofcode.com/2022/day/21",
+      "solutions" : {
+        "partOne" : "160274622817992",
+        "partTwo" : "3087390115721"
+      }
+    } ],
+    "2023" : [ {
+      "year" : 2023,
+      "day" : 3,
+      "title" : "Gear Ratios",
+      "link" : "https://adventofcode.com/2023/day/3",
+      "solutions" : {
+        "partOne" : "540212",
+        "partTwo" : "87605697"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 4,
+      "title" : "Scratchcards",
+      "link" : "https://adventofcode.com/2023/day/4",
+      "solutions" : {
+        "partOne" : "22193",
+        "partTwo" : "5625994"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 6,
+      "title" : "Wait For It",
+      "link" : "https://adventofcode.com/2023/day/6",
+      "solutions" : {
+        "partOne" : "4568778",
+        "partTwo" : "28973936"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 10,
+      "title" : "Pipe Maze",
+      "link" : "https://adventofcode.com/2023/day/10",
+      "solutions" : {
+        "partOne" : "6690",
+        "partTwo" : "525"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 13,
+      "title" : "Point of Incidence",
+      "link" : "https://adventofcode.com/2023/day/13",
+      "solutions" : {
+        "partOne" : "42974",
+        "partTwo" : "27587"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 21,
+      "title" : "Step Counter",
+      "link" : "https://adventofcode.com/2023/day/21",
+      "solutions" : {
+        "partOne" : "3737",
+        "partTwo" : "625382480005896"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 9,
+      "title" : "Mirage Maintenance",
+      "link" : "https://adventofcode.com/2023/day/9",
+      "solutions" : {
+        "partOne" : "1901217887",
+        "partTwo" : "905"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 5,
+      "title" : "If You Give A Seed A Fertilizer",
+      "link" : "https://adventofcode.com/2023/day/5",
+      "solutions" : {
+        "partOne" : "424490994",
+        "partTwo" : "15290096"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 20,
+      "title" : "Pulse Propagation",
+      "link" : "https://adventofcode.com/2023/day/20",
+      "solutions" : {
+        "partOne" : "832957356",
+        "partTwo" : "1"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 24,
+      "title" : "Never Tell Me The Odds",
+      "link" : "https://adventofcode.com/2023/day/24",
+      "solutions" : {
+        "partOne" : "12015",
+        "partTwo" : "1016365642179116"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 17,
+      "title" : "Clumsy Crucible",
+      "link" : "https://adventofcode.com/2023/day/17",
+      "solutions" : {
+        "partOne" : "1008",
+        "partTwo" : "1210"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 7,
+      "title" : "Camel Cards",
+      "link" : "https://adventofcode.com/2023/day/7",
+      "solutions" : {
+        "partOne" : "245794640",
+        "partTwo" : "247899149"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 1,
+      "title" : "Trebuchet?!",
+      "link" : "https://adventofcode.com/2023/day/1",
+      "solutions" : {
+        "partOne" : "54597",
+        "partTwo" : "54504"
+      }
+    }, {
+      "year" : 2023,
+      "day" : 2,
+      "title" : "Cube Conundrum",
+      "link" : "https://adventofcode.com/2023/day/2",
+      "solutions" : {
+        "partOne" : "2285",
+        "partTwo" : "77021"
+      }
+    } ],
+    "2024" : [ {
+      "year" : 2024,
+      "day" : 1,
+      "title" : "Historian Hysteria",
+      "link" : "https://adventofcode.com/2024/day/1",
+      "solutions" : {
+        "partOne" : "2192892",
+        "partTwo" : "22962826"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 18,
+      "title" : "RAM Run",
+      "link" : "https://adventofcode.com/2024/day/18",
+      "solutions" : {
+        "partOne" : "322",
+        "partTwo" : "60,21"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 4,
+      "title" : "Ceres Search",
+      "link" : "https://adventofcode.com/2024/day/4",
+      "solutions" : {
+        "partOne" : "352",
+        "partTwo" : "2041"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 5,
+      "title" : "Print Queue",
+      "link" : "https://adventofcode.com/2024/day/5",
+      "solutions" : {
+        "partOne" : "3608",
+        "partTwo" : "4922"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 9,
+      "title" : "Disk Fragmenter",
+      "link" : "https://adventofcode.com/2024/day/9",
+      "solutions" : {
+        "partOne" : "6279058075753",
+        "partTwo" : "6301361958738"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 22,
+      "title" : "Monkey Market",
+      "link" : "https://adventofcode.com/2024/day/22",
+      "solutions" : {
+        "partOne" : "12664695565",
+        "partTwo" : "1444"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 23,
+      "title" : "LAN Party",
+      "link" : "https://adventofcode.com/2024/day/23",
+      "solutions" : {
+        "partOne" : "1308",
+        "partTwo" : "bu,fq,fz,pn,rr,st,sv,tr,un,uy,zf,zi,zy"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 2,
+      "title" : "Red-Nosed Reports",
+      "link" : "https://adventofcode.com/2024/day/2",
+      "solutions" : {
+        "partOne" : "680",
+        "partTwo" : "710"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 8,
+      "title" : "Resonant Collinearity",
+      "link" : "https://adventofcode.com/2024/day/8",
+      "solutions" : {
+        "partOne" : "271",
+        "partTwo" : "994"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 6,
+      "title" : "Guard Gallivant",
+      "link" : "https://adventofcode.com/2024/day/6",
+      "solutions" : {
+        "partOne" : "5461",
+        "partTwo" : "1836"
+      }
+    } ],
+    "2025" : [ {
+      "year" : 2025,
+      "day" : 1,
+      "title" : "Secret Entrance",
+      "link" : "https://adventofcode.com/2025/day/1",
+      "solutions" : {
+        "partOne" : "1147",
+        "partTwo" : "6789"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 2,
+      "title" : "Gift Shop",
+      "link" : "https://adventofcode.com/2025/day/2",
+      "solutions" : {
+        "partOne" : "9188031749",
+        "partTwo" : "11323661261"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 3,
+      "title" : "Lobby",
+      "link" : "https://adventofcode.com/2025/day/3",
+      "solutions" : {
+        "partOne" : "16993",
+        "partTwo" : "168617068915447"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 4,
+      "title" : "Printing Department",
+      "link" : "https://adventofcode.com/2025/day/4",
+      "solutions" : {
+        "partOne" : "1491",
+        "partTwo" : "8722"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 5,
+      "title" : "Cafeteria",
+      "link" : "https://adventofcode.com/2025/day/5",
+      "solutions" : {
+        "partOne" : "739",
+        "partTwo" : "344486348901788"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 6,
+      "title" : "Trash Compactor",
+      "link" : "https://adventofcode.com/2025/day/6",
+      "solutions" : {
+        "partOne" : "3968933219902",
+        "partTwo" : "6019576291014"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 7,
+      "title" : "Laboratories",
+      "link" : "https://adventofcode.com/2025/day/7",
+      "solutions" : {
+        "partOne" : "1711",
+        "partTwo" : "36706966158365"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 8,
+      "title" : "Playground",
+      "link" : "https://adventofcode.com/2025/day/8",
+      "solutions" : {
+        "partOne" : "32103",
+        "partTwo" : "8133642976"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 9,
+      "title" : "Movie Theater",
+      "link" : "https://adventofcode.com/2025/day/9",
+      "solutions" : {
+        "partOne" : "4773451098",
+        "partTwo" : "1429075575"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 10,
+      "title" : "Factory",
+      "link" : "https://adventofcode.com/2025/day/10",
+      "solutions" : {
+        "partOne" : "459",
+        "partTwo" : "18687"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 11,
+      "title" : "Reactor",
+      "link" : "https://adventofcode.com/2025/day/11",
+      "solutions" : {
+        "partOne" : "658",
+        "partTwo" : "371113003846800"
+      }
+    }, {
+      "year" : 2025,
+      "day" : 12,
+      "title" : "Christmas Tree Farm",
+      "link" : "https://adventofcode.com/2025/day/12",
+      "solutions" : {
+        "partOne" : "583",
+        "partTwo" : "⭐"
+      }
+    } ]
   }
 }
