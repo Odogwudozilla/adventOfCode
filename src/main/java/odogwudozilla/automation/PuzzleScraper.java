@@ -40,7 +40,7 @@ public final class PuzzleScraper {
     @NotNull
     public PuzzleInfo scrapePartOne(@NotNull PuzzleInfo info) {
         String url = info.getPuzzleUrl();
-        LOGGER.info("scrapePartOne - navigating to " + url);
+        LOGGER.info("scrapePartOne - opening AoC puzzle page: " + url);
 
         try (Page page = sessionManager.newPage()) {
             page.navigate(url);
@@ -51,17 +51,16 @@ public final class PuzzleScraper {
                     .textContent();
             String title = extractTitleFromHeading(titleHeading, info.getDay());
 
-            // Collect all article elements - first is Part 1, second (if present) is Part 2
             var articles = page.locator(AutomationConfig.PUZZLE_ARTICLE_SELECTOR).all();
 
             String partOneText = articles.isEmpty() ? "" : articles.get(0).innerText();
-            LOGGER.info("scrapePartOne - scraped Part 1 for: " + title);
+            LOGGER.info("scrapePartOne - successfully scraped Part 1 description for: \"" + title + "\"");
 
             PuzzleInfo updated = info.withPartOne(title, partOneText);
 
             if (articles.size() > 1) {
                 String partTwoText = articles.get(1).innerText();
-                LOGGER.info("scrapePartOne - Part 2 also available on page, scraping now");
+                LOGGER.info("scrapePartOne - Part 2 is already unlocked on the page; scraped both parts in one request");
                 updated = updated.withPartTwo(partTwoText);
             }
 
@@ -78,7 +77,7 @@ public final class PuzzleScraper {
     @NotNull
     public PuzzleInfo scrapePartTwo(@NotNull PuzzleInfo info) {
         String url = info.getPuzzleUrl();
-        LOGGER.info("scrapePartTwo - navigating to " + url);
+        LOGGER.info("scrapePartTwo - re-opening puzzle page to check for Part 2: " + url);
 
         try (Page page = sessionManager.newPage()) {
             page.navigate(url);
@@ -87,12 +86,12 @@ public final class PuzzleScraper {
             var articles = page.locator(AutomationConfig.PUZZLE_ARTICLE_SELECTOR).all();
 
             if (articles.size() < 2) {
-                LOGGER.warning("scrapePartTwo - Part 2 not yet available on page");
+                LOGGER.warning("scrapePartTwo - Part 2 is not yet unlocked for " + info.getYear() + " Day " + info.getDay() + "; only " + articles.size() + " article(s) found on page");
                 return info;
             }
 
             String partTwoText = articles.get(1).innerText();
-            LOGGER.info("scrapePartTwo - scraped Part 2 for day " + info.getDay());
+            LOGGER.info("scrapePartTwo - Part 2 description scraped for " + info.getYear() + " Day " + info.getDay());
             return info.withPartTwo(partTwoText);
         }
     }

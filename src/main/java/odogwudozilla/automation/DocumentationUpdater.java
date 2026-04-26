@@ -120,13 +120,14 @@ public final class DocumentationUpdater {
     /**
      * Appends a new year entry to the main README Years section if one is not present.
      * @param info PuzzleInfo containing the year
+     * @return true if the main README was modified, false if the year was already listed or not found
      * @throws IOException if the main README cannot be read or written
      */
-    public void updateMainReadmeIfNewYear(@NotNull PuzzleInfo info) throws IOException {
+    public boolean updateMainReadmeIfNewYear(@NotNull PuzzleInfo info) throws IOException {
         Path mainReadme = Paths.get(MAIN_README_PATH).toAbsolutePath();
         if (!Files.exists(mainReadme)) {
             LOGGER.warning("updateMainReadmeIfNewYear - main README not found at " + mainReadme);
-            return;
+            return false;
         }
 
         String content = Files.readString(mainReadme);
@@ -134,13 +135,13 @@ public final class DocumentationUpdater {
                 + info.getYear() + "/README.md)";
 
         if (content.contains(yearEntry)) {
-            return;
+            return false;
         }
 
         int insertIndex = content.indexOf(YEARS_SECTION_MARKER);
         if (insertIndex == -1) {
-            LOGGER.warning("updateMainReadmeIfNewYear - '" + YEARS_SECTION_MARKER + "' marker not found in README");
-            return;
+            LOGGER.warning("updateMainReadmeIfNewYear - '" + YEARS_SECTION_MARKER + "' marker not found in README; cannot insert year entry");
+            return false;
         }
 
         int lineEnd = content.indexOf('\n', insertIndex);
@@ -149,7 +150,8 @@ public final class DocumentationUpdater {
                 + content.substring(lineEnd + 1);
 
         Files.writeString(mainReadme, updated);
-        LOGGER.info("updateMainReadmeIfNewYear - added year " + info.getYear() + " to main README");
+        LOGGER.info("updateMainReadmeIfNewYear - added " + info.getYear() + " to main README Years section");
+        return true;
     }
 
     /**
@@ -194,5 +196,4 @@ public final class DocumentationUpdater {
                 + "- **Source:** [View code](" + sourceLink + ")\n\n";
     }
 }
-
 

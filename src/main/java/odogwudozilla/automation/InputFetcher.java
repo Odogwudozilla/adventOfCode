@@ -38,24 +38,25 @@ public final class InputFetcher {
      */
     public void fetchAndSave(@NotNull PuzzleInfo info) throws IOException {
         String inputUrl = info.getPuzzleUrl() + "/input";
-        LOGGER.info("fetchAndSave - fetching input from " + inputUrl);
+        LOGGER.info("fetchAndSave - requesting puzzle input from AoC: " + inputUrl);
 
         String inputContent;
         try (Page page = sessionManager.newPage()) {
             page.navigate(inputUrl);
-            // The input page renders as plain text - grab the full body text content
             inputContent = page.locator("body").textContent();
         }
 
         if (inputContent == null || inputContent.isBlank()) {
-            throw new IOException("fetchAndSave - received empty input for " + info);
+            throw new IOException("fetchAndSave - AoC returned an empty input for " + info
+                    + ". The session cookie may be invalid or expired.");
         }
 
         Path outputPath = buildOutputPath(info);
         Files.createDirectories(outputPath.getParent());
         Files.writeString(outputPath, inputContent.trim() + System.lineSeparator());
 
-        LOGGER.info("fetchAndSave - input written to " + outputPath);
+        LOGGER.info("fetchAndSave - puzzle input saved (" + inputContent.trim().lines().count()
+                + " lines) -> " + outputPath);
     }
 
     /**

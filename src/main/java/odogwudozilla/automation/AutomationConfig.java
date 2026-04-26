@@ -45,17 +45,23 @@ public final class AutomationConfig {
     /** Gradle wrapper executable name on Unix/macOS. */
     public static final String GRADLE_WRAPPER_UNIX = "./gradlew";
 
-    /** Substring present in AoC response page when the answer is correct. */
+    /** String present in AoC response when answer is correct. */
     public static final String CORRECT_ANSWER_SIGNAL = "That's the right answer!";
 
-    /** Substring present in AoC response page when the answer is wrong. */
+    /** String present in AoC response when answer is wrong. */
     public static final String WRONG_ANSWER_SIGNAL = "That's not the right answer";
 
-    /** Substring present in AoC response when a submission was made too recently. */
+    /** String present in AoC response when submitting too soon. */
     public static final String TOO_SOON_SIGNAL = "You gave an answer too recently";
 
-    /** Substring present in AoC response when the level has already been completed. */
+    /** String present in AoC response when the level is already complete or wrong level. */
     public static final String ALREADY_SOLVED_SIGNAL = "You don't seem to be solving the right level";
+
+    /**
+     * String present on the main puzzle page (not submission response) when both parts
+     * of the puzzle have already been completed. Used as a pre-submission guard.
+     */
+    public static final String ALREADY_COMPLETE_SIGNAL = "Both parts of this puzzle are complete!";
 
     /** Prefix used in puzzle stdout for Part 1 answer capture. */
     public static final String PART_ONE_OUTPUT_PREFIX = "Part 1:";
@@ -80,6 +86,19 @@ public final class AutomationConfig {
 
     /** Selector for the main article on the post-submission response page. */
     public static final String RESPONSE_ARTICLE_SELECTOR = "article";
+
+    // -------------------------------------------------------------------------
+    // Watch mode (non-headless + slow-motion)
+    // -------------------------------------------------------------------------
+
+    /** CLI flag that enables watch mode: non-headless browser with slow-motion actions. */
+    public static final String FLAG_WATCH = "--watch";
+
+    /**
+     * Slow-motion delay in milliseconds applied between Playwright actions in watch mode.
+     * At 3000 ms each action is clearly visible and readable to a human observer.
+     */
+    public static final int WATCH_SLOW_MO_MILLIS = 3_000;
 
     private AutomationConfig() {
         // Utility class - not instantiable

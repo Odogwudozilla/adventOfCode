@@ -41,3 +41,8 @@ bin/
 ### Mac OS ###
 .DS_Store
 /.idea/
+
+### AoC Automation - session cookie and pipeline state (never commit) ###
+.aoc-session
+.aoc-state
+

@@ -27,8 +27,7 @@ public final class SolutionSkeletonGenerator {
      * @throws IOException if any file cannot be created or written
      */
     public void generate(@NotNull PuzzleInfo info) throws IOException {
-        String classNamePrefix = toUpperCamelCase(info.getTitle() != null ? info.getTitle() : "Day" + info.getDay());
-        String className = classNamePrefix + "AOC" + info.getYear() + "Day" + info.getDay();
+        String className = resolveClassName(info);
         String packageName = AutomationConfig.PACKAGE_BASE
                 + ".year" + info.getYear()
                 + ".day" + info.getDay();
@@ -185,13 +184,25 @@ public final class SolutionSkeletonGenerator {
     }
 
     /**
+     * Resolves the expected Java class name for a given puzzle.
+     * Format: {@code <TitleCamelCase>AOC<Year>Day<Day>}
+     * @param info PuzzleInfo with title, year, and day populated
+     * @return the class name, e.g. {@code HighEntropyPassphrasesAOC2017Day4}
+     */
+    @NotNull
+    public static String resolveClassName(@NotNull PuzzleInfo info) {
+        String titlePart = toUpperCamelCase(info.getTitle() != null ? info.getTitle() : "Day" + info.getDay());
+        return titlePart + "AOC" + info.getYear() + "Day" + info.getDay();
+    }
+
+    /**
      * Converts a puzzle title such as "Not Quite Lisp" to "NotQuiteLisp".
      * Non-alphanumeric characters are used as word separators and stripped.
      * @param title the raw puzzle title
      * @return a UpperCamelCase identifier string
      */
     @NotNull
-    private String toUpperCamelCase(@NotNull String title) {
+    private static String toUpperCamelCase(@NotNull String title) {
         StringBuilder result = new StringBuilder();
         boolean capitaliseNext = true;
 

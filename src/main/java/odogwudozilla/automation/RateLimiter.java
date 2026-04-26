@@ -31,12 +31,13 @@ public final class RateLimiter {
         if (elapsed < AutomationConfig.RATE_LIMIT_MILLIS) {
             long remaining = AutomationConfig.RATE_LIMIT_MILLIS - elapsed;
             long remainingSeconds = remaining / 1000;
-            LOGGER.info("waitIfNeeded - rate limit active; waiting " + remainingSeconds + " seconds");
+            LOGGER.info("waitIfNeeded - AoC rate limit: " + remainingSeconds
+                    + " second(s) remaining before next request is allowed; pausing now");
             try {
                 Thread.sleep(remaining);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                LOGGER.warning("waitIfNeeded - rate limit sleep interrupted");
+                LOGGER.warning("waitIfNeeded - rate-limit sleep was interrupted");
             }
         }
 

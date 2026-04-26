@@ -131,30 +131,62 @@ AutomationOrchestrator (main entry point)
 
 ---
 
-## Chat Usage (Copilot-driven from chat)
+## Chat Usage (Copilot-driven from chat) - FULLY AUTOMATED
 
-When asked to run the automation from the chat, Copilot uses the terminal tool in two steps:
+This is the only fully end-to-end automated workflow. Copilot uses the terminal
+to run the two commands and implements the solve methods in between.
 
-### Step 1 - Setup (fetches puzzle + generates skeleton)
+### Why the CLI alone cannot be fully automated
+Stages 1-4 (fetch, scrape, generate) and Stages 6-12 (run, submit, document, commit)
+are all automated. Stage 5 - implementing the puzzle algorithm - requires intelligence.
+The CLI tools can orchestrate everything around it, but the puzzle solution itself
+must be written by a developer or Copilot.
+
+### Workflow options
+
+| Mode | Command | Stage 5 (solve) | End-to-end automated? |
+|------|---------|-----------------|----------------------|
+| CLI interactive | `./gradlew autoSolve` | You implement, type `continue` | No |
+| CLI two-step | `--setup` → implement → `--auto` | You implement between commands | No |
+| Copilot chat | `--setup` → Copilot implements → `--auto` | Copilot reads description + writes code | **Yes** |
+
+### Chat step-by-step
+
+**Step 1 - Fetch and generate skeleton (Stages 1-4)**
 ```bash
-./gradlew autoSolve --args="--setup"
+./gradlew autoSolve --args="--setup --watch"
 ```
-Copilot then reads the generated description file and implements the solve methods.
+Selects a random unsolved puzzle, scrapes the description, fetches the input,
+generates the Java skeleton, saves pending state to `.aoc-state`, then exits.
 
-### Step 2 - Submit (builds, runs, submits)
+**Step 2 - Copilot implements the solution**
+Copilot reads:
+- `src/main/resources/<YYYY>/day<D>/day<D>_puzzle_description.txt`
+- `src/main/resources/<YYYY>/day<D>/day<D>_puzzle_data.txt` (sample)
+
+Then implements `solvePartOne` and `solvePartTwo` in the generated skeleton class.
+
+**Step 3 - Submit and finalise (Stages 5-12)**
 ```bash
-./gradlew autoSolve --args="--auto"
+./gradlew autoSolve --args="--auto --watch"
 ```
-Or, for a specific puzzle already set up:
+Reads pending state from `.aoc-state`, skips the Stage 5 pause, compiles and
+runs the solution, submits both parts with rate-limit enforcement, verifies
+results, updates `solutions_database.json` and README files, and commits only
+the puzzle-specific files.
+
+> **`--watch` is always used in chat-driven commands** so the user can follow
+> the browser in real time (3 s slow-motion per action).
+
+### Resuming after a failed or interrupted run
+If `--auto` finds stub answers (solve methods not yet implemented), it saves
+the pending state and exits with instructions. Re-run `--auto` after implementing.
+
+### Submitting a specific already-solved puzzle
 ```bash
 ./gradlew autoSolve --args="--submit YEAR DAY"
 ```
-
-### Full pipeline (user-interactive, CLI only)
-```bash
-./gradlew autoSolve
-```
-Pauses at Stage 5 for the user to type `continue` after implementing solve methods.
+Skips all setup stages; runs solver and submits for the given year/day only.
 
 ---
 

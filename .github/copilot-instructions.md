@@ -1,7 +1,137 @@
 Role:
 You are a coding assistant that helps solve Advent of Code puzzles using Java. You operate in a step-by-step, stateful workflow — pausing for user confirmation at each stage. You help organize project structure, prepare required files, and generate clean, runnable Java code once all required puzzle data is available.
 
-Workflow Steps (with Confirmation at Each Stage):
+Two modes are available: **Automated Pipeline** (recommended) and **Manual Workflow**.
+
+---
+
+## Automated Pipeline (`./gradlew autoSolve`)
+
+The preferred workflow. Runs the full end-to-end pipeline with minimal manual steps.
+
+### Prerequisites (one-time setup)
+1. Set your AoC session cookie:
+   - PowerShell: `$env:AOC_SESSION="<your session cookie value>"`
+   - Or create a `.aoc-session` file in the project root (gitignored) with just the cookie value
+   - To get the cookie: log in to adventofcode.com -> DevTools (F12) -> Application -> Cookies -> copy `session`
+2. Install Playwright browsers (once): `./gradlew installPlaywright`
+
+---
+
+## Chat Triggers: `random` and `solve`
+
+When the user types **`random`** or **`solve`** in the chat, Copilot must follow
+this exact sequence every time:
+
+### Step 1 - Check for an unfinished puzzle
+
+Check whether `.aoc-state` exists in the project root:
+
+```powershell
+Get-Content ".aoc-state" -ErrorAction SilentlyContinue
+```
+
+- **If the file exists**: it contains `YEAR,DAY` of a pending puzzle whose skeleton
+  was already generated and is waiting to be implemented. Read the year and day,
+  then go to **Step 2a**.
+- **If the file does not exist**: no pending puzzle. Go to **Step 2b**.
+
+### Step 2a - Resume pending puzzle (skeleton already generated)
+
+Read the description file to understand the puzzle:
+
+```
+src/main/resources/<YEAR>/day<DAY>/day<DAY>_puzzle_description.txt
+```
+
+Implement `solvePartOne` and `solvePartTwo` in the existing skeleton class:
+
+```
+src/main/java/odogwudozilla/year<YEAR>/day<DAY>/<ClassName>.java
+```
+
+Then submit, document, and commit by running:
+
+```powershell
+.\gradlew.bat autoSolve --args="--auto --watch"
+```
+
+### Step 2b - Start a fresh puzzle
+
+Run setup to select a random unsolved puzzle, scrape it, and generate the skeleton:
+
+```powershell
+.\gradlew.bat autoSolve --args="--setup --watch"
+```
+
+Read the generated description file, implement `solvePartOne` and `solvePartTwo`,
+then run:
+
+```powershell
+.\gradlew.bat autoSolve --args="--auto --watch"
+```
+
+### Rules for chat-driven runs
+
+- **Always** use `--watch` so the user can see the browser in action.
+- **Never** skip `--watch` in chat-driven commands.
+- After `--setup` completes, always read the description file before implementing.
+- After `--auto` completes successfully, confirm the commit message to the user.
+
+---
+
+### Run modes (reference)
+| Command | Who solves? | End-to-end automated? |
+|---------|-------------|----------------------|
+| `./gradlew autoSolve` | You - implement before typing `continue` | No |
+| `./gradlew autoSolve --args="--setup --watch"` then `--auto --watch` | You - implement between commands | No |
+| Type `random` or `solve` in chat | Copilot reads description + writes code | **Yes** |
+| `--watch` on any mode | - | Visible browser + 3 s slow-motion |
+
+### What it does automatically
+1. Selects a random unsolved puzzle via `PuzzleRandomizer`
+2. Scrapes puzzle description and title from adventofcode.com
+3. Fetches and saves puzzle input to the resources folder
+4. Generates the Java solution class skeleton (`<Title>AOC<Year>Day<D>.java`) with stub methods
+5. **PAUSES** - prompts you to implement `solvePartOne` and `solvePartTwo`
+6. Compiles and runs the solution via Gradle, capturing answers from stdout
+7. Submits Part 1 with 60-second rate-limit enforcement
+8. Verifies the result; retries up to 3 times if incorrect
+9. Scrapes Part 2 description, runs solver again, submits Part 2
+10. Updates `solutions_database.json` and year/main README files
+11. Stages and commits all changes with a descriptive commit message
+
+### Key automation classes
+All classes live in `src/main/java/odogwudozilla/automation/`:
+- `AutomationConfig` - all constants (URLs, paths, timeouts, signal strings)
+- `BrowserSessionManager` - Playwright lifecycle + session cookie injection
+- `PuzzleScraper` - scrapes description/title from AoC pages
+- `InputFetcher` - fetches and writes puzzle input to resources
+- `SolutionSkeletonGenerator` - creates Java class stub and resource files
+- `SolverRunner` - runs puzzle via Gradle, parses "Part 1:"/"Part 2:" stdout lines
+- `AnswerSubmitter` - submits answers via Playwright form
+- `AcceptanceVerifier` - parses AoC response for correct/incorrect/too-soon signals
+- `RateLimiter` - enforces >= 60 second delay between submissions
+- `DocumentationUpdater` - updates solutions_database.json and README files
+- `GitAutomationService` - runs git add + git commit
+
+Main orchestrator: `src/main/java/odogwudozilla/AutomationOrchestrator.java`
+
+### Answer output format requirement
+Solution classes generated by the skeleton generator must print answers in this format:
+```
+Part 1: <answer>
+Part 2: <answer>
+```
+The `SolverRunner` captures lines starting with these prefixes.
+
+---
+
+## Manual Workflow (step-by-step, agent-assisted)
+
+Use this when you want fine-grained control over each step or when the automated pipeline is not suitable.
+
+### Steps (with Confirmation at Each Stage):
 
 Ask for Year and Day (or Random Selection)
 

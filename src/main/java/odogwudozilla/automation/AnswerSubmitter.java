@@ -50,11 +50,22 @@ public final class AnswerSubmitter {
      */
     @NotNull
     public SubmissionResult submit(@NotNull PuzzleInfo info, @NotNull String answer, int part) {
-        LOGGER.info("submit - waiting for rate limit before submitting Part " + part);
+        LOGGER.info("submit - preparing to submit Part " + part + " answer \"" + answer
+                + "\" for " + info.getYear() + " Day " + info.getDay()
+                + " (\"" + info.getTitle() + "\")");
+
+        // Before Part 1: check the main puzzle page to see if both parts are already complete.
+        // This avoids wasting a submission attempt and triggering a rate-limit delay.
+        if (part == PART_ONE && isPuzzleAlreadyComplete(info)) {
+            LOGGER.info("submit - puzzle " + info.getYear() + " Day " + info.getDay()
+                    + " is already marked complete on AoC; skipping submission for Part " + part);
+            return SubmissionResult.ALREADY_SOLVED;
+        }
+
         rateLimiter.waitIfNeeded();
 
         String submitUrl = info.getPuzzleUrl() + "/answer";
-        LOGGER.info("submit - submitting Part " + part + " answer to " + submitUrl);
+        LOGGER.info("submit - posting answer to: " + submitUrl);
 
         try (Page page = sessionManager.newPage()) {
             page.navigate(submitUrl);
@@ -68,8 +79,31 @@ public final class AnswerSubmitter {
             page.locator(AutomationConfig.ANSWER_FORM_SELECTOR + " input[type='submit']").click();
             page.waitForLoadState();
 
-            LOGGER.info("submit - response page loaded, verifying result");
+            LOGGER.info("submit - answer posted; reading AoC response page to determine whether it was accepted");
             return verifier.verify(page);
+        }
+    }
+
+    /**
+     * Navigates to the main puzzle page and checks whether AoC reports that both parts
+     * are already complete. Used as a pre-submission guard before Part 1 to avoid
+     * burning a submission attempt on a puzzle that is fully solved.
+     * @param info PuzzleInfo for the target puzzle
+     * @return true if the "Both parts complete" signal is found on the puzzle page
+     */
+    private boolean isPuzzleAlreadyComplete(@NotNull PuzzleInfo info) {
+        try (Page page = sessionManager.newPage()) {
+            page.navigate(info.getPuzzleUrl());
+            String pageContent = page.content();
+            boolean complete = pageContent.contains(AutomationConfig.ALREADY_COMPLETE_SIGNAL);
+            if (complete) {
+                LOGGER.info("isPuzzleAlreadyComplete - found completion marker on puzzle page for "
+                        + info.getYear() + " Day " + info.getDay());
+            }
+            return complete;
+        } catch (Exception e) {
+            LOGGER.warning("isPuzzleAlreadyComplete - check failed, proceeding with submission: " + e.getMessage());
+            return false;
         }
     }
 }

@@ -22,6 +22,8 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 /**
@@ -39,6 +41,9 @@ import java.util.logging.Logger;
  *   <li><b>{@code --submit YEAR DAY}</b> - Stages 6-12 only for a specific puzzle:
  *       runs the solver, submits answers, updates docs, and commits. Use this when
  *       the solution is already written and you only need to submit.</li>
+ *   <li><b>{@code --watch}</b> - may be combined with any mode flag. Opens a visible
+ *       browser window with slow-motion actions so a human observer can follow what
+ *       is happening in real time. Example: {@code --auto --watch}</li>
  * </ul>
  *
  * <p>Typical Copilot-driven workflow (chat):</p>
@@ -63,20 +68,34 @@ public final class AutomationOrchestrator {
     private static final String STATE_FILE = ".aoc-state";
 
     private final BufferedReader stdinReader;
+    private final boolean watchMode;
 
     /**
      * Creates an AutomationOrchestrator with a shared stdin reader.
+     * Watch mode is off by default.
      */
     public AutomationOrchestrator() {
         this.stdinReader = new BufferedReader(new InputStreamReader(System.in));
+        this.watchMode = false;
+    }
+
+    /**
+     * Creates an AutomationOrchestrator with explicit watch mode setting.
+     * @param watchMode {@code true} to open a visible browser with slow-motion actions
+     */
+    public AutomationOrchestrator(boolean watchMode) {
+        this.stdinReader = new BufferedReader(new InputStreamReader(System.in));
+        this.watchMode = watchMode;
     }
 
     /**
      * Entry point for the automation pipeline.
-     * @param args optional run-mode flags: --setup, --auto, or --submit YEAR DAY
+     * @param args optional run-mode flags; may include any of:
+     *             {@code --setup}, {@code --auto}, {@code --submit YEAR DAY}, {@code --watch}
      */
     public static void main(String[] args) {
-        AutomationOrchestrator orchestrator = new AutomationOrchestrator();
+        boolean watchMode = containsFlag(args, AutomationConfig.FLAG_WATCH);
+        AutomationOrchestrator orchestrator = new AutomationOrchestrator(watchMode);
         try {
             orchestrator.dispatch(args);
         } catch (Exception e) {
@@ -87,16 +106,42 @@ public final class AutomationOrchestrator {
     }
 
     /**
+     * Returns true if the given flag appears anywhere in the args array.
+     * @param args the command line arguments array
+     * @param flag the flag to search for
+     * @return true if the flag is present
+     */
+    private static boolean containsFlag(@NotNull String[] args, @NotNull String flag) {
+        for (String arg : args) {
+            if (flag.equalsIgnoreCase(arg)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Dispatches to the correct pipeline mode based on the provided arguments.
+     * The {@code --watch} flag may appear in any position and is ignored when
+     * determining the mode.
      * @param args command line arguments from main()
      * @throws Exception if any pipeline stage fails unrecoverably
      */
     private void dispatch(String[] args) throws Exception {
-        if (args.length > 0 && FLAG_SETUP.equalsIgnoreCase(args[0])) {
+        // Find the primary mode flag, ignoring --watch
+        String modeFlag = "";
+        for (String arg : args) {
+            if (!AutomationConfig.FLAG_WATCH.equalsIgnoreCase(arg)) {
+                modeFlag = arg;
+                break;
+            }
+        }
+
+        if (FLAG_SETUP.equalsIgnoreCase(modeFlag)) {
             runSetupOnly();
-        } else if (args.length > 0 && FLAG_AUTO.equalsIgnoreCase(args[0])) {
+        } else if (FLAG_AUTO.equalsIgnoreCase(modeFlag)) {
             runFull(true);
-        } else if (args.length > 0 && FLAG_SUBMIT.equalsIgnoreCase(args[0])) {
+        } else if (FLAG_SUBMIT.equalsIgnoreCase(modeFlag)) {
             runSubmitOnly(args);
         } else {
             runFull(false);
@@ -120,7 +165,7 @@ public final class AutomationOrchestrator {
 
         SolutionSkeletonGenerator skeletonGenerator = new SolutionSkeletonGenerator();
 
-        try (BrowserSessionManager session = new BrowserSessionManager()) {
+        try (BrowserSessionManager session = newBrowserSession()) {
             info = scrapeAndFetch(info, session, new RateLimiter());
             skeletonGenerator.generate(info);
         }
@@ -162,7 +207,7 @@ public final class AutomationOrchestrator {
         SolverRunner solver = new SolverRunner();
         SolutionSkeletonGenerator skeletonGenerator = new SolutionSkeletonGenerator();
 
-        try (BrowserSessionManager session = new BrowserSessionManager()) {
+        try (BrowserSessionManager session = newBrowserSession()) {
             AnswerSubmitter submitter = new AnswerSubmitter(session, rateLimiter, verifier);
 
             info = scrapeAndFetch(info, session, rateLimiter);
@@ -186,17 +231,28 @@ public final class AutomationOrchestrator {
     /**
      * Runs Stages 6-12 for a specific year and day: builds, runs, submits, documents, commits.
      * Does not scrape or re-generate the skeleton - assumes files already exist.
-     * @param args the full args array; expected: flags[0]="--submit", args[1]=YEAR, args[2]=DAY
+     * Year and day are extracted from the non-flag tokens in args, so {@code --watch}
+     * may appear in any position without affecting parsing.
+     * @param args the full args array, e.g. {@code ["--submit", "2025", "1"]} or
+     *             {@code ["--submit", "--watch", "2025", "1"]}
      * @throws Exception if any stage fails
      */
     private void runSubmitOnly(String[] args) throws Exception {
-        if (args.length < 3) {
+        // Extract year and day - skip all flag tokens (those starting with --)
+        List<String> numericArgs = new ArrayList<>();
+        for (String arg : args) {
+            if (!arg.startsWith("--")) {
+                numericArgs.add(arg);
+            }
+        }
+
+        if (numericArgs.size() < 2) {
             throw new IllegalArgumentException(
                     "Usage: --submit YEAR DAY  (e.g., --submit 2025 1)");
         }
 
-        int year = Integer.parseInt(args[1]);
-        int day = Integer.parseInt(args[2]);
+        int year = Integer.parseInt(numericArgs.get(0));
+        int day  = Integer.parseInt(numericArgs.get(1));
 
         System.out.println("\n[Submit mode] Year " + year + " Day " + day);
         PuzzleInfo info = PuzzleInfo.minimal(year, day);
@@ -209,7 +265,7 @@ public final class AutomationOrchestrator {
         SolverRunner solver = new SolverRunner();
         SolutionSkeletonGenerator skeletonGenerator = new SolutionSkeletonGenerator();
 
-        try (BrowserSessionManager session = new BrowserSessionManager()) {
+        try (BrowserSessionManager session = newBrowserSession()) {
             AnswerSubmitter submitter = new AnswerSubmitter(session, rateLimiter, verifier);
             solveAndSubmit(info, solver, submitter, session, skeletonGenerator, docUpdater, git, rateLimiter);
         }
@@ -364,9 +420,19 @@ public final class AutomationOrchestrator {
         SubmissionResult part2Result = submitWithRetry(submitter, info, partTwoAnswer, AnswerSubmitter.PART_TWO);
         System.out.println("  Part 2 result: " + part2Result);
 
-        // Stages 11-12: document and commit
-        String part2Stored = isAccepted(part2Result) ? partTwoAnswer : null;
-        finaliseDocumentation(info, partOneAnswer, part2Stored, docUpdater, git);
+        if (!isAccepted(part2Result)) {
+            // Critical guard - never commit when a submitted answer was not accepted.
+            System.out.println("\n[ERROR] Part 2 answer \"" + partTwoAnswer
+                    + "\" was NOT accepted by AoC (result: " + part2Result + ").");
+            System.out.println("  Commit aborted to prevent recording an incorrect solution.");
+            System.out.println("  Check the logs above for the AoC response (e.g. 'too high' / 'too low').");
+            System.out.println("  Fix solvePartTwo and re-run: ./gradlew autoSolve --args=\"--submit "
+                    + info.getYear() + " " + info.getDay() + " --watch\"");
+            return info;
+        }
+
+        // Stages 11-12: both parts accepted - document and commit
+        finaliseDocumentation(info, partOneAnswer, partTwoAnswer, docUpdater, git);
         return info;
     }
 
@@ -428,10 +494,11 @@ public final class AutomationOrchestrator {
         System.out.println("\n[Stage 11] Updating documentation...");
         docUpdater.updateSolutionsDatabase(info, partOneAnswer, partTwoAnswer);
         docUpdater.updateYearReadme(info);
-        docUpdater.updateMainReadmeIfNewYear(info);
+        boolean mainReadmeUpdated = docUpdater.updateMainReadmeIfNewYear(info);
 
-        System.out.println("[Stage 12] Committing changes...");
-        git.stageAll();
+        System.out.println("[Stage 12] Committing changes (only files created/updated in this run)...");
+        List<String> affectedFiles = collectAffectedFiles(info, mainReadmeUpdated);
+        git.stageFiles(affectedFiles);
         String commitMessage = git.buildCommitMessage(info, "automated solution");
         git.commit(commitMessage);
 
@@ -524,6 +591,66 @@ public final class AutomationOrchestrator {
             LOGGER.warning("readLine - failed to read from stdin: " + e.getMessage());
             return "";
         }
+    }
+
+    // -------------------------------------------------------------------------
+    // Browser session factory
+    // -------------------------------------------------------------------------
+
+    /**
+     * Creates a {@link BrowserSessionManager} configured according to the current
+     * watch-mode setting. In watch mode the browser window is visible and each
+     * Playwright action is slowed down so a human observer can follow.
+     * @return an authenticated browser session ready for use
+     */
+    @NotNull
+    private BrowserSessionManager newBrowserSession() {
+        if (watchMode) {
+            System.out.println("  [Watch mode] Browser will be visible with "
+                    + AutomationConfig.WATCH_SLOW_MO_MILLIS + " ms slow-motion per action");
+            return new BrowserSessionManager(false, AutomationConfig.WATCH_SLOW_MO_MILLIS);
+        }
+        return new BrowserSessionManager();
+    }
+
+    // -------------------------------------------------------------------------
+    // File tracking - builds the list of files this run created/modified
+    // -------------------------------------------------------------------------
+
+    /**
+     * Builds the list of file paths that this pipeline run created or modified.
+     * Only these files will be staged - no unrelated working-tree changes are touched.
+     * @param info PuzzleInfo for the completed puzzle
+     * @param includeMainReadme whether the main README was updated in this run
+     * @return list of relative file path strings to pass to git add
+     */
+    @NotNull
+    private List<String> collectAffectedFiles(@NotNull PuzzleInfo info, boolean includeMainReadme) {
+        List<String> files = new ArrayList<>();
+
+        // Java solution class
+        String className = SolutionSkeletonGenerator.resolveClassName(info);
+        files.add(AutomationConfig.JAVA_BASE_PATH + "/"
+                + AutomationConfig.PACKAGE_BASE.replace('.', '/') + "/year" + info.getYear()
+                + "/day" + info.getDay() + "/" + className + ".java");
+
+        // Resource files
+        String resourceDir = AutomationConfig.RESOURCES_BASE_PATH + "/" + info.getYear()
+                + "/day" + info.getDay();
+        files.add(resourceDir + "/day" + info.getDay() + "_puzzle_data.txt");
+        files.add(resourceDir + "/day" + info.getDay() + "_puzzle_description.txt");
+
+        // Solutions database and year README
+        files.add(AutomationConfig.SOLUTIONS_DB_PATH);
+        files.add(AutomationConfig.JAVA_BASE_PATH + "/" + AutomationConfig.PACKAGE_BASE.replace('.', '/')
+                + "/year" + info.getYear() + "/README.md");
+
+        if (includeMainReadme) {
+            files.add("README.md");
+        }
+
+        LOGGER.info("collectAffectedFiles - " + files.size() + " file(s) will be staged for commit");
+        return files;
     }
 
     // -------------------------------------------------------------------------

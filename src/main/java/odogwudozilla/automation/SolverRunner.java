@@ -37,12 +37,11 @@ public final class SolverRunner {
                 ? AutomationConfig.GRADLE_WRAPPER_WINDOWS
                 : AutomationConfig.GRADLE_WRAPPER_UNIX;
 
-        String args = info.getYear() + " day" + info.getDay();
-        LOGGER.info("run - executing: " + gradleWrapper + " run --args=" + args);
+        String puzzleArgs = info.getYear() + " day" + info.getDay();
+        LOGGER.info("run - compiling and executing solution for " + info.getYear() + " Day " + info.getDay()
+                + " (\"" + info.getTitle() + "\") via Gradle: " + gradleWrapper + " run --args=" + puzzleArgs);
 
-        ProcessBuilder builder = new ProcessBuilder(
-                gradleWrapper, "run", "--args=" + args
-        );
+        ProcessBuilder builder = new ProcessBuilder(gradleWrapper, "run", "--args=" + puzzleArgs);
         builder.directory(Paths.get("").toAbsolutePath().toFile());
         builder.redirectErrorStream(true);
 
@@ -54,25 +53,27 @@ public final class SolverRunner {
             String line;
             while ((line = reader.readLine()) != null) {
                 outputLines.add(line);
-                LOGGER.info("run [stdout] - " + line);
+                LOGGER.info("run [gradle output] - " + line);
             }
         }
 
         int exitCode = process.waitFor();
         if (exitCode != 0) {
-            LOGGER.warning("run - Gradle process exited with code " + exitCode);
+            LOGGER.warning("run - Gradle process exited with non-zero code " + exitCode
+                    + "; solution may have failed to execute");
         }
 
-        return parseAnswers(outputLines);
+        return parseAnswers(outputLines, info);
     }
 
     /**
      * Parses output lines for "Part 1:" and "Part 2:" answer prefixes.
      * @param lines list of stdout lines from the puzzle run
+     * @param info PuzzleInfo used for contextual logging
      * @return SolveOutput containing extracted Part 1 and Part 2 answers
      */
     @NotNull
-    private SolveOutput parseAnswers(@NotNull List<String> lines) {
+    private SolveOutput parseAnswers(@NotNull List<String> lines, @NotNull PuzzleInfo info) {
         String partOne = null;
         String partTwo = null;
 
@@ -85,7 +86,8 @@ public final class SolverRunner {
             }
         }
 
-        LOGGER.info("run - parsed answers - Part 1: " + partOne + " | Part 2: " + partTwo);
+        LOGGER.info("run - solution output for " + info.getYear() + " Day " + info.getDay()
+                + " -> Part 1: \"" + partOne + "\" | Part 2: \"" + partTwo + "\"");
         return new SolveOutput(partOne, partTwo);
     }
 
