@@ -97,3 +97,9 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 **Algorithm/Approach**: Part 1 uses simple simulation with a deterministic die. Part 2 uses recursive dynamic programming with memoization to count wins across all quantum universes. Pre-compute the frequency of each possible sum when rolling a 3-sided die three times (sums 3-9 with different frequencies), then recursively explore all game states, caching results to avoid recomputation.
 
 ---
+
+### Day 7: The Treachery of Whales
+
+- **Puzzle:** [The Treachery of Whales](https://adventofcode.com/2021/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2021/day7/)
+

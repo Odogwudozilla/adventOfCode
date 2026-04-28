@@ -679,6 +679,15 @@
         "partOne" : "380612",
         "partTwo" : "1710166656900"
       }
+    }, {
+      "year" : 2021,
+      "day" : 7,
+      "title" : "The Treachery of Whales",
+      "link" : "https://adventofcode.com/2021/day/7",
+      "solutions" : {
+        "partOne" : "347509",
+        "partTwo" : "98257206"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,
