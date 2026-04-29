@@ -472,6 +472,15 @@
         "partOne" : "303",
         "partTwo" : "11222"
       }
+    }, {
+      "year" : 2019,
+      "day" : 4,
+      "title" : "Secure Container",
+      "link" : "https://adventofcode.com/2019/day/4",
+      "solutions" : {
+        "partOne" : "1767",
+        "partTwo" : "1192"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,

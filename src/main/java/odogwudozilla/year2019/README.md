@@ -52,3 +52,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
   - **Algorithm:** Implement a minimal Intcode interpreter. For Part 1, jump if any of A, B, or C is a hole and D is ground. For Part 2, also require that H or E is ground before jumping, using extended sensors and RUN mode.
 
 [Back to main README](../../../README.md)
+
+### Day 4: Secure Container
+
+- **Puzzle:** [Secure Container](https://adventofcode.com/2019/day/4)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day4/)
+
