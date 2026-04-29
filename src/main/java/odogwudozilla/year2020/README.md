@@ -150,3 +150,9 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 - **Puzzle:** [Passport Processing](https://adventofcode.com/2020/day/4)
 - **Source:** [View code](src/main/java/odogwudozilla/year2020/day4/)
 
+
+### Day 14: Docking Data
+
+- **Puzzle:** [Docking Data](https://adventofcode.com/2020/day/14)
+- **Source:** [View code](src/main/java/odogwudozilla/year2020/day14/)
+

@@ -597,6 +597,15 @@
       "solutions" : {
         "partOne" : "254"
       }
+    }, {
+      "year" : 2020,
+      "day" : 14,
+      "title" : "Docking Data",
+      "link" : "https://adventofcode.com/2020/day/14",
+      "solutions" : {
+        "partOne" : "13727901897109",
+        "partTwo" : "5579916171823"
+      }
     } ],
     "2021" : [ {
       "year" : 2021,
