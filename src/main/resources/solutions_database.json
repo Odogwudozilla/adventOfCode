@@ -372,6 +372,15 @@
         "partOne" : "JDEKPFABTUHOQSXVYMLZCNIGRW",
         "partTwo" : "1048"
       }
+    }, {
+      "year" : 2018,
+      "day" : 8,
+      "title" : "Memory Maneuver",
+      "link" : "https://adventofcode.com/2018/day/8",
+      "solutions" : {
+        "partOne" : "42146",
+        "partTwo" : "26753"
+      }
     } ],
     "2019" : [ {
       "year" : 2019,

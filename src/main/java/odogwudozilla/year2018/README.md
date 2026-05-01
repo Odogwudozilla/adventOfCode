@@ -37,3 +37,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - **Puzzle:** [The Sum of Its Parts](https://adventofcode.com/2018/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2018/day7/)
 
+
+### Day 8: Memory Maneuver
+
+- **Puzzle:** [Memory Maneuver](https://adventofcode.com/2018/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day8/)
+
