@@ -58,3 +58,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Secure Container](https://adventofcode.com/2019/day/4)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day4/)
 
+
+### Day 5: Sunny with a Chance of Asteroids
+
+- **Puzzle:** [Sunny with a Chance of Asteroids](https://adventofcode.com/2019/day/5)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day5/)
+

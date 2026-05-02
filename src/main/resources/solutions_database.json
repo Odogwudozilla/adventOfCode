@@ -490,6 +490,15 @@
         "partOne" : "1767",
         "partTwo" : "1192"
       }
+    }, {
+      "year" : 2019,
+      "day" : 5,
+      "title" : "Sunny with a Chance of Asteroids",
+      "link" : "https://adventofcode.com/2019/day/5",
+      "solutions" : {
+        "partOne" : "15259545",
+        "partTwo" : "7616021"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,
