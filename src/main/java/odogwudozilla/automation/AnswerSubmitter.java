@@ -95,12 +95,16 @@ public final class AnswerSubmitter {
         try (Page page = sessionManager.newPage()) {
             page.navigate(info.getPuzzleUrl());
             String pageContent = page.content();
-            boolean complete = pageContent.contains(AutomationConfig.ALREADY_COMPLETE_SIGNAL);
-            if (complete) {
+            boolean bothPartsComplete = pageContent.contains(AutomationConfig.ALREADY_COMPLETE_SIGNAL);
+            boolean partTwoUnlocked = pageContent.contains("--- Part Two ---");
+            if (bothPartsComplete) {
                 LOGGER.info("isPuzzleAlreadyComplete - found completion marker on puzzle page for "
                         + info.getYear() + " Day " + info.getDay());
+            } else if (partTwoUnlocked) {
+                LOGGER.info("isPuzzleAlreadyComplete - found '--- Part Two ---' marker; Part 1 already accepted for "
+                        + info.getYear() + " Day " + info.getDay());
             }
-            return complete;
+            return bothPartsComplete || partTwoUnlocked;
         } catch (Exception e) {
             LOGGER.warning("isPuzzleAlreadyComplete - check failed, proceeding with submission: " + e.getMessage());
             return false;
