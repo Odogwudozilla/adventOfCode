@@ -43,3 +43,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - **Puzzle:** [Memory Maneuver](https://adventofcode.com/2018/day/8)
 - **Source:** [View code](src/main/java/odogwudozilla/year2018/day8/)
 
+
+### Day 12: Subterranean Sustainability
+
+- **Puzzle:** [Subterranean Sustainability](https://adventofcode.com/2018/day/12)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day12/)
+

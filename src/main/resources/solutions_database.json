@@ -381,6 +381,15 @@
         "partOne" : "42146",
         "partTwo" : "26753"
       }
+    }, {
+      "year" : 2018,
+      "day" : 12,
+      "title" : "Subterranean Sustainability",
+      "link" : "https://adventofcode.com/2018/day/12",
+      "solutions" : {
+        "partOne" : "1623",
+        "partTwo" : "1600000000401"
+      }
     } ],
     "2019" : [ {
       "year" : 2019,
