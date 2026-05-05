@@ -642,6 +642,15 @@
         "partOne" : "13727901897109",
         "partTwo" : "5579916171823"
       }
+    }, {
+      "year" : 2020,
+      "day" : 5,
+      "title" : "Binary Boarding",
+      "link" : "https://adventofcode.com/2020/day/5",
+      "solutions" : {
+        "partOne" : "826",
+        "partTwo" : "678"
+      }
     } ],
     "2021" : [ {
       "year" : 2021,

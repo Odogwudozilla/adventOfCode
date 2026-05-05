@@ -156,3 +156,9 @@ Advent of Code 2020 featured puzzles themed around tropical vacation adventures 
 - **Puzzle:** [Docking Data](https://adventofcode.com/2020/day/14)
 - **Source:** [View code](src/main/java/odogwudozilla/year2020/day14/)
 
+
+### Day 5: Binary Boarding
+
+- **Puzzle:** [Binary Boarding](https://adventofcode.com/2020/day/5)
+- **Source:** [View code](src/main/java/odogwudozilla/year2020/day5/)
+
