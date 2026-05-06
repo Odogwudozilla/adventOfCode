@@ -281,6 +281,15 @@
         "partOne" : "477",
         "partTwo" : "167"
       }
+    }, {
+      "year" : 2017,
+      "day" : 6,
+      "title" : "Memory Reallocation",
+      "link" : "https://adventofcode.com/2017/day/6",
+      "solutions" : {
+        "partOne" : "7864",
+        "partTwo" : "1695"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,

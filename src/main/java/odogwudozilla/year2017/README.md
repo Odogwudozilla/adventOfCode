@@ -127,3 +127,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 - **Puzzle:** [High-Entropy Passphrases](https://adventofcode.com/2017/day/4)
 - **Source:** [View code](src/main/java/odogwudozilla/year2017/day4/)
 
+
+### Day 6: Memory Reallocation
+
+- **Puzzle:** [Memory Reallocation](https://adventofcode.com/2017/day/6)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day6/)
+
