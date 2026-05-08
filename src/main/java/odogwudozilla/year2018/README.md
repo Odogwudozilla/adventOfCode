@@ -49,3 +49,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - **Puzzle:** [Subterranean Sustainability](https://adventofcode.com/2018/day/12)
 - **Source:** [View code](src/main/java/odogwudozilla/year2018/day12/)
 
+
+### Day 9: Marble Mania
+
+- **Puzzle:** [Marble Mania](https://adventofcode.com/2018/day/9)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day9/)
+

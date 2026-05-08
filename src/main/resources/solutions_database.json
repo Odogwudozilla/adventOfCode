@@ -399,6 +399,15 @@
         "partOne" : "1623",
         "partTwo" : "1600000000401"
       }
+    }, {
+      "year" : 2018,
+      "day" : 9,
+      "title" : "Marble Mania",
+      "link" : "https://adventofcode.com/2018/day/9",
+      "solutions" : {
+        "partOne" : "370210",
+        "partTwo" : "3101176548"
+      }
     } ],
     "2019" : [ {
       "year" : 2019,
