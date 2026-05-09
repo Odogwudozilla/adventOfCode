@@ -290,6 +290,15 @@
         "partOne" : "7864",
         "partTwo" : "1695"
       }
+    }, {
+      "year" : 2017,
+      "day" : 7,
+      "title" : "Recursive Circus",
+      "link" : "https://adventofcode.com/2017/day/7",
+      "solutions" : {
+        "partOne" : "mkxke",
+        "partTwo" : "268"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,

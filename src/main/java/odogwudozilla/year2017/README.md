@@ -133,3 +133,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 - **Puzzle:** [Memory Reallocation](https://adventofcode.com/2017/day/6)
 - **Source:** [View code](src/main/java/odogwudozilla/year2017/day6/)
 
+
+### Day 7: Recursive Circus
+
+- **Puzzle:** [Recursive Circus](https://adventofcode.com/2017/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day7/)
+
