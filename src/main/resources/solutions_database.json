@@ -417,6 +417,15 @@
         "partOne" : "370210",
         "partTwo" : "3101176548"
       }
+    }, {
+      "year" : 2018,
+      "day" : 10,
+      "title" : "The Stars Align",
+      "link" : "https://adventofcode.com/2018/day/10",
+      "solutions" : {
+        "partOne" : "GFNKCGGH",
+        "partTwo" : "10274"
+      }
     } ],
     "2019" : [ {
       "year" : 2019,

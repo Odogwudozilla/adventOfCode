@@ -55,3 +55,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - **Puzzle:** [Marble Mania](https://adventofcode.com/2018/day/9)
 - **Source:** [View code](src/main/java/odogwudozilla/year2018/day9/)
 
+
+### Day 10: The Stars Align
+
+- **Puzzle:** [The Stars Align](https://adventofcode.com/2018/day/10)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day10/)
+
