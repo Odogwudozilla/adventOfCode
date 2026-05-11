@@ -182,3 +182,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 ---
 
 [← Back to Main README](../../../../../../README.md)
+
+### Day 8: Haunted Wasteland
+
+- **Puzzle:** [Haunted Wasteland](https://adventofcode.com/2023/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day8/)
+

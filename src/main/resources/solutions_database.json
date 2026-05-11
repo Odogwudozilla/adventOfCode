@@ -987,6 +987,15 @@
         "partOne" : "2285",
         "partTwo" : "77021"
       }
+    }, {
+      "year" : 2023,
+      "day" : 8,
+      "title" : "Haunted Wasteland",
+      "link" : "https://adventofcode.com/2023/day/8",
+      "solutions" : {
+        "partOne" : "16697",
+        "partTwo" : "10668805667831"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,
