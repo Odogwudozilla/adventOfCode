@@ -1087,6 +1087,15 @@
         "partOne" : "5461",
         "partTwo" : "1836"
       }
+    }, {
+      "year" : 2024,
+      "day" : 3,
+      "title" : "Mull It Over",
+      "link" : "https://adventofcode.com/2024/day/3",
+      "solutions" : {
+        "partOne" : "175700056",
+        "partTwo" : "71668682"
+      }
     } ],
     "2025" : [ {
       "year" : 2025,
