@@ -544,6 +544,15 @@
         "partOne" : "15259545",
         "partTwo" : "7616021"
       }
+    }, {
+      "year" : 2019,
+      "day" : 6,
+      "title" : "Universal Orbit Map",
+      "link" : "https://adventofcode.com/2019/day/6",
+      "solutions" : {
+        "partOne" : "453028",
+        "partTwo" : "562"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,

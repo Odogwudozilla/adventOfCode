@@ -64,3 +64,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Sunny with a Chance of Asteroids](https://adventofcode.com/2019/day/5)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day5/)
 
+
+### Day 6: Universal Orbit Map
+
+- **Puzzle:** [Universal Orbit Map](https://adventofcode.com/2019/day/6)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day6/)
+
