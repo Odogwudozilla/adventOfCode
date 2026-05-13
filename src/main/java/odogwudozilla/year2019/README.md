@@ -70,3 +70,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Universal Orbit Map](https://adventofcode.com/2019/day/6)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day6/)
 
+
+### Day 8: Space Image Format
+
+- **Puzzle:** [Space Image Format](https://adventofcode.com/2019/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day8/)
+

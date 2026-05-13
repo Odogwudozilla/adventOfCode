@@ -553,6 +553,15 @@
         "partOne" : "453028",
         "partTwo" : "562"
       }
+    }, {
+      "year" : 2019,
+      "day" : 8,
+      "title" : "Space Image Format",
+      "link" : "https://adventofcode.com/2019/day/8",
+      "solutions" : {
+        "partOne" : "2286",
+        "partTwo" : "CJZLP"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,
