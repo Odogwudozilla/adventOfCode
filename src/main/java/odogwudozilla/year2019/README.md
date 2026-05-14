@@ -76,3 +76,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Space Image Format](https://adventofcode.com/2019/day/8)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day8/)
 
+
+### Day 10: Monitoring Station
+
+- **Puzzle:** [Monitoring Station](https://adventofcode.com/2019/day/10)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day10/)
+

@@ -562,6 +562,15 @@
         "partOne" : "2286",
         "partTwo" : "CJZLP"
       }
+    }, {
+      "year" : 2019,
+      "day" : 10,
+      "title" : "Monitoring Station",
+      "link" : "https://adventofcode.com/2019/day/10",
+      "solutions" : {
+        "partOne" : "344",
+        "partTwo" : "2732"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,
