@@ -4,6 +4,7 @@ import com.microsoft.playwright.Page;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+import java.io.IOException;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,16 +35,35 @@ public final class PuzzleScraper {
     /**
      * Navigates to the puzzle page and scrapes the title and Part 1 description.
      * If Part 2 is already unlocked on the same page, it is scraped as well.
+     * Also checks for an inline puzzle input embedded on the page (e.g. "Your puzzle
+     * input is X.") and stores it in the returned PuzzleInfo when found.
      * @param info minimal PuzzleInfo containing year and day
-     * @return updated PuzzleInfo with title and Part 1 (and optionally Part 2) descriptions
+     * @return updated PuzzleInfo with title, Part 1 (and optionally Part 2) descriptions,
+     *         and inline input if detected
+     * @throws IOException if the session cookie appears to be expired or the page cannot be loaded
      */
     @NotNull
-    public PuzzleInfo scrapePartOne(@NotNull PuzzleInfo info) {
+    public PuzzleInfo scrapePartOne(@NotNull PuzzleInfo info) throws IOException {
         String url = info.getPuzzleUrl();
         LOGGER.info("scrapePartOne - opening AoC puzzle page: " + url);
 
         try (Page page = sessionManager.newPage()) {
             page.navigate(url);
+
+            // Guard: if AoC redirected away from the expected puzzle URL, the session is expired.
+            String landingUrl = page.url();
+            if (!landingUrl.startsWith(url)) {
+                throw new IOException(
+                        "[ACTION REQUIRED] AoC session cookie is expired or invalid.\n"
+                        + "  Browser was redirected to: " + landingUrl + "\n"
+                        + "  Expected puzzle URL prefix: " + url + "\n"
+                        + "  - Log in to https://adventofcode.com\n"
+                        + "  - Open DevTools (F12) -> Application -> Cookies -> copy the 'session' value\n"
+                        + "  - Paste it into your .aoc-session file in the project root\n"
+                        + "  - Re-run the same command - the pending state will resume automatically"
+                );
+            }
+
             page.waitForSelector(AutomationConfig.PUZZLE_ARTICLE_SELECTOR);
 
             String titleHeading = page.locator(AutomationConfig.PUZZLE_TITLE_SELECTOR)
@@ -64,6 +84,13 @@ public final class PuzzleScraper {
                 updated = updated.withPartTwo(partTwoText);
             }
 
+            // Look for an inline puzzle input on the description page (e.g. "Your puzzle input is X.")
+            String inlineInput = extractInlineInput(page);
+            if (inlineInput != null) {
+                LOGGER.info("scrapePartOne - detected inline puzzle input on description page: \"" + inlineInput + "\"");
+                updated = updated.withInlineInput(inlineInput);
+            }
+
             return updated;
         }
     }
@@ -73,9 +100,10 @@ public final class PuzzleScraper {
      * Call this after Part 1 has been solved and submitted correctly.
      * @param info PuzzleInfo already containing Part 1 data
      * @return updated PuzzleInfo with Part 2 description added
+     * @throws IOException if the session cookie appears to be expired or the page cannot be loaded
      */
     @NotNull
-    public PuzzleInfo scrapePartTwo(@NotNull PuzzleInfo info) {
+    public PuzzleInfo scrapePartTwo(@NotNull PuzzleInfo info) throws IOException {
         String url = info.getPuzzleUrl();
         LOGGER.info("scrapePartTwo - re-opening puzzle page to check for Part 2: " + url);
 
@@ -94,6 +122,74 @@ public final class PuzzleScraper {
             LOGGER.info("scrapePartTwo - Part 2 description scraped for " + info.getYear() + " Day " + info.getDay());
             return info.withPartTwo(partTwoText);
         }
+    }
+
+    /**
+     * Attempts to extract an inline puzzle input from the AoC description page.
+     *
+     * <p>Strategy 1 - paragraph with code element: looks for a {@code <p>} containing the text
+     * "Your puzzle input is" and returns the text of the first {@code <code>} child element.</p>
+     *
+     * <p>Strategy 2 - plain paragraph text: if no {@code <code>} element is found, extracts the
+     * text following the marker phrase directly from the paragraph (e.g. "Your puzzle input is 347991.").</p>
+     *
+     * <p>Strategy 3 - bare pre block: looks for a {@code <pre>} element that is a direct child
+     * of {@code <main>} (i.e. outside any {@code <article>}), which some puzzles use for
+     * multi-line inline inputs.</p>
+     *
+     * @param page the already-navigated Playwright page
+     * @return the extracted inline input string, or null if no inline input is detected
+     */
+    @Nullable
+    private String extractInlineInput(@NotNull Page page) {
+        // Strategy 1 & 2: <p>Your puzzle input is <code>VALUE</code></p> or plain text
+        try {
+            var paraLocator = page.locator(
+                    "xpath=//p[contains(., '" + AutomationConfig.INLINE_INPUT_TEXT_MARKER + "')]");
+            if (paraLocator.count() > 0) {
+                // Try to get the <code> child element value first (more precise)
+                var codeLocator = paraLocator.first()
+                        .locator("xpath=.//code");
+                if (codeLocator.count() > 0) {
+                    String codeText = codeLocator.first().textContent();
+                    if (codeText != null && !codeText.isBlank()) {
+                        return codeText.trim();
+                    }
+                }
+                // Fallback: extract plain text after the marker phrase
+                String paraText = paraLocator.first().textContent();
+                if (paraText != null) {
+                    int markerIndex = paraText.indexOf(AutomationConfig.INLINE_INPUT_TEXT_MARKER);
+                    if (markerIndex != -1) {
+                        String afterMarker = paraText
+                                .substring(markerIndex + AutomationConfig.INLINE_INPUT_TEXT_MARKER.length())
+                                .trim();
+                        if (afterMarker.endsWith(".")) {
+                            afterMarker = afterMarker.substring(0, afterMarker.length() - 1).trim();
+                        }
+                        if (!afterMarker.isBlank()) {
+                            return afterMarker;
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            LOGGER.fine("extractInlineInput - paragraph strategy failed: " + e.getMessage());
+        }
+
+        // Strategy 3: bare <pre> block that is a direct child of <main> (outside any article)
+        try {
+            Object preText = page.evaluate(
+                    "() => { const el = document.querySelector('main > pre'); "
+                    + "return el ? el.textContent : null; }");
+            if (preText instanceof String preString && !preString.isBlank()) {
+                return preString.trim();
+            }
+        } catch (Exception e) {
+            LOGGER.fine("extractInlineInput - pre-block strategy failed: " + e.getMessage());
+        }
+
+        return null;
     }
 
     /**

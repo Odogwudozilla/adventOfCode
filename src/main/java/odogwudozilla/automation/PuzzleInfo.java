@@ -25,6 +25,13 @@ public final class PuzzleInfo {
     private final String puzzleUrl;
 
     /**
+     * Puzzle input detected inline on the description page (e.g. "Your puzzle input is X.").
+     * Null when the input must be fetched from the dedicated {@code /input} URL.
+     */
+    @Nullable
+    private final String inlineInput;
+
+    /**
      * Constructs a PuzzleInfo with all fields.
      * @param year the puzzle year
      * @param day the puzzle day
@@ -32,19 +39,22 @@ public final class PuzzleInfo {
      * @param partOneDescription plain-text Part 1 description
      * @param partTwoDescription plain-text Part 2 description, or null if not yet available
      * @param puzzleUrl the canonical AoC URL for this puzzle
+     * @param inlineInput puzzle input found inline on the description page, or null
      */
     public PuzzleInfo(int year,
                       int day,
                       @Nullable String title,
                       @Nullable String partOneDescription,
                       @Nullable String partTwoDescription,
-                      @NotNull String puzzleUrl) {
+                      @NotNull String puzzleUrl,
+                      @Nullable String inlineInput) {
         this.year = year;
         this.day = day;
         this.title = title;
         this.partOneDescription = partOneDescription;
         this.partTwoDescription = partTwoDescription;
         this.puzzleUrl = puzzleUrl;
+        this.inlineInput = inlineInput;
     }
 
     /**
@@ -56,7 +66,7 @@ public final class PuzzleInfo {
     @NotNull
     public static PuzzleInfo minimal(int year, int day) {
         String url = AutomationConfig.AOC_BASE_URL + "/" + year + "/day/" + day;
-        return new PuzzleInfo(year, day, null, null, null, url);
+        return new PuzzleInfo(year, day, null, null, null, url, null);
     }
 
     /**
@@ -67,7 +77,7 @@ public final class PuzzleInfo {
      */
     @NotNull
     public PuzzleInfo withPartOne(@NotNull String newTitle, @NotNull String newPartOneDescription) {
-        return new PuzzleInfo(year, day, newTitle, newPartOneDescription, partTwoDescription, puzzleUrl);
+        return new PuzzleInfo(year, day, newTitle, newPartOneDescription, partTwoDescription, puzzleUrl, inlineInput);
     }
 
     /**
@@ -77,7 +87,19 @@ public final class PuzzleInfo {
      */
     @NotNull
     public PuzzleInfo withPartTwo(@NotNull String newPartTwoDescription) {
-        return new PuzzleInfo(year, day, title, partOneDescription, newPartTwoDescription, puzzleUrl);
+        return new PuzzleInfo(year, day, title, partOneDescription, newPartTwoDescription, puzzleUrl, inlineInput);
+    }
+
+    /**
+     * Returns a copy of this PuzzleInfo with the inline input set.
+     * Used when the puzzle input is embedded on the description page rather than
+     * available at the dedicated {@code /input} URL.
+     * @param input the inline puzzle input extracted from the description page
+     * @return updated PuzzleInfo
+     */
+    @NotNull
+    public PuzzleInfo withInlineInput(@NotNull String input) {
+        return new PuzzleInfo(year, day, title, partOneDescription, partTwoDescription, puzzleUrl, input);
     }
 
     public int getYear() {
@@ -106,6 +128,11 @@ public final class PuzzleInfo {
     @NotNull
     public String getPuzzleUrl() {
         return puzzleUrl;
+    }
+
+    @Nullable
+    public String getInlineInput() {
+        return inlineInput;
     }
 
     @Override

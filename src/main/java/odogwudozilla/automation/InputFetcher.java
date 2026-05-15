@@ -32,11 +32,21 @@ public final class InputFetcher {
 
     /**
      * Fetches the puzzle input from AoC and writes it to the resource file.
+     * If the puzzle carries an inline input (detected during description scraping), that is used
+     * directly and the network request to {@code /input} is skipped entirely.
      * Creates intermediate directories if they do not exist.
-     * @param info PuzzleInfo containing year and day
-     * @throws IOException if the resource file cannot be written
+     * @param info PuzzleInfo containing year, day, and optional inline input
+     * @throws IOException if the resource file cannot be written, or if the AoC session
+     *                     cookie is detected as expired or invalid
      */
     public void fetchAndSave(@NotNull PuzzleInfo info) throws IOException {
+        // Fast path: use inline input detected during description scraping
+        if (info.getInlineInput() != null) {
+            LOGGER.info("fetchAndSave - using inline input found on description page (skipping /input URL)");
+            writeInputToFile(info.getInlineInput(), info);
+            return;
+        }
+
         String inputUrl = info.getPuzzleUrl() + "/input";
         LOGGER.info("fetchAndSave - requesting puzzle input from AoC: " + inputUrl);
 
@@ -51,11 +61,34 @@ public final class InputFetcher {
                     + ". The session cookie may be invalid or expired.");
         }
 
+        // Detect expired/invalid session cookie
+        if (inputContent.contains(AutomationConfig.SESSION_EXPIRED_SIGNAL)) {
+            throw new IOException(
+                    "[ACTION REQUIRED] AoC session cookie is expired or invalid.\n"
+                    + "  The /input endpoint returned: \"" + AutomationConfig.SESSION_EXPIRED_SIGNAL + "...\"\n"
+                    + "  - Log in to https://adventofcode.com\n"
+                    + "  - Open DevTools (F12) -> Application -> Cookies -> copy the 'session' value\n"
+                    + "  - Paste it into your .aoc-session file in the project root\n"
+                    + "  - Re-run the same command - the pending state will resume automatically"
+            );
+        }
+
+        writeInputToFile(inputContent, info);
+    }
+
+    /**
+     * Trims and writes the given input content to the puzzle data file, creating directories
+     * as needed. Logs the number of lines saved.
+     * @param content the raw input content to write
+     * @param info PuzzleInfo used to resolve the output path
+     * @throws IOException if the file cannot be written
+     */
+    private void writeInputToFile(@NotNull String content, @NotNull PuzzleInfo info) throws IOException {
+        String trimmed = content.trim();
         Path outputPath = buildOutputPath(info);
         Files.createDirectories(outputPath.getParent());
-        Files.writeString(outputPath, inputContent.trim() + System.lineSeparator());
-
-        LOGGER.info("fetchAndSave - puzzle input saved (" + inputContent.trim().lines().count()
+        Files.writeString(outputPath, trimmed + System.lineSeparator());
+        LOGGER.info("fetchAndSave - puzzle input saved (" + trimmed.lines().count()
                 + " lines) -> " + outputPath);
     }
 

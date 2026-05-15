@@ -88,6 +88,24 @@ public final class AutomationConfig {
     public static final String RESPONSE_ARTICLE_SELECTOR = "article";
 
     // -------------------------------------------------------------------------
+    // Session validation signals
+    // -------------------------------------------------------------------------
+
+    /**
+     * Text present in the HTTP body when the puzzle {@code /input} endpoint is accessed
+     * with an expired or missing session cookie. Detecting this string means the cookie
+     * must be refreshed before continuing.
+     */
+    public static final String SESSION_EXPIRED_SIGNAL = "Puzzle inputs differ by user";
+
+    /**
+     * Text marker used to locate paragraphs that contain an inline puzzle input directly on
+     * the AoC description page (e.g. "Your puzzle input is 347991."). Some puzzles supply a
+     * single value inline rather than via the {@code /input} URL.
+     */
+    public static final String INLINE_INPUT_TEXT_MARKER = "Your puzzle input is";
+
+    // -------------------------------------------------------------------------
     // Watch mode (non-headless + slow-motion)
     // -------------------------------------------------------------------------
 
