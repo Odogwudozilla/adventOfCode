@@ -82,3 +82,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Monitoring Station](https://adventofcode.com/2019/day/10)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day10/)
 
+
+### Day 12: The N-Body Problem
+
+- **Puzzle:** [The N-Body Problem](https://adventofcode.com/2019/day/12)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day12/)
+

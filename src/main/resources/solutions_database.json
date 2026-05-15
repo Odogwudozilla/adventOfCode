@@ -571,6 +571,15 @@
         "partOne" : "344",
         "partTwo" : "2732"
       }
+    }, {
+      "year" : 2019,
+      "day" : 12,
+      "title" : "The N-Body Problem",
+      "link" : "https://adventofcode.com/2019/day/12",
+      "solutions" : {
+        "partOne" : "10635",
+        "partTwo" : "583523031727256"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,
