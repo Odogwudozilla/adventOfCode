@@ -31,9 +31,23 @@ This project includes advanced enhancement features for testing, monitoring, and
 
 ```
 adventOfCode/
+├── .github/
+│   ├── agents/                            # GitHub Copilot agent definitions
+│   │   ├── puzzle-analyser.agent.md       # Analyses puzzle descriptions
+│   │   ├── solution-implementer.agent.md  # Implements solve methods with TDD
+│   │   ├── solution-reviewer.agent.md     # Reviews solutions and produces commit messages
+│   │   ├── puzzle-orchestrator.agent.md   # Orchestrates the full pipeline
+│   │   └── agent-builder.agent.md         # Builds new agents for this project
+│   ├── instructions/
+│   │   └── agent-shared-rules.instructions.md  # Cross-cutting rules for all agents
+│   ├── prompts/
+│   │   └── update-agents-md.prompt.md     # Keeps AGENTS.md current
+│   └── copilot-instructions.md            # GitHub Copilot project instructions
+│
 ├── src/main/java/odogwudozilla/
 │   ├── Main.java                          # Main entry point
 │   ├── PuzzleRandomizer.java              # Random puzzle selector utility
+│   ├── automation/                        # autoSolve pipeline classes
 │   ├── core/                              # Enhancement features (core utilities)
 │   ├── dashboard/                         # Enhancement features (web dashboard)
 │   ├── examples/                          # Enhancement features (usage examples)
@@ -43,24 +57,32 @@ adventOfCode/
 │
 ├── src/main/resources/
 │   ├── aoc_challenge_config.json          # Available years and days configuration
+│   ├── solutions_database.json            # Solved puzzle registry
 │   └── <YYYY>/
 │       └── day<D>/
 │           ├── day<D>_puzzle_description.txt
 │           └── day<D>_puzzle_data.txt
 │
-├── docs/enhancements/                     # Enhancement features documentation
-│   ├── README.md                          # Enhancement docs index
-│   ├── QUICK_START.md                     # Quick integration guide
-│   ├── ENHANCEMENT_FEATURES.md            # Complete feature documentation
+├── docs/
+│   ├── enhancements/                      # Enhancement features documentation
+│   │   ├── README.md
+│   │   ├── QUICK_START.md
+│   │   └── ENHANCEMENT_FEATURES.md
+│   ├── ai-output/                         # Local-only AI analysis output (not pushed)
+│   │   └── puzzle-analysis/
+│   └── memory/                            # Agent lessons-learned system
+│       ├── LESSONS.md                     # Lessons index
+│       └── lessons/                       # Individual lesson files
 │
 ├── cache/                                 # Runtime-generated cache
 │   └── puzzle-results/                    # Cached puzzle results (JSON)
 │
 ├── dashboard/                             # Runtime-generated dashboard
-│   └── index.html                         # Progress dashboard
+│   └── index.html                         # Progress dashboard (auto-generated)
 │
-├── build.gradle.kts                        # Gradle build configuration
-└── README.md                               # This file
+├── AGENTS.md                              # AI agent guide for this project
+├── build.gradle.kts                       # Gradle build configuration
+└── README.md                              # This file
 ```
 
 ## 🚀 Getting Started
@@ -69,6 +91,7 @@ adventOfCode/
 
 - **Java JDK 11 or higher**
 - **Gradle** (or use the included Gradle wrapper)
+- **GitHub Copilot** with agent support *(optional - for AI-assisted workflow)*
 
 ### Installation
 
@@ -82,6 +105,105 @@ cd adventOfCode
 ```bash
 ./gradlew build
 ```
+
+3. *(One-time)* Install Playwright browsers for the `autoSolve` automation:
+```bash
+./gradlew installPlaywright
+```
+
+4. *(One-time)* Set your AoC session cookie so `autoSolve` can fetch puzzles and submit answers.
+   Log in to [adventofcode.com](https://adventofcode.com), open DevTools → Application → Cookies,
+   copy the `session` value, then either:
+
+   ```powershell
+   # Option A - environment variable (current session only)
+   $env:AOC_SESSION="<your session cookie value>"
+
+   # Option B - file (persists across sessions; gitignored automatically)
+   "<your session cookie value>" | Set-Content .aoc-session
+   ```
+
+5. *(Optional)* If you want to use the GitHub Copilot agents, see the
+   [AI-Assisted Workflow](#-ai-assisted-workflow-github-copilot) section above for first-time setup.
+
+## 🤖 AI-Assisted Workflow (GitHub Copilot)
+
+This project ships with a set of GitHub Copilot agent files that automate the
+puzzle-solving pipeline end-to-end. If you use GitHub Copilot with agent support
+(JetBrains IDE or VS Code), you can solve puzzles entirely through chat.
+
+### Prerequisites
+
+- GitHub Copilot subscription with agent/chat support enabled
+- Your AoC session cookie (see [Automated Pipeline](#automated-pipeline-gradlew-autosolve)
+  below for how to set it)
+
+### First-time Setup After Cloning
+
+The agents reference an output directory for analysis files. This path is
+machine-specific and must be configured locally - it is **not** stored in the repository.
+
+Run the workflow initialiser once after cloning:
+
+```
+@workflow-initializer
+Target project: <absolute path to this cloned repo>
+Templates: <path to your agentic-workflow-templates folder>
+```
+
+The initialiser will:
+1. Update `AGENTS.md` to reflect the current project state
+2. Infer the workflow intent and agent pipeline from the project files
+3. Ask you 4 short questions (output directory, response prefix, memory system, test base class)
+4. Generate personalised agent files and deploy them to `.github/agents/`
+5. Write a `workflow-how-to.md` guide tailored to your machine
+
+> **Note:** The three output files the initialiser produces (`ide-global-reference.md`,
+> `workflow-generation-report.md`, `workflow-how-to.md`) contain your local absolute paths
+> and are automatically excluded from git via `.git/info/exclude` - they will never be pushed.
+
+### Daily Use - Solving Puzzles via Chat
+
+Once initialised, simply type in GitHub Copilot chat:
+
+```
+random
+```
+
+or
+
+```
+solve
+```
+
+`@puzzle-orchestrator` handles the full pipeline:
+
+| Step | Who | What |
+|------|-----|------|
+| 1 | `autoSolve --setup` | Selects puzzle, fetches description + input, generates Java skeleton |
+| 2 | `@puzzle-analyser` | Reads description, extracts examples, recommends algorithm |
+| 3 | *(you confirm)* | Review algorithm recommendation before implementation begins |
+| 4 | `@solution-implementer` | Writes `solvePartOne`/`solvePartTwo` with TDD against examples |
+| 5 | `@solution-reviewer` | Reviews correctness, conventions, efficiency; produces commit message |
+| 6 | `autoSolve --auto` | Submits answers, updates database, commits |
+
+### Available Agents
+
+| Agent | Purpose | Invoke with |
+|-------|---------|-------------|
+| `@puzzle-orchestrator` | Full pipeline orchestrator | Type `random` or `solve` in chat |
+| `@puzzle-analyser` | Analyse one puzzle description | `@puzzle-analyser` + year/day |
+| `@solution-implementer` | Implement solve methods | `@solution-implementer` + year/day |
+| `@solution-reviewer` | Review a completed solution | `@solution-reviewer` + year/day |
+| `@agent-builder` | Create or adapt agents | `@agent-builder` + description |
+
+### Lessons-Learned Memory
+
+The `docs/memory/` directory holds a lessons system for capturing reusable algorithm
+insights across puzzles. See `docs/memory/lessons/README.md` for the lesson file template.
+`docs/memory/LESSONS.md` is the searchable index.
+
+---
 
 ## 📖 Usage
 
@@ -205,9 +327,13 @@ public class <PuzzleName>AOC<YYYY>Day<D> {
 |------|-------------|
 | `./gradlew build` | Compile and build the project |
 | `./gradlew run` | Run the main application |
-| `./gradlew randomPuzzle` | Select a random unsolved puzzle |
+| `./gradlew randomPuzzle` | Select a random unsolved puzzle (outputs `YYYY,D`) |
 | `./gradlew test` | Run unit tests |
-| `./gradlew runDay<D>` | Run a specific day's solution (if task exists) |
+| `./gradlew autoSolve` | Full automation pipeline (pauses at implementation step) |
+| `./gradlew autoSolve --args="--setup --watch"` | Fetch puzzle + generate skeleton only |
+| `./gradlew autoSolve --args="--auto --watch"` | Submit answers + document + commit |
+| `./gradlew installPlaywright` | Install Playwright browsers (one-time setup for autoSolve) |
+| `puzzle <YEAR> day<N>` | Run a specific puzzle via the `puzzle` command script |
 
 ## 📦 Dependencies
 

@@ -131,5 +131,4 @@ Main orchestrator: `src/main/java/odogwudozilla/AutomationOrchestrator.java`
 - **Project overview**: `README.md`
 - **Enhancement docs**: `docs/enhancements/`
 - **Dashboard**: `dashboard/index.html`
-- **`my-workflow/`**: Reserved directory for custom agent/workflow definitions (`agents/`, `core/`, `memory/` subdirs); currently empty
 
