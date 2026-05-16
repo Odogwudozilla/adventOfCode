@@ -188,3 +188,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - **Puzzle:** [Haunted Wasteland](https://adventofcode.com/2023/day/8)
 - **Source:** [View code](src/main/java/odogwudozilla/year2023/day8/)
 
+
+### Day 11: Cosmic Expansion
+
+- **Puzzle:** [Cosmic Expansion](https://adventofcode.com/2023/day/11)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day11/)
+

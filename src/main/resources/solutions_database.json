@@ -1041,6 +1041,15 @@
         "partOne" : "16697",
         "partTwo" : "10668805667831"
       }
+    }, {
+      "year" : 2023,
+      "day" : 11,
+      "title" : "Cosmic Expansion",
+      "link" : "https://adventofcode.com/2023/day/11",
+      "solutions" : {
+        "partOne" : "10165598",
+        "partTwo" : "678728808158"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,
