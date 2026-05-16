@@ -299,6 +299,15 @@
         "partOne" : "mkxke",
         "partTwo" : "268"
       }
+    }, {
+      "year" : 2017,
+      "day" : 8,
+      "title" : "I Heard You Like Registers",
+      "link" : "https://adventofcode.com/2017/day/8",
+      "solutions" : {
+        "partOne" : "6611",
+        "partTwo" : "6619"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,

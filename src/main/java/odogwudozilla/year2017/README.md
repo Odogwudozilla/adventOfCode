@@ -139,3 +139,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 - **Puzzle:** [Recursive Circus](https://adventofcode.com/2017/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2017/day7/)
 
+
+### Day 8: I Heard You Like Registers
+
+- **Puzzle:** [I Heard You Like Registers](https://adventofcode.com/2017/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day8/)
+
