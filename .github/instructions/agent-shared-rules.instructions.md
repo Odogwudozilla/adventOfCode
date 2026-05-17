@@ -32,18 +32,17 @@ Documents, code comments, and any other output included.
 
 ## 3. File output convention (file-producing agents)
 
-Agents that save analysis, documentation, or review artefacts:
+The **single source of truth** for all analysis and review artefacts is:
+`docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md`
 
-1. **Save to the current project directory first** with the canonical filename for the
-   workflow (e.g. `<YEAR>-day<N>-analysis.md`, `<YEAR>-day<N>-review.md`).
-2. **Do not save directly** to `docs/ai-output/` or any other output location. The user
-   requests output-directory copies at workflow end, not earlier.
-3. When the user requests a copy at workflow end, **copy** (not move) the file into the
-   matching output directory under a `<YEAR>-day<N>` subfolder:
-   `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<filename>`. Always use the
-   subfolder; never dump files directly into the root of an output directory.
-4. **Overwrite** any existing files in the target output location. The project-directory
-   copy remains in place.
+Rules:
+
+1. **Save directly** to `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/`. Create the
+   directory if it does not exist.
+2. **Never save to the project root** or any other intermediate location.
+3. **No separate review document.** All review findings are appended as a `## Review`
+   section inside the same analysis file. There is no `<YEAR>-day<N>-review.md`.
+4. **Overwrite** any existing file at the target path.
 
 ---
 
@@ -108,10 +107,22 @@ them to mid-flow. They produce analysis documents. Code changes are produced onl
 
 ---
 
+## 9. Autonomous operation (universal)
+
+All agents operate autonomously within their scope. No agent may:
+
+- Ask the user to confirm before proceeding with its normal workflow.
+- Pause mid-workflow waiting for user selection of issues or approval of a commit message.
+- Present a gate before invoking its next step.
+
+Agents complete their workflow fully and emit their Output Contract. Escalating to the user
+is only permitted when a **contract violation** cannot be resolved automatically.
+
+---
+
 ## How agents inherit these rules
 
 This file uses `applyTo: '**/*.agent.md'`, so Copilot loads it whenever an agent file is
 in scope. Agents should not restate these rules in their own Boundaries. Where
 agent-specific nuance is needed, the agent file may add to - but not contradict - the rules
 above.
-

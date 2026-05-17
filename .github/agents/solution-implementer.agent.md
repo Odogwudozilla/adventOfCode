@@ -33,7 +33,7 @@ Follow the conventions defined in:
 
 | Type | When | Approach |
 |------|------|----------|
-| Part 1 only | Part 2 description not yet available | Implement `solvePartOne`; leave `solvePartTwo` as stub |
+| Part 1 only | Part 2 description not yet available | Implement `solvePartOne`; leave `solvePartTwo` as the **original skeleton stub** - it must print `Part 2: not implemented` so that `autoSolve --auto` exits cleanly after submitting Part 1 |
 | Parts 1 and 2 | Both available in analysis | Implement both; run full solution |
 | Fix / optimise | Solution produces wrong answer or times out | Read analysis, identify what needs correcting |
 
@@ -44,13 +44,13 @@ Follow the conventions defined in:
 ## Always required
 
 - **Year and Day** *(required)*: from the analysis document or `.aoc-state`
-- **Analysis document** *(required)*: `<YEAR>-day<N>-analysis.md` in project root -
+- **Analysis document** *(required)*: `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md` -
   produced by `@puzzle-analyser`. Must contain algorithm recommendation, example test
   cases, and implementation plan.
 
 ## Gate: no analysis document
 
-If `<YEAR>-day<N>-analysis.md` does not exist, stop and respond:
+If `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md` does not exist, stop and respond:
 
 > `<YEAR>-day<N>-analysis.md` is required before implementation can begin.
 > Please run `@puzzle-analyser` first and provide its output here.
@@ -72,7 +72,7 @@ If `<YEAR>-day<N>-analysis.md` does not exist, stop and respond:
 
 ## Step 1 - Ingest the analysis document
 
-1. Read `<YEAR>-day<N>-analysis.md` in full.
+1. Read `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md` in full.
 2. Extract: year, day, puzzle title, skeleton class path, puzzle input file path,
    recommended algorithm, example test cases, implementation plan outline.
 3. Confirm: "Implementing `<YEAR>` Day `<N>` - `<Title>`. Algorithm: `[approach]`."
@@ -117,7 +117,7 @@ Before writing any solution code, create a test class.
    package odogwudozilla.year<YEAR>.day<N>;
 
    import org.junit.jupiter.api.Test;
-   import static org.junit.jupiter.api.Assertions.*;
+   import static org.junit.jupiter.api.Assertions.assertEquals;
 
    class <Title>AOC<YEAR>Day<N>Test {
    ```
@@ -200,8 +200,9 @@ exercises the correct code path."*
 
 ## Step 10 - Produce the Implementation Summary
 
-Append an `## Implementation Summary` section to the existing `<YEAR>-day<N>-analysis.md`
-file. Update the `### Producing Agents (lifecycle)` table with a new row.
+Append an `## Implementation Summary` section to the existing analysis file at:
+`docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md`
+Update the `### Producing Agents (lifecycle)` table with a new row.
 
 ```markdown
 ## Implementation Summary
@@ -257,7 +258,7 @@ After saving, present a 3-5 bullet summary to the user and state the next step
 - Parts implemented: [Part 1 only / Parts 1 and 2]
 - All example tests: [passing]
 
-Saved to: <YEAR>-day<N>-analysis.md (see ## Implementation Summary for full detail)
+Saved to: docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md (see ## Implementation Summary for full detail)
 ```
 
 ---

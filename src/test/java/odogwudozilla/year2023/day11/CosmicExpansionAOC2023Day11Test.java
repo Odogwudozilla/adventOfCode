@@ -2,7 +2,7 @@ package odogwudozilla.year2023.day11;
 
 import org.junit.jupiter.api.Test;
 import java.util.List;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CosmicExpansionAOC2023Day11Test {
 
@@ -42,4 +42,5 @@ class CosmicExpansionAOC2023Day11Test {
         assertEquals("82000210", solver.solvePartTwo(lines));
     }
 }
+
 

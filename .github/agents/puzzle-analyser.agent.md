@@ -121,8 +121,11 @@ If neither year+day nor `.aoc-state` is available, stop and respond:
 
 ## Step 8 - Produce the analysis document
 
-Save the analysis as `<YEAR>-day<N>-analysis.md` in the **current project directory** (project
-root). Use the structure below. Do not save directly to `docs/ai-output/`.
+Save the analysis as `<YEAR>-day<N>-analysis.md` directly to:
+`docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md`
+
+Create the directory if it does not exist. Never save to the project root.
+Use the structure below.
 
 ```markdown
 # <YEAR> Day <N> - <Puzzle Title> - Analysis
@@ -146,7 +149,7 @@ Puzzle Analysis
 ### Files Created
 | File | Purpose |
 |------|---------|
-| <YEAR>-day<N>-analysis.md | Consolidated analysis lifecycle file |
+| docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md | Consolidated analysis lifecycle file |
 
 ---
 
@@ -277,7 +280,6 @@ After saving, present a 3-5 bullet summary to the user and state the next step
 
 ---
 
-# Output Contract
 
 ## Output to: `@solution-implementer`
 
@@ -287,7 +289,7 @@ After saving, present a 3-5 bullet summary to the user and state the next step
 - Part 2 available: [Yes/No]
 - Example cases: [N] extracted
 
-Saved to: <YEAR>-day<N>-analysis.md (see ## Implementation Plan for full detail)
+Saved to: docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md (see ## Implementation Plan for full detail)
 ```
 
 ---
@@ -304,7 +306,7 @@ Before finalising:
 - [ ] Complexity assessment completed with input scale estimate.
 - [ ] Implementation plan includes the exact `Files.readAllLines()` pattern from this project.
 - [ ] Pipeline Handoff block contains skeleton class path and input file path.
-- [ ] Analysis document saved to project root (not `docs/ai-output/`).
+- [ ] Analysis document saved to `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/` (not project root, not docs/ai-output root).
 - [ ] Chat output is 3-5 bullets plus one `Saved to:` line.
 - [ ] No source code files modified.
 - [ ] Output written in British English.
@@ -319,14 +321,14 @@ Before finalising:
 - Read the skeleton class to understand the expected class and method structure
 - Extract example test cases, constraints, and algorithm requirements
 - Produce a structured, actionable analysis document
-- Save the analysis to the project root as `<YEAR>-day<N>-analysis.md`
+- Save the analysis to `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/` as `<YEAR>-day<N>-analysis.md`
 
 **Does not:**
 - Modify the skeleton class or any source file
 - Write code (that is `@solution-implementer`'s responsibility)
 - Run the solution or tests
 - Submit answers to adventofcode.com
-- Write directly to `docs/ai-output/` - the user requests copies at workflow end
+- Save to the project root or any path outside `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/`
 - Continue invocation after saving the analysis document and presenting the summary
 
 > Inherits universal rules from `.github/instructions/agent-shared-rules.instructions.md`.
