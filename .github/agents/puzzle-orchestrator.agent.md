@@ -54,8 +54,7 @@ Parts are always solved sequentially:
 | B2 | `run_subagent: solution-implementer` | Implement Part 2 |
 | B3 | `run_subagent: solution-reviewer` | Review Part 2; update analysis doc |
 | B4 | `run_in_terminal` (review loop if needed) | Fix any issues |
-| B5 | `run_in_terminal` | `.\gradlew.bat autoSolve --args="--auto --watch"` - submits Part 2; commits core files |
-| C1 | `run_in_terminal` | Cleanup commit: stage and commit test files + analysis doc |
+| B5 | `run_in_terminal` | `.\gradlew.bat autoSolve --args="--auto --watch"` - submits Part 2; commits **all** puzzle files (solution, test, resources, analysis doc, database, README) |
 
 ## Resume Pending Puzzle Workflow
 
@@ -93,7 +92,7 @@ or fails). Do not reprint after every action.
 - Step B5: autoSolve --auto (Part 2 submit) - [Pending / Complete]
 
 ### Phase C - Cleanup
-- Step C1: git commit (test + analysis files) - [Pending / Complete]
+- Step C1: git commit (test + analysis files) - N/A (included in autoSolve B5 commit)
 
 ### Current Step
 Step [X] - [description] - [status]
@@ -272,37 +271,21 @@ Expected behaviour:
 - Part 1 re-submitted → receives `ALREADY_SOLVED` → proceeds automatically.
 - Part 2 submitted and accepted.
 - `solutions_database.json` updated.
-- Core files committed by autoSolve (solution class, resources, database, year README).
+- **All** puzzle artefacts committed in one commit by autoSolve:
+  solution class, test class, resources, analysis doc
+  (`docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md`),
+  solutions database, year README.
 - `.aoc-state` cleared.
 
 After completion:
 1. Confirm `.aoc-state` no longer exists.
 2. Confirm `solutions_database.json` has both Part 1 and Part 2 entries.
-3. Update Execution State: B5 -> Complete.
+3. Confirm working tree is clean (no uncommitted puzzle files).
+4. Update Execution State: B5 -> Complete.
 
 ---
 
-## Phase C - Cleanup Commit
-
-After autoSolve commits core files, the following are still uncommitted:
-- `docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md`
-- `src/test/java/odogwudozilla/year<YEAR>/day<N>/` (test class)
-
-Run a cleanup commit:
-
-```powershell
-git add "docs/ai-output/puzzle-analysis/<YEAR>-day<N>/<YEAR>-day<N>-analysis.md"
-git add "src/test/java/odogwudozilla/year<YEAR>/day<N>/"
-git commit -m "Add analysis and tests for AOC <YEAR> Day <N>: <Title>"
-```
-
-After completion:
-1. Confirm both files are committed (no dirty working tree for these paths).
-2. Update Execution State: C1 -> Complete.
-
----
-
-## Phase D - Pipeline Complete
+## Phase C - Pipeline Complete
 
 When all steps are marked Complete:
 
@@ -310,7 +293,7 @@ When all steps are marked Complete:
 2. Provide a concise summary:
    - Puzzle solved, both parts submitted and accepted.
    - `solutions_database.json` updated.
-   - All files committed cleanly.
+   - All files committed cleanly in one commit (solution, test, analysis doc, resources).
 3. Display the commit message from `## Review / ### Commit Message` in the analysis doc.
 
 ---
@@ -349,8 +332,7 @@ Task passed:
 | B1: puzzle-analyser | Part 2 Requirements section added to analysis doc |
 | B2: solution-implementer | Part 2 puzzle run result captured |
 | B3: solution-reviewer | Review Status Block with `ALL_VERIFIED` |
-| B5: autoSolve --auto | `.aoc-state` cleared; both parts in solutions_database.json |
-| C1: git commit | No uncommitted changes in test or analysis paths |
+| B5: autoSolve --auto | `.aoc-state` cleared; both parts in solutions_database.json; working tree clean |
 
 If a contract violation is detected:
 
@@ -388,7 +370,7 @@ Before each step:
 
 Before pipeline close:
 - [ ] All steps marked Complete.
-- [ ] Cleanup commit (C1) made for test files and analysis documents.
+- [ ] Working tree clean - all puzzle files committed in one autoSolve commit.
 - [ ] `dashboard/index.html` not written to directly.
 
 ---
@@ -404,7 +386,6 @@ Before pipeline close:
 - Maintain Execution State; display only when pipeline state changes
 - Validate handoff contracts between steps
 - Manage the review loop autonomously until `solution-reviewer` returns `ALL_VERIFIED`
-- Run a cleanup commit for test files and analysis documents after the autoSolve commit
 
 **Does not:**
 - Perform analysis, implementation, or review itself

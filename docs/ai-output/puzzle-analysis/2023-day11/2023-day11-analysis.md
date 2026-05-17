@@ -15,6 +15,7 @@ Cosmic Expansion
 | Step | Agent | Section Added |
 |------|-------|---------------|
 | 1 | @puzzle-analyser | All sections (Initial analysis) |
+| 2 | @solution-implementer | Implementation Summary |
 
 ### Files Created
 | File | Purpose |
@@ -186,6 +187,54 @@ Not yet available in current description – expected to be released after Part 
 - Complexity assessment – `## Complexity Assessment`
 - Implementation plan – `## Implementation Plan`
 - Pipeline handoff – `## Pipeline Handoff`
+
+---
+
+## Implementation Summary
+
+### Year and Day
+2023 Day 11
+
+### Algorithm Applied
+**Coordinate Geometry + Pairwise Distance Summation** with parameterised expansion factor.
+- Part 1: Expansion factor = 2
+- Part 2: Expansion factor = 1,000,000
+
+The algorithm correctly identifies empty rows and columns, then calculates Manhattan distance between all galaxy pairs with expansion adjustments. For each empty row/column between two galaxies, an extra (expansionFactor - 1) distance is added. All pairwise distances are summed without materialising the expanded grid.
+
+### TDD Summary
+| Test class | Test method | Level | Status |
+|---|---|---|---|
+| CosmicExpansionAOC2023Day11Test | givenExampleInput_solvePartOne_returns374() | Unit | Fails before fix → Passes after fix |
+| CosmicExpansionAOC2023Day11Test | givenExampleInput_solvePartTwo_returns82000210() | Unit | Fails before fix → Passes after fix |
+
+### Changes Made
+| File | Change description |
+|---|---|
+| CosmicExpansionAOC2023Day11.java | Refactored methods to public instance methods for testability; implemented solvePartOne with expansion factor = 2 |
+| CosmicExpansionAOC2023Day11.java | Implemented solvePartTwo with expansion factor = 1,000,000; added parameterised solveWithExpansionFactor helper |
+| CosmicExpansionAOC2023Day11.java | Added helper methods: extractGalaxies, findEmptyRows, findEmptyColumns, calculateDistance |
+| CosmicExpansionAOC2023Day11.java | Added inner Galaxy class to represent galaxy coordinates; used long type for distance calculations to prevent overflow |
+| CosmicExpansionAOC2023Day11Test.java | Created unit tests with example inputs from puzzle analysis; tests verify expansion factor logic |
+
+### Output Format Verified
+- Part 1 output: `Part 1: 10165598` ✓ Verified
+- Part 2 output: `Part 2: 678728808158` ✓ Verified
+
+### Puzzle Run Result
+```
+Part 1: 10165598
+Part 2: 678728808158
+```
+
+### Deviations from Analysis
+- **None.** Implementation exactly follows the recommended algorithm from the analysis document.
+- Both solvePartOne and solvePartTwo are correctly parameterised to use the same core algorithm with different expansion factors, enabling efficient calculation for large factors without grid materialisation.
+
+### Recommended Follow-up
+- [x] Implement Part 1: Complete and working (answer = 10165598)
+- [x] Implement Part 2: Complete and working (answer = 678728808158)
+- [ ] Submit both answers via `./gradlew autoSolve --args="--auto --watch"`
 
 ---
 

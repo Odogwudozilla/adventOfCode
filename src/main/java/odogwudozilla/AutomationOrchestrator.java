@@ -620,6 +620,8 @@ public final class AutomationOrchestrator {
     /**
      * Builds the list of file paths that this pipeline run created or modified.
      * Only these files will be staged - no unrelated working-tree changes are touched.
+     * Includes the test class and AI analysis document so all puzzle artefacts land
+     * in a single commit.
      * @param info PuzzleInfo for the completed puzzle
      * @param includeMainReadme whether the main README was updated in this run
      * @return list of relative file path strings to pass to git add
@@ -633,6 +635,11 @@ public final class AutomationOrchestrator {
         files.add(AutomationConfig.JAVA_BASE_PATH + "/"
                 + AutomationConfig.PACKAGE_BASE.replace('.', '/') + "/year" + info.getYear()
                 + "/day" + info.getDay() + "/" + className + ".java");
+
+        // JUnit test class - same naming convention with "Test" suffix
+        files.add("src/test/java/"
+                + AutomationConfig.PACKAGE_BASE.replace('.', '/') + "/year" + info.getYear()
+                + "/day" + info.getDay() + "/" + className + "Test.java");
 
         // Resource files
         String resourceDir = AutomationConfig.RESOURCES_BASE_PATH + "/" + info.getYear()
@@ -648,6 +655,10 @@ public final class AutomationOrchestrator {
         if (includeMainReadme) {
             files.add("README.md");
         }
+
+        // AI analysis document produced by the Copilot agent pipeline
+        files.add("docs/ai-output/puzzle-analysis/" + info.getYear() + "-day" + info.getDay()
+                + "/" + info.getYear() + "-day" + info.getDay() + "-analysis.md");
 
         LOGGER.info("collectAffectedFiles - " + files.size() + " file(s) will be staged for commit");
         return files;
