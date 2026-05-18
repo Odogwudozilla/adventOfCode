@@ -589,6 +589,15 @@
         "partOne" : "10635",
         "partTwo" : "583523031727256"
       }
+    }, {
+      "year" : 2019,
+      "day" : 14,
+      "title" : "Space Stoichiometry",
+      "link" : "https://adventofcode.com/2019/day/14",
+      "solutions" : {
+        "partOne" : "397771",
+        "partTwo" : "3126714"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,

@@ -88,3 +88,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [The N-Body Problem](https://adventofcode.com/2019/day/12)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day12/)
 
+
+### Day 14: Space Stoichiometry
+
+- **Puzzle:** [Space Stoichiometry](https://adventofcode.com/2019/day/14)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day14/)
+
