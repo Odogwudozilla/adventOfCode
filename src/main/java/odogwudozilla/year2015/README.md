@@ -100,3 +100,9 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 ---
 
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
+
+### Day 6: Probably a Fire Hazard
+
+- **Puzzle:** [Probably a Fire Hazard](https://adventofcode.com/2015/day/6)
+- **Source:** [View code](src/main/java/odogwudozilla/year2015/day6/)
+

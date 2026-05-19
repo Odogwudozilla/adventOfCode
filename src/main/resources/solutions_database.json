@@ -81,6 +81,15 @@
         "partOne" : "1061",
         "partTwo" : "1006"
       }
+    }, {
+      "year" : 2015,
+      "day" : 6,
+      "title" : "Probably a Fire Hazard",
+      "link" : "https://adventofcode.com/2015/day/6",
+      "solutions" : {
+        "partOne" : "377891",
+        "partTwo" : "14110788"
+      }
     } ],
     "2016" : [ {
       "year" : 2016,
