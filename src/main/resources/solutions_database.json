@@ -90,6 +90,15 @@
         "partOne" : "377891",
         "partTwo" : "14110788"
       }
+    }, {
+      "year" : 2015,
+      "day" : 7,
+      "title" : "Some Assembly Required",
+      "link" : "https://adventofcode.com/2015/day/7",
+      "solutions" : {
+        "partOne" : "956",
+        "partTwo" : "40149"
+      }
     } ],
     "2016" : [ {
       "year" : 2016,

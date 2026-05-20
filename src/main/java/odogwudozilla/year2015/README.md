@@ -106,3 +106,9 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 - **Puzzle:** [Probably a Fire Hazard](https://adventofcode.com/2015/day/6)
 - **Source:** [View code](src/main/java/odogwudozilla/year2015/day6/)
 
+
+### Day 7: Some Assembly Required
+
+- **Puzzle:** [Some Assembly Required](https://adventofcode.com/2015/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2015/day7/)
+
