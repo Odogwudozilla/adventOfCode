@@ -103,3 +103,9 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 - **Puzzle:** [The Treachery of Whales](https://adventofcode.com/2021/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2021/day7/)
 
+
+### Day 8: Seven Segment Search
+
+- **Puzzle:** [Seven Segment Search](https://adventofcode.com/2021/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2021/day8/)
+

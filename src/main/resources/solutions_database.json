@@ -850,6 +850,15 @@
         "partOne" : "347509",
         "partTwo" : "98257206"
       }
+    }, {
+      "year" : 2021,
+      "day" : 8,
+      "title" : "Seven Segment Search",
+      "link" : "https://adventofcode.com/2021/day/8",
+      "solutions" : {
+        "partOne" : "452",
+        "partTwo" : "1096964"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,
