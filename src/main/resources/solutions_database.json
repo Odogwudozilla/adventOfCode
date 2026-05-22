@@ -941,6 +941,15 @@
         "partOne" : "160274622817992",
         "partTwo" : "3087390115721"
       }
+    }, {
+      "year" : 2022,
+      "day" : 5,
+      "title" : "Supply Stacks",
+      "link" : "https://adventofcode.com/2022/day/5",
+      "solutions" : {
+        "partOne" : "GFTNRBZPF",
+        "partTwo" : "VRQWPDSGP"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,

@@ -94,3 +94,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 ## Navigation
 - [Main README](../../../README.md)
 - [All Solutions Database](../../../resources/solutions_database.json)
+
+### Day 5: Supply Stacks
+
+- **Puzzle:** [Supply Stacks](https://adventofcode.com/2022/day/5)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day5/)
+
