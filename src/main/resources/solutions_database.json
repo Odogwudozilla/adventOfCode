@@ -1195,6 +1195,15 @@
         "partOne" : "175700056",
         "partTwo" : "71668682"
       }
+    }, {
+      "year" : 2024,
+      "day" : 7,
+      "title" : "Bridge Repair",
+      "link" : "https://adventofcode.com/2024/day/7",
+      "solutions" : {
+        "partOne" : "1298103531759",
+        "partTwo" : "140575048428831"
+      }
     } ],
     "2025" : [ {
       "year" : 2025,

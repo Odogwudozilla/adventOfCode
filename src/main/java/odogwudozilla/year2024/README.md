@@ -107,3 +107,9 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 ---
 
 [← Back to Main README](../../../../../README.md) | [View All Years](../../../../../README.md#-years)
+
+### Day 7: Bridge Repair
+
+- **Puzzle:** [Bridge Repair](https://adventofcode.com/2024/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2024/day7/)
+
