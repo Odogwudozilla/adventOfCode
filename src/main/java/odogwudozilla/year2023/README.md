@@ -194,3 +194,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - **Puzzle:** [Cosmic Expansion](https://adventofcode.com/2023/day/11)
 - **Source:** [View code](src/main/java/odogwudozilla/year2023/day11/)
 
+
+### Day 12: Hot Springs
+
+- **Puzzle:** [Hot Springs](https://adventofcode.com/2023/day/12)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day12/)
+

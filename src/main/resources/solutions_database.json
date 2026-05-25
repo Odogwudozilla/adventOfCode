@@ -1095,6 +1095,15 @@
         "partOne" : "10165598",
         "partTwo" : "678728808158"
       }
+    }, {
+      "year" : 2023,
+      "day" : 12,
+      "title" : "Hot Springs",
+      "link" : "https://adventofcode.com/2023/day/12",
+      "solutions" : {
+        "partOne" : "7633",
+        "partTwo" : "23903579139437"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,
