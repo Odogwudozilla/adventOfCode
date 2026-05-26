@@ -1104,6 +1104,15 @@
         "partOne" : "7633",
         "partTwo" : "23903579139437"
       }
+    }, {
+      "year" : 2023,
+      "day" : 14,
+      "title" : "Parabolic Reflector Dish",
+      "link" : "https://adventofcode.com/2023/day/14",
+      "solutions" : {
+        "partOne" : "113456",
+        "partTwo" : "118747"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,

@@ -200,3 +200,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - **Puzzle:** [Hot Springs](https://adventofcode.com/2023/day/12)
 - **Source:** [View code](src/main/java/odogwudozilla/year2023/day12/)
 
+
+### Day 14: Parabolic Reflector Dish
+
+- **Puzzle:** [Parabolic Reflector Dish](https://adventofcode.com/2023/day/14)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day14/)
+
