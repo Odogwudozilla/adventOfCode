@@ -1222,6 +1222,15 @@
         "partOne" : "1298103531759",
         "partTwo" : "140575048428831"
       }
+    }, {
+      "year" : 2024,
+      "day" : 10,
+      "title" : "Hoof It",
+      "link" : "https://adventofcode.com/2024/day/10",
+      "solutions" : {
+        "partOne" : "617",
+        "partTwo" : "1477"
+      }
     } ],
     "2025" : [ {
       "year" : 2025,

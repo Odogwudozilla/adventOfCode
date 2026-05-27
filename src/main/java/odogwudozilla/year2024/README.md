@@ -113,3 +113,9 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 - **Puzzle:** [Bridge Repair](https://adventofcode.com/2024/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2024/day7/)
 
+
+### Day 10: Hoof It
+
+- **Puzzle:** [Hoof It](https://adventofcode.com/2024/day/10)
+- **Source:** [View code](src/main/java/odogwudozilla/year2024/day10/)
+
