@@ -859,6 +859,15 @@
         "partOne" : "452",
         "partTwo" : "1096964"
       }
+    }, {
+      "year" : 2021,
+      "day" : 9,
+      "title" : "Smoke Basin",
+      "link" : "https://adventofcode.com/2021/day/9",
+      "solutions" : {
+        "partOne" : "462",
+        "partTwo" : "1397760"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,
