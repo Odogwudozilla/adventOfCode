@@ -100,3 +100,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 - **Puzzle:** [Supply Stacks](https://adventofcode.com/2022/day/5)
 - **Source:** [View code](src/main/java/odogwudozilla/year2022/day5/)
 
+
+### Day 6: Tuning Trouble
+
+- **Puzzle:** [Tuning Trouble](https://adventofcode.com/2022/day/6)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day6/)
+

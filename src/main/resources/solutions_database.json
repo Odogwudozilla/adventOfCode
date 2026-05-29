@@ -959,6 +959,15 @@
         "partOne" : "GFTNRBZPF",
         "partTwo" : "VRQWPDSGP"
       }
+    }, {
+      "year" : 2022,
+      "day" : 6,
+      "title" : "Tuning Trouble",
+      "link" : "https://adventofcode.com/2022/day/6",
+      "solutions" : {
+        "partOne" : "1100",
+        "partTwo" : "2421"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,
