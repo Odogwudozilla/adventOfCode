@@ -115,3 +115,9 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 - **Puzzle:** [Smoke Basin](https://adventofcode.com/2021/day/9)
 - **Source:** [View code](src/main/java/odogwudozilla/year2021/day9/)
 
+
+### Day 10: Syntax Scoring
+
+- **Puzzle:** [Syntax Scoring](https://adventofcode.com/2021/day/10)
+- **Source:** [View code](src/main/java/odogwudozilla/year2021/day10/)
+

@@ -868,6 +868,15 @@
         "partOne" : "462",
         "partTwo" : "1397760"
       }
+    }, {
+      "year" : 2021,
+      "day" : 10,
+      "title" : "Syntax Scoring",
+      "link" : "https://adventofcode.com/2021/day/10",
+      "solutions" : {
+        "partOne" : "374061",
+        "partTwo" : "2116639949"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,
