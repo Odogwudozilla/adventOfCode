@@ -616,6 +616,15 @@
         "partOne" : "397771",
         "partTwo" : "3126714"
       }
+    }, {
+      "year" : 2019,
+      "day" : 15,
+      "title" : "Oxygen System",
+      "link" : "https://adventofcode.com/2019/day/15",
+      "solutions" : {
+        "partOne" : "234",
+        "partTwo" : "292"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,
