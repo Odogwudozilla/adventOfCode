@@ -986,6 +986,15 @@
         "partOne" : "1100",
         "partTwo" : "2421"
       }
+    }, {
+      "year" : 2022,
+      "day" : 7,
+      "title" : "No Space Left On Device",
+      "link" : "https://adventofcode.com/2022/day/7",
+      "solutions" : {
+        "partOne" : "1444896",
+        "partTwo" : "404395"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,

@@ -106,3 +106,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 - **Puzzle:** [Tuning Trouble](https://adventofcode.com/2022/day/6)
 - **Source:** [View code](src/main/java/odogwudozilla/year2022/day6/)
 
+
+### Day 7: No Space Left On Device
+
+- **Puzzle:** [No Space Left On Device](https://adventofcode.com/2022/day/7)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day7/)
+
