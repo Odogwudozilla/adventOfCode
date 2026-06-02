@@ -1158,6 +1158,15 @@
         "partOne" : "113456",
         "partTwo" : "118747"
       }
+    }, {
+      "year" : 2023,
+      "day" : 15,
+      "title" : "Lens Library",
+      "link" : "https://adventofcode.com/2023/day/15",
+      "solutions" : {
+        "partOne" : "516469",
+        "partTwo" : "221627"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,

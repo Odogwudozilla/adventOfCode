@@ -206,3 +206,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - **Puzzle:** [Parabolic Reflector Dish](https://adventofcode.com/2023/day/14)
 - **Source:** [View code](src/main/java/odogwudozilla/year2023/day14/)
 
+
+### Day 15: Lens Library
+
+- **Puzzle:** [Lens Library](https://adventofcode.com/2023/day/15)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day15/)
+
