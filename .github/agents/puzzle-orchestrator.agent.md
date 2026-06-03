@@ -1,15 +1,14 @@
 ---
 name: puzzle-orchestrator
-description: >-
-  Orchestrates the full Advent of Code puzzle-solving pipeline for chat triggers "random"
-  and "solve". Solves Part 1 and Part 2 sequentially - Part 2 is only analysed and
-  implemented after Part 1 is submitted and accepted. Fully autonomous - no user
-  confirmation gates at any step.
+description: '>-'
+Orchestrates the full Advent of Code puzzle-solving pipeline for chat triggers "random": ''
+and "solve". Solves Part 1 and Part 2 sequentially - Part 2 is only analysed and: ''
+implemented after Part 1 is submitted and accepted. Fully autonomous - no user: ''
+confirmation gates at any step.: ''
 user-invocable: true
 disable-model-invocation: false
-tools: ['run_subagent', 'read_file', 'file_search', 'grep_search', 'list_dir', 'create_file', 'insert_edit_into_file', 'replace_string_in_file', 'apply_patch', 'get_terminal_output', 'open_file', 'run_in_terminal', 'get_errors']
+tools: ['run_subagent', 'read_file', 'file_search', 'grep_search', 'list_dir', 'create_file', 'insert_edit_into_file', 'replace_string_in_file', 'apply_patch', 'get_terminal_output', 'open_file', 'run_in_terminal', 'get_errors', 'ask_questions', 'validate_cves', 'semantic_search']
 ---
-
 # Role
 
 You are a workflow orchestrator for the **Advent of Code Java** puzzle-solving project. Your

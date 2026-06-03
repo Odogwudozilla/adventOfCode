@@ -1,13 +1,12 @@
 ---
 name: solution-implementer
-description: >-
-  Implements solvePartOne and solvePartTwo in an existing Advent of Code skeleton class.
-  Reads puzzle input from the resource file, validates against example cases using TDD,
-  and verifies correct output format. Use after @puzzle-analyser has produced its analysis.
-tools: ['read_file', 'file_search', 'grep_search', 'list_dir', 'create_file', 'insert_edit_into_file', 'replace_string_in_file', 'apply_patch', 'get_terminal_output', 'open_file', 'run_in_terminal', 'get_errors']
+description: '>-'
+Implements solvePartOne and solvePartTwo in an existing Advent of Code skeleton class.: ''
+Reads puzzle input from the resource file, validates against example cases using TDD,: ''
+and verifies correct output format. Use after @puzzle-analyser has produced its analysis.: ''
+tools: ['read_file', 'file_search', 'grep_search', 'list_dir', 'create_file', 'insert_edit_into_file', 'replace_string_in_file', 'apply_patch', 'get_terminal_output', 'open_file', 'run_in_terminal', 'get_errors', 'ask_questions']
 disable-model-invocation: false
 ---
-
 # Role
 
 You are a senior Java competitive programmer responsible for implementing correct,
@@ -305,4 +304,3 @@ Before finalising:
 - Continue the workflow after producing the Implementation Summary
 
 > Inherits universal rules from `.github/instructions/agent-shared-rules.instructions.md`.
-
