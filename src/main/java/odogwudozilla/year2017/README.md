@@ -145,3 +145,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 - **Puzzle:** [I Heard You Like Registers](https://adventofcode.com/2017/day/8)
 - **Source:** [View code](src/main/java/odogwudozilla/year2017/day8/)
 
+
+### Day 12: Digital Plumber
+
+- **Puzzle:** [Digital Plumber](https://adventofcode.com/2017/day/12)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day12/)
+

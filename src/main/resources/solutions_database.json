@@ -335,6 +335,15 @@
         "partOne" : "8536",
         "partTwo" : "aff593797989d665349efe11bb4fd99b"
       }
+    }, {
+      "year" : 2017,
+      "day" : 12,
+      "title" : "Digital Plumber",
+      "link" : "https://adventofcode.com/2017/day/12",
+      "solutions" : {
+        "partOne" : "130",
+        "partTwo" : "189"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,
