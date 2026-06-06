@@ -1185,6 +1185,15 @@
         "partOne" : "516469",
         "partTwo" : "221627"
       }
+    }, {
+      "year" : 2023,
+      "day" : 16,
+      "title" : "The Floor Will Be Lava",
+      "link" : "https://adventofcode.com/2023/day/16",
+      "solutions" : {
+        "partOne" : "7632",
+        "partTwo" : "8023"
+      }
     } ],
     "2024" : [ {
       "year" : 2024,

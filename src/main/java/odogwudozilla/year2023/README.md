@@ -212,3 +212,9 @@ This directory contains solutions for [Advent of Code 2023](https://adventofcode
 - **Puzzle:** [Lens Library](https://adventofcode.com/2023/day/15)
 - **Source:** [View code](src/main/java/odogwudozilla/year2023/day15/)
 
+
+### Day 16: The Floor Will Be Lava
+
+- **Puzzle:** [The Floor Will Be Lava](https://adventofcode.com/2023/day/16)
+- **Source:** [View code](src/main/java/odogwudozilla/year2023/day16/)
+
