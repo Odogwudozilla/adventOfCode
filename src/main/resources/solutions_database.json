@@ -904,6 +904,15 @@
         "partOne" : "374061",
         "partTwo" : "2116639949"
       }
+    }, {
+      "year" : 2021,
+      "day" : 11,
+      "title" : "Dumbo Octopus",
+      "link" : "https://adventofcode.com/2021/day/11",
+      "solutions" : {
+        "partOne" : "1725",
+        "partTwo" : "308"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,
