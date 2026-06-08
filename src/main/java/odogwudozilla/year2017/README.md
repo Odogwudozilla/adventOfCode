@@ -151,3 +151,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 - **Puzzle:** [Digital Plumber](https://adventofcode.com/2017/day/12)
 - **Source:** [View code](src/main/java/odogwudozilla/year2017/day12/)
 
+
+### Day 13: Packet Scanners
+
+- **Puzzle:** [Packet Scanners](https://adventofcode.com/2017/day/13)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day13/)
+

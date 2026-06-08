@@ -344,6 +344,15 @@
         "partOne" : "130",
         "partTwo" : "189"
       }
+    }, {
+      "year" : 2017,
+      "day" : 13,
+      "title" : "Packet Scanners",
+      "link" : "https://adventofcode.com/2017/day/13",
+      "solutions" : {
+        "partOne" : "1900",
+        "partTwo" : "3966414"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,
