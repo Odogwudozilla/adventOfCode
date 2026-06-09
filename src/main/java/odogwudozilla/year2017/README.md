@@ -153,7 +153,11 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 
 ### Day 13: Packet Scanners
+**Link**: [https://adventofcode.com/2017/day/13](https://adventofcode.com/2017/day/13)
 
-- **Puzzle:** [Packet Scanners](https://adventofcode.com/2017/day/13)
-- **Source:** [View code](src/main/java/odogwudozilla/year2017/day13/)
+**Description**: Navigate a firewall made of layers, each containing a security scanner that oscillates back and forth. Calculate the total severity (depth × range) of being caught when traversing immediately (Part 1). For Part 2, find the minimum delay in picoseconds before starting the trip so that the packet passes through without being caught by any scanner.
+
+**Source Code**: [PacketScannersAOC2017Day13.java](day13/)
+
+**Algorithm**: A scanner at a layer with range `r` has a period of `2*(r-1)`. The packet is caught at depth `d` (with no delay) if `d % period == 0`. For Part 2, iterate over increasing delays until no layer satisfies `(d + delay) % period == 0` for all layers.
 
