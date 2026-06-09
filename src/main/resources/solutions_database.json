@@ -351,7 +351,7 @@
       "link" : "https://adventofcode.com/2017/day/13",
       "solutions" : {
         "partOne" : "1900",
-          "partTwo" : "3966414"
+        "partTwo" : "3966414"
       }
     } ],
     "2018" : [ {
@@ -1329,6 +1329,15 @@
       "solutions" : {
         "partOne" : "617",
         "partTwo" : "1477"
+      }
+    }, {
+      "year" : 2024,
+      "day" : 11,
+      "title" : "Plutonian Pebbles",
+      "link" : "https://adventofcode.com/2024/day/11",
+      "solutions" : {
+        "partOne" : "175006",
+        "partTwo" : "207961583799296"
       }
     } ],
     "2025" : [ {

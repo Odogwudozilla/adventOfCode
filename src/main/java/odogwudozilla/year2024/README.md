@@ -119,3 +119,9 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 - **Puzzle:** [Hoof It](https://adventofcode.com/2024/day/10)
 - **Source:** [View code](src/main/java/odogwudozilla/year2024/day10/)
 
+
+### Day 11: Plutonian Pebbles
+
+- **Puzzle:** [Plutonian Pebbles](https://adventofcode.com/2024/day/11)
+- **Source:** [View code](src/main/java/odogwudozilla/year2024/day11/)
+
