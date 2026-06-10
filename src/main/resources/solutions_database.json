@@ -922,6 +922,14 @@
         "partOne" : "1725",
         "partTwo" : "308"
       }
+    }, {
+      "year" : 2021,
+      "day" : 13,
+      "title" : "Transparent Origami",
+      "link" : "https://adventofcode.com/2021/day/13",
+      "solutions" : {
+        "partOne" : "638"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,

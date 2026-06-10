@@ -127,3 +127,9 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 - **Puzzle:** [Dumbo Octopus](https://adventofcode.com/2021/day/11)
 - **Source:** [View code](src/main/java/odogwudozilla/year2021/day11/)
 
+
+### Day 13: Transparent Origami
+
+- **Puzzle:** [Transparent Origami](https://adventofcode.com/2021/day/13)
+- **Source:** [View code](src/main/java/odogwudozilla/year2021/day13/)
+
