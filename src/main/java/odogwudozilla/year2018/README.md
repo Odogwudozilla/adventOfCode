@@ -61,3 +61,9 @@ This README tracks all implemented solutions for Advent of Code 2018.
 - **Puzzle:** [The Stars Align](https://adventofcode.com/2018/day/10)
 - **Source:** [View code](src/main/java/odogwudozilla/year2018/day10/)
 
+
+### Day 21: Chronal Conversion
+
+- **Puzzle:** [Chronal Conversion](https://adventofcode.com/2018/day/21)
+- **Source:** [View code](src/main/java/odogwudozilla/year2018/day21/)
+
