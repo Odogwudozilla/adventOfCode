@@ -73,10 +73,13 @@ public final class GitAutomationService {
 
     /**
      * Runs a Git command, logging every output line and failing fast on non-zero exit.
+     * The "nothing to commit" exit code is treated as a success so that a re-run after
+     * a partial failure (docs written but commit not yet made) does not crash the pipeline.
      * @param command the full command token list
      * @throws IOException if the process cannot be started
      * @throws InterruptedException if the process is interrupted
-     * @throws IllegalStateException if Git exits with a non-zero code
+     * @throws IllegalStateException if Git exits with a non-zero code for any reason
+     *                               other than "nothing to commit"
      */
     private void runGitCommand(@NotNull List<String> command) throws IOException, InterruptedException {
         ProcessBuilder builder = new ProcessBuilder(command);
@@ -85,16 +88,25 @@ public final class GitAutomationService {
 
         Process process = builder.start();
 
+        StringBuilder outputCapture = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(
                 new InputStreamReader(process.getInputStream()))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 LOGGER.info("git - " + line);
+                outputCapture.append(line).append('\n');
             }
         }
 
         int exitCode = process.waitFor();
         if (exitCode != 0) {
+            String output = outputCapture.toString();
+            // "nothing to commit" is not an error - the files were already committed on a
+            // previous run that cleared the state file but failed before printing "Done!".
+            if (output.contains("nothing to commit") || output.contains("nothing added to commit")) {
+                LOGGER.info("commit - nothing to commit (files already committed); treating as success");
+                return;
+            }
             throw new IllegalStateException("Git command failed with exit code " + exitCode
                     + ": " + String.join(" ", command));
         }

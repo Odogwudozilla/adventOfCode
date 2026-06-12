@@ -377,7 +377,9 @@ public final class AutomationOrchestrator {
             return info;
         }
         System.out.println("  Part 1 result: " + part1Result);
-        docUpdater.updateSolutionsDatabase(info, partOneAnswer, null);
+        // Do NOT write to the DB here with a null Part 2 - that would clobber any existing
+        // Part 2 answer already in the database.  The final write happens in finaliseDocumentation
+        // once both answers are known.
 
         // Stage 9: scrape Part 2 if not already present
         if (info.getPartTwoDescription() == null) {
@@ -496,13 +498,18 @@ public final class AutomationOrchestrator {
         docUpdater.updateYearReadme(info);
         boolean mainReadmeUpdated = docUpdater.updateMainReadmeIfNewYear(info);
 
+        // Clear the pending-state file BEFORE the git commit so that a commit failure
+        // (e.g. "nothing to commit" on a re-run, or a transient git error) does not leave
+        // the state file pointing at an already-solved puzzle and cause an infinite retry loop.
+        // Both answers have already been confirmed correct by AoC at this point.
+        clearPendingState();
+
         System.out.println("[Stage 12] Committing changes (only files created/updated in this run)...");
         List<String> affectedFiles = collectAffectedFiles(info, mainReadmeUpdated);
         git.stageFiles(affectedFiles);
         String commitMessage = git.buildCommitMessage(info, "automated solution");
         git.commit(commitMessage);
 
-        clearPendingState();
         System.out.println("\nDone! Committed: " + commitMessage);
     }
 

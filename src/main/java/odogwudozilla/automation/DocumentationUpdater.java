@@ -64,20 +64,29 @@ public final class DocumentationUpdater {
                 ? (ArrayNode) solutions.get(yearKey)
                 : solutions.putArray(yearKey);
 
-        // Remove existing entry for this day if present
+        // Remove existing entry for this day if present, but preserve any answers already recorded
+        // so that a partial update (e.g. partTwoAnswer == null) never drops existing data.
+        String existingPartOne = null;
+        String existingPartTwo = null;
         for (int i = 0; i < yearArray.size(); i++) {
             if (yearArray.get(i).path("day").asInt() == info.getDay()) {
+                existingPartOne = yearArray.get(i).path("solutions").path("partOne").asText(null);
+                existingPartTwo = yearArray.get(i).path("solutions").path("partTwo").asText(null);
                 yearArray.remove(i);
                 break;
             }
         }
 
+        // Use the most-recent non-null answer for each part so previous results are never clobbered
+        String effectivePartOne = partOneAnswer != null ? partOneAnswer : existingPartOne;
+        String effectivePartTwo = partTwoAnswer != null ? partTwoAnswer : existingPartTwo;
+
         ObjectNode solutionsNode = objectMapper.createObjectNode();
-        if (partOneAnswer != null) {
-            solutionsNode.put("partOne", partOneAnswer);
+        if (effectivePartOne != null) {
+            solutionsNode.put("partOne", effectivePartOne);
         }
-        if (partTwoAnswer != null) {
-            solutionsNode.put("partTwo", partTwoAnswer);
+        if (effectivePartTwo != null) {
+            solutionsNode.put("partTwo", effectivePartTwo);
         }
 
         ObjectNode entry = objectMapper.createObjectNode();
