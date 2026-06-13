@@ -125,3 +125,9 @@ Advent of Code 2024 brought fresh algorithmic challenges with themes of computer
 - **Puzzle:** [Plutonian Pebbles](https://adventofcode.com/2024/day/11)
 - **Source:** [View code](src/main/java/odogwudozilla/year2024/day11/)
 
+
+### Day 12: Garden Groups
+
+- **Puzzle:** [Garden Groups](https://adventofcode.com/2024/day/12)
+- **Source:** [View code](src/main/java/odogwudozilla/year2024/day12/)
+

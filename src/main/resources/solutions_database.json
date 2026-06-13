@@ -1356,6 +1356,15 @@
         "partOne" : "175006",
         "partTwo" : "207961583799296"
       }
+    }, {
+      "year" : 2024,
+      "day" : 12,
+      "title" : "Garden Groups",
+      "link" : "https://adventofcode.com/2024/day/12",
+      "solutions" : {
+        "partOne" : "1363682",
+        "partTwo" : "787680"
+      }
     } ],
     "2025" : [ {
       "year" : 2025,
