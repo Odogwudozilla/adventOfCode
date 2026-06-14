@@ -161,3 +161,9 @@ Advent of Code 2017 presents algorithmic challenges ranging from string manipula
 
 **Algorithm**: A scanner at a layer with range `r` has a period of `2*(r-1)`. The packet is caught at depth `d` (with no delay) if `d % period == 0`. For Part 2, iterate over increasing delays until no layer satisfies `(d + delay) % period == 0` for all layers.
 
+
+### Day 15: Dueling Generators
+
+- **Puzzle:** [Dueling Generators](https://adventofcode.com/2017/day/15)
+- **Source:** [View code](src/main/java/odogwudozilla/year2017/day15/)
+

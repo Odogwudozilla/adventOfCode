@@ -353,6 +353,15 @@
         "partOne" : "1900",
         "partTwo" : "3966414"
       }
+    }, {
+      "year" : 2017,
+      "day" : 15,
+      "title" : "Dueling Generators",
+      "link" : "https://adventofcode.com/2017/day/15",
+      "solutions" : {
+        "partOne" : "567",
+        "partTwo" : "323"
+      }
     } ],
     "2018" : [ {
       "year" : 2018,
