@@ -1048,6 +1048,15 @@
         "partOne" : "1444896",
         "partTwo" : "404395"
       }
+    }, {
+      "year" : 2022,
+      "day" : 9,
+      "title" : "Rope Bridge",
+      "link" : "https://adventofcode.com/2022/day/9",
+      "solutions" : {
+        "partOne" : "5779",
+        "partTwo" : "2331"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,

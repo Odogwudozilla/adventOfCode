@@ -112,3 +112,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 - **Puzzle:** [No Space Left On Device](https://adventofcode.com/2022/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2022/day7/)
 
+
+### Day 9: Rope Bridge
+
+- **Puzzle:** [Rope Bridge](https://adventofcode.com/2022/day/9)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day9/)
+
