@@ -120,7 +120,7 @@ public final class KnotHashAOC2017Day10 {
      * @param input list of input lines
      * @return the Part 2 answer (knot hash in hexadecimal)
      */
-    private static String solvePartTwo(List<String> input) {
+    public static String solvePartTwo(List<String> input) {
         String rawInput = input == null || input.isEmpty() ? "" : input.get(0).trim();
         int[] lengths = toAsciiLengthsWithSuffix(rawInput);
         KnotHashState state = runKnotHashRounds(lengths, DEFAULT_LIST_SIZE, 64);
