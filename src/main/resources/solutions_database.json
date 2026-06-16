@@ -1066,6 +1066,15 @@
         "partOne" : "5779",
         "partTwo" : "2331"
       }
+    }, {
+      "year" : 2022,
+      "day" : 10,
+      "title" : "Cathode-Ray Tube",
+      "link" : "https://adventofcode.com/2022/day/10",
+      "solutions" : {
+        "partOne" : "13180",
+        "partTwo" : "EZFCHJAB"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,

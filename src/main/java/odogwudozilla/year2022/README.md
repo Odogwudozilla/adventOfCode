@@ -118,3 +118,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 - **Puzzle:** [Rope Bridge](https://adventofcode.com/2022/day/9)
 - **Source:** [View code](src/main/java/odogwudozilla/year2022/day9/)
 
+
+### Day 10: Cathode-Ray Tube
+
+- **Puzzle:** [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day10/)
+
