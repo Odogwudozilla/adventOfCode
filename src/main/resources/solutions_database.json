@@ -670,6 +670,15 @@
         "partOne" : "234",
         "partTwo" : "292"
       }
+    }, {
+      "year" : 2019,
+      "day" : 17,
+      "title" : "Set and Forget",
+      "link" : "https://adventofcode.com/2019/day/17",
+      "solutions" : {
+        "partOne" : "7404",
+        "partTwo" : "929045"
+      }
     } ],
     "2020" : [ {
       "year" : 2020,

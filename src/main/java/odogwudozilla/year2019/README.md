@@ -100,3 +100,9 @@ This directory contains solutions for Advent of Code 2019 puzzles.
 - **Puzzle:** [Oxygen System](https://adventofcode.com/2019/day/15)
 - **Source:** [View code](src/main/java/odogwudozilla/year2019/day15/)
 
+
+### Day 17: Set and Forget
+
+- **Puzzle:** [Set and Forget](https://adventofcode.com/2019/day/17)
+- **Source:** [View code](src/main/java/odogwudozilla/year2019/day17/)
+
