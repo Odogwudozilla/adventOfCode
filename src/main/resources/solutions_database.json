@@ -957,6 +957,15 @@
       "solutions" : {
         "partOne" : "638"
       }
+    }, {
+      "year" : 2021,
+      "day" : 14,
+      "title" : "Extended Polymerization",
+      "link" : "https://adventofcode.com/2021/day/14",
+      "solutions" : {
+        "partOne" : "2740",
+        "partTwo" : "2959788056211"
+      }
     } ],
     "2022" : [ {
       "year" : 2022,

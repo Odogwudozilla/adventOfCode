@@ -133,3 +133,9 @@ Advent of Code 2021 features a submarine adventure attempting to recover lost sl
 - **Puzzle:** [Transparent Origami](https://adventofcode.com/2021/day/13)
 - **Source:** [View code](src/main/java/odogwudozilla/year2021/day13/)
 
+
+### Day 14: Extended Polymerization
+
+- **Puzzle:** [Extended Polymerization](https://adventofcode.com/2021/day/14)
+- **Source:** [View code](src/main/java/odogwudozilla/year2021/day14/)
+
