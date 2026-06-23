@@ -99,6 +99,15 @@
         "partOne" : "956",
         "partTwo" : "40149"
       }
+    }, {
+      "year" : 2015,
+      "day" : 8,
+      "title" : "Matchsticks",
+      "link" : "https://adventofcode.com/2015/day/8",
+      "solutions" : {
+        "partOne" : "1342",
+        "partTwo" : "2074"
+      }
     } ],
     "2016" : [ {
       "year" : 2016,

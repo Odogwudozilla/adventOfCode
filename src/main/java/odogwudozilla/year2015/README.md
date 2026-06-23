@@ -112,3 +112,9 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 - **Puzzle:** [Some Assembly Required](https://adventofcode.com/2015/day/7)
 - **Source:** [View code](src/main/java/odogwudozilla/year2015/day7/)
 
+
+### Day 8: Matchsticks
+
+- **Puzzle:** [Matchsticks](https://adventofcode.com/2015/day/8)
+- **Source:** [View code](src/main/java/odogwudozilla/year2015/day8/)
+
