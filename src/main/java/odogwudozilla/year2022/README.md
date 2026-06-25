@@ -124,3 +124,9 @@ Advent of Code 2022 continues the tradition of daily programming puzzles through
 - **Puzzle:** [Cathode-Ray Tube](https://adventofcode.com/2022/day/10)
 - **Source:** [View code](src/main/java/odogwudozilla/year2022/day10/)
 
+
+### Day 11: Monkey in the Middle
+
+- **Puzzle:** [Monkey in the Middle](https://adventofcode.com/2022/day/11)
+- **Source:** [View code](src/main/java/odogwudozilla/year2022/day11/)
+

@@ -1102,6 +1102,15 @@
         "partOne" : "13180",
         "partTwo" : "EZFCHJAB"
       }
+    }, {
+      "year" : 2022,
+      "day" : 11,
+      "title" : "Monkey in the Middle",
+      "link" : "https://adventofcode.com/2022/day/11",
+      "solutions" : {
+        "partOne" : "55930",
+        "partTwo" : "14636993466"
+      }
     } ],
     "2023" : [ {
       "year" : 2023,
