@@ -118,3 +118,9 @@ Advent of Code 2015 was the inaugural year of this annual coding challenge. Thes
 - **Puzzle:** [Matchsticks](https://adventofcode.com/2015/day/8)
 - **Source:** [View code](src/main/java/odogwudozilla/year2015/day8/)
 
+
+### Day 9: All in a Single Night
+
+- **Puzzle:** [All in a Single Night](https://adventofcode.com/2015/day/9)
+- **Source:** [View code](src/main/java/odogwudozilla/year2015/day9/)
+
